@@ -3,7 +3,7 @@ from django.urls import path
 
 from . import views
 
-APP_NAME = "network"
+APP_NAME = "capstone"
 
 urlpatterns = [
     path("", views.index, name="index"),

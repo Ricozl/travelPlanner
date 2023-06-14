@@ -8,11 +8,11 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import User, Posto, Follow
+from .models import User
 
 
 def index(request):
-    return render(request, "network/index.html")
+    return render(request, "capstone/index.html")
 
 
 @login_required
