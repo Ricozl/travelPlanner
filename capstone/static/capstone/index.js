@@ -3,5 +3,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
     event.preventDefault();
     //load_page('all_posts');
     console.log("got to js page")
-    document.querySelector("#message").innerHTML = "Got to index.js"
+    //document.querySelector("#message").innerHTML = "Got to index.js"
 });
