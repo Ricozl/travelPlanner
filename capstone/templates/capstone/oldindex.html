@@ -1,0 +1,24 @@
+{% extends "capstone/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <img src="{% static 'capstone/rome-sky.jpg' %}" width="100%" height="100%" alt="Rome sky">
+
+    <h4 id="page-name" style="margin:10px; display:inline-block;">Travel</h4>
+    <div id="app"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div id="hello">
+                    Hello, Travellers!
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'capstone/index.js' %}"></script>
+{% endblock %}
