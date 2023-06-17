@@ -14,12 +14,12 @@ body, html {
   background-size: cover;
 }
 .img1 {
-  background-image: url("rome-sky.jpg");
+  background-image: url("rome-street.jpg");
   min-height: 100%;
 }
 
 .img2 {
-  background-image: url("rome-street.jpg");
+  background-image: url("rome-sky.jpg");
   min-height: 400px;
 }
 
