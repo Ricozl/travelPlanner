@@ -15,7 +15,7 @@ body, html {
 }
 .img1 {
   background-image: url("rome-street.jpg");
-  min-height: 400px;
+  min-height: 100%;
   position: relative;
 }
 /* Postion the navbar container inside the image */
