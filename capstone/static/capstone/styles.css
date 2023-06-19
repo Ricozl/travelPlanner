@@ -84,7 +84,7 @@ body, html {
   width: 100%;
 }
 /* add some top padding to the page content to prevent quick movement as navbar gets new position */
-.sticky + .img1 {
+.sticky + .navClass {
   padding-top: 60px;
 }
 
