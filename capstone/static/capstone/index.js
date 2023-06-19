@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 function compose_email() {
     // Show compose view and hide other views
-    document.querySelector('.img1').style.display = 'none';
+    document.querySelector('#showImgs').style.display = 'none';
     //document.querySelector('#emails-list').style.display = 'none';
     //document.querySelector('#oneEmail').style.display = 'none';
     //document.querySelector('#compose-view').style.display = 'block';
@@ -21,6 +21,6 @@ function compose_email() {
 
 function pick_place() {
     // show newPage and hide main page
-    document.querySelector('.img1').style.display = 'none';
+    document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#newPage').style.display = 'block';
 }
