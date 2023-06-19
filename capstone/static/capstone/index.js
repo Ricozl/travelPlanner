@@ -5,3 +5,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     console.log("got to js page")
     //document.querySelector("#message").innerHTML = "Got to index.js"
 });
+
+function compose_email() {
+    // Show compose view and hide other views
+    document.querySelector('#emails-view').style.display = 'none';
+    document.querySelector('#emails-list').style.display = 'none';
+    document.querySelector('#oneEmail').style.display = 'none';
+    document.querySelector('#compose-view').style.display = 'block';
+};
