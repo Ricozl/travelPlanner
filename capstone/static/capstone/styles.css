@@ -140,6 +140,14 @@ img {
 h4 {
   color: red;
 }
+.row {
+  display: flex;
+}
+/* create three equal columns that sit next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 
 #hello {
   text-align: center;
