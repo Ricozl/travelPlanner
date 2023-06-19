@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     // toggle between buttons
     document.querySelector('#destinations').addEventListener('click', pick_place);
-    document.querySelector('#food').addEventListener('click', compose_email);
+    //document.querySelector('#food').addEventListener('click', compose_email);
 });
 
 function compose_email() {
