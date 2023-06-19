@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     document.querySelector('#newPage').style.display = 'none';
 
     // toggle between buttons
-    document.querySelector('#destinations').addEventListener('click, pick_place);
+    document.querySelector('#destinations').addEventListener('click', pick_place);
     document.querySelector('#food').addEventListener('click', compose_email);
 });
 
