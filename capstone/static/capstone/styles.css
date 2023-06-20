@@ -189,7 +189,7 @@ h4 {
   position: relative;
   opacity: 0.33;
   background-attachment: fixed;
-  background-position: center;
+  background-position: left,top;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
