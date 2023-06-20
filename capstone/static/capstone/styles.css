@@ -192,7 +192,7 @@ h4 {
 
   opacity: 0.33;
   background-attachment: fixed;
-  background-position: left,top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
