@@ -152,6 +152,7 @@ h4 {
 #hello {
   text-align: center;
   font-size: 36px;
+  color: black;
 }
 
 #app {
@@ -162,7 +163,7 @@ h4 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100%;
+  height: 100%;
   text-align: center;
 }
 
