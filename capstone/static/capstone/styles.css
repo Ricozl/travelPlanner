@@ -122,10 +122,6 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
-.app {
-  background-image: url("rome-area-map1.jpg");
-  min-height: 400px;
-}
 
 /* turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
