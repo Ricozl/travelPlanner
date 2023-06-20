@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from .models import User
-import React, { component } from 'react'
+#import React, { component } from 'react'
 
 
 def index(request):
