@@ -155,7 +155,7 @@ h4 {
   color: black;
 }
 
-#map {
+#app {
   background-image: url("rome-area-map1.jpg");
   position: relative;
   opacity: 0.33;
