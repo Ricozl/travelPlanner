@@ -133,10 +133,15 @@
         <img src="static/capstone/rome-area-map1.jpg" style="width:100%; height:400px;">
     </div>
     <script type="text/babel">
-        function App() {
+        import reactPage from './rome-area-map1.jpg'
+        //function App() {
+        export default function App() {
             return (
-                <div id="hello">
-                    Hello, Travellers!
+                <div>
+                    <div style={{ backgroundImage: reactPage}}>Overlay text</div>
+                    <div id="hello">
+                        Hello, Travellers!
+                    </div>
                 </div>
             );
         }
