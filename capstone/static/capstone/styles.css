@@ -122,7 +122,7 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
-
+/*
 path {
   stroke: white;
   fill: paleturquoise !important;
@@ -151,6 +151,7 @@ path:hover {
   transition: opacity .4s ease;
   z-index: 1;
 }
+*/
 /* turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .img1, .img2, .img3 {
@@ -183,7 +184,7 @@ h4 {
   color: black;
 }
 
-.notromeMap {
+.romeMap {
   background-image: url("rome-area-map1.jpg");
   position: relative;
   opacity: 0.33;
