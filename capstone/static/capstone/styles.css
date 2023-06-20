@@ -132,6 +132,7 @@ path:hover {
   fill: orange !important;
 }
 #r-Map {
+  background-image: url("rome-area-map1.jpg");
   display: block;
   position: absolute;
   top: 0;
@@ -145,7 +146,6 @@ path:hover {
   font-size: 24px;
   position: fixed;
   color: white;
-  background-image: url("rome-area-map1.jpg");
   width: fit-content;
   transform: translateX(-50%);
   transition: opacity .4s ease;
