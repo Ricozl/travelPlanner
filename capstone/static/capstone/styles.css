@@ -183,18 +183,15 @@ h4 {
   font-size: 36px;
   color: black;
 }
-#romePlaces {
-  column-count: 2;
-  column-gap: 2px;
-}
+
 #romeMap {
   background-image: url("rome-area-map1.jpg");
 
   opacity: 0.33;
   background-attachment: fixed;
-  background-position: center;
+  background-position: left,top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 800px 300px;
   min-height: 100%;
   width: 100%;
 }
