@@ -159,6 +159,8 @@ h4 {
 }
 
 #app {
+  background-image: url("rome-area-map1.jpg");
+  min-height: 400px;
   background: rgba(0, 128, 0, 0.3);
   text-align: center;
 }
