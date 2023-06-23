@@ -11,7 +11,7 @@ from .models import User
 def index(request):
     return render(request, "capstone/index.html")
 
-def placeMap(request):
+def places(request):
     return render(request, "capstone/places.html")
 
 
