@@ -14,8 +14,8 @@
             </div>-->
             <div class="tab" id="navbar">
                 <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>
-                <!--<button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>-->
-                <a class="nav-link" href="{% url 'places' %}">Active Listings</a>
+                <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
+
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
                 <button class="tablinks" onclick="openCity(event, 'Contact')">Contact Us</button>
                 <button class="tablinks" onclick="openCity(event, 'About')">About</button>
@@ -24,7 +24,7 @@
             <div id="Home"></div>
             <div id="Destinations" class="tabcontent">
                 <h3>Where To Go</h3>
-                <p>There are many wonderful places to go. Why not try the <button id="destinations">Trevi Fountain?</button></p>
+                <p>There are many wonderful places to go. Why not try the <a href="{% url 'places' %}">Where To Go</a></p>
             </div>
             <div id="Food" class="tabcontent">
                 <h3>Places to Eat</h3>
