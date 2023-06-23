@@ -204,6 +204,9 @@ h4 {
   min-height: 100%;
   width: 100%;
 }
+#map {
+  height: 180px;
+}
 #app {
   background-color: green;
   text-align: center;

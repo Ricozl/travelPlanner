@@ -1,0 +1,15 @@
+{% extends "capstone/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="map"></div>
+
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'capstone/index.js' %}"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+{% endblock %}
