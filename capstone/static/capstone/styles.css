@@ -205,7 +205,9 @@ h4 {
   width: 100%;
 }
 #map {
-  height: 180px;
+  height: 800px;
+  width: 500px;
+  margin: 5rem auto;
 }
 #app {
   background-color: green;
