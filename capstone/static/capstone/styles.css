@@ -196,9 +196,14 @@ h4 {
   width: 100%;
 }
 #canvasMap {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("rome-area-map1.jpg");
+  background-image: url("rome-area-map1.jpg");
+  opacity: 0.33;
+  background-attachment: fixed;
   background-size: 800px 500px;
-  background-position: center;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  width: 100%;
 }
 #app {
   background-color: green;
