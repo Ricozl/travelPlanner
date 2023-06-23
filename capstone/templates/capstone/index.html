@@ -134,28 +134,26 @@
         </div>
     </div>
 
-    <div id="romeMap">
-    </div>
+    <!--<div id="romeMap">
+    </div>-->
+    <canvas id="canvasMap" width="500" height="800">
+        <img src="capstone/rome-area-map1.jpg">
+    </canvas>
+    <script type="application/javascript">
+        //function draw() {
+        const canvas = document.getElementById("canvasMap");
+        if (canvas.getContext) {
+            const ctx = canvas.getContext("2d");
 
-    <!--<script>
-        var tooltipSpan = document.getElementById('romeMap');
-        document.addEventListener('mouseover', function(e) {
-            if (e.target.tagname == 'path') {
-                var content = e.target.dataset.name;
-                document.getElementById('romeMap').innerHTML = content;
-                document.getElementById('romeMap').style.opacity = "100%";
+            ctx.fillStyle = "rgb(200, 0, 0)";
+            ctx.fillRect(10, 10, 50, 50);
+
+            ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+            ctx.fillRect(30, 30, 50, 50);
             }
-            else {
-                document.getElementById('romeMap').style.opacity = "0%";
-            }
-        });
-        window.onmousemove = function (e) {
-            var x = e.clientX,
-                y = e.clientY;
-            tooltipSpan.style.top = (y + 20) + 'px';
-            tooltipSpan.style.left = (x) + 'px';
-        };
-    </script>-->
+        //}
+      </script>
+
 
     <div id="app">
     </div>
