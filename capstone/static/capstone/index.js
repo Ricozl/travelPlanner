@@ -25,7 +25,13 @@ function compose_email() {
 
 function pick_place() {
     // show newPage and hide main page
-    document.querySelector('#showImgs').style.display = 'none';
-    document.querySelector('#app').style.display ='none';
-    document.querySelector('#newPage').style.display = 'block';
+    //document.querySelector('#showImgs').style.display = 'none';
+    //document.querySelector('#app').style.display ='none';
+    //document.querySelector('#newPage').style.display = 'block';
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
 }
