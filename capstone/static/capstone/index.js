@@ -28,7 +28,8 @@ function pick_place() {
     //document.querySelector('#showImgs').style.display = 'none';
     //document.querySelector('#app').style.display ='none';
     //document.querySelector('#newPage').style.display = 'block';
-    const mymap = L.map('map').setView([51.505, -0.09], 13);
+    //const mymap = L.map('map').setView([51.505, -0.09], 13);
+    const mymap = L.map('map').setView([41.893, 12.493], 13)
 
     //L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
