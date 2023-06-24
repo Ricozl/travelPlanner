@@ -8,11 +8,12 @@ from .models import User
 #import React, { component } from 'react'
 
 
+
 def index(request):
     return render(request, "capstone/index.html")
 
 def places(request):
-    return render(request, "capstone/places.html")
+    return render(request, "capstone/mapPlaces.html")
 
 
 def login_view(request):
