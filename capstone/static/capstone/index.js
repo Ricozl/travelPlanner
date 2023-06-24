@@ -1,4 +1,3 @@
-const apikey = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsajk1bmtuajB6bWQzbW81dXQxc2V3ZmsifQ.pHR1ndWInokMfvttpqGnag';
 
 
 document.addEventListener('DOMContentLoaded', function (event) {
