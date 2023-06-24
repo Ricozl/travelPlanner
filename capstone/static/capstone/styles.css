@@ -204,6 +204,9 @@ h4 {
   min-height: 100%;
   width: 100%;
 }
+#backmap {
+  background-color: blue;
+}
 #map {
   height: 500px;
   width: 500px;
