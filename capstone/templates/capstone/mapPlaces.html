@@ -217,22 +217,6 @@
     });
 </script>
 
-</body>
-</html>
-
-	
-    // Add a layer showing the places.
-    map.addLayer({
-        'id': 'places',
-        'type': 'symbol',
-        'source': 'places',
-        'layout': {
-        'icon-image': ['get', 'icon'],
-        'icon-allow-overlap': true
-        }
-    });
-
-
 
     // Add markers to the map.
     //for (const marker of geojson.features) {
@@ -252,10 +236,10 @@
         //});
 
         // Add markers to the map.
-        new mapboxgl.Marker(el)
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
-    }
-</script>
+        //new mapboxgl.Marker(el)
+            //.setLngLat(marker.geometry.coordinates)
+            //.addTo(map);
+    //}
+//</script>
 
 {% endblock %}
