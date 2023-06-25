@@ -87,6 +87,16 @@
             }
         })
     });
+    // Add a layer showing the places.
+    map.addLayer({
+        'id': 'places',
+        'type': 'symbol',
+        'source': 'places',
+        'layout': {
+        'icon-image': ['get', 'icon'],
+        'icon-allow-overlap': true
+        }
+    });
 
     const map = new mapboxgl.Map({
         container: 'map',
