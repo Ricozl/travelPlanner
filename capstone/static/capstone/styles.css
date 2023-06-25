@@ -207,14 +207,12 @@ h4 {
 #backmap {
   background-color: #e6ffff;
 }
-#mapold {
+#map {
   height: 500px;
   width: 500px;
   margin: 5rem auto;
 }
-#map {
-  position: absolute; top: 0; bottom: 0; width: 100%;
-}
+
 #app {
   background-color: green;
   text-align: center;
