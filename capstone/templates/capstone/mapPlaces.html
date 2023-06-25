@@ -220,53 +220,7 @@
 </body>
 </html>
 
-	//mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsajk1bmtuajB6bWQzbW81dXQxc2V3ZmsifQ.pHR1ndWInokMfvttpqGnag';
-    map.on('load', () => {
-        map.addSource('places', {
-    // This GeoJSON contains features that include an "icon"
-    // property. The value of the "icon" property corresponds
-    // to an image in the Mapbox Streets style's sprite.
-            'type': 'geojson',
-            'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                {
-                    'type': 'Feature',
-                    'properties': {
-                        'description': 'Foo',
-                        'iconSize': [60, 60]
-                    },
-                    'geometry': {
-                        'type': 'Point',
-                        'coordinates': [12.48312, 41.90395]
-                    }
-                },
-                {
-                    'type': 'Feature',
-                    'properties': {
-                        'message': 'Bar',
-                        'iconSize': [50, 50]
-                    },
-                    'geometry': {
-                        'type': 'Point',
-                        'coordinates': [12.47654, 41.89990]
-                    }
-                },
-                {
-                    'type': 'Feature',
-                    'properties': {
-                        'message': 'Baz',
-                        'iconSize': [40, 40]
-                    },
-                    'geometry': {
-                        'type': 'Point',
-                        'coordinates': [12.48495, 41.89420]
-                    }
-                }
-                ]
-            }
-        })
-    });
+	
     // Add a layer showing the places.
     map.addLayer({
         'id': 'places',
