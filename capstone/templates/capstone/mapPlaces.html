@@ -47,9 +47,9 @@
         const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
 
         // add a marker
-        new mapboxgl.Marker {
+        new mapboxgl.Marker ({
             scale: 1
-        }
+        })
             .setLngLat(lngLat)
             .setPopup(popup)
             .addTo(map);
