@@ -80,7 +80,7 @@
     ]
 
     sites.forEach(({ name, lngLat, text }) => {
-        const popup = new mapboxgl.Popup({ offset: 25}).setText(name, text);
+        const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
 
         // add a marker
         new mapboxgl.Marker ({
@@ -88,6 +88,7 @@
             scale: 1
         })
             .setLngLat(lngLat)
+            .setText(text)
             .setPopup(popup)
             .addTo(map);
     })
