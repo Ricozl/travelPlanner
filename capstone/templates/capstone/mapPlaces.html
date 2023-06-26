@@ -46,10 +46,6 @@
     sites.forEach(({ name, lnglat }) => {
         const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
 
-        // Create a default Marker, colored black, rotated 45 degrees.
-        const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
-            .setLngLat([12.65147, 55.608166])
-            .addTo(map);
         // add a marker
         new mapboxgl.Marker ({
             color: 'steelblue',
