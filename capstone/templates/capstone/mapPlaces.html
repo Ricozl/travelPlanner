@@ -40,8 +40,20 @@
             name: 'Colosseum',
             lngLat: [12.49723, 41.89281]
         },
-        
+
     ]
+
+    sites.forEach(({ name, lnglat }) => {
+        const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
+
+        // add a marker
+        new mapboxgl.Marker {
+            scale: 1
+        }
+            .setLngLat(lngLat)
+            .setPopup(popup)
+            .addTo(map);
+    })
 
     // Create a new marker.
     //const marker = new mapboxgl.Marker({
