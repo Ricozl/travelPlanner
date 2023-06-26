@@ -39,47 +39,47 @@
         {
             name: 'Colosseum',
             lngLat: [12.49723, 41.89281],
-            text: 'The Colosseum'
+            description: 'The Colosseum'
         },
         {
             name: 'Trevi Fountain',
             lngLat: [12.48312, 41.90395],
-            text: 'Nice Fountain'
+            description: 'Nice Fountain'
         },
         {
             name: 'Pantheon',
             lngLat: [12.47654, 41.89990],
-            text: 'The Pantheon'
+            description: 'The Pantheon'
         },
         {
             name: 'The Roman Forum',
             lngLat: [12.48495, 41.89420],
-            text: 'Hangout'
+            description: 'Hangout'
         },
         {
             name: 'Spanish Steps',
             lngLat: [12.48198, 41.90604],
-            text: 'Place to sit'
+            description: 'Place to sit'
         },
         {
             name: 'Monument to Victor Emmanuele II',
             lngLat: [12.48315, 41.89442],
-            text: 'The wedding cake'
+            description: 'The wedding cake'
         },
         {
             name: 'Largo di Torre Argentina',
             lngLat: [12.47676, 41.89550],
-            text: 'The largo di Torre Argentina'
+            description: 'The largo di Torre Argentina'
         },
         {
             name: 'Basilica di San Clemente',
             lngLat: [12.50078, 41.89015],
-            text: 'The Basilica of San Clemente'
+            description: 'The Basilica of San Clemente'
         }
 
     ]
 
-    sites.forEach(({ name, lngLat }) => {
+    sites.forEach(({ name, lngLat, description }) => {
         const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
 
         // add a marker
@@ -88,6 +88,7 @@
             scale: 1
         })
             .setLngLat(lngLat)
+            .setHTML(description)
             .setPopup(popup)
             .addTo(map);
     })
