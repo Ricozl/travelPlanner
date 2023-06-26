@@ -118,8 +118,13 @@
     //});
 
     map.on('load', () => {
-
-        map.addSource('places', {
+        // Add an image to use as a custom marker
+        map.loadImage(
+            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            (error, image) => {
+                if (error) throw error;
+                map.addImage('custom-marker', image);
+            map.addSource('places', {
             // This GeoJSON contains features that include an "icon"
             // property. The value of the "icon" property corresponds
             // to an image in the Mapbox Streets style's sprite.
