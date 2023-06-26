@@ -253,7 +253,8 @@
             'type': 'symbol',
             'source': 'places',
             'layout': {
-                'icon-image': 'custom-marker',
+                'icon-image': ['get', 'https://api.mapbox.com/styles/v1/{username}/{style_id}/{sprite_id}/sprite{@2x}.{format}'],
+                //'icon-image': 'custom-marker',
                 //'icon-image': ['get', 'icon'],
                 'icon-allow-overlap': true
             }
