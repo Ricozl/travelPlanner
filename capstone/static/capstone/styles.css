@@ -122,6 +122,14 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
+section {
+  position: relative;
+}
+
+.jump-marker {
+  position: absolute;
+  margin: -120px 0 0;
+}
 /*
 path {
   stroke: white;
