@@ -313,14 +313,7 @@
 </script>
 
 <div id="jumpto">This is where I jump to</div>
-<script>
-    $('a[href*="#"]').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top - 50
-    }, 500);
-    return false;
-});
-</script>
+
 
     <!--// Add markers to the map.
     //for (const marker of geojson.features) {
