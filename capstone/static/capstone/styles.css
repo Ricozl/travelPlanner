@@ -225,7 +225,7 @@ h4 {
   flex-grow: 1;
 }
 #sidebar {
-  width: 300px;
+  width: 500px;
   flex-shrink: 0;
   height: 100%;
 }
