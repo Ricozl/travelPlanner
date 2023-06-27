@@ -226,7 +226,7 @@ h4 {
 }
 #sidebar {
   width: 500px;
-  flex-shrink: 5;
+  flex-shrink: 0;
   height: 100%;
 }
 
