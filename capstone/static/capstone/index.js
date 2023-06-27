@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     document.querySelector('#newPage').style.display = 'none';
 
     // toggle between buttons
-    document.querySelector('section-content').style.display = 'none';
-    
+    //document.querySelector('section-content').style.display = 'none';
+    document.querySelector('#jumpto').addEventListener('click', choose-site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
 });
@@ -23,6 +23,11 @@ function compose_email() {
     //document.querySelector('#oneEmail').style.display = 'none';
     //document.querySelector('#compose-view').style.display = 'block';
 };
+
+function choose-site() {
+    document.querySelector('#map').style.display = 'none';
+    document.querySelector('#jumpto').style.display = 'block';
+}
 
 function pick_place() {
     console.log('Got to pick_place')
