@@ -122,7 +122,7 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
-section {
+.section-content {
   position: relative;
 }
 
