@@ -23,6 +23,7 @@ function compose_email() {
 };
 
 function pick_place() {
+    console.log('Got to pick_place')
     // show newPage and hide main page
     //document.querySelector('#showImgs').style.display = 'none';
     //document.querySelector('#app').style.display ='none';
