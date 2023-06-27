@@ -215,6 +215,8 @@ h4 {
 }
 #backmap {
   background-color: #e6ffff;
+  display: flex;
+  height: 500px;
 }
 #map {
   height: 500px;
