@@ -39,63 +39,6 @@
         zoom: 12 // starting zoom
     });
 
-    //const sites = [
-        //{
-            //name: 'Colosseum',
-            //lngLat: [12.49723, 41.89281],
-            //description: '<h1>The Colosseum</h1>'
-        //},
-        //{
-            //name: 'Trevi Fountain',
-            //lngLat: [12.48312, 41.90395],
-            //description: 'Nice Fountain'
-        //},
-        //{
-            //name: 'Pantheon',
-            //lngLat: [12.47654, 41.89990],
-            //description: 'The Pantheon'
-        //},
-        //{
-            //name: 'The Roman Forum',
-            //lngLat: [12.48495, 41.89420],
-            //description: 'Hangout'
-        //},
-        //{
-            //name: 'Spanish Steps',
-            //lngLat: [12.48198, 41.90604],
-            //description: 'Place to sit'
-        //},
-        //{
-            //name: 'Monument to Victor Emmanuele II',
-            //lngLat: [12.48315, 41.89442],
-            //description: 'The wedding cake'
-        //},
-        //{
-            //name: 'Largo di Torre Argentina',
-            //lngLat: [12.47676, 41.89550],
-            //description: 'The largo di Torre Argentina'
-        //},
-        //{
-            //name: 'Basilica di San Clemente',
-            //lngLat: [12.50078, 41.89015],
-            //description: 'The Basilica of San Clemente'
-        //}
-
-    //]
-
-    //sites.forEach(({ name, lngLat }) => {
-        //const popup = new mapboxgl.Popup({ offset: 25}).setText(name);
-
-        // add a marker
-        //new mapboxgl.Marker ({
-            //color: 'steelblue',
-            //scale: 1
-        //})
-            //.setLngLat(lngLat)
-            //.setPopup(popup)
-            //.addTo(map);
-    //})
-
     //const popup = new mapboxgl.Popup({ closeOnClick: false })
         //.setLngLat([-96, 37.8])
         //.setHTML('<h1>Hello World!</h1>')
@@ -144,7 +87,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.48312, 41.90395]
+                            'coordinates': [12.483239912221268, 41.90110677437803]
                         }
                     },
                     {
@@ -157,7 +100,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.47654, 41.89990]
+                            'coordinates': [12.476883623407923, 41.89882638667701]
                         }
                     },
                     {
@@ -170,7 +113,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.48495, 41.89420]
+                            'coordinates': [12.485280192982373, 41.892672638458635]
                         }
                     },
                     {
@@ -182,7 +125,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.48198, 41.90604]
+                            'coordinates': [12.482314462326206, 41.905896737858676]
                         }
                     },
                     {
@@ -194,7 +137,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.48315, 41.89442]
+                            'coordinates': [12.483073717584107, 41.89477827501808]
                         }
                     },
                     {
@@ -206,7 +149,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.47676, 41.89550]
+                            'coordinates': [12.477236699594691, 41.895631691872616]
                         }
                     },
                     {
@@ -218,7 +161,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.50078, 41.89015]
+                            'coordinates': [12.497543508066062, 41.88954233109117]
                         }
                     },
                     {
@@ -230,7 +173,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.47237, 41.89270]
+                            'coordinates': [12.46965961423719, 41.8894937098454]
                         }
                     },
                     {
@@ -242,7 +185,19 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [12.46620, 41.90317]
+                            'coordinates': [12.466340367584765, 41.90328675682885]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Colosseum</strong><p><a href="http://www.truckeroodc.com/www/" target="_blank">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>',
+                            'iconSize': [30, 30]
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.492230894572035, 41.89042581503916]
                         }
                     }
                 ]
@@ -316,6 +271,7 @@
     });
     document.querySelector('#jumpto').addEventListener('click', () => {
         console.log('got to event listener for jumpto')
+        console.log(e)
     })
 </script>
 
