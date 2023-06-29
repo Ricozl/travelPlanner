@@ -10,7 +10,6 @@ class Sites(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=512)
     image_url = models.URLField(max_length=1024, blank=True)
-    sites_neighborhood = models.ForeignKey(Neighborhoods, on_delete=models.CASCADE, related_name="sites_hood")
 
     class Meta:
         ordering = ['title']
