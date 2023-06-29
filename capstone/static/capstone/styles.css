@@ -131,36 +131,25 @@ h3 {
   margin: -120px 0 0;
 }
 
-/*
-path {
-  stroke: white;
-  fill: paleturquoise !important;
-  transition: fill .4s ease;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
-path:hover {
-  fill: orange !important;
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
 }
-#r-Map {
-  background-image: url("rome-area-map1.jpg");
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  height: 100%;
 }
-#romeMap {
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 24px;
-  position: fixed;
-  color: white;
-  width: fit-content;
-  transform: translateX(-50%);
-  transition: opacity .4s ease;
-  z-index: 1;
-}
-*/
+
 /* turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .img1, .img2, .img3 {
@@ -177,14 +166,6 @@ img {
 
 h4 {
   color: red;
-}
-.row {
-  display: flex;
-}
-/* create three equal columns that sit next to each other */
-.column {
-  flex: 33.33%;
-  padding: 5px;
 }
 
 #hello {
