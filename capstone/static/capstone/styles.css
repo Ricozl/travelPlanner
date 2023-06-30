@@ -46,8 +46,8 @@ body, html {
   color: green;
 }
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #99e699;
+  color: black;
 }
 .topnav .icon {
   display: none;
