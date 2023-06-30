@@ -29,7 +29,7 @@ body, html {
 /* The navbar */
 .topnav {
   overflow: hidden;
-  background-color: light grey;
+  background-color: #e6e6e6;
 }
 /* Navbar links */
 .topnav a {
