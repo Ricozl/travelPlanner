@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     // toggle between buttons
     //document.querySelector('section-content').style.display = 'none';
-    //document.querySelector('#jumpto').addEventListener('click', choose-site);
+    //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
 });
@@ -24,7 +24,7 @@ function compose_email() {
     //document.querySelector('#compose-view').style.display = 'block';
 };
 
-function choose-site() {
+function choose_site() {
     document.querySelector('#map').style.display = 'none';
     document.querySelector('#jumpto').style.display = 'block';
 }
