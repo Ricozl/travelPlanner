@@ -34,7 +34,16 @@
     <h2>Responsive Topnav Example</h2>
     <p>Resize the browser window to see how it works.</p>
   </div>
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 <div id="backmap">
     <div id="map"></div>
     <div class="section-content">
