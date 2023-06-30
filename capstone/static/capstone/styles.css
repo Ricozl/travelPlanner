@@ -232,7 +232,7 @@ h4 {
   font-size: 36px;
   color: black;
 }
-
+/*
 #romeMap {
   background-image: url("rome-area-map1.jpg");
 
@@ -252,7 +252,8 @@ h4 {
   background-repeat: no-repeat;
   min-height: 100%;
   width: 100%;
-}
+} */
+
 #backmap {
   background-color: #e6ffff;
   display: flex;
