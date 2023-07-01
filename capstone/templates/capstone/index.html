@@ -9,9 +9,10 @@
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
 
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
-                <button class="tablinks" onclick="openCity(event, 'Contact')">Contact Us</button>
                 <button class="tablinks" onclick="openCity(event, 'SignIn')">Sign In</button>
+                {% if user.is_authenticated %}
                 <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
+                <button class="tablinks" onclick="openCity(event, 'SignOut')">Sign Out</button>
             </div>
 
             <div id="Home"></div>
