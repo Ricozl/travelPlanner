@@ -13,11 +13,12 @@ class Categories(models.Model):
 
     def __str__(self):
         return self.cat_name
-    
+
 class Sites(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=512)
     image_url = models.URLField(max_length=1024, blank=True)
+    site_category = models.ForeignKey(Categories, on_delete=models.CASCADE, related_name="site_cat")
 
     class Meta:
         ordering = ['title']
