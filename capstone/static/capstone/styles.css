@@ -223,11 +223,8 @@ img {
 }
 */
 form {
-  background-color: green;
   margin: 20px;
-}
-.form-control {
-  background-color: #e6ffff;
+  background-color: aqua;
   width: 50%;
 }
 
