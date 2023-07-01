@@ -1,7 +1,7 @@
 {% extends "capstone/layout.html" %}
 
 {% block body %}
-
+<div id="form-page">
     <h2>Register</h2>
 
     {% if message %}
@@ -26,5 +26,5 @@
     </form>
 
     <p>Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
-
+</div>
 {% endblock %}
