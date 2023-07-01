@@ -11,9 +11,9 @@
 
                 {% if user.is_authenticated %}
                 <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
-                <button class="tablinks" onclick="openCity(event, 'SignOut')">Sign Out</button>
+                <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
                 {% else %}
-                <button class="tablinks" onclick="openCity(event, 'SignIn')">Sign In</button>
+                <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
                 <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
                 {% endif %}
             </div>
@@ -33,14 +33,14 @@
                 <h3>Favorites</h3>
                 <p>Save your favorites to help plan your trip.</p>
             </div>
-            <div id="SignOut" class="tabcontent">
-                <h3>Sign Out</h3>
-                <p><a href="{% url 'logout' %}">Please Sign Out here.</a></p>
+            <div id="Logout" class="tabcontent">
+                <h3>Logout</h3>
+                <p><a href="{% url 'logout' %}">Please Logout here.</a></p>
             </div>
             {% else %}
-            <div id="SignIn" class="tabcontent">
-                <h3>Sign In</h3>
-                <p><a href="{% url 'login' %}">Please Sign In here.</a></p>
+            <div id="Login" class="tabcontent">
+                <h3>Login</h3>
+                <p><a href="{% url 'login' %}">Please Login here.</a></p>
             </div>
             <div id="Register" class="tabcontent">
                 <h3>Register</h3>
