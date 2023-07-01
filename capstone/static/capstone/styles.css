@@ -222,6 +222,11 @@ img {
   height: auto;
 }
 */
+
+#form-page {
+  background-color: aqua;
+}
+
 form {
   margin: 20px;
   width: 75%;
