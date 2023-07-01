@@ -180,7 +180,7 @@ h3 {
   padding: 0 4px;
 }
 
-/* Create three equal columns that sits next to each other */
+/* Create three equal columns that sit next to each other */
 .column {
   flex: 33%;
   max-width: 33%;
