@@ -222,7 +222,7 @@ img {
   height: auto;
 }
 */
-.form-group {
+form {
   background-color: green;
   margin: 20px;
 }
