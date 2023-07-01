@@ -2,10 +2,10 @@
 
 {% block body %}
 <div id="form-page">
-    <h2 style="margin:20px;">Login</h2>
+    <h2>Login</h2>
 
     {% if message %}
-        <div style="margin:20px;">{{ message }}</div>
+        <div>{{ message }}</div>
     {% endif %}
 
     <form action="{% url 'login' %}" method="post">
@@ -19,6 +19,6 @@
         <input class="btn btn-primary" type="submit" value="Login">
     </form>
 
-    <p style="margin:20px;">Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
 </div>
 {% endblock %}
