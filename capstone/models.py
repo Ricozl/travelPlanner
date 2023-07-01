@@ -18,7 +18,7 @@ class Sites(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=512)
     image_url = models.URLField(max_length=1024, blank=True)
-    site_category = models.ForeignKey(Categories, on_delete=models.CASCADE, related_name="site_cat")
+    sites_category = models.ForeignKey(Categories, on_delete=models.CASCADE, related_name="sites_cat")
 
     class Meta:
         ordering = ['title']
