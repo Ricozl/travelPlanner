@@ -25,3 +25,14 @@ class Sites(models.Model):
 
     def __str__(self):
         return "Sites title: {}, Sites Category: {}, Description: {}, Image URL: {}".format(self.title, self.sites_category.cat_name, self.description, self.image_url)
+
+class Favorites(models.Model):
+    item = models.ForeignKey(Sites, on_delete=models.CASCADE, related_name='fav_list')
+    watcher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='fav_user')
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['watcher', 'item']
+
+    def __str__(self):
+        return "Watcher: {}, Sites: {}, Is_active: {}".format(self.watcher, self.item.title, self.is_active)
