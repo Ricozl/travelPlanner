@@ -222,7 +222,10 @@ img {
   height: auto;
 }
 */
-
+.form-group {
+  background-color: green;
+  margin: 20px;
+}
 .form-control {
   background-color: #e6ffff;
   width: 50%;
