@@ -7,12 +7,14 @@
             <div class="tab" id="navbar">
                 <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
-
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
-                <button class="tablinks" onclick="openCity(event, 'SignIn')">Sign In</button>
+
                 {% if user.is_authenticated %}
                 <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
                 <button class="tablinks" onclick="openCity(event, 'SignOut')">Sign Out</button>
+                {% else %}
+                <button class="tablinks" onclick="openCity(event, 'SignIn')">Sign In</button>
+                <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
                 {% endif %}
             </div>
 
