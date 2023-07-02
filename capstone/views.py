@@ -22,9 +22,9 @@ def sites(request, site):
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
-        # get all posts by all posters
 
-    #try:
+
+   #need to get int for site from categories first, then use it to look up in Sites
     sitenm = Sites.objects.filter(sites_category = site)
     print(sitenm)
         #sites = Sites.objects.all()
