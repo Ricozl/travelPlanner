@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
-    document.querySelector('#ancient-rome').addEventListener('click', choose_site);
+    document.querySelector('#ancient-rome').addEventListener('click', choose_site('ancient-rome'));
 });
 
 function compose_email() {
