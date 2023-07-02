@@ -29,9 +29,29 @@ function compose_email() {
 function choose_site() {
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#sites').style.display = 'block';
-       
 
 
+    function load_mailbox(mailbox) {
+        // Show the mailbox and hide other views
+        document.querySelector('#emails-view').style.display = 'block';
+        document.querySelector('#compose-view').style.display = 'none';
+        document.querySelector('#emails-list').style.display = 'block';
+        document.querySelector('#oneEmail').style.display = 'none';
+
+        // Show the mailbox name
+        document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+
+        // get emails
+        document.querySelector('#emails-list').innerHTML = "";
+        email_id = 0;
+
+        fetch(`/emails/${mailbox}`)
+            .then(response => response.json())
+            .then(emails => {
+              if (emails.error) {
+                  console.log(emails.error)
+                  document.querySelector('#emails-view').innerHTML = "Error: " + emails.error;
+              }
 
 function pick_place() {
     console.log('Got to pick_place')
