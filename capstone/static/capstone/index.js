@@ -26,8 +26,8 @@ function compose_email() {
 };
 
 function choose_site() {
-    document.querySelector('#map').style.display = 'none';
-    document.querySelector('#jumpto').style.display = 'block';
+    document.querySelector('#showImgs').style.display = 'none';
+    document.querySelector('#sites').style.display = 'block';
 }
 
 function pick_place() {
