@@ -23,7 +23,7 @@ def sites(request, site):
         # get all posts by all posters
 
     try:
-        sitenm = Sites.objects.filter(sites_category = )
+        sitenm = Sites.objects.filter(sites_category = site)
         sites = Sites.objects.all()
     elif profile == "following":
         # determine who user is following and get their posts to display
