@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     //document.querySelector("#message").innerHTML = "Got to index.js"
     document.querySelector('#newPage').style.display = 'none';
+    document.querySelector('#sites').style.display = 'none';
 
     // toggle between buttons
     //document.querySelector('section-content').style.display = 'none';
@@ -28,6 +29,7 @@ function compose_email() {
 function choose_site() {
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#sites').style.display = 'block';
+    
 }
 
 function pick_place() {
