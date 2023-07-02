@@ -15,6 +15,9 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
+def sites(request):
+    return render(request, "capstone/index.html")
+
 
 def login_view(request):
     if request.method == "POST":
