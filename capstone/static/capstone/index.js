@@ -43,9 +43,9 @@ function load_page(profile) {
     let current_page = 1;
     let rows_per_page = 10;
     // get posts
-    fetch(`/posts/${profile}`)
+    fetch(`/sites/${profile}`)
         .then(response => response.json())
-        .then(posts => {
+        .then(sites => {
             if (posts === undefined || posts.length == 0) {
                 document.querySelector('#message').innerHTML = "No Posts Found";
             }
