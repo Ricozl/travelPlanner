@@ -59,7 +59,7 @@ function load_site(site) {
                     // show emails as read or unread
 
                     // build each email
-                    element.innerHTML = `<p style="display:inline-block; width:20%;">${site.title}</p><p style="width:50%;">${site.description}</p>`;
+                    element.innerHTML = `<p style="display:inline-block; width:20%;">${site.title}</p><p style="width:50%;">${site.description}</p><p>${site.category}`;
 
                     // add event listener for clicking on a site
                     element.addEventListener('click', function(e) {
