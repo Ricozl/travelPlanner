@@ -35,4 +35,4 @@ class Favorites(models.Model):
         ordering = ['watcher', 'item']
 
     def __str__(self):
-        return "Watcher: {}, Site: {}, Is_active: {}".format(self.watcher, self.item.title, self.is_active)
+        return "Watcher: {}, Site: {}, Is_active: {}".format(self.watcher.username, self.item.title, self.is_active)
