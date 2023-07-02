@@ -16,29 +16,31 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request, site):
+    sitenm = ""
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
         # get all posts by all posters
 
-    try:
-        sitenm = Sites.objects.filter(sites_category = site)
+    #try:
+    sitenm = Sites.objects.filter(sites_category = site)
+    if !sitenm:
         #sites = Sites.objects.all()
     #elif profile == "following":
         # determine who user is following and get their posts to display
         #reqUsernm = request.user.username
         #try:
             #usernm = User.objects.get(username__exact=reqUsernm)
-    except sites_category.DoesNotExist:
+    #except si.DoesNotExist:
             #return JsonResponse({"Error": "User not found"})
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
         #posts = Posto.objects.filter(poster__id__in=followedNms)
     #else:
         # get posts posted by chosen username
-        try:
-            sitenm = Sites.objects.filter(title = site)
+        #try:
+        sitepl = Sites.objects.filter(title = site)
             #list = User.objects.get(username__exact=profile)
         except title.DoesNotExist:
             return JsonResponse({"Error": "site not found"})
