@@ -29,7 +29,11 @@ function compose_email() {
 function choose_site() {
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#sites').style.display = 'block';
-    
+       // Use navigation button to load 'all posts'
+       document.querySelector('#all_posts').addEventListener('click', function(event) {
+        event.preventDefault();
+        load_page('all_posts')
+    });
 }
 
 function pick_place() {
