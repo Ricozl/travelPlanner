@@ -39,7 +39,7 @@ function load_site(site) {
     //document.querySelector('#oneEmail').style.display = 'none';
 
     // Show the site name
-    document.querySelector('#siteName').innerHTML = `<h3>${site.charAt(0).toUpperCase() + site.slice(1)}</h3>`;
+    document.querySelector('#siteName').innerHTML = `<h3>${site.title}</h3>`;
 
     // get emails
     //document.querySelector('#emails-list').innerHTML = "";
