@@ -52,6 +52,27 @@ function load_site(site) {
                 console.log(emails.error)
                 document.querySelector('#emails-view').innerHTML = "Error: " + emails.error;
             }
+            else {
+                emails.forEach(email => {
+                    // create separate div for each email
+                    const element = document.createElement('div');
+                    // show emails as read or unread
+                    if (email.read === true) {
+                        element.style.backgroundColor = "lightgray"
+                    }
+                    else {
+                        element.style.backgroundColor = "white";
+                    }
+                    // build each email
+                    element.innerHTML = `<p style="display:inline-block; width:20%;">${email.sender}</p><p style="width:50%;">${email.subject}</p><p>${email.timestamp}</p>`;
+
+                    // add event listener for clicking on an email
+                    element.addEventListener('click', function(e) {
+                        document.querySelector('#oneEmail').style.display = 'block';
+                        // show and hide buttons for different mailboxes
+                        if (mailbox === 'inbox') {
+                            document.querySelector('#email-buttons').style.display = 'block';
+                            document.querySelector('#unarchive').style.display = 'none';
 
 function pick_place() {
     console.log('Got to pick_place')
