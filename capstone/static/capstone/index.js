@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
-    document.querySelector('#ancient-rome').addEventListener('click', choose_site('ancient-rome'));
+    document.querySelector('#ancient-rome').addEventListener('click', load_site('ancient-rome'));
 });
 
 function compose_email() {
@@ -31,12 +31,12 @@ function choose_site() {
     document.querySelector('#sites').style.display = 'block';
 
 
-    function load_mailbox(mailbox) {
-        // Show the mailbox and hide other views
-        document.querySelector('#emails-view').style.display = 'block';
-        document.querySelector('#compose-view').style.display = 'none';
-        document.querySelector('#emails-list').style.display = 'block';
-        document.querySelector('#oneEmail').style.display = 'none';
+    function load_site(site) {
+        // Show the site and hide other views
+        document.querySelector('#showImgs').style.display = 'none';
+        document.querySelector('#sites').style.display = 'block';
+        //document.querySelector('#emails-list').style.display = 'block';
+        //document.querySelector('#oneEmail').style.display = 'none';
 
         // Show the mailbox name
         document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
