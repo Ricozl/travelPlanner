@@ -34,39 +34,34 @@ function choose_site() {
 function load_site(site) {
     // Show the site and hide other views
     document.querySelector('#showImgs').style.display = 'none';
-    document.querySelector('#sites').style.display = 'block';
+    document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
     //document.querySelector('#oneEmail').style.display = 'none';
 
     // Show the site name
-    document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+    document.querySelector('#siteName').innerHTML = `<h3>${site.charAt(0).toUpperCase() + site.slice(1)}</h3>`;
 
     // get emails
-    document.querySelector('#emails-list').innerHTML = "";
-    email_id = 0;
+    //document.querySelector('#emails-list').innerHTML = "";
+    //email_id = 0;
 
     fetch(`/sites/${site}`)
         .then(response => response.json())
-        .then(emails => {
-            if (emails.error) {
-                console.log(emails.error)
-                document.querySelector('#emails-view').innerHTML = "Error: " + emails.error;
+        .then(sites => {
+            if (sites.error) {
+                console.log(sites.error)
+                document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
             }
             else {
-                emails.forEach(email => {
+                sites.forEach(site => {
                     // create separate div for each email
                     const element = document.createElement('div');
                     // show emails as read or unread
-                    if (email.read === true) {
-                        element.style.backgroundColor = "lightgray"
-                    }
-                    else {
-                        element.style.backgroundColor = "white";
-                    }
-                    // build each email
-                    element.innerHTML = `<p style="display:inline-block; width:20%;">${email.sender}</p><p style="width:50%;">${email.subject}</p><p>${email.timestamp}</p>`;
 
-                    // add event listener for clicking on an email
+                    // build each email
+                    element.innerHTML = `<p style="display:inline-block; width:20%;">${site.title}</p><p style="width:50%;">${site.description}</p>`;
+
+                    // add event listener for clicking on a site
                     element.addEventListener('click', function(e) {
                         document.querySelector('#oneEmail').style.display = 'block';
                         // show and hide buttons for different mailboxes
