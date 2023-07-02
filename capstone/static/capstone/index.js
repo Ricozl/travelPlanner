@@ -51,6 +51,8 @@ function load_page(profile) {
             }
             else {
 
+
+                
 function pick_place() {
     console.log('Got to pick_place')
     // show newPage and hide main page
