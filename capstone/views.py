@@ -15,9 +15,28 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
-def sites(request):
-    
-    return render(request, "capstone/index.html")
+def sites(request, site):
+    if site == "ancient-rome":
+        # get all posts by all posters
+        sites = Sites.objects.all()
+    elif profile == "following":
+        # determine who user is following and get their posts to display
+        reqUsernm = request.user.username
+        try:
+            usernm = User.objects.get(username__exact=reqUsernm)
+        except User.DoesNotExist:
+            return JsonResponse({"Error": "User not found"})
+        followedNms = Follow.objects.filter(
+            follower=usernm, is_active=True).values_list('followed')
+        posts = Posto.objects.filter(poster__id__in=followedNms)
+    else:
+        # get posts posted by chosen username
+        try:
+            list = User.objects.get(username__exact=profile)
+        except User.DoesNotExist:
+            return JsonResponse({"Error": "User not found"})
+        posts = Posto.objects.filter(poster__exact=list.id)
+    return JsonResponse([post.serialize() for post in posts], safe=False)
 
 
 def login_view(request):
