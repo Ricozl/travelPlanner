@@ -35,6 +35,21 @@ function choose_site() {
         load_page('all_posts')
     });
 }
+function load_page(profile) {
+    // Show the posts page and hide other views
+    setupPostsPage(profile)
+    document.querySelector('#posts-list').innerHTML = "";
+    document.querySelector('#message').innerHTML = "";
+    let current_page = 1;
+    let rows_per_page = 10;
+    // get posts
+    fetch(`/posts/${profile}`)
+        .then(response => response.json())
+        .then(posts => {
+            if (posts === undefined || posts.length == 0) {
+                document.querySelector('#message').innerHTML = "No Posts Found";
+            }
+            else {
 
 function pick_place() {
     console.log('Got to pick_place')
