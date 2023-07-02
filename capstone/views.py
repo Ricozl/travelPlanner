@@ -16,8 +16,14 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request, site):
-    if site == "ancient-rome":
+    #if site == "ancient-rome":
+# check to see if 'site' is in category list. if so, print out all sites with that category.
+# if not in category list, check to see if it is a 'title' and print that out.
+# make header one or the other.
         # get all posts by all posters
+
+    try:
+        sitenm = Sites.objects.filter()
         sites = Sites.objects.all()
     elif profile == "following":
         # determine who user is following and get their posts to display
