@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import User
+from .models import User, Sites
 #import React, { component } from 'react'
 
 
@@ -24,25 +24,27 @@ def sites(request, site):
 
     try:
         sitenm = Sites.objects.filter(sites_category = site)
-        sites = Sites.objects.all()
-    elif profile == "following":
+        #sites = Sites.objects.all()
+    #elif profile == "following":
         # determine who user is following and get their posts to display
-        reqUsernm = request.user.username
-        try:
-            usernm = User.objects.get(username__exact=reqUsernm)
-        except User.DoesNotExist:
-            return JsonResponse({"Error": "User not found"})
-        followedNms = Follow.objects.filter(
-            follower=usernm, is_active=True).values_list('followed')
-        posts = Posto.objects.filter(poster__id__in=followedNms)
-    else:
+        #reqUsernm = request.user.username
+        #try:
+            #usernm = User.objects.get(username__exact=reqUsernm)
+    except sites_category.DoesNotExist:
+            #return JsonResponse({"Error": "User not found"})
+        #followedNms = Follow.objects.filter(
+            #follower=usernm, is_active=True).values_list('followed')
+        #posts = Posto.objects.filter(poster__id__in=followedNms)
+    #else:
         # get posts posted by chosen username
         try:
-            list = User.objects.get(username__exact=profile)
-        except User.DoesNotExist:
-            return JsonResponse({"Error": "User not found"})
-        posts = Posto.objects.filter(poster__exact=list.id)
-    return JsonResponse([post.serialize() for post in posts], safe=False)
+            sitenm = Sites.objects.filter(title = site)
+            #list = User.objects.get(username__exact=profile)
+        except title.DoesNotExist:
+            return JsonResponse({"Error": "site not found"})
+        #posts = Posto.objects.filter(poster__exact=list.id)
+    #return JsonResponse([post.serialize() for post in posts], safe=False)
+    return JsonResponse([site.serialize() for site in sitess], safe=False)
 
 
 def login_view(request):
