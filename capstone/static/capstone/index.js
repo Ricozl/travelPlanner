@@ -29,30 +29,10 @@ function compose_email() {
 function choose_site() {
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#sites').style.display = 'block';
-       // Use navigation button to load 'all posts'
-       document.querySelector('#all_posts').addEventListener('click', function(event) {
-        event.preventDefault();
-        load_page('all_posts')
-    });
-}
-function load_page(profile) {
-    // Show the posts page and hide other views
-    setupPostsPage(profile)
-    document.querySelector('#posts-list').innerHTML = "";
-    document.querySelector('#message').innerHTML = "";
-    let current_page = 1;
-    let rows_per_page = 10;
-    // get posts
-    fetch(`/sites/${profile}`)
-        .then(response => response.json())
-        .then(sites => {
-            if (posts === undefined || posts.length == 0) {
-                document.querySelector('#message').innerHTML = "No Posts Found";
-            }
-            else {
+       
 
 
-                
+
 function pick_place() {
     console.log('Got to pick_place')
     // show newPage and hide main page
