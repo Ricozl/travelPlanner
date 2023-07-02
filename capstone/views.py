@@ -25,14 +25,14 @@ def sites(request, site):
 
     #try:
     sitenm = Sites.objects.filter(sites_category = site)
-    if !sitenm:
+    print(sitenm)
         #sites = Sites.objects.all()
     #elif profile == "following":
         # determine who user is following and get their posts to display
         #reqUsernm = request.user.username
         #try:
             #usernm = User.objects.get(username__exact=reqUsernm)
-    #except si.DoesNotExist:
+    if site.DoesNotExist:
             #return JsonResponse({"Error": "User not found"})
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
@@ -42,11 +42,11 @@ def sites(request, site):
         #try:
         sitepl = Sites.objects.filter(title = site)
             #list = User.objects.get(username__exact=profile)
-        except title.DoesNotExist:
-            return JsonResponse({"Error": "site not found"})
+        if sitepl is not None:
+        #sponse({"Error": "site not found"})
         #posts = Posto.objects.filter(poster__exact=list.id)
     #return JsonResponse([post.serialize() for post in posts], safe=False)
-    return JsonResponse([site.serialize() for site in sitess], safe=False)
+            return JsonResponse([site.serialize() for site in sites], safe=False)
 
 
 def login_view(request):
