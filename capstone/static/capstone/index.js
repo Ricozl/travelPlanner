@@ -73,6 +73,26 @@ function load_site(site) {
                         if (mailbox === 'inbox') {
                             document.querySelector('#email-buttons').style.display = 'block';
                             document.querySelector('#unarchive').style.display = 'none';
+                        }
+                        else if (mailbox === 'archive') {
+                            document.querySelector('#email-buttons').style.display = 'none';
+                            document.querySelector('#unarchive').style.display = 'block';
+                        }
+                        else if (mailbox === 'sent') {
+                            document.querySelector('#email-buttons').style.display = 'none';
+                            document.querySelector('#unarchive').style.display = 'none';
+                        }
+                        email_id = parseInt(email.id)
+                        readEmail(email_id)
+                    });
+                    document.querySelector('#emails-list').append(element);
+                })
+            }
+          })
+          .catch(error => {
+            console.log('Error:', error);
+          });
+    }
 
 function pick_place() {
     console.log('Got to pick_place')
