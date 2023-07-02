@@ -10,8 +10,9 @@ urlpatterns = [
     path("login", views.login_view, name="login"),
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
-    path("places", views.places, name="places")
-]
+    path("places", views.places, name="places"),
+
 
 # API routes
-
+    path("sites", views.sites, name="sites")
+]
