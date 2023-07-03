@@ -16,10 +16,10 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
-def sites(request):
-    site = request.GET
-    #sitenm = {site}
-    #print(sitenm)
+def sites(request, site):
+
+    sitenm = {site}
+    print(sitenm)
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
