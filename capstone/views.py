@@ -28,6 +28,10 @@ def sites(request, site):
    #need to get int for site from categories first, then use it to look up in Sites
 
     # get all active listings in this category
+    # displays all categories as links
+    return render(request, 'sites/categories_list.html', {
+        'categories': Categories.objects.all()
+    })
     active_list = Sites.objects.filter(
         sites_category__cat_name=site).values()
         #sites_category__cat_name=title, is_active="True").values()
