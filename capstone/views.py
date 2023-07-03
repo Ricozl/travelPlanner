@@ -4,6 +4,7 @@ from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
+from django.core import serializers
 
 from .models import User, Sites, Categories
 #import React, { component } from 'react'
@@ -31,16 +32,17 @@ def sites(request):
    #need to get int for site from categories first, then use it to look up in Sites
 
     # get all active listings in this category
-
-    sites = Sites.objects.filter(
-        sites_category__cat_name=site)
+    sites = serializers.serialize("json", Sites.objects.filter(
+        sites_category__cat_name=site))
         #sites_category__cat_name=title, is_active="True").values()
     #data_json = json.dumps(list(sites))
     #entry_list = list(Entry.objects.all())
     print(sites)
 
-    #return HttpResponse({ "sites": sites})
-    return JsonResponse([site.serialize() for site in sites], safe=False)
+    #data = serializers.serialize("json", SomeModel.objects.all())
+
+    return JsonResponse({ "sites": sites})
+    #return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
     if catno is None:
