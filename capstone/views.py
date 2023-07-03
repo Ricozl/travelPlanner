@@ -29,10 +29,11 @@ def sites(request, site):
 
     # get all active listings in this category
     active_list = Sites.objects.filter(
-        sites_category__cat_name=title, is_active="True").values()
+        sites_category__cat_name=site)
+        #sites_category__cat_name=title, is_active="True").values()
     # display all listings (as links) in this category
     return render(request, "capstone/sites.html", {
-        "title": title, "listings": active_list
+        "site": site, "sites": active_list
     })
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
