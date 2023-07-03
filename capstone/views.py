@@ -39,7 +39,7 @@ def sites(request):
     #entry_list = list(Entry.objects.all())
     print(sites)
 
-    return JsonResponse({ "sites": sites})
+    return HttpResponse({ "sites": sites})
     #return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
