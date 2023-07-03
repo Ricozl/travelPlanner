@@ -29,8 +29,8 @@ def sites(request, site):
 
     # get all active listings in this category
     # displays all categories as links
-    return render(request, 'sites/categories_list.html', {
-        'categories': Categories.objects.all()
+    return render(request, 'sites/index.html', {
+        'sites': Sites.objects.all()
     })
     active_list = Sites.objects.filter(
         sites_category__cat_name=site).values()
