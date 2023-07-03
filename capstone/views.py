@@ -16,11 +16,12 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
-def sites(request):
-    sitedata = request.GET.body
+def sites(request, site):
+    sitedata = site
+
     #sitenm = {site}
     print(sitedata)
-    print(sitedata.title)
+
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
@@ -32,7 +33,7 @@ def sites(request):
     # get all active listings in this category
 
     sites = Sites.objects.filter(
-        sites_category__cat_name=sitedata.title)
+        sites_category__cat_name=sitedata)
         #sites_category__cat_name=title, is_active="True").values()
     return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)

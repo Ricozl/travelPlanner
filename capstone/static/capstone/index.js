@@ -40,7 +40,7 @@ function load_site(site) {
     document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
     //document.querySelector('#oneEmail').style.display = 'none';
-
+    console.log({site})
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
