@@ -58,7 +58,7 @@ function load_site(site) {
                 //document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
             //}
             //else {
-            .then(sites.forEach(site => {
+        .then(sites.forEach(site => {
                     // create separate div for each email
                     const element = document.createElement('div');
                     // show emails as read or unread
@@ -89,12 +89,13 @@ function load_site(site) {
                     });
                     document.querySelector('#sites').append(element);
                 })
-            }
-          })
+            })
+          )
           .catch(error => {
             console.log('Error:', error);
           });
-    }
+        )
+};
 
 function pick_place() {
     console.log('Got to pick_place')
