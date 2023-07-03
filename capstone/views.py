@@ -17,7 +17,7 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request):
-    sitedata = request.body
+    sitedata = request.GET.body
     #sitenm = {site}
     print(sitedata)
     print(sitedata.title)
