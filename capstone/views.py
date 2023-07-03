@@ -35,7 +35,7 @@ def sites(request):
     sites = Sites.objects.filter(
         sites_category__cat_name=site)
         #sites_category__cat_name=title, is_active="True").values()
-    return JsonResponse({ sites})
+    return JsonResponse({ "sites": sites })
     #return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
