@@ -63,6 +63,8 @@ function load_site(site) {
 
                     // add event listener for clicking on a site
                     element.addEventListener('click', function(e) {
+                        const element = e.target;
+                        console.log(element)
                         //document.querySelector('#onemail').style.display = 'block';
                         // show and hide buttons for different mailboxes
                         //if (mailbox === 'inbox') {
