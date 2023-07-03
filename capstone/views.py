@@ -33,7 +33,7 @@ def sites(request):
 
     # this gives good data but goes to blank page
     sites = list(Sites.objects.filter(
-        sites_category_id__cat_name=site).values())
+        sites_category__cat_name=site).values())
         #sites_category__cat_name=title, is_active="True").values()
     #data_json = json.dumps(list(sites))
     #entry_list = list(Entry.objects.all())
