@@ -31,7 +31,7 @@ def sites(request, site):
     # get all active listings in this category
 
     sites = Sites.objects.filter(
-        sites_category__cat_name=site).values()
+        sites_category__cat_name=site)
         #sites_category__cat_name=title, is_active="True").values()
     return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
