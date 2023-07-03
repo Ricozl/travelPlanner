@@ -119,6 +119,16 @@
     <div id="top-site" name="top-site">
         <div id="siteName"></div>
         <div id="sites"></div>
+        <h2>Active Listings for Category: {{ title }}</h2>
+        {% csrf_token %}
+
+        <ul>
+            {% for listing in listings %}
+            <li><a href="{% url 'listing_page' site.id %}">{{ listing.title }}</a></li>
+            {% empty %}
+            <li>No Active Listings</li>
+            {% endfor %}
+        </ul>
         {% if user.is_authenticated %}
         <button id="fav">
             <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">
