@@ -51,25 +51,25 @@ function load_site(site) {
 
     fetch(`/sites/${site}`)
         .then(response => response.json())
-        //.then(sites => {
+        .then(data => {
             console.log('got to fetch sites')
+            console.log(data)
             //if (sites.error) {
                 //console.log(sites.error)
                 //document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
             //}
             //else {
-        .then(sites.forEach(site => {
-                    // create separate div for each email
-                    const element = document.createElement('div');
-                    // show emails as read or unread
 
-                    // build each email
-                    element.innerHTML = `<p style="display:inline-block; width:20%;">${site.title}</p><p style="width:50%;">${site.description}</p><p>${site.category}`;
+            // create separate div for each email
+            const element = document.createElement('div');
 
-                    // add event listener for clicking on a site
-                    element.addEventListener('click', function(e) {
-                        const element = e.target;
-                        console.log(element)
+            // build each email
+            element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.category}`;
+
+            // add event listener for clicking on a site
+            element.addEventListener('click', function(e) {
+                const element = e.target;
+                console.log(element)
                         //document.querySelector('#onemail').style.display = 'block';
                         // show and hide buttons for different mailboxes
                         //if (mailbox === 'inbox') {
@@ -86,15 +86,12 @@ function load_site(site) {
                         //}
                         //email_id = parseInt(email.id)
                         //readEmail(email_id)
-                    });
-                    document.querySelector('#sites').append(element);
-                })
-            })
-          )
-          .catch(error => {
+                });
+                document.querySelector('#sites').append(element);
+        })
+        .catch(error => {
             console.log('Error:', error);
-          });
-        )
+        });
 };
 
 function pick_place() {
