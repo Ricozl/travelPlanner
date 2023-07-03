@@ -65,20 +65,20 @@ function load_site(site) {
                     element.addEventListener('click', function(e) {
                         document.querySelector('#oneEmail').style.display = 'block';
                         // show and hide buttons for different mailboxes
-                        if (mailbox === 'inbox') {
-                            document.querySelector('#email-buttons').style.display = 'block';
-                            document.querySelector('#unarchive').style.display = 'none';
-                        }
-                        else if (mailbox === 'archive') {
-                            document.querySelector('#email-buttons').style.display = 'none';
-                            document.querySelector('#unarchive').style.display = 'block';
-                        }
-                        else if (mailbox === 'sent') {
-                            document.querySelector('#email-buttons').style.display = 'none';
-                            document.querySelector('#unarchive').style.display = 'none';
-                        }
-                        email_id = parseInt(email.id)
-                        readEmail(email_id)
+                        //if (mailbox === 'inbox') {
+                            //document.querySelector('#email-buttons').style.display = 'block';
+                            //document.querySelector('#unarchive').style.display = 'none';
+                        //}
+                        //else if (mailbox === 'archive') {
+                            //document.querySelector('#email-buttons').style.display = 'none';
+                            //document.querySelector('#unarchive').style.display = 'block';
+                        //}
+                        //else if (mailbox === 'sent') {
+                            //document.querySelector('#email-buttons').style.display = 'none';
+                            //document.querySelector('#unarchive').style.display = 'none';
+                        //}
+                        //email_id = parseInt(email.id)
+                        //readEmail(email_id)
                     });
                     document.querySelector('#emails-list').append(element);
                 })
