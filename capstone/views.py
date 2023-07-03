@@ -31,7 +31,7 @@ def sites(request):
 
    #need to get int for site from categories first, then use it to look up in Sites
 
-    # get all active listings in this category
+    # this gives good data but goes to blank page
     data = list(Sites.objects.filter(
         sites_category__cat_name=site).values())
         #sites_category__cat_name=title, is_active="True").values()
