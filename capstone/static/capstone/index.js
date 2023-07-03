@@ -51,7 +51,6 @@ function load_site(site) {
     fetch(`/sites/${site}`)
         .then(response => response.json())
         .then(sites => {
-            console.log(sites)
             if (sites.error) {
                 console.log(sites.error)
                 document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
