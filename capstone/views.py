@@ -27,7 +27,7 @@ def sites(request, site):
    #need to get int for site from categories first, then use it to look up in Sites
     catno = Categories.objects.filter(cat_name = site)
     print(catno)
-    sitenm = Sites.objects.filter(site = site)
+    sitenm = Sites.objects.filter(site = catno)
     print(sitenm)
         #sites = Sites.objects.all()
     #elif profile == "following":
