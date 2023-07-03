@@ -5,7 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import User, Sites
+from .models import User, Sites, Categories
 #import React, { component } from 'react'
 
 
@@ -25,7 +25,8 @@ def sites(request, site):
 
 
    #need to get int for site from categories first, then use it to look up in Sites
-    sitenm = Sites.objects.filter(title = site)
+    catno = Categories.objects.filter(cat_name = site)
+    sitenm = Sites.objects.filter(catno = site)
     print(sitenm)
         #sites = Sites.objects.all()
     #elif profile == "following":
