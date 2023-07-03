@@ -17,7 +17,8 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request, site):
-    sitenm = ""
+    sitenm = {site}
+    print(sitenm)
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
@@ -25,7 +26,7 @@ def sites(request, site):
 
 
    #need to get int for site from categories first, then use it to look up in Sites
-    catno = Categories.objects.filter(cat_name = site)
+    catno = Categories.objects.filter( = sites_category)
     print(catno)
     sitenm = Sites.objects.filter(site = catno)
     print(sitenm)
