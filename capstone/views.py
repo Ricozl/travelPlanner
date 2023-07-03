@@ -29,7 +29,7 @@ def sites(request, site):
 
     # get all active listings in this category
     # displays all categories as links
-    return render(request, 'sites/index.html', {
+    return render(request, 'capstone/sites.html', {
         'sites': Sites.objects.all()
     })
     active_list = Sites.objects.filter(
