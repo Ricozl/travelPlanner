@@ -118,25 +118,10 @@
     </div>
     <div id="top-site" name="top-site">
         <div id="siteName"></div>
-        <div id="sites">
-
-            <h2>Active Listings for Category: {{ site }}</h2>
-            {% csrf_token %}
-
-            <ul>
-                {% for site in sites %}
-                <li><a href="{% url 'sites/title' %}">{{ site }}</a></li>
-                {% empty %}
-                <li>No Active Listings</li>
-                {% endfor %}
-            </ul>
-            {% if user.is_authenticated %}
-
-            <button id="fav">
-                <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">
-            </button>
-            {% endif %}
-        </div>
+        <div id="sites"></div>
+        <button id="fav">
+            <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">
+        </button>
     </div>
     <!--<div class="row" style="margin:20px;">
         <div class="column">

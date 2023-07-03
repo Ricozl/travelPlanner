@@ -63,7 +63,7 @@ function load_site(site) {
 
                     // add event listener for clicking on a site
                     element.addEventListener('click', function(e) {
-                        document.querySelector('#oneEmail').style.display = 'block';
+                        //document.querySelector('#onemail').style.display = 'block';
                         // show and hide buttons for different mailboxes
                         //if (mailbox === 'inbox') {
                             //document.querySelector('#email-buttons').style.display = 'block';
@@ -80,7 +80,7 @@ function load_site(site) {
                         //email_id = parseInt(email.id)
                         //readEmail(email_id)
                     });
-                    document.querySelector('#emails-list').append(element);
+                    document.querySelector('#sites').append(element);
                 })
             }
           })
