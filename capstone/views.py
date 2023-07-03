@@ -17,6 +17,7 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request):
+    site = request.GET
     #sitenm = {site}
     #print(sitenm)
     #if site == "ancient-rome":
