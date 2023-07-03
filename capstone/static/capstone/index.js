@@ -53,11 +53,11 @@ function load_site(site) {
         .then(response => response.json())
         .then(sites => {
             console.log('got to fetch sites')
-            if (sites.error) {
-                console.log(sites.error)
-                document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
-            }
-            else {
+            //if (sites.error) {
+                //console.log(sites.error)
+                //document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
+            //}
+            //else {
                 sites.forEach(site => {
                     // create separate div for each email
                     const element = document.createElement('div');
