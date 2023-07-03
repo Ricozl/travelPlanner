@@ -119,6 +119,9 @@
     <div id="top-site" name="top-site">
         <div id="siteName"></div>
         <div id="sites"></div>
+    return render(request, 'auctions/categories_list.html', {
+        'categories': Categories.objects.all()
+    })
         <h2>Active Listings for Category: {{ site }}</h2>
         {% csrf_token %}
 
