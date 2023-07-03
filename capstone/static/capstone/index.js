@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
-    document.querySelector('#ancient-rome').addEventListener('click', load_site('ancient'));
+    document.querySelector('#ancient-rome').addEventListener('click', load_site('Ancient Rome'));
 });
 
 function compose_email() {
@@ -39,7 +39,7 @@ function load_site(site) {
     //document.querySelector('#oneEmail').style.display = 'none';
 
     // Show the site name
-    document.querySelector('#siteName').innerHTML = `<h3>${site.title}</h3>`;
+    document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
     // get emails
     //document.querySelector('#emails-list').innerHTML = "";
