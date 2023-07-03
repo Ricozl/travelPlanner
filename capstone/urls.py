@@ -14,5 +14,5 @@ urlpatterns = [
 
 
 # API routes
-    path("sites/<str:site>/", views.sites, name="sites"),
+    path("sites", views.sites, name="sites"),
 ]
