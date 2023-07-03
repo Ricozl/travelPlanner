@@ -28,8 +28,9 @@ def sites(request, site):
    #need to get int for site from categories first, then use it to look up in Sites
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
-    sitenm = Sites.objects.filter(sites_category = catno)
-    print(sitenm)
+    if Categories.DoesNotExist:
+        sitenm = Sites.objects.filter(sites_category = cat_name)
+        print(sitenm)
         #sites = Sites.objects.all()
     #elif profile == "following":
         # determine who user is following and get their posts to display
