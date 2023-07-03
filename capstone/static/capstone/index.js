@@ -51,14 +51,14 @@ function load_site(site) {
 
     fetch(`/sites/${site}`)
         .then(response => response.json())
-        .then(sites => {
+        //.then(sites => {
             console.log('got to fetch sites')
             //if (sites.error) {
                 //console.log(sites.error)
                 //document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
             //}
             //else {
-                sites.forEach(site => {
+            .then(sites.forEach(site => {
                     // create separate div for each email
                     const element = document.createElement('div');
                     // show emails as read or unread
