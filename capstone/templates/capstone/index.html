@@ -125,7 +125,7 @@
 
             <ul>
                 {% for site in sites %}
-                <li><a href="{% url 'sites' site %}">{{ site }}</a></li>
+                <li><a href="{% url 'sites/site' %}">{{ site }}</a></li>
                 {% empty %}
                 <li>No Active Listings</li>
                 {% endfor %}
