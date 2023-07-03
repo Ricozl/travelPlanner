@@ -32,13 +32,14 @@ def sites(request):
 
     # get all active listings in this category
 
-    sites = Sites.objects.filter(
-        sites_category__cat_name=site).values()
+    sites = list(Sites.objects.filter(
+        sites_category__cat_name=site))
         #sites_category__cat_name=title, is_active="True").values()
     #data_json = json.dumps(list(sites))
-    print(sites.title)
-    print(sites.category)
-    return HttpResponse({ "sites": sites})
+    #entry_list = list(Entry.objects.all())
+    print(sites)
+
+    return JsonResponse({ "sites": sites})
     #return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
