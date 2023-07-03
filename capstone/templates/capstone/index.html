@@ -119,11 +119,11 @@
     <div id="top-site" name="top-site">
         <div id="siteName"></div>
         <div id="sites"></div>
-        <h2>Active Listings for Category: {{ title }}</h2>
+        <h2>Active Listings for Category: {{ site }}</h2>
         {% csrf_token %}
 
         <ul>
-            {% for listing in listings %}
+            {% for site in sites %}
             <li><a href="{% url 'listing_page' site.id %}">{{ listing.title }}</a></li>
             {% empty %}
             <li>No Active Listings</li>
