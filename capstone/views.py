@@ -26,6 +26,14 @@ def sites(request, site):
 
 
    #need to get int for site from categories first, then use it to look up in Sites
+
+    # get all active listings in this category
+    active_list = Sites.objects.filter(
+        sites_category__cat_name=title, is_active="True").values()
+    # display all listings (as links) in this category
+    return render(request, "auctions/cat_listings.html", {
+        "title": title, "listings": active_list
+    })
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
     if catno is None:
