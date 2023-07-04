@@ -60,6 +60,7 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
+            console.log(data.title)
             //if (sites.error) {
                 //console.log(sites.error)
                 //document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
