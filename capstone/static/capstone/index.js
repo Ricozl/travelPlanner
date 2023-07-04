@@ -65,7 +65,7 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-            console.log(data.data.title)
+            
             // create separate div for each email
             const element = document.createElement('div');
 
