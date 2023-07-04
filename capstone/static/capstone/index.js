@@ -78,13 +78,13 @@ function load_site(site) {
                 //const element = e.target;
                 //console.log(element)
 
-            });
+            };
         document.querySelector('#sites').append(element);
-        }
+        });
         .catch(error => {
             console.log('Error:', error);
         });
-//};
+};
 
 function pick_place() {
     console.log('Got to pick_place')
