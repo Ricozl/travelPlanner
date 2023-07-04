@@ -30,7 +30,7 @@ def sites(request, site):
 
 
    #need to get int for site from categories first, then use it to look up in Sites
-
+   
     # this gives good data but goes to blank page
     #sites = list(Sites.objects.filter(
     sites = Sites.objects.filter(
