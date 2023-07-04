@@ -80,11 +80,11 @@ function load_site(site) {
 
             });
         document.querySelector('#sites').append(element);
-        
+        )}
         .catch(error => {
             console.log('Error:', error);
         });
-};
+//};
 
 function pick_place() {
     console.log('Got to pick_place')
