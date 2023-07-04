@@ -67,32 +67,32 @@ function load_site(site) {
       })
         //.then(response => response.json())
         //.then(data => {
-            console.log('got to fetch sites')
-            console.log(data)
-            console.log(data.title)
-            if (data.error) {
-                console.log(data.error)
-                document.querySelector('#siteName').innerHTML = "Error: " + data.error;
-            }
-            else {
+            //console.log('got to fetch sites')
+            //console.log(data)
+            //console.log(data.title)
+            //if (data.error) {
+                //console.log(data.error)
+                //document.querySelector('#siteName').innerHTML = "Error: " + data.error;
+            //}
+            //else {
 
             // create separate div for each email
-                const element = document.createElement('div');
+                //const element = document.createElement('div');
 
                 // build each email
-                element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.category}`;
+                //element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.category}`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
                 //const element = e.target;
                 //console.log(element)
 
-            };
-        document.querySelector('#sites').append(element);
-        })
-        .catch(error => {
-            console.log('Error:', error);
-        });
+            //};
+        //document.querySelector('#sites').append(element);
+        //})
+        //.catch(error => {
+            //console.log('Error:', error);
+        //});
 };
 
 function pick_place() {
