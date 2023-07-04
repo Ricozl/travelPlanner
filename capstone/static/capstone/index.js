@@ -79,7 +79,7 @@ function load_site(site) {
                 console.log(element)
 
             });
-            document.querySelector('#sites').append(element);
+        document.querySelector('#sites').append(element);
         })
         .catch(error => {
             console.log('Error:', error);
