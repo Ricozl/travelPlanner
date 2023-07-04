@@ -49,7 +49,7 @@ function load_site(site) {
     //document.querySelector('#oneEmail').style.display = 'none';
     console.log({site})
     // Show the site name
-    document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+    document.querySelector('#siteName').innerHTML = `<h3 style="margin:20px;">${site}</h3>`;
 
     // get emails
     //document.querySelector('#emails-list').innerHTML = "";
@@ -65,12 +65,12 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-
+            console.log({data.title})
             // create separate div for each email
             const element = document.createElement('div');
 
             // build each email
-            element.innerHTML = `<p style="display:inline-block; width:20%; margin:20px;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.sites_category}</p>`;
+            element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.sites_category}</p>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
