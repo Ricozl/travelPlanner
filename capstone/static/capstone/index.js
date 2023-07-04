@@ -76,22 +76,7 @@ function load_site(site) {
             element.addEventListener('click', function(e) {
                 const element = e.target;
                 console.log(element)
-                        //document.querySelector('#onemail').style.display = 'block';
-                        // show and hide buttons for different mailboxes
-                        //if (mailbox === 'inbox') {
-                            //document.querySelector('#email-buttons').style.display = 'block';
-                            //document.querySelector('#unarchive').style.display = 'none';
-                        //}
-                        //else if (mailbox === 'archive') {
-                            //document.querySelector('#email-buttons').style.display = 'none';
-                            //document.querySelector('#unarchive').style.display = 'block';
-                        //}
-                        //else if (mailbox === 'sent') {
-                            //document.querySelector('#email-buttons').style.display = 'none';
-                            //document.querySelector('#unarchive').style.display = 'none';
-                        //}
-                        //email_id = parseInt(email.id)
-                        //readEmail(email_id)
+                        
             });
             document.querySelector('#sites').append(element);
         })
