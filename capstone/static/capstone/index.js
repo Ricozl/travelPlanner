@@ -61,9 +61,9 @@ function load_site(site) {
             console.log('got to fetch sites')
             console.log(data)
             console.log(data.title)
-            if (sites.error) {
-                console.log(sites.error)
-                document.querySelector('#siteName').innerHTML = "Error: " + sites.error;
+            if (data.error) {
+                console.log(data.error)
+                document.querySelector('#siteName').innerHTML = "Error: " + data.error;
             }
             else {
 
