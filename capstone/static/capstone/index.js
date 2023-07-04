@@ -54,8 +54,14 @@ function load_site(site) {
     // get emails
     //document.querySelector('#emails-list').innerHTML = "";
     //email_id = 0;
-
-    fetch(`/sites/${site}`)
+    
+      }).then(response => response.json())
+    fetch(`/sites/${site}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
         .then(async response => {
         try {
          const data = await response.json()
