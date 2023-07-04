@@ -72,7 +72,9 @@ function load_site(site) {
 
                 console.log(image)
                 let text = image
-                text.replace(".", "/");
+                let newimage = text.replace(".", "/");
+                let image = text.replace(".", "/");
+                console.log(image)
                 description = el.description;
                 category = el.sites_category;
             })
