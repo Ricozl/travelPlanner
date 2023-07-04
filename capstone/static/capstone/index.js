@@ -65,12 +65,17 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-            
+            data.forEach((el) => {
+                title = el.title;
+                console.log(el.title);
+                description = el.description;
+                category = el.sites_category;
+            })
             // create separate div for each email
             const element = document.createElement('div');
 
             // build each email
-            element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.sites_category}</p>`;
+            element.innerHTML = `<p style="display:inline-block; width:20%;">${title}</p><p style="width:50%;">${description}</p><p>${category}</p>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
