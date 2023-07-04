@@ -69,15 +69,14 @@ function load_site(site) {
                 title = el.title;
                 console.log(el.title);
                 image = el.image_url;
-
-                console.log(image)
-                let text = image
-                let newimage = text.replace(".", "/");
-                let image = text.replace(".", "/");
                 console.log(image)
                 description = el.description;
                 category = el.sites_category;
             })
+            let text = image;
+            let newimage = text.replace(".", "/");
+            let image = text.replace(".", "/");
+            console.log(image)
             // create separate div for each email
             const element = document.createElement('div');
             const img = document.createElement('img');
