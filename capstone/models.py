@@ -23,6 +23,15 @@ class Sites(models.Model):
     class Meta:
         ordering = ['title']
 
+    def serialize(self):
+        return {
+            "id": self.id,
+            "title": self.title,
+            "description": self.description,
+            "image_url": self.image_url,
+            "sites_category": self.category
+        }
+
     def __str__(self):
         return "Sites title: {}, Sites Category: {}, Description: {}, Image URL: {}".format(self.title, self.sites_category.cat_name, self.description, self.image_url)
 
