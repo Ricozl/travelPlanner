@@ -56,8 +56,17 @@ function load_site(site) {
     //email_id = 0;
 
     fetch(`/sites/${site}`)
-        .then(response => response.json())
-        .then(data => {
+        .then(async response => {
+        try {
+         const data = await response.json()
+         console.log('response data?', data)
+       } catch(error) {
+         console.log('Error happened here!')
+         console.error(error)
+       }
+      })
+        //.then(response => response.json())
+        //.then(data => {
             console.log('got to fetch sites')
             console.log(data)
             console.log(data.title)
