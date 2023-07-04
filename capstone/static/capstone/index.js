@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     //document.querySelector("#message").innerHTML = "Got to index.js"
     document.querySelector('#newPage').style.display = 'none';
-    //document.querySelector('#top-site').style.display = 'none';
+    document.querySelector('#top-site').style.display = 'block';
 
     // toggle between buttons
     //document.querySelector('section-content').style.display = 'none';
@@ -76,7 +76,7 @@ function load_site(site) {
             element.addEventListener('click', function(e) {
                 const element = e.target;
                 console.log(element)
-                        
+
             });
             document.querySelector('#sites').append(element);
         })
