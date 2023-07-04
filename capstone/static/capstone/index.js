@@ -15,14 +15,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
     //document.querySelector('#food').addEventListener('click', compose_email);
-    document.querySelector('#ancient-rome').addEventListener('click', function(event) {
-        event.preventDefault();
-        load_page('Ancient Rome')
-    });
-    //const el = document.getElementById("#ancient-rome");
-    //if (el) {
+    const el = document.getElementById("#ancient-rome");
+    if (el) {
         //el.addEventListener('click', load_site('Ancient Rome'));
     //}
+        document.querySelector('#ancient-rome').addEventListener('click', function(event) {
+            event.preventDefault();
+            load_page('Ancient Rome')
+        });
+    }
+
 });
 
 function compose_email() {
