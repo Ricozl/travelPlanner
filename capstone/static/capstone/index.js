@@ -77,7 +77,7 @@ function load_site(site) {
             const element = document.createElement('div');
 
             // build each email
-            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="{image}"></p><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="image"></p><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
