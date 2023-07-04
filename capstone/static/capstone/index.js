@@ -69,7 +69,10 @@ function load_site(site) {
                 title = el.title;
                 console.log(el.title);
                 image = el.image_url;
+
                 console.log(image)
+                let text = image
+                text.replace(".", "/");
                 description = el.description;
                 category = el.sites_category;
             })
