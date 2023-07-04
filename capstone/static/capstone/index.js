@@ -86,8 +86,8 @@ function load_site(site) {
                         //}
                         //email_id = parseInt(email.id)
                         //readEmail(email_id)
-                });
-                document.querySelector('#sites').append(element);
+            });
+            document.querySelector('#sites').append(element);
         })
         .catch(error => {
             console.log('Error:', error);
