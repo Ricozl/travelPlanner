@@ -32,8 +32,9 @@ def sites(request):
    #need to get int for site from categories first, then use it to look up in Sites
 
     # this gives good data but goes to blank page
-    sites = list(Sites.objects.filter(
-        sites_category__cat_name=site).values())
+    #sites = list(Sites.objects.filter(
+    sites = Sites.objects.filter(
+        sites_category__cat_name=site).values()
         #sites_category__cat_name=title, is_active="True").values()
     #data_json = json.dumps(list(sites))
     #entry_list = list(Entry.objects.all())
@@ -41,8 +42,8 @@ def sites(request):
 
     #data = serializers.serialize("json", SomeModel.objects.all())
 
-    return JsonResponse(sites, safe=False)
-    #return JsonResponse([site.serialize() for site in sites], safe=False)
+    #return JsonResponse(sites, safe=False)
+    return JsonResponse([site.serialize() for site in sites], safe=False)
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
     if catno is None:
