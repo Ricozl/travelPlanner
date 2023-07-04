@@ -49,7 +49,7 @@ function load_site(site) {
     //document.querySelector('#oneEmail').style.display = 'none';
     console.log({site})
     // Show the site name
-    document.querySelector('#siteName').innerHTML = `<h3 style="margin:20px;">${site}</h3>`;
+    document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
     // get emails
     //document.querySelector('#emails-list').innerHTML = "";
@@ -76,7 +76,7 @@ function load_site(site) {
             const element = document.createElement('div');
 
             // build each email
-            element.innerHTML = `<h5 style="display:inline-block; width:20%;">${title}</h5><p style="width:50%;">${description}</p><p>${image}</p>`;
+            element.innerHTML = `<h5 style="display:inline-block; width:20%;">${title}</h5><p style="width:50%;">${description}</p><p>{image}</p>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
