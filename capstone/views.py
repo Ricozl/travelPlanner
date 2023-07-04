@@ -22,7 +22,7 @@ def sites(request, site):
 
     #sitenm = {site}
     print(site)
-
+    print(request)
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
@@ -30,7 +30,7 @@ def sites(request, site):
 
 
    #need to get int for site from categories first, then use it to look up in Sites
-   
+
     # this gives good data but goes to blank page
     #sites = list(Sites.objects.filter(
     sites = Sites.objects.filter(
