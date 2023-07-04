@@ -73,18 +73,20 @@ function load_site(site) {
                 description = el.description;
                 category = el.sites_category;
             })
-            let text = image;
-            let newimage = text.replace(".", "/");
-            let image = text.replace(".", "/");
-            console.log(image)
+            //let text = image;
+            //let newimage = text.replace(".", "/");
+            //let image = text.replace(".", "/");
+            //console.log(image)
             // create separate div for each email
             const element = document.createElement('div');
-            const img = document.createElement('img');
-            img.src = image;
-            element.appendChild(img);
-
+            //const img = document.createElement('img');
+            //img.src = image;
+            //element.appendChild(img);
+            if ({site} == 'Markets') {
+                image = "https://static/capstone/campo-dei-fiori2.jpg"
+            }
             // build each email
-            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src=image><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
