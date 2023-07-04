@@ -29,7 +29,7 @@ class Sites(models.Model):
             "title": self.title,
             "description": self.description,
             "image_url": self.image_url,
-            "sites_category": self.sites_category
+            "sites_category": self.sites_category.cat_name
         }
 
     def __str__(self):
