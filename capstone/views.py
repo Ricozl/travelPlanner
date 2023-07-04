@@ -17,8 +17,8 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
-def sites(request):
-    site = 'Ancient Rome'
+def sites(request, site):
+    #site = 'Ancient Rome'
 
     #sitenm = {site}
     print(site)
