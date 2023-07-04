@@ -70,7 +70,7 @@ function load_site(site) {
             const element = document.createElement('div');
 
             // build each email
-            element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.sites_category}`;
+            element.innerHTML = `<p style="display:inline-block; width:20%;">${data.title}</p><p style="width:50%;">${data.description}</p><p>${data.sites_category}</p>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
