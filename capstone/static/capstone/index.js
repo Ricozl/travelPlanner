@@ -77,7 +77,7 @@ function load_site(site) {
                 //const element = e.target;
                 //console.log(element)
 
-            };
+        });
         document.querySelector('#sites').append(element);
         })
         .catch(error => {
