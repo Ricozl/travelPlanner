@@ -68,8 +68,8 @@ function load_site(site) {
             data.forEach((el) => {
                 title = el.title;
                 console.log(el.title);
-                image = el.image
-                //console.log(image);
+                image = el.image.url
+                console.log(el.image.url);
                 description = el.description;
                 category = el.sites_category;
             })
