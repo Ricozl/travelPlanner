@@ -69,7 +69,6 @@ function load_site(site) {
                 title = el.title;
                 console.log(el.title);
                 console.log(el.image_url)
-                console.log(image)
                 description = el.description;
                 category = el.sites_category;
             })
