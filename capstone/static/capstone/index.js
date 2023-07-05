@@ -68,8 +68,8 @@ function load_site(site) {
             data.forEach((el) => {
                 title = el.title;
                 console.log(el.title);
-                image = el.image;
-                console.log(image);
+                image = el.image_url;
+                console.log(image_url);
                 description = el.description;
                 category = el.sites_category;
             })
@@ -86,7 +86,7 @@ function load_site(site) {
                 //img.src = "https://static/capstone/campo-dei-fiori2.jpg"
             //}
             // build each email
-            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="{ image }" style="width:400px; height:400px;">${el.image}<p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+            element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="{ image }" style="width:400px; height:400px;">${image}<p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
             // add event listener for clicking on a site
             //element.addEventListener('click', function(e) {
