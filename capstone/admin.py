@@ -3,7 +3,7 @@ from .models import Categories, Sites, Favorites
 
 # Register your models here.
 class SitesAdmin(admin.ModelAdmin):
-    list_display = ("title")
+    list_display = ("title", "description", "category")
 
 admin.site.register(Categories)
 admin.site.register(Sites, SitesAdmin)
