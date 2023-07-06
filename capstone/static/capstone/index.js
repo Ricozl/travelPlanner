@@ -81,16 +81,16 @@ function load_site(site) {
             // create separate div for each email
             const element = document.createElement('div');
             var opt = document.createElement("img");
-            opt.setAttribute('src', '../images/cal.gif');
-            opt.setAttribute('Pick a date', 'alternate text');
-            opt.setAttribute('height', '16px');
-            opt.setAttribute('width', '16px');
+            opt.setAttribute('src', 'el.image_url');
+            //opt.setAttribute('Pick a date', 'alternate text');
+            opt.setAttribute('height', '300px');
+            opt.setAttribute('width', '300px');
             //const img = document.createElement('img');
             //img.src = image;
             //element.appendChild(img);
-            if ({site} == 'Markets') {
-                img.src = `https://static/capstone/campo-dei-fiori2.jpg`
-            }
+            //if ({site} == 'Markets') {
+                //img.src = `https://static/capstone/campo-dei-fiori2.jpg`
+            //}
             // build each email
             element.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="{{img.src}}" style="width:400px; height:400px;"><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
