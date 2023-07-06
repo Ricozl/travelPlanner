@@ -83,14 +83,14 @@ function load_site(site) {
             const element = document.createElement('div');
             element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
 
-            document.querySelector('#sites').append(element);
+            //document.querySelector('#sites').append(element);
             var opt = document.createElement("img");
             opt.setAttribute('src', 'el.image_url');
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '300px');
             opt.setAttribute('width', '300px');
-            txtOffsetDateCleared.appendChild(opt);
-            document.querySelector('#sites').append(opt);
+            element.appendChild(opt);
+            //document.querySelector('#sites').append(opt);
             //const img = document.createElement('img');
             //img.src = image;
             //element.appendChild(img);
