@@ -80,6 +80,7 @@ function load_site(site) {
             //console.log(image)
             // create separate div for each email
             const element = document.createElement('div');
+            document.querySelector('#sites').append(element);
             var opt = document.createElement("img");
             opt.setAttribute('src', 'el.image_url');
             //opt.setAttribute('Pick a date', 'alternate text');
