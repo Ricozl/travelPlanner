@@ -118,34 +118,7 @@
     </div>
     <div id="top-site" name="top-site">
         <div id="siteName"></div>
-        <div id="sites">
-            <h2>Active Listings</h2>
-            {% csrf_token %}
-
-            <ul>
-                {% for site in sites %}
-                    <table>
-                        <tr>
-                            <p>{{site.title }}</p>
-                            {% if site.image_url %}
-                                <td><img src="{{ site.image_url }}" style="width:300px; height:200px;"></td>
-                            {% endif %}
-                            <td>{{ site.description }}
-                            </td>
-                            <td>
-                                <button id="fav">
-                                    <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">
-                                </button>
-                            </td>
-                        </tr>
-                        <tr></tr>
-                    </table>
-                {% empty %}
-                    <li>No Active Listings</li>
-                {% endfor %}
-
-            </ul>
-        </div>
+        <div id="sites"></div>
     </div>
 
     <div id="banner">
