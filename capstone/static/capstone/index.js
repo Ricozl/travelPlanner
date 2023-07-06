@@ -51,10 +51,6 @@ function load_site(site) {
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
-    // get emails
-    //document.querySelector('#emails-list').innerHTML = "";
-    //email_id = 0;
-
     fetch(`/sites/${site}`, {
         method: 'GET',
         headers: {
