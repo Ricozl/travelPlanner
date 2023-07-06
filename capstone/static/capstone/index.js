@@ -80,6 +80,11 @@ function load_site(site) {
             //console.log(image)
             // create separate div for each email
             const element = document.createElement('div');
+            var opt = document.createElement("img");
+            opt.setAttribute('src', '../images/cal.gif');
+            opt.setAttribute('Pick a date', 'alternate text');
+            opt.setAttribute('height', '16px');
+            opt.setAttribute('width', '16px');
             //const img = document.createElement('img');
             //img.src = image;
             //element.appendChild(img);
