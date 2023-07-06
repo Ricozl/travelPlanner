@@ -123,18 +123,16 @@
             {% csrf_token %}
 
             <ul>
-                {% for listing in listings %}
+                {% for site in sites %}
                     <table>
                         <tr>
-                            <a href="{% url 'listing_page' listing.id %}">{{listing.title }}</a>
-                            {% if listing.image_url %}
-                                <td><img src="{{ listing.image_url }}" style="width:100px; height:100px;"></td>
+                            <p>{{site.title }}</p>
+                            {% if sites.image_url %}
+                                <td><img src="{{ site.image_url }}" style="width:300px; height:200px;"></td>
                             {% endif %}
-                            <td>{{ listing.description }}<br>{% if listing.highest_bid %}
-                                Current Price: ${{ listing.highest_bid }}
-                                {% else %}
-                                Current Price: ${{ listing.start_bid }}
-                                {% endif %}
+                            <td>{{ site.description }}
+                            </td>
+                            <td>{{ site.description }}
                             </td>
                         </tr>
                         <tr></tr>
