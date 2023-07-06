@@ -66,9 +66,9 @@ function load_site(site) {
             console.log('got to fetch sites')
             console.log(data)
             data.forEach((el) => {
-                console.log{{ el }};
+
                 title = el.title;
-                //console.log(el.title);
+                console.log(el.title);
 
                 //console.log(image);
                 description = el.description;
