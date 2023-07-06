@@ -71,15 +71,11 @@ function load_site(site) {
                 description = el.description;
                 category = el.sites_category;
             })
-            //let text = image;
-            //let newimage = text.replace(".", "/");
-            //let image = text.replace(".", "/");
-            //console.log(image)
-            // create separate div for each email
+
+            // create separate div for each site
             const element = document.createElement('div');
             element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
 
-            //document.querySelector('#sites').append(element);
             var opt = document.createElement("img");
             //opt.setAttribute('src', 'static/capstone/campo-dei-fiori2.jpg');
             opt.setAttribute('src', image);
