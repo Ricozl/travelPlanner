@@ -71,7 +71,7 @@ function load_site(site) {
                 console.log(el.title);
                 image = el.image_url;
 
-                //console.log(image);
+                console.log(image);
                 description = el.description;
                 category = el.sites_category;
             })
