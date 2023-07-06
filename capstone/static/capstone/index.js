@@ -69,6 +69,7 @@ function load_site(site) {
 
                 title = el.title;
                 console.log(el.title);
+                image = el.image_url;
 
                 //console.log(image);
                 description = el.description;
@@ -80,8 +81,9 @@ function load_site(site) {
             //console.log(image)
             // create separate div for each email
             const element = document.createElement('div');
-            element.innerHTML = `<h5 style="width:20%;">`;
-            document.querySelector('#sites').append(element);
+            element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
+
+            //document.querySelector('#sites').append(element);
             var opt = document.createElement("img");
             opt.setAttribute('src', 'el.image_url');
             //opt.setAttribute('Pick a date', 'alternate text');
