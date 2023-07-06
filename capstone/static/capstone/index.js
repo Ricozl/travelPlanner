@@ -85,6 +85,7 @@ function load_site(site) {
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '300px');
             opt.setAttribute('width', '300px');
+            document.querySelector('#sites').append(opt);
             //const img = document.createElement('img');
             //img.src = image;
             //element.appendChild(img);
