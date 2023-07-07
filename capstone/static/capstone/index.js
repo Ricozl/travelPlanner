@@ -87,7 +87,9 @@ function load_site(site) {
 
                     // build each site
                     const ele = document.createElement('p');
-                    ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+                    ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p>`
+                    const jump = document.createElement()
+                    jump.innerHTML = `<img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">`;
 
                     element.appendChild(ele);
                     // add event listener for clicking on a site
