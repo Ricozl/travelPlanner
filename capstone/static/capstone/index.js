@@ -74,34 +74,35 @@ function load_site(site) {
                 document.querySelector('#message').innerHTML = "No Posts Found";
             }
             else {
-                for (let i = 0; i < data.length; i++)
-            }
+                for (let i = 0; i < data.length; i++) {
 
-                // create separate div for each site
-                const element = document.createElement('div');
-                element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
 
-                var opt = document.createElement("img");
-                opt.setAttribute('src', data[i].image);
-                //opt.setAttribute('Pick a date', 'alternate text');
-                opt.setAttribute('height', '100%');
-                opt.setAttribute('width', '80%');
-                opt.setAttribute('object-fit', 'cover');
-                element.appendChild(opt);
+                    // create separate div for each site
+                    const element = document.createElement('div');
+                    element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
 
-                // build each site
-                const ele = document.createElement('p');
-                ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+                    var opt = document.createElement("img");
+                    opt.setAttribute('src', data[i].image);
+                    //opt.setAttribute('Pick a date', 'alternate text');
+                    opt.setAttribute('height', '100%');
+                    opt.setAttribute('width', '80%');
+                    opt.setAttribute('object-fit', 'cover');
+                    element.appendChild(opt);
 
-                element.appendChild(ele);
-                // add event listener for clicking on a site
-                element.addEventListener('click', function(e) {
-                    const etarget = e.target;
-                    console.log(etarget)
+                    // build each site
+                    const ele = document.createElement('p');
+                    ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
-            });
+                    element.appendChild(ele);
+                    // add event listener for clicking on a site
+                    element.addEventListener('click', function(e) {
+                        const etarget = e.target;
+                        console.log(etarget)
+                    });
+                });
             document.querySelector('#sites').append(element);
-        })
+            };
+        });
         .catch(error => {
             console.log('Error:', error);
         });
