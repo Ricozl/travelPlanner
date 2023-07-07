@@ -41,10 +41,8 @@ function choose_site() {
 };
 
 function load_site(site) {
-    window.addEventListener('load',
-  function() {
-    alert('hello!');
-  }, false);
+    //window.addEventListener('load',
+  //function() {}, false);
     console.log('got to load_site')
     // Show the site and hide other views
     document.querySelector('#sites').innerHTML = "";
@@ -77,6 +75,7 @@ function load_site(site) {
             //})
             //.then(data => {
             if (data === undefined || data.length == 0) {
+                if ('messages)
                 document.querySelector('#message').innerHTML = "No Posts Found";
             }
             else {
