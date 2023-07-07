@@ -74,10 +74,8 @@ function load_site(site) {
                 //category = el.sites_category;
             //})
             //.then(data => {
-            if (data === undefined || data.length == 0) {
-                if (document.getElementById('#messages')) {
-                    document.querySelector('#message').innerHTML = "No Posts Found";
-                }
+            if (!response.ok) {
+                   document.querySelector('#message').innerHTML = "No Sites Found";
             }
             else {
                 for (let i = 0; i < data.length; i++) {
