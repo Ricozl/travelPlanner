@@ -46,7 +46,7 @@ function load_site(site) {
     console.log('got to load_site')
     // Show the site and hide other views
     document.querySelector('#sites').innerHTML = "";
-    document.querySelector('#messages').innerHTML = "";
+    //document.querySelector('#messages').innerHTML = "";
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
@@ -75,7 +75,7 @@ function load_site(site) {
             //})
             //.then(data => {
             if (!data.ok) {
-                   document.querySelector('#message').innerHTML = "No Sites Found";
+                   document.querySelector('#top-site').innerHTML = "No Sites Found";
             }
             else {
                 for (let i = 0; i < data.length; i++) {
