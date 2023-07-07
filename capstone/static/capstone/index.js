@@ -61,19 +61,24 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-            data.forEach((el) => {
+            //data.forEach((el) => {
 
-                title = el.title;
-                console.log(el.title);
-                image = el.image_url;
-                description = el.description;
-                category = el.sites_category;
-            })
-            for (let i = 0; i < paginatedItems.length; i++) {
+                //title = el.title;
+                //console.log(el.title);
+                //image = el.image_url;
+                //description = el.description;
+                //category = el.sites_category;
+            //})
+            .then(data => {
+                if (data === undefined || data.length == 0) {
+                    document.querySelector('#message').innerHTML = "No Posts Found";
+                }
+                else {
+            for (let i = 0; i < data.length; i++) {
                 // create separate div for each post
                 const element = document.createElement('div');
                 // build each post
-                
+
             // create separate div for each site
             const element = document.createElement('div');
             element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
