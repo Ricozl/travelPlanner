@@ -78,8 +78,8 @@ function load_site(site) {
                    //document.querySelector('#top-site').innerHTML = "No Sites Found";
             //}
             //else {
-            if (posts === undefined || posts.length == 0) {
-                document.querySelector('#message').innerHTML = "No Posts Found";
+            if (data === undefined || data.length == 0) {
+                document.querySelector('#message').innerHTML = "No Sites Found";
             }
             else {
                 for (let i = 0; i < data.length; i++) {
