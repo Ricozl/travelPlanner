@@ -76,13 +76,13 @@ function load_site(site) {
             else {
                 for (let i = 0; i < data.length; i++) {
 
-                    image = data[i].image
+                    //image = data[i].image
                     // create separate div for each site
                     const element = document.createElement('div');
                     element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
 
                     var opt = document.createElement("img");
-                    opt.setAttribute('src', image);
+                    opt.setAttribute('src', data[i].image_url);
                     //opt.setAttribute('Pick a date', 'alternate text');
                     opt.setAttribute('height', '100%');
                     opt.setAttribute('width', '80%');
