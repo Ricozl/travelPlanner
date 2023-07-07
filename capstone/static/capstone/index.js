@@ -82,6 +82,7 @@ function load_site(site) {
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '500px');
             opt.setAttribute('width', '100%');
+            opt.setAttribute(https://www.wantedinrome.com/i/preview/storage/uploads/2019/02/testaccio-market-rome.jpg)
             element.appendChild(opt);
 
             // build each site
