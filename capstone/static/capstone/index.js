@@ -75,8 +75,9 @@ function load_site(site) {
             //})
             //.then(data => {
             if (data === undefined || data.length == 0) {
-                if ('messages)
-                document.querySelector('#message').innerHTML = "No Posts Found";
+                if (document.getElementById('#messages')) {
+                    document.querySelector('#message').innerHTML = "No Posts Found";
+                }
             }
             else {
                 for (let i = 0; i < data.length; i++) {
