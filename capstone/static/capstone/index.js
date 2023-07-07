@@ -65,7 +65,7 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-            
+
             if (data === undefined || data.length == 0) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
@@ -91,10 +91,10 @@ function load_site(site) {
 
                     element.appendChild(ele);
                     // add event listener for clicking on a site
-                    //element.addEventListener('click', function(e) {
-                        //const etarget = e.target;
-                        //console.log(etarget)
-                    //});
+                    element.addEventListener('click', function(e) {
+                        const etarget = e.target;
+                        console.log(etarget)
+                    });
 
                     document.querySelector('#sites').append(element);
                 };
