@@ -78,34 +78,38 @@ function load_site(site) {
                    //document.querySelector('#top-site').innerHTML = "No Sites Found";
             //}
             //else {
-            for (let i = 0; i < data.length; i++) {
+            if (posts === undefined || posts.length == 0) {
+                document.querySelector('#message').innerHTML = "No Posts Found";
+            }
+            else {
+                for (let i = 0; i < data.length; i++) {
 
-                //image = data[i].image
-                // create separate div for each site
-                const element = document.createElement('div');
-                element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
+                    //image = data[i].image
+                    // create separate div for each site
+                    const element = document.createElement('div');
+                    element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
 
-                var opt = document.createElement("img");
-                opt.setAttribute('src', data[i].image_url);
-                //opt.setAttribute('Pick a date', 'alternate text');
-                opt.setAttribute('height', '80%');
-                opt.setAttribute('width', '80%');
-                opt.setAttribute('object-fit', 'cover');
-                element.appendChild(opt);
+                    var opt = document.createElement("img");
+                    opt.setAttribute('src', data[i].image_url);
+                    //opt.setAttribute('Pick a date', 'alternate text');
+                    opt.setAttribute('height', '80%');
+                    opt.setAttribute('width', '80%');
+                    opt.setAttribute('object-fit', 'cover');
+                    element.appendChild(opt);
 
-                // build each site
-                const ele = document.createElement('p');
-                ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+                    // build each site
+                    const ele = document.createElement('p');
+                    ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
-                element.appendChild(ele);
-                // add event listener for clicking on a site
-                //element.addEventListener('click', function(e) {
-                    //const etarget = e.target;
-                    //console.log(etarget)
-                //});
+                    element.appendChild(ele);
+                    // add event listener for clicking on a site
+                    //element.addEventListener('click', function(e) {
+                        //const etarget = e.target;
+                        //console.log(etarget)
+                    //});
 
-                document.querySelector('#sites').append(element);
-            };
+                    document.querySelector('#sites').append(element);
+                };
 
         })
         .catch(error => {
