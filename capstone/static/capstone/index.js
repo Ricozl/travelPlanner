@@ -79,7 +79,7 @@ function load_site(site) {
             //}
             //else {
             if (data === undefined || data.length == 0) {
-                document.querySelector('#message').innerHTML = "No Sites Found";
+                document.querySelector('#sites').innerHTML = "No Sites Found";
             }
             else {
                 for (let i = 0; i < data.length; i++) {
