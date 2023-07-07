@@ -36,8 +36,7 @@ def sites(request, site):
     #data_json = json.dumps(list(sites))
     #entry_list = list(Entry.objects.all())
     print(sites)
-
-    #data = serializers.serialize("json", SomeModel.objects.all())
+    
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     return JsonResponse([site.serialize() for site in sites], safe=False)
