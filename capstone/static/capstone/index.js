@@ -82,7 +82,7 @@ function load_site(site) {
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '500px');
             opt.setAttribute('width', '100%');
-            opt.setAttribute('object-fit', 'cover');
+            opt.setAttribute('object-fit', 'contain');
             element.appendChild(opt);
 
             // build each site
