@@ -110,6 +110,7 @@ function load_site(site) {
 
                     document.querySelector('#sites').append(element);
                 };
+            }
 
         })
         .catch(error => {
