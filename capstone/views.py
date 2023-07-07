@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
+from django.contrib import messages
 
 from .models import User, Sites, Categories
 #import React, { component } from 'react'
@@ -36,7 +37,7 @@ def sites(request, site):
     #data_json = json.dumps(list(sites))
     #entry_list = list(Entry.objects.all())
     print(sites)
-    
+
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     return JsonResponse([site.serialize() for site in sites], safe=False)
