@@ -74,7 +74,7 @@ function load_site(site) {
                 //category = el.sites_category;
             //})
             //.then(data => {
-            if (!response.ok) {
+            if (!data.ok) {
                    document.querySelector('#message').innerHTML = "No Sites Found";
             }
             else {
