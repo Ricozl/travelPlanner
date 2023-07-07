@@ -80,7 +80,7 @@ function load_site(site) {
             //opt.setAttribute('src', 'static/capstone/campo-dei-fiori2.jpg');
             opt.setAttribute('src', image);
             //opt.setAttribute('Pick a date', 'alternate text');
-            opt.setAttribute('height', '500px');
+            opt.setAttribute('height', '100%');
             opt.setAttribute('width', '80%');
             opt.setAttribute('object-fit', 'cover');
             element.appendChild(opt);
