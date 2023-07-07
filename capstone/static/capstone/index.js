@@ -76,13 +76,13 @@ function load_site(site) {
             else {
                 for (let i = 0; i < data.length; i++) {
 
-
+                    image = data[i].image
                     // create separate div for each site
                     const element = document.createElement('div');
                     element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
 
                     var opt = document.createElement("img");
-                    opt.setAttribute('src', data[i].image);
+                    opt.setAttribute('src', image);
                     //opt.setAttribute('Pick a date', 'alternate text');
                     opt.setAttribute('height', '100%');
                     opt.setAttribute('width', '80%');
@@ -95,10 +95,10 @@ function load_site(site) {
 
                     element.appendChild(ele);
                     // add event listener for clicking on a site
-                    element.addEventListener('click', function(e) {
-                        const etarget = e.target;
-                        console.log(etarget)
-                    });
+                    //element.addEventListener('click', function(e) {
+                        //const etarget = e.target;
+                        //console.log(etarget)
+                    //});
 
                     document.querySelector('#sites').append(element);
                 };
