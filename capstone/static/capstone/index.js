@@ -99,9 +99,9 @@ function load_site(site) {
                         const etarget = e.target;
                         console.log(etarget)
                     });
-                });
-            document.querySelector('#sites').append(element);
-            };
+
+                    document.querySelector('#sites').append(element);
+                };
         });
         .catch(error => {
             console.log('Error:', error);
