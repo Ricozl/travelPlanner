@@ -43,6 +43,7 @@ function choose_site() {
 function load_site(site) {
     console.log('got to load_site')
     // Show the site and hide other views
+    document.querySelector('#top-site').innerHTML = "";
     document.querySelector('#showImgs').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
