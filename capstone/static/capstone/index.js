@@ -69,7 +69,11 @@ function load_site(site) {
                 description = el.description;
                 category = el.sites_category;
             })
-
+            for (let i = 0; i < paginatedItems.length; i++) {
+                // create separate div for each post
+                const element = document.createElement('div');
+                // build each post
+                
             // create separate div for each site
             const element = document.createElement('div');
             element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
