@@ -81,8 +81,8 @@ function load_site(site) {
             opt.setAttribute('src', image);
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '500px');
-            opt.setAttribute('width', '100%');
-            opt.setAttribute('object-fit', 'contain');
+            opt.setAttribute('width', '80%');
+            opt.setAttribute('object-fit', 'cover');
             element.appendChild(opt);
 
             // build each site
