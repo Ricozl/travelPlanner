@@ -74,7 +74,7 @@ function load_site(site) {
                     document.querySelector('#message').innerHTML = "No Posts Found";
                 }
                 else {
-            for (let i = 0; i < data.length; i++) {
+                    for (let i = 0; i < data.length; i++) {
                 // create separate div for each post
                 const element = document.createElement('div');
                 // build each post
