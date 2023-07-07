@@ -91,7 +91,7 @@ function load_site(site) {
 
                     element.appendChild(ele);
                     // add event listener for clicking on a site
-                    element.addEventListener('click', function(e) {
+                    ele.addEventListener('click', function(e) {
                         const etarget = e.target;
                         console.log(etarget)
                     });
