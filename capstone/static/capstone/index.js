@@ -65,19 +65,7 @@ function load_site(site) {
         .then(data => {
             console.log('got to fetch sites')
             console.log(data)
-            //data.forEach((el) => {
-
-                //title = el.title;
-                //console.log(el.title);
-                //image = el.image_url;
-                //description = el.description;
-                //category = el.sites_category;
-            //})
-            //.then(data => {
-            //if (!data.ok) {
-                   //document.querySelector('#top-site').innerHTML = "No Sites Found";
-            //}
-            //else {
+            
             if (data === undefined || data.length == 0) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
