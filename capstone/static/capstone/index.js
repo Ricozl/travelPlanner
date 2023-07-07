@@ -77,7 +77,6 @@ function load_site(site) {
             element.innerHTML = `<h5 style="width:20%;">${title}</h5>`;
 
             var opt = document.createElement("img");
-            //opt.setAttribute('src', 'static/capstone/campo-dei-fiori2.jpg');
             opt.setAttribute('src', image);
             //opt.setAttribute('Pick a date', 'alternate text');
             opt.setAttribute('height', '100%');
@@ -88,7 +87,7 @@ function load_site(site) {
             // build each site
             const ele = document.createElement('p');
             ele.innerHTML = `<p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
-            //ele.innerHTML = `<h5 style="width:20%;">${title}</h5><p style="display:inline-block;"><img src="{{img.src}}" style="width:400px; height:400px;"><p style="display:inline-block; width:50%;">${description}</p><span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+            
             element.appendChild(ele);
             // add event listener for clicking on a site
             element.addEventListener('click', function(e) {
