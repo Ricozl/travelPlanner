@@ -78,7 +78,7 @@ function load_site(site) {
                     var opt = document.createElement("img");
                     opt.setAttribute('src', data[i].image_url);
                     //opt.setAttribute('Pick a date', 'alternate text');
-                    opt.setAttribute('height', '60%');
+                    opt.setAttribute('height', '80%');
                     opt.setAttribute('width', '60%');
                     opt.setAttribute('object-fit', 'cover');
                     element.appendChild(opt);
