@@ -71,8 +71,6 @@ function load_site(site) {
             }
             else {
                 for (let i = 0; i < data.length; i++) {
-
-                    //image = data[i].image
                     // create separate div for each site
                     const element = document.createElement('div');
                     element.innerHTML = `<h5 style="width:20%;">${data[i].title}</h5>`;
