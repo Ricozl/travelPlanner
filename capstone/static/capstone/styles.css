@@ -20,9 +20,6 @@ body, html {
   position: relative;
 }
 
-#sites img {
-  max-height: 600px;
-}
 /* Postion the navbar container inside the image
 .container {
   position: absolute;
