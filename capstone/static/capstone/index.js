@@ -107,7 +107,7 @@ function load_site(site) {
             //document.querySelector('#sites').addEventListener("change", setFocusToSites);
 
             if (sites) {
-                document.getElementById("sites").focus():
+                document.getElementById("sites").focus();
             }
                 //var input = document.getElementById("sites");
 
