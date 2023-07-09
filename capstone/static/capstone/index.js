@@ -99,7 +99,7 @@ function load_site(site) {
 
                     document.querySelector('#sites').append(element);
                 };
-            document.getElementById('top-site').focus();
+            document.getElementById('sites').focus();
             }
 
         })
