@@ -127,23 +127,6 @@ function load_site(site) {
     //setFocusToSites(card);
 };
 
-function setFocusToSites() {
-    console.log('got to focus function');
-    document.querySelector('#sites').focus();
-
-    //card.load('change', function(){
-        //console.log(elementType)
-        //if (event.complete) {
-            //card.focus();
-       // }
-    //})
-};
-    //window.onload = function() {
-        //document.getElementById("top-site").focus();
-      //}
-    //document.querySelector("#top-site").focus();
-//}
-
 
 function pick_place() {
     console.log('Got to pick_place')
