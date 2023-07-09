@@ -105,6 +105,7 @@ function load_site(site) {
         .catch(error => {
             console.log('Error:', error);
         });
+    console.log('got to focus')
     document.getElementById('sites').focus();
 };
 
