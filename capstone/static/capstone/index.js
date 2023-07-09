@@ -102,9 +102,8 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            document.querySelector('#sites').onload => () {
-                document.querySelector('#sites').focus()
-            }
+            document.querySelector('#sites').addEventListener("load", setFocusToSites);
+
             //card.focus();
             //setFocusToSites(card)
             //card.on('change', function() {
@@ -123,13 +122,15 @@ function load_site(site) {
 };
 
 function setFocusToSites(card) {
-    console.log('got to focus function')
-    card.load('change', function(){
-        console.log(elementType)
-        if (event.complete) {
-            card.focus();
-        }
-    })
+    console.log('got to focus function';
+    document.querySelector('#sites').focus();
+    
+    //card.load('change', function(){
+        //console.log(elementType)
+        //if (event.complete) {
+            //card.focus();
+       // }
+    //})
 };
     //window.onload = function() {
         //document.getElementById("top-site").focus();
