@@ -54,6 +54,7 @@ function load_site(site) {
     console.log({site})
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+    document.getElementById('siteName').focus();
 
     fetch(`/sites/${site}`, {
         method: 'GET',
@@ -99,8 +100,8 @@ function load_site(site) {
 
                     document.querySelector('#sites').append(element);
                 };
-            console.log("got to focus")
-            document.querySelector('#siteName').focus();
+            //console.log("got to focus")
+            //document.querySelector('#siteName').focus();
             }
 
         })
