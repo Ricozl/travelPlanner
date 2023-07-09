@@ -103,16 +103,20 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            document.querySelector('#sites').focus();
+            //document.querySelector('#sites').focus();
             //document.querySelector('#sites').addEventListener("change", setFocusToSites);
 
-            //card.focus();
-            //setFocusToSites(card)
-            //card.on('change', function() {
-               // if (event.complete) {
-                    //card.focus();
+            window.onload = function() {
+                var input = document.getElementById("sites");
+
+                //if (obj.addEventListener) {
+                 //obj.addEventListener("focus", placeCursorAtEnd, false);
+                //} else if (obj.attachEvent) {
+                  //obj.attachEvent('onfocus', placeCursorAtEnd);
                 //}
-            //})
+
+                input.focus();
+              }
             }
 
         })
