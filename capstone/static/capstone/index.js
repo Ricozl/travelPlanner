@@ -106,8 +106,10 @@ function load_site(site) {
             //document.querySelector('#sites').focus();
             //document.querySelector('#sites').addEventListener("change", setFocusToSites);
 
-            window.onload = function() {
-                var input = document.getElementById("sites");
+            if (sites) {
+                document.getElementById("sites").focus():
+            }
+                //var input = document.getElementById("sites");
 
                 //if (obj.addEventListener) {
                  //obj.addEventListener("focus", placeCursorAtEnd, false);
