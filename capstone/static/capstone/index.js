@@ -113,7 +113,8 @@ function load_site(site) {
 };
 
 function setFocusToSites() {
-    document.getElementById("sites").focus();
+    console.log('got to focus function')
+    document.querySelector("#sites").focus();
 }
 
 
