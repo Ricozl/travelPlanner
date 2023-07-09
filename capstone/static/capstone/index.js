@@ -121,7 +121,7 @@ function load_site(site) {
 
 function setFocusToSites(card) {
     console.log('got to focus function')
-    card.click('change', function(){
+    card.load('change', function(){
         console.log(elementType)
         if (event.complete) {
             card.focus();
