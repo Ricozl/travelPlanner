@@ -105,6 +105,7 @@ function load_site(site) {
         .catch(error => {
             console.log('Error:', error);
         });
+    document.getElementById('sites').focus();
 };
 
 function pick_place() {
