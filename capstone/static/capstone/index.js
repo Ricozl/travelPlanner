@@ -102,12 +102,13 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
+            card.focus();
             //setFocusToSites(card)
-            card.on('change', function() {
-                if (event.complete) {
-                    card.focus();
-                }
-            })
+            //card.on('change', function() {
+               // if (event.complete) {
+                    //card.focus();
+                //}
+            //})
             }
 
         })
