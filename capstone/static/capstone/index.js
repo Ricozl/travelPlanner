@@ -98,11 +98,11 @@ function load_site(site) {
                         console.log(etarget)
                     });
 
-                    document.querySelector('#sites').append(element);
+                    var card = document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            element.on('ready', function(){
-                element.focus();
+            card.on('ready', function(){
+                card.focus();
                 }
             )
             }
