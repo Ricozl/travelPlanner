@@ -104,27 +104,12 @@ function load_site(site) {
                 };
             console.log("got to focus")
             document.querySelector('#sitefocus').focus();
-            //document.querySelector('#sites').addEventListener("change", setFocusToSites);
-
-
-                //var input = document.getElementById("sites");
-
-                //if (obj.addEventListener) {
-                 //obj.addEventListener("focus", placeCursorAtEnd, false);
-                //} else if (obj.attachEvent) {
-                  //obj.attachEvent('onfocus', placeCursorAtEnd);
-                //}
-
-                //input.focus();
-              //}
             }
 
         })
         .catch(error => {
             console.log('Error:', error);
         });
-    //console.log('got to focus')
-    //setFocusToSites(card);
 };
 
 
