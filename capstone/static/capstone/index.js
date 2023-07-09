@@ -101,7 +101,10 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            setFocusToSites()
+            card.on('ready', function(){
+                card.focus();
+                }
+            )
             }
 
         })
@@ -114,6 +117,10 @@ function load_site(site) {
 
 function setFocusToSites() {
     console.log('got to focus function')
+    card.on('ready', function(){
+        card.focus();
+        }
+    )
     window.onload = function() {
         document.getElementById("top-site").focus();
       }
