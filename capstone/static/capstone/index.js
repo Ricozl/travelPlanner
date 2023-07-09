@@ -102,7 +102,8 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            document.querySelector('#sites').addEventListener("change", setFocusToSites);
+            document.querySelector('#sites').focus();
+            //document.querySelector('#sites').addEventListener("change", setFocusToSites);
 
             //card.focus();
             //setFocusToSites(card)
