@@ -54,7 +54,7 @@ function load_site(site) {
     console.log({site})
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-    document.getElementById('siteName').focus();
+    //document.getElementById('siteName').focus();
 
     fetch(`/sites/${site}`, {
         method: 'GET',
@@ -108,8 +108,8 @@ function load_site(site) {
         .catch(error => {
             console.log('Error:', error);
         });
-    //console.log('got to focus')
-    //document.getElementById('top-site').focus();
+    console.log('got to focus')
+    document.getElementById('sites').focus();
 };
 
 function pick_place() {
