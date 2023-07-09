@@ -103,12 +103,10 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            //document.querySelector('#sites').focus();
+            document.querySelector('#top-site').focus();
             //document.querySelector('#sites').addEventListener("change", setFocusToSites);
 
-            if (sites) {
-                document.getElementById("sites").focus();
-            }
+            
                 //var input = document.getElementById("sites");
 
                 //if (obj.addEventListener) {
