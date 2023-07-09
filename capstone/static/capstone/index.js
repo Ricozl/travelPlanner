@@ -99,14 +99,15 @@ function load_site(site) {
 
                     document.querySelector('#sites').append(element);
                 };
-            document.querySelector('sites').focus();
+            console.log("got to focus")
+            document.querySelector('#siteName').focus();
             }
 
         })
         .catch(error => {
             console.log('Error:', error);
         });
-    console.log('got to focus')
+    //console.log('got to focus')
     //document.getElementById('top-site').focus();
 };
 
