@@ -114,7 +114,7 @@ function load_site(site) {
 
 function setFocusToSites() {
     console.log('got to focus function')
-    document.querySelector("#sites").focus();
+    document.querySelector("#top-site").focus();
 }
 
 
