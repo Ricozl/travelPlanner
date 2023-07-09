@@ -117,8 +117,8 @@ function load_site(site) {
                   //obj.attachEvent('onfocus', placeCursorAtEnd);
                 //}
 
-                input.focus();
-              }
+                //input.focus();
+              //}
             }
 
         })
