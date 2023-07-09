@@ -100,33 +100,30 @@ function load_site(site) {
 
                     var card = document.querySelector('#sites').append(element);
                 };
-            console.log("got to focus")
-            card.on('change', function(){
-                if (event.complete) {
-                    card.focus();
-                }
-            })
+            //console.log("got to focus")
             }
 
         })
         .catch(error => {
             console.log('Error:', error);
         });
-    //console.log('got to focus')
-    //setFocusToSites();
+    console.log('got to focus')
+    setFocusToSites();
 };
 
 function setFocusToSites() {
     console.log('got to focus function')
-    card.on('ready', function(){
-        card.focus();
+    card.on('change', function(){
+        if (event.complete) {
+            card.focus();
         }
-    )
-    window.onload = function() {
-        document.getElementById("top-site").focus();
-      }
+    })
+};
+    //window.onload = function() {
+        //document.getElementById("top-site").focus();
+      //}
     //document.querySelector("#top-site").focus();
-}
+//}
 
 
 function pick_place() {
