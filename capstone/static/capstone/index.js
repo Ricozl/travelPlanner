@@ -103,7 +103,7 @@ function load_site(site) {
                 };
             console.log("got to focus")
             //card.focus();
-            //setFocusToSites(card)
+            setFocusToSites(card)
             //card.on('change', function() {
                // if (event.complete) {
                     //card.focus();
