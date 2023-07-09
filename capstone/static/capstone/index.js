@@ -114,7 +114,10 @@ function load_site(site) {
 
 function setFocusToSites() {
     console.log('got to focus function')
-    document.querySelector("#top-site").focus();
+    window.onload = function() {
+        var input = document.getElementById("sites").focus();
+      }
+    //document.querySelector("#top-site").focus();
 }
 
 
