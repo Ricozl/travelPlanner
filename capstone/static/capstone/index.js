@@ -108,10 +108,10 @@ function load_site(site) {
             console.log('Error:', error);
         });
     console.log('got to focus')
-    setFocusToSites();
+    setFocusToSites(card);
 };
 
-function setFocusToSites() {
+function setFocusToSites(card) {
     console.log('got to focus function')
     card.on('change', function(){
         if (event.complete) {
