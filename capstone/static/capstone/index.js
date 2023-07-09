@@ -100,15 +100,16 @@ function load_site(site) {
 
                     var card = document.querySelector('#sites').append(element);
                 };
-            //console.log("got to focus")
+            console.log("got to focus")
+            setFocusToSites(card)
             }
 
         })
         .catch(error => {
             console.log('Error:', error);
         });
-    console.log('got to focus')
-    setFocusToSites(card);
+    //console.log('got to focus')
+    //setFocusToSites(card);
 };
 
 function setFocusToSites(card) {
