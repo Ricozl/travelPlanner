@@ -101,10 +101,11 @@ function load_site(site) {
                     var card = document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
-            card.on('ready', function(){
-                card.focus();
+            card.on('change', function(){
+                if (event.complete) {
+                    card.focus();
                 }
-            )
+            })
             }
 
         })
