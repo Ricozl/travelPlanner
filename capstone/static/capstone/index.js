@@ -106,7 +106,7 @@ function load_site(site) {
             console.log('Error:', error);
         });
     console.log('got to focus')
-    document.getElementById('sites').focus();
+    document.getElementById('top-site').focus();
 };
 
 function pick_place() {
