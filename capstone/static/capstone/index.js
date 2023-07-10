@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     //document.querySelector("#message").innerHTML = "Got to index.js"
     document.querySelector('#newPage').style.display = 'none';
+    document.querySelector('#topofpage').style.display = 'block';
     document.querySelector('#top-site').style.display = 'block';
 
     // toggle between buttons
