@@ -48,7 +48,7 @@ function load_site(site) {
     document.querySelector('#sites').innerHTML = "";
 
     //document.querySelector('#messages').innerHTML = "";
-    document.querySelector('#showImgs').style.display = 'none';
+    document.querySelector('#topofpage').style.display = 'none';
     //document.querySelector('#nav-pics').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
