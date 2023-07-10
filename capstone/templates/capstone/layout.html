@@ -29,7 +29,7 @@
                 <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
-                <button class="tablinks" onclick="/statiplaces' %}">Map of Rome</button>
+                <button class="tablinks"><a href="{% url 'places' %}">Map of Rome</a></button>
 
                 {% if user.is_authenticated %}
                 <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
