@@ -49,7 +49,7 @@ function load_site(site) {
     document.querySelector('#sites').innerHTML = "";
 
     //document.querySelector('#messages').innerHTML = "";
-    document.querySelector('#topofpage').innerHTML = "";
+    document.querySelector('#topofpage').style.display = "none";
     //document.querySelector('#nav-pics').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     //document.querySelector('#emails-list').style.display = 'block';
@@ -57,7 +57,6 @@ function load_site(site) {
     console.log({site})
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-    //document.getElementById('siteName').focus();
 
     fetch(`/sites/${site}`, {
         method: 'GET',
