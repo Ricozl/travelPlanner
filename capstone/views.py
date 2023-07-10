@@ -26,9 +26,6 @@ def sites(request, site):
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
 
-
-   #need to get int for site from categories first, then use it to look up in Sites
-
     sites = Sites.objects.filter(
         sites_category__cat_name=site)
 
