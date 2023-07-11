@@ -6,7 +6,8 @@
     <div class="navClass">
         <div class="container">
             <div class="tab" id="navbar">
-                <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>
+                <!--<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>-->
+                <button class="tablinks" id="defaultOpen"><a href="{% url 'index' %}">Rome Travel</a></button>
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
                 <button class="tablinks" onclick="openCity(event, 'Map-of-rome')">Map of Rome</button>
@@ -96,7 +97,7 @@
         <div style="position:relative;">
             <div style="color: #777; background-color:white; text-align:center; padding: 50px 80px; text-align:justify;">
                 <!--<h3 style="text-align:center;">But, it's full of restaurants, bars, and young people.</h3>-->
-                <p>But, it's full of restaurants, bars and young people.</p>
+                <p style="">But, it's full of restaurants, bars and young people.</p>
             </div>
         </div>
 
