@@ -237,17 +237,17 @@
                 });
             });
 
-        // Add a layer showing the places.
-        map.addLayer({
-            'id': 'places',
-            'type': 'symbol',
-            'source': 'places',
-            'layout': {
-                'icon-image': 'custom-marker',
-                //'icon-image': ['get', 'icon'],
-                'icon-allow-overlap': true
-            }
-        });
+            // Add a layer showing the places.
+            map.addLayer({
+                'id': 'places',
+                'type': 'symbol',
+                'source': 'places',
+                'layout': {
+                    'icon-image': 'custom-marker',
+                    //'icon-image': ['get', 'icon'],
+                    'icon-allow-overlap': true
+                }
+            });
 
          // When a click event occurs on a feature in the places layer, open a popup at the
         // location of the feature, with description HTML from its properties.
