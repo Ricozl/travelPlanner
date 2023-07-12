@@ -68,7 +68,7 @@
         center: [12.49723, 41.89281], // Rome starting position [lng, lat]
         zoom: 12 // starting zoom
     });
-    
+
 
     //const popup = new mapboxgl.Popup({ closeOnClick: false })
         //.setLngLat([-96, 37.8])
@@ -269,7 +269,7 @@
             .setLngLat(coordinates)
             .setHTML(description)
             .addTo(map);
-        //});
+        });
 
 
             // Add markers to the map.
@@ -293,7 +293,7 @@
 //.setLngLat(marker.geometry.coordinates)
 //.addTo(map);
 //}
-    });
+
         // Change the cursor to a pointer when the mouse is over the places layer.
         map.on('mouseenter', 'places', () => {
             map.getCanvas().style.cursor = 'pointer';
