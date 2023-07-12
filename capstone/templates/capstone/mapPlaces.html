@@ -245,6 +245,19 @@
             }
         });
 
+        
+map.on('click', (event) => {
+  // If the user clicked on one of your markers, get its information.
+  const features = map.queryRenderedFeatures(event.point, {
+    layers: ['YOUR_LAYER_NAME'] // replace with your layer name
+  });
+  if (!features.length) {
+    return;
+  }
+  const feature = features[0];
+
+  // Code from the next step will go here.
+});
         // When a click event occurs on a feature in the places layer, open a popup at the
         // location of the feature, with description HTML from its properties.
         map.on('click', 'places', (e) => {
