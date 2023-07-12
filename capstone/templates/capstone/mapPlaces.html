@@ -61,18 +61,11 @@
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
-    const map = new mapboxgl.Map({
-        container: 'map',
-        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        style: 'mapbox://styles/mapbox/streets-v12',
-        center: [-77.04, 38.907],
-        zoom: 11.15
-    });
    const map = new mapboxgl.Map({
         container: 'map', // container ID
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [12.49723, 41.89281], // starting position [lng, lat]
+        center: [12.49723, 41.89281], // Rome starting position [lng, lat]
         zoom: 12 // starting zoom
     });
 
