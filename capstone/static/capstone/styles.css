@@ -274,7 +274,7 @@ h4 {
   width: 100%;
 } */
 
-#backmap {
+/*#backmap {   comments: this is what I did for map, took out to make work
   background-color: #e6ffff;
   display: flex;
   height: 100%;
@@ -290,7 +290,7 @@ h4 {
   flex-shrink: 0;
   height: 100%;
 }
-
+*/
 #app {
   background-color: green;
   text-align: center;
