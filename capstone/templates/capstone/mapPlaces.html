@@ -92,12 +92,11 @@
     map.on('load', () => {
         // Add an image to use as a custom marker
         map.loadImage(
-            //'https://docs.mapbox.com/mapbox-gl-js/assets/custom-marker.png',
-            '../static/captone/mapbox-marker-icon-20px-green.png',
+            'https://docs.mapbox.com/mapbox-gl-js/assets/custom-marker.png',
             (error, image) => {
                 if (error) throw error;
                 //map.addImage('custom-marker', image);
-                map.addImage('mapbox-marker-icon-20px-green', image);
+                map.addImage('custom-marker', image);
 
                 map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
