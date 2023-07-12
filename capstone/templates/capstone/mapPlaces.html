@@ -60,7 +60,7 @@
 <script>
     // Create a new marker.
     const marker = new mapboxgl.Marker()
-    
+
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
@@ -95,6 +95,7 @@
     map.on('load', () => {
         // Add an image to use as a custom marker
         map.loadImage(
+            //mapbox://styles/map-un623/clk06ip5800uj01qj8lrjbeba
             'https://docs.mapbox.com/mapbox-gl-js/assets/custom-marker.png',
             (error, image) => {
                 if (error) throw error;
