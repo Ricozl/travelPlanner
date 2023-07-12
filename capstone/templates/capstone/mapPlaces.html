@@ -89,30 +89,6 @@
             .addTo(map);
     });
 
-    //const popup = new mapboxgl.Popup({ closeOnClick: false })
-        //.setLngLat([-96, 37.8])
-        //.setHTML('<h1>Hello World!</h1>')
-        //.addTo(map);
-
-    // Create a new marker.
-    //const marker = new mapboxgl.Marker({
-        //color: "#FFFFFF",
-        //draggable: false
-    //});
-
-
-
-//<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-
-    //const map = new mapboxgl.Map({
-        //container: 'map',
-        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        //style: 'mapbox://styles/mapbox/streets-v12',
-        //center: [12.49723, 41.89281], // starting position [lng, lat]
-        //zoom: 12
-    //});
-
-
     map.on('load', () => {
         // Add an image to use as a custom marker
         map.loadImage(
@@ -120,7 +96,7 @@
             (error, image) => {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
-        //});
+
                 map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
                 // property. The value of the "icon" property corresponds
@@ -255,7 +231,6 @@
                         ]
                     }
                 });
-            //});
 
                 // Add a layer showing the places.
                 map.addLayer({
@@ -290,29 +265,6 @@
             //.addTo(map);
         //});
 
-
-            // Add markers to the map.
-        //for (const marker of geojson.features) {
-        // Create a DOM element for each marker.
-            //const el = document.createElement('div');
-            //const width = marker.properties.iconSize[0];
-            //const height = marker.properties.iconSize[1];
-            //el.className = 'marker';
-            //el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
-            //el.style.width = `${width}px`;
-            //el.style.height = `${height}px`;
-            //el.style.backgroundSize = '100%';
-
-            //el.addEventListener('click', () => {
-                //window.alert(marker.properties.message);
-            ///});
-
-// Add markers to the map.
-//new mapboxgl.Marker(el)
-//.setLngLat(marker.geometry.coordinates)
-//.addTo(map);
-//}
-
         // Change the cursor to a pointer when the mouse is over the places layer.
         map.on('mouseenter', 'places', () => {
             map.getCanvas().style.cursor = 'pointer';
@@ -327,31 +279,5 @@
 
 </script>
 
-
-
-
-    <!--// Add markers to the map.
-    //for (const marker of geojson.features) {
-        // Create a DOM element for each marker.
-        //const el = document.createElement('div');
-        //const width = marker.properties.iconSize[0];
-        //const height = marker.properties.iconSize[1];
-        //el.className = 'marker';
-        //el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
-        //el.style.backgroundImage = `url('mapbox:/sprites/mapbox-marker-icon-20px-blue.png/g/${width}/${height}/)`;
-        //el.style.width = `${width}px`;
-        //el.style.height = `${height}px`;
-        //el.style.backgroundSize = '100%';
-
-        //el.addEventListener('click', () => {
-            //window.alert(marker.properties.message);
-        //});
-
-        // Add markers to the map.
-        //new mapboxgl.Marker(el)
-            //.setLngLat(marker.geometry.coordinates)
-            //.addTo(map);
-    //}
-//</script>-->
 
 {% endblock %}
