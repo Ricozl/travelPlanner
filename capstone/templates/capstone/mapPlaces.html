@@ -235,6 +235,19 @@
                 ]
             }
         });
+
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': ['get', 'icon'],
+                'icon-allow-overlap': true
+            }
+        });
+
+
         // Add a layer showing the places.
         map.addLayer({
             'id': 'places',
@@ -364,32 +377,6 @@ map.on('click', (event) => {
 <script>
 
 
-
-                 
-                        'type': 'Feature',
-                        'properties': {
-                            'description':
-                                '<strong>Truckeroo</strong><p><a href="http://www.truckeroodc.com/www/" target="_blank">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>',
-                            'icon': 'music'
-                        },
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [-77.007481, 38.876516]
-                        }
-                    }
-                ]
-            }
-        });
-        // Add a layer showing the places.
-        map.addLayer({
-            'id': 'places',
-            'type': 'symbol',
-            'source': 'places',
-            'layout': {
-                'icon-image': ['get', 'icon'],
-                'icon-allow-overlap': true
-            }
-        });
 
         // When a click event occurs on a feature in the places layer, open a popup at the
         // location of the feature, with description HTML from its properties.
