@@ -90,7 +90,8 @@
             (error, image) => {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
-            map.addSource('places', {
+        });
+        map.addSource('places', {
             // This GeoJSON contains features that include an "icon"
             // property. The value of the "icon" property corresponds
             // to an image in the Mapbox Streets style's sprite.
