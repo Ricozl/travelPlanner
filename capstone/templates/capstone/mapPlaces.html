@@ -58,9 +58,6 @@
 </div>
 
 <script>
-    // Create a new marker.
-    const marker = new mapboxgl.Marker()
-
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
@@ -95,13 +92,10 @@
     map.on('load', () => {
         // Add an image to use as a custom marker
         map.loadImage(
-            url('mapbox://styles/map-un623/clk06ip5800uj01qj8lrjbeba'),
-            //pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsajk1bmtuajB6bWQzbW81dXQxc2V3ZmsifQ.pHR1ndWInokMfvttpqGnag
-            //'https://docs.mapbox.com/mapbox-gl-js/assets/custom-marker.png',
+            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
             (error, image) => {
                 if (error) throw error;
-                //map.addImage('custom-marker', image);
-                map.addImage('icon-marker', image);
+                map.addImage('custom-marker', image);
 
                 map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
@@ -129,7 +123,7 @@
                                 'properties': {
                                     'description':
                                         '<strong>The Pantheon</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="Opens in a new window">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>',
-                                    'icon-image': 'icon-marker',
+                                    //'icon': 'bar',
                                     'iconSize': [30, 30]
                                 },
                                 'geometry': {
