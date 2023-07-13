@@ -244,20 +244,18 @@
                 // Add a layer showing the places.
                 map.addLayer({
                     'id': 'places',
-                    'type': 'circle',
+                    'type': 'symbol',
                     'source': 'places',
                     'layout': {
                         'icon-image': 'marker',
+                        'icon-size': 3,
                         //'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true,
                         //'text-field': ['get', 'title'],
                         //'text-offset': [0, 1.25],
                         //'text-anchor': 'top'
                     },
-                    'paint': {
-                        'circle-color': '#4264fb',
-                        'circle-radius': 6,
-                    }
+                    
                 });
             });
             // Add a symbol layer
