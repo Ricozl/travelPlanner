@@ -105,7 +105,7 @@
                 //'https://api.mapbox.com/styles/v1/map-un623/{style_id}/default_marker';
 
                 // add markers to map
-        for (const feature of geojson.features) {
+        //for (const feature of geojson.features) {
   // create a HTML element for each feature
   //const el = document.createElement('div');
   //el.className = 'marker';
@@ -277,7 +277,7 @@
                 new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
                 }
 
-            });
+            //});
             // Add a symbol layer
 //map.addLayer({
 //'id': 'points',
