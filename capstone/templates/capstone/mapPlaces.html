@@ -51,7 +51,7 @@
 
 <div id="backmap">
     <div id="map"></div>
-    
+
 </div>
 
 <script>
@@ -100,7 +100,7 @@
             (error, image) => {
                 if (error) throw error;
                 map.addImage('marker1', image)
-               // map.addImage('marker', '/static/capstone/mapbox-marker-icon-20px-green.png');
+               /map.addImage('marker2', '/static/capstone/mapbox-marker-icon-20px-green.png');
                 //'https://api.mapbox.com/styles/v1/map-un623/{style_id}/default_marker';
 
                 // add markers to map
@@ -256,7 +256,7 @@
                     'type': 'symbol',
                     'source': 'places',
                     'layout': {
-                        'icon-image': 'marker1',
+                        'icon-image': 'marker2',
                         'icon-size': 1,
                         //'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true,
