@@ -97,7 +97,7 @@
                // map.addImage('marker', '/static/capstone/mapbox-marker-icon-20px-green.png');
                 //'https://api.mapbox.com/styles/v1/map-un623/{style_id}/default_marker';
 
-                
+
                 map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
                 // property. The value of the "icon" property corresponds
@@ -241,7 +241,7 @@
                     'source': 'places',
                     'layout': {
                         //'icon-image': 'custom-marker',
-                        'icon-image': ['get', 'icon'],
+                        'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true
                     }
                 });
