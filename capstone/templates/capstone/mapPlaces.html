@@ -238,8 +238,8 @@
                     'type': 'symbol',
                     'source': 'places',
                     'layout': {
-                        'icon-image': 'custom-marker',
-                        //'icon-image': ['get', 'icon'],
+                        //'icon-image': 'custom-marker',
+                        'icon-image': ['get', 'icon'],
                         'icon-allow-overlap': true
                     }
                 });
@@ -274,7 +274,7 @@
         map.on('mouseleave', 'places', () => {
             map.getCanvas().style.cursor = '';
         });
-    });
+    //});
 
 
 </script>
