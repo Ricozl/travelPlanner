@@ -242,12 +242,12 @@
 
                 // Add a layer showing the places.
                 map.addLayer({
-                    'id': 'marker',
+                    'id': 'places',
                     'type': 'symbol',
                     'source': 'places',
                     'layout': {
-                        //'icon-image': 'custom-marker',
-                        'icon-image': ['get', 'default_marker'],
+                        'icon-image': 'marker',
+                        //'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true,
                     }
 
