@@ -290,9 +290,6 @@ h4 {
   flex-shrink: 0;
   height: 100%;
 }
-.map-container {
-  height: 400px;
-}
 
 .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
