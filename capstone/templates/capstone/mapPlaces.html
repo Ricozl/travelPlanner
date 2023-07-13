@@ -51,11 +51,21 @@
 
 <div id="backmap">  my code that I took out for testing
     <div id="map"></div>
-    <div class="section-content">
+    <div class="sidebar">
         <span id="mapsite" class="jump-marker"></span>
         The section i want to jump to
     </div>
 </div>
+
+
+      <div>
+        <div className="sidebar">
+          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+        </div>
+        <div ref={this.mapContainer} className="map-container" />
+      </div>
+    );
+  }
 
 <script>
     // my apikey
