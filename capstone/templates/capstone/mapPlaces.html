@@ -94,7 +94,7 @@
             //'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
             //(error, image) => {
                 //if (error) throw error;
-                //map.addImage('custom-marker', image);
+                map.addImage('marker', url('/static/capstone/mapbox-marker-icon-20px-green.png'));
 
                 map.addSource('places', {
                 // This GeoJSON contains features that include an "icon"
@@ -110,7 +110,7 @@
                                     'description':
                                         '<strong>Trevi Fountain</strong><p><a href="#mapsite" target="_blank" title="Opens in a new window">Visit the Trevi Fountain</a> where a coin tossed over your shoulder will guarantee your return to Rome.</p>',
                                         //'<strong>Trevi Fountain</strong><p><a href="/capstone/index.html#sites" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
-                                    'icon': 'mapbox-marker-icon-20px-green',
+                                    'icon': 'marker',
                                     'iconSize': [30, 30]
                                 },
                                 'geometry': {
