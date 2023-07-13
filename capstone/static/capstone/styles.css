@@ -280,6 +280,7 @@ h4 {
   height: 100%;
 }
 #map {
+  background-color: #e6ffff;
   height: 100%;
   width: 500px;
   margin: 5rem auto;
@@ -300,7 +301,7 @@ h4 {
   cursor: pointer;
 }
 
-.sidebar {
+/*.sidebar {
   background-color: #e6ffff;
   color: #fff;
   padding: 6px 12px;
@@ -313,7 +314,7 @@ h4 {
   border-radius: 4px;
   height: 300px;
   width: 300px;
-}
+}*/
 
 
 #app {
