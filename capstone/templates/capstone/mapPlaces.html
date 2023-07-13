@@ -106,14 +106,13 @@
 
                 // add markers to map
             //for (const feature of geojson.features) {
-            for (const feature of places.features) {
             // create a HTML element for each feature
-                const el = document.createElement('div');
-                el.className = 'marker';
+                //const el = document.createElement('div');
+                //el.className = 'marker';
 
                 // make a marker for each feature and add to the map
-                new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
-            }
+                //new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+            //}
 
 
                 map.addSource('places', {
@@ -130,7 +129,7 @@
                                     'description':
                                         '<strong>Trevi Fountain</strong><p><a href="#mapsite" target="_blank" title="Opens in a new window">Visit the Trevi Fountain</a> where a coin tossed over your shoulder will guarantee your return to Rome.</p>',
                                         //'<strong>Trevi Fountain</strong><p><a href="/capstone/index.html#sites" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
-                                    'icon': 'marker',
+                                    //'icon': 'marker',
                                     'iconSize': [60, 60]
                                 },
                                 'geometry': {
@@ -258,7 +257,7 @@
                     'type': 'symbol',
                     'source': 'places',
                     'layout': {
-                        'icon-image': 'marker',
+                        //'icon-image': 'marker',
                         'icon-size': 2,
                         //'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true,
