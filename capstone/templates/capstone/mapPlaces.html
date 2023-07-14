@@ -247,17 +247,13 @@
                     'layout': {
                         'icon-image': 'marker2',
                         'icon-size': 1,
-                        //'icon-image': ['get', 'default_marker'],
                         'icon-allow-overlap': true,
-                        //'text-field': ['get', 'title'],
-                        //'text-offset': [0, 1.25],
-                        //'text-anchor': 'top'
                     },
 
                 });
 
             });
-            
+
 
     // When a click event occurs on a feature in the places layer, open a popup at the
     // location of the feature, with description HTML from its properties.
@@ -307,14 +303,3 @@
 //.setLngLat([12.65147, 55.608166])
 //.addTo(map);
 
-//Next, add the JavaScript needed to create the markers and add them to the map. Copy and paste the following code within your script tag after the end of your map object declaration but before the closing script tag.
-
-// add markers to map
-//for (const feature of geojson.features) {
-  // create a HTML element for each feature
-  //const el = document.createElement('div');
-  //el.className = 'marker';
-
-  // make a marker for each feature and add to the map
-  //new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
-//}
