@@ -286,11 +286,11 @@ h4 {
   margin: 5rem auto;
   flex-grow: 1;
 }
-#sidebar {
+/*#sidebar {
   width: 500px;
   flex-shrink: 0;
   height: 100%;
-}
+}*/
 
 .marker {
   background-image: url('mapbox-marker-icon-20px-green.png');
@@ -301,7 +301,7 @@ h4 {
   cursor: pointer;
 }
 
-/*.sidebar {
+#sidebar {
   background-color: #e6ffff;
   color: #fff;
   padding: 6px 12px;
@@ -314,7 +314,7 @@ h4 {
   border-radius: 4px;
   height: 300px;
   width: 300px;
-}*/
+}
 
 
 #app {
