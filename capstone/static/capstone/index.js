@@ -135,4 +135,15 @@ function pick_place() {
 
 function form() {
     const [useState] = React
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log("email", email)
+        console.log("password", password)
+    }
+    return (
+        <form className="
+    )
 }
