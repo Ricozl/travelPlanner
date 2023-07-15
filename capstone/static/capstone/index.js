@@ -132,3 +132,5 @@ function pick_place() {
     }).addTo(mymap);
 
 };
+
+function
