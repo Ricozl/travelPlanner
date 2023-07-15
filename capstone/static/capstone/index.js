@@ -145,5 +145,14 @@ function form() {
     }
     return (
         <form className="at-8 space-y-6" onSubmit=[handleSubmit]>
+        <div>
+            <label for="email-address"
+            className="sr-only">Email Address</label>
+            <input id="email-address"
+                name="email"
+                type="email"
+                autocomplete="off"
+                required
+        </div>
     )
 }
