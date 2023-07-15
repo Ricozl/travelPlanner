@@ -173,6 +173,6 @@ function form() {
             </div>
         </form>
     )
+    ReactDOM.render(<Form />, document.querySelector("#form"))
 };
 
-ReactDOM.render(<Form />, document.querySelector("#form"))
