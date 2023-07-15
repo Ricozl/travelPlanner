@@ -173,3 +173,5 @@ function form() {
     </div>
     )
 };
+
+ReactDOM.render(<Form />, document.querySelector("#form"))
