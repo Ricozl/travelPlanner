@@ -12,7 +12,7 @@ function form() {
         console.log("password", password)
     }
     return (
-        <form className="at-8 space-y-6" onSubmit=[handleSubmit]>
+        <form className="at-8 space-y-6" onSubmit=handleSubmit(e)>
             <div>
                 <label for="email-address"
                     className="sr-only">Email Address</label>
