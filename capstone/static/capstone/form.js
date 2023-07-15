@@ -22,7 +22,7 @@ function form() {
                     autocomplete="off"
                     required
                     placeholder="Email address"
-                    value=[email]
+                    value={email}
                     onInput=[(e) => setEmail(e.target.value)]
                     />
             </div>
@@ -35,7 +35,7 @@ function form() {
                     autocomplete="off"
                     required
                     placeholder="Password"
-                    value=[password]
+                    value={password}
                     onInput=[(e) => setPassword(e.target.value)]
                     />
             </div>
