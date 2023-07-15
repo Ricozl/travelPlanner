@@ -23,7 +23,7 @@ function form() {
                     required
                     placeholder="Email address"
                     value={email}
-                    onInput=(e) => setEmail(e.target.value)
+                    onInput="(e) => setEmail(e.target.value)"
                     />
             </div>
             <div>
@@ -36,7 +36,7 @@ function form() {
                     required
                     placeholder="Password"
                     value={password}
-                    onInput=(e) => setPassword(e.target.value)
+                    onInput="(e) => setPassword(e.target.value)"
                     />
             </div>
         </form>
