@@ -159,17 +159,17 @@ function form() {
                 />
         </div>
         <div>
-        <label for="email-address"
-            className="sr-only">Email Address</label>
-        <input id="email-address"
-            name="email"
-            type="email"
+        <label for="password"
+            className="sr-only">Password</label>
+        <input id="password"
+            name="password"
+            type="password"
             autocomplete="off"
             required
-            placeholder="Email address"
-            value=[email]
-            onInput=[(e) => setEmail(e.target.value)]
+            placeholder="Password"
+            value=[password]
+            onInput=[(e) => setPassword(e.target.value)]
             />
     </div>
     )
-}
+};
