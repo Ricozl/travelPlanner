@@ -73,11 +73,12 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "capstone/login.html", {
+            #return render(request, "capstone/login.html", {
+            return render(request, "capstone/form.html", {
                 "message": "Invalid username and/or password."
             })
     else:
-        return render(request, "capstone/login.html")
+        return render(request, "capstone/form.html")
 
 
 def logout_view(request):
