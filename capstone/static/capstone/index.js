@@ -159,18 +159,18 @@ function form() {
                 />
         </div>
         <div>
-        <label for="password"
-            className="sr-only">Password</label>
-        <input id="password"
-            name="password"
-            type="password"
-            autocomplete="off"
-            required
-            placeholder="Password"
-            value=[password]
-            onInput=[(e) => setPassword(e.target.value)]
-            />
-    </div>
+            <label for="password"
+                className="sr-only">Password</label>
+            <input id="password"
+                name="password"
+                type="password"
+                autocomplete="off"
+                required
+                placeholder="Password"
+                value=[password]
+                onInput=[(e) => setPassword(e.target.value)]
+                />
+        </div>
     )
 };
 
