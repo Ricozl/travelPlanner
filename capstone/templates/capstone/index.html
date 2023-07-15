@@ -220,14 +220,10 @@
         }
 
         ReactDOM.render(<App />, document.querySelector("#app"));
-    </script>
-    <div id="form">
-        <p>Here is a new page</p>
-    </div>
+
 {% endblock %}
 
 {% block script %}
-    <script src="./form.js" type="text/babel"></script>
     <script src="{% static 'capstone/index.js' %}"></script>
 
 {% endblock %}
