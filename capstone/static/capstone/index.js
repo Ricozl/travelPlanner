@@ -144,6 +144,6 @@ function form() {
         console.log("password", password)
     }
     return (
-        <form className="
+        <form className="at-8 space-y-6" onSubmit=[handleSubmit]>
     )
 }
