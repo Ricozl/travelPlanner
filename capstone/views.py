@@ -105,7 +105,7 @@ def updateRecord(request, name):
 
     # find out if favorites record already exists. If not, create it
     try:
-        follow = Favorites.objects.get(
+        favorite = Favorites.objects.get(
             watcher__exact=folName, site__exact=favsite)
     except Favorites.DoesNotExist:
         # record not found so create record
@@ -118,11 +118,11 @@ def updateRecord(request, name):
 
     if request.method == "PUT":
         data = json.loads(request.body)
-        follow.is_active = data["is_active"]
-        activity = follow.is_active
+        favorite.is_active = data["is_active"]
+        activity = favorite.is_active
         favorite.save()
-        return JsonResponse(follow.serialize(), safe=False)
-    activity = follow.is_active
+        return JsonResponse(favorite.serialize(), safe=False)
+    activity = favorite.is_active
     return JsonResponse({"newRecord": newRecord, "activity": activity})
 
 
