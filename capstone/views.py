@@ -109,10 +109,10 @@ def updateRecord(request, name):
             watcher__exact=folName, item__exact=favsite)
     except Favorites.DoesNotExist:
         # record not found so create record
-        newRecord = True
-        active = activity
+        #newRecord = True
+        #activity = True
         favorite = Favorites(watcher=folName,
-                        item=favsite, is_active=active)
+                        item=favsite, is_active=True)
         favorite.save()
         return JsonResponse({"newRecord": newRecord, "activity": activity})
 
