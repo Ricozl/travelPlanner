@@ -59,7 +59,19 @@ def sites(request, site):
     #return JsonResponse([post.serialize() for post in posts], safe=False)
             return JsonResponse([site.serialize() for site in sites], safe=False)
 
+def favorites(request):
+    print(request)
+    #if site == "ancient-rome":
+# check to see if 'site' is in category list. if so, print out all sites with that category.
+# if not in category list, check to see if it is a 'title' and print that out.
+# make header one or the other.
 
+    sites = Sites.objects.filter(
+        sites_category__cat_name=site)
+
+    #return HttpResponse({"sites": sites})
+    #return JsonResponse(sites, safe=False)
+    return JsonResponse([site.serialize() for site in sites], safe=False)
 
 def login_view(request):
     if request.method == "POST":
