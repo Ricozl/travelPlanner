@@ -13,7 +13,7 @@ urlpatterns = [
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
     path("places", views.places, name="places"),
-    path("favorites", views.favorites, name="favorites"),
+    path("favorites/<str:siteName>", views.favorites, name="favorites"),
     path("updateRecord/<str:title>", views.updateRecord, name="updateRecord"),
 
 # API routes
