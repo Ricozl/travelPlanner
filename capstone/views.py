@@ -114,7 +114,7 @@ def updateRecord(request, name):
         favorite = Favorites(watcher=folName,
                         item=favsite, is_active=True)
         favorite.save()
-        return JsonResponse({"newRecord": newRecord, "activity": activity})
+        return JsonResponse(favorites.serialize(), safe=False)
 
     if request.method == "PUT":
         data = json.loads(request.body)
