@@ -98,7 +98,7 @@ function load_site(site) {
                         const element = e.target;
                         console.log(element)
                         element.previousSibling.innerText = "Added Successfully!"
-
+                        // update favorites table in database, set to active
                     });
 
                     document.querySelector('#sites').append(element);
