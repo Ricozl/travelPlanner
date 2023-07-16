@@ -117,12 +117,13 @@ function load_site(site) {
         });
 };
 
+@login_required
 function updateRecord(title) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     fetch(`/updateRecord/${title}`, {
         method: 'PUT',
-        //headers: {'X-CSRFToken': csrftoken},
+        headers: {'X-CSRFToken': csrftoken},
         mode: 'same-origin',
         body: JSON.stringify({
             title: title,
