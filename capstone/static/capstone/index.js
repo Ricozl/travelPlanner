@@ -89,7 +89,7 @@ function load_site(site) {
                     ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p>`
                     element.appendChild(ele);
                     const jump = document.createElement('span');
-                    jump.innerHTML = `<span><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
+                    jump.innerHTML = `<span>Click to add to Favorites <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></span>`;
 
                     element.appendChild(jump);
                     // add event listener for clicking on a site
