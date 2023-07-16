@@ -84,10 +84,10 @@ def favorites(request, name):
         post.save()
     return JsonResponse(post.serialize(), safe=False)
 
-def checkRecord(request, name):
+def updateRecord(request, name):
     # check if record exists. if not, create new one
     newRecord = False
-    activity = ""
+    activity = data.get("is_active")
 
     # query for requested profile to follow
     try:
@@ -107,11 +107,11 @@ def checkRecord(request, name):
     try:
         follow = Favorites.objects.get(
             watcher__exact=folName, site__exact=favsite)
-    except Follow.DoesNotExist:
+    except Favorites.DoesNotExist:
         # record not found so create record
         newRecord = True
-        activity = False
-        follow = Follow(follower=folName,
+        active = activity
+        follow = Favorites(follower=folName,
                         followed=userToBefollowed, is_active=False)
         follow.save()
         return JsonResponse({"newRecord": newRecord, "activity": activity})
