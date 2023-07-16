@@ -116,15 +116,16 @@ function load_site(site) {
         });
 };
 
-function editFavs(sites_id, eleContent) {
+function editFavs(title) {
     // update 'content' in database
-    post_id = parseInt(post_id)
-    fetch(`/posts/${post_id}`, {
+    //post_id = parseInt(post_id)
+    fetch(`/favorites/${title}`, {
         method: 'PUT',
         headers: {'X-CSRFToken': csrftoken},
         mode: 'same-origin',
         body: JSON.stringify({
-            content: eleContent
+            title: title,
+            is_active: true
         })
     })
         .then(response => {
