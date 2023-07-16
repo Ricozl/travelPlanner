@@ -8,6 +8,8 @@ from django.core import serializers
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import requires_csrf_token
+
 
 from .models import User, Sites, Categories, Favorites
 #import React, { component } from 'react'
@@ -86,7 +88,8 @@ def favorites(request, name):
         favorite.save()
     return JsonResponse(favorite.serialize(), safe=False)
 
-@login_required
+
+@requires_csrf_token
 def updateRecord(request, name):
     # check if record exists. if not, create new one
     newRecord = False
