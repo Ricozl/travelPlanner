@@ -71,8 +71,8 @@ def favorites(request, name):
         data = json.loads(request.body)
         if data.get("is_active"):
             site.is_active = data.get("is_active")
-        else:
-            site.is_active = data.get("likes")
+        #else:
+            #site.is_active = data.get("likes")
         post.save()
     return JsonResponse(post.serialize(), safe=False)
 
