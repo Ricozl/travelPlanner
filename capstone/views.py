@@ -103,10 +103,10 @@ def checkRecord(request, name):
         # follower's record not found
         return JsonResponse({"Error": "Error. User not found."}, status=404)
 
-    # find out if follow record already exists. If not, create it
+    # find out if favorites record already exists. If not, create it
     try:
         follow = Favorites.objects.get(
-            watcher__exact=folName, site__exact=userToBefollowed)
+            watcher__exact=folName, site__exact=favsite)
     except Follow.DoesNotExist:
         # record not found so create record
         newRecord = True
