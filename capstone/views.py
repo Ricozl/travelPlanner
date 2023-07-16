@@ -125,7 +125,7 @@ def updateRecord(request, title):
         #newRecord = True
         #activity = True
         print("got to look for favorites record")
-        favorite = Favorites(watcher=folName,
+        favorite = Favorites.objects(watcher=folName,
                         item=favsite, is_active=True)
         favorite.save()
         return JsonResponse({"favorite": favorite}, safe=False)
