@@ -111,16 +111,16 @@ def updateRecord(request, name):
         # record not found so create record
         newRecord = True
         active = activity
-        follow = Favorites(watcher=folName,
+        favorite = Favorites(watcher=folName,
                         item=favsite, is_active=active)
-        follow.save()
+        favorite.save()
         return JsonResponse({"newRecord": newRecord, "activity": activity})
 
     if request.method == "PUT":
         data = json.loads(request.body)
         follow.is_active = data["is_active"]
         activity = follow.is_active
-        follow.save()
+        favorite.save()
         return JsonResponse(follow.serialize(), safe=False)
     activity = follow.is_active
     return JsonResponse({"newRecord": newRecord, "activity": activity})
