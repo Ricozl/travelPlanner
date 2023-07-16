@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.core import serializers
 from django.contrib import messages
 
-from .models import User, Sites, Categories
+from .models import User, Sites, Categories, Favorites
 #import React, { component } from 'react'
 
 
@@ -61,13 +61,15 @@ def sites(request, site):
 
 def favorites(request):
     print(request)
+    name = request.user.username
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
 
     favorites = Favorites.objects.filter(
-        sites_category__cat_name=site)
+        name=watcher.fav_user)
+    print(favorites)
 
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
