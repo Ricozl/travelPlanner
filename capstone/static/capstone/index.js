@@ -105,8 +105,8 @@ function load_site(site) {
                         console.log(title)
                         // update favorites table in database, set to active
                         updateRecord(title)
-                    });
-
+                    })
+                }
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
