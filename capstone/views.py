@@ -84,17 +84,17 @@ def favorites(request, name):
         post.save()
     return JsonResponse(post.serialize(), safe=False)
 
-def checkRecord(request, profile):
+def checkRecord(request, name):
     # check if record exists. if not, create new one
     newRecord = False
     activity = ""
 
     # query for requested profile to follow
     try:
-        siteToBefollowed = Sites.objects.get(ite__exact=profile)
-    except User.DoesNotExist:
+        siteToBefaved = Sites.objects.get(title__exact=name)
+    except Sites.DoesNotExist:
         # requested profile to follow does not exist
-        return JsonResponse({"Error": "Error. User not found."}, status=404)
+        return JsonResponse({"Error": "Error. Site not found."}, status=404)
     # query for follower's record
     follower = request.user.username
     try:
