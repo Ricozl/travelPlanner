@@ -60,7 +60,7 @@ def sites(request, site):
             return JsonResponse([site.serialize() for site in sites], safe=False)
 
 def favorites(request, title):
-    # update a specific post in database (likes, content)
+    # update a specific site in database (likes, content)
     # query for requested post
     try:
         post = Posto.objects.get(pk=post_id)
@@ -77,7 +77,7 @@ def favorites(request, title):
     return JsonResponse(post.serialize(), safe=False)
 
 
-def favorites(request):
+def favor(request):
     print(request)
     name = request.user.username
     #if site == "ancient-rome":
