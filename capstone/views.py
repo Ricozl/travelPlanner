@@ -84,7 +84,7 @@ def favorites(request, name):
         favorite.save()
     return JsonResponse(favorite.serialize(), safe=False)
 
-def updateRecord(request, name):
+def updateRecord(request, title):
     # check if record exists. if not, create new one
     newRecord = False
     activity = ""
