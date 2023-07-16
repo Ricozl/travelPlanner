@@ -102,6 +102,7 @@ function load_site(site) {
                         title = data[i].title
                         console.log(title)
                         // update favorites table in database, set to active
+                        updateRecord(title)
                     });
 
                     document.querySelector('#sites').append(element);
@@ -116,7 +117,7 @@ function load_site(site) {
         });
 };
 
-function editFavs(title) {
+function updateRecord(title) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     fetch(`/favorites/${title}`, {
