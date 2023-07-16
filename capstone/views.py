@@ -106,7 +106,7 @@ def updateRecord(request, name):
     # find out if favorites record already exists. If not, create it
     try:
         favorite = Favorites.objects.get(
-            watcher__exact=folName, site__exact=favsite)
+            watcher__exact=folName, item__exact=favsite)
     except Favorites.DoesNotExist:
         # record not found so create record
         newRecord = True
