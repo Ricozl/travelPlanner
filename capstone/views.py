@@ -59,17 +59,17 @@ def sites(request, site):
     #return JsonResponse([post.serialize() for post in posts], safe=False)
             return JsonResponse([site.serialize() for site in sites], safe=False)
 
-def favorites(request, title):
-    # update a specific site in database (likes, content)
+def favorites(request, name):
+    # update a specific site in database (title, is_active)
     # query for requested post
     try:
-        post = Posto.objects.get(pk=post_id)
-    except Posto.DoesNotExist:
-        return JsonResponse({"Error": "post not found"}, status=404)
+        site = Sites.objects.get(title=name)
+    except Sites.DoesNotExist:
+        return JsonResponse({"Error": "site not found"}, status=404)
 
     if request.method == "PUT":
         data = json.loads(request.body)
-        if data.get("content"):
+        if data.get("title"):
             post.content = data.get("content")
         else:
             post.likes = data.get("likes")
