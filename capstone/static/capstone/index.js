@@ -96,8 +96,7 @@ function load_site(site) {
                     jump.addEventListener('click', function(e) {
                         const etarget = e.target;
                         console.log(etarget)
-                        const eclass = e.className;
-                        console.log(eclass)
+                        
 
                     });
 
