@@ -127,7 +127,7 @@ def updateRecord(request, title):
         favorite = Favorites(watcher=folName,
                         item=favsite, is_active=True)
         favorite.save()
-        return JsonResponse(favorite.serialize(), safe=False)
+        return JsonResponse({"favorite": favorite}, safe=False)
 
     if request.method == "PUT":
         print("got to PUT")
