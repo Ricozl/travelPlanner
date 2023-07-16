@@ -210,11 +210,11 @@
     </div>
     <script type="text/babel">
         function App() {
+            const [count, setCount] = React.useState(0);
             return (
                 <div>
-                    <div id="hello">
-                        Hello, Travellers!
-                    </div>
+                    <div>{count}</div>
+                    <button>Count</button>
                 </div>
             );
         }
