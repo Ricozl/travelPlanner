@@ -62,6 +62,7 @@ def sites(request, site):
 def favorites(request, name):
     # update a specific site in database (title, is_active)
     # query for requested post
+    print(request)
     try:
         site = Sites.objects.get(title=name)
     except Sites.DoesNotExist:
