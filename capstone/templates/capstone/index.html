@@ -214,8 +214,14 @@
     </script>
 
 {% endblock %}
-
+<script>
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    </script>
 {% block script %}
-    <script src="{% static 'capstone/index.js' %}"></script>
+<script>
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    <script src="{% static 'capstone/index.js' %}">
+        
+    </script>
 
 {% endblock %}

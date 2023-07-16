@@ -19,6 +19,9 @@
 
     <title>{% block title %}Travel Planner{% endblock %}</title>
     {% block script %}
+        <script>
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        </script>
     {% endblock %}
 </head>
 
