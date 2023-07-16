@@ -70,9 +70,13 @@ def favorites(request, name):
 
     if request.method == "PUT":
         data = json.loads(request.body)
+        activity = data.get("is_active")
+        print(activity)
         try:
-            fav = Favorites.objects.get(item=name)
+            favorite = Favorites.objects.get(item=name)
         except Favorites.DoesNotExist:
+            favorite.item = name,
+            favorite.is_active = activity
             
         if data.get("is_active"):
             site.is_active = data.get("is_active")
