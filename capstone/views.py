@@ -84,6 +84,50 @@ def favorites(request, name):
         post.save()
     return JsonResponse(post.serialize(), safe=False)
 
+def checkRecord(request, profile):
+    # check if record exists. if not, create new one
+    newRecord = False
+    activity = ""
+    # if follower and followed are the same, return error message
+    if (profile == request.user.username):
+        # cannot follow yourself
+        return JsonResponse({"error": "Error. Cannot follow yourself."}, status=401)
+    # query for requested profile to follow
+    try:
+        userToBefollowed = User.objects.get(username__exact=profile)
+    except User.DoesNotExist:
+        # requested profile to follow does not exist
+        return JsonResponse({"Error": "Error. User not found."}, status=404)
+    # query for follower's record
+    follower = request.user.username
+    try:
+        folName = User.objects.get(username__exact=follower)
+    except User.DoesNotExist:
+        # follower's record not found
+        return JsonResponse({"Error": "Error. Follower not found."}, status=404)
+
+    # find out if follow record already exists. If not, create it
+    try:
+        follow = Follow.objects.get(
+            follower__exact=folName, followed__exact=userToBefollowed)
+    except Follow.DoesNotExist:
+        # record not found so create record
+        newRecord = True
+        activity = False
+        follow = Follow(follower=folName,
+                        followed=userToBefollowed, is_active=False)
+        follow.save()
+        return JsonResponse({"newRecord": newRecord, "activity": activity})
+
+    if request.method == "PUT":
+        data = json.loads(request.body)
+        follow.is_active = data["is_active"]
+        activity = follow.is_active
+        follow.save()
+        return JsonResponse(follow.serialize(), safe=False)
+    activity = follow.is_active
+    return JsonResponse({"newRecord": newRecord, "activity": activity})
+
 
 def favor(request):
     print(request)
