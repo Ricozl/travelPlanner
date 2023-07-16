@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import User, Sites, Categories, Favorites
 #import React, { component } from 'react'
@@ -84,7 +85,7 @@ def favorites(request, name):
         favorite.save()
     return JsonResponse(favorite.serialize(), safe=False)
 
-@csrf_protect()
+@csrf_exempt()
 def updateRecord(request, name):
     # check if record exists. if not, create new one
     newRecord = False
