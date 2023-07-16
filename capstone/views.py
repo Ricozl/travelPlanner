@@ -72,6 +72,8 @@ def favorites(request, name):
         data = json.loads(request.body)
         try:
             fav = Favorites.objects.get(item=name)
+        except Favorites.DoesNotExist:
+            
         if data.get("is_active"):
             site.is_active = data.get("is_active")
         #else:
