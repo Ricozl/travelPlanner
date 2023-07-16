@@ -77,7 +77,7 @@ def favorites(request, name):
         except Favorites.DoesNotExist:
             favorite.item = name,
             favorite.is_active = activity
-            
+            favorite.save()
         if data.get("is_active"):
             site.is_active = data.get("is_active")
         #else:
