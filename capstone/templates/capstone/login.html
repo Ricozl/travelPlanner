@@ -10,6 +10,9 @@
 
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
+        <script>
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        </script>
         <div class="form-group">
             <input autofocus class="form-control" type="text" name="username" placeholder="Username">
         </div>
