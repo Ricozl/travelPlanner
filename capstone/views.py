@@ -105,7 +105,7 @@ def checkRecord(request, name):
 
     # find out if follow record already exists. If not, create it
     try:
-        follow = Follow.objects.get(
+        follow = Favorites.objects.get(
             follower__exact=folName, followed__exact=userToBefollowed)
     except Follow.DoesNotExist:
         # record not found so create record
