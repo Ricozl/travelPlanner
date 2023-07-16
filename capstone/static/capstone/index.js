@@ -133,7 +133,8 @@ function updateRecord(title) {
     })
         .then(response => {
             if (!response.ok) {
-                document.querySelector("#siteName").innerHTML = "Updating post content in database was unsuccessful."
+                //document.querySelector("#siteName").innerHTML = "Updating post content in database was unsuccessful."
+                console.log("response not ok")
             }
         })
         .catch(error => {
