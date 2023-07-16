@@ -81,8 +81,8 @@ def favorites(request, name):
             return JsonResponse(favorite.serialize(), safe=False)
 
         favorite.is_active = activity
-        post.save()
-    return JsonResponse(post.serialize(), safe=False)
+        favorite.save()
+    return JsonResponse(favorite.serialize(), safe=False)
 
 def updateRecord(request, name):
     # check if record exists. if not, create new one
