@@ -114,6 +114,28 @@ function load_site(site) {
         });
 };
 
+function editFavs(post_id, eleContent) {
+    // update 'content' in database
+    post_id = parseInt(post_id)
+    fetch(`/posts/${post_id}`, {
+        method: 'PUT',
+        headers: {'X-CSRFToken': csrftoken},
+        mode: 'same-origin',
+        body: JSON.stringify({
+            content: eleContent
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                document.querySelector("#message").innerHTML = "Updating post content in database was unsuccessful."
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        })
+};
+
+
 function favorites() {
     console.log('got to favorites');
 }
