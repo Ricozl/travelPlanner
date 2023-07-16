@@ -88,13 +88,10 @@ def checkRecord(request, profile):
     # check if record exists. if not, create new one
     newRecord = False
     activity = ""
-    # if follower and followed are the same, return error message
-    if (profile == request.user.username):
-        # cannot follow yourself
-        return JsonResponse({"error": "Error. Cannot follow yourself."}, status=401)
+
     # query for requested profile to follow
     try:
-        userToBefollowed = User.objects.get(username__exact=profile)
+        siteToBefollowed = Sites.objects.get(ite__exact=profile)
     except User.DoesNotExist:
         # requested profile to follow does not exist
         return JsonResponse({"Error": "Error. User not found."}, status=404)
