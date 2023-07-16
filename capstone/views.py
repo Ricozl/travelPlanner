@@ -67,6 +67,13 @@ def favorites(request, siteName):
     # update a specific site in database (title, is_active)
     # query for requested post
     print(request)
+
+    try:#screwy
+        favorites = Sites.objects.get(title=siteName)
+    except Sites.DoesNotExist:
+        return JsonResponse({"Error": "site not found"}, status=404)
+    #return JsonResponse(site.serialize(), safe=False)
+
     try:
         site = Sites.objects.get(title=siteName)
     except Sites.DoesNotExist:
