@@ -124,7 +124,7 @@ function updateRecord(title) {
     //post_id = parseInt(post_id)
     fetch(`/updateRecord/${title}`, {
         method: 'PUT',
-       headers: {'X-CSRFToken': csrftoken},
+       //headers: {'X-CSRFToken': csrftoken},
         mode: 'same-origin',
         body: JSON.stringify({
             title: title,
