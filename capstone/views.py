@@ -111,8 +111,8 @@ def updateRecord(request, name):
         # record not found so create record
         newRecord = True
         active = activity
-        follow = Favorites(follower=folName,
-                        followed=userToBefollowed, is_active=False)
+        follow = Favorites(watcher=folName,
+                        item=favsite, is_active=active)
         follow.save()
         return JsonResponse({"newRecord": newRecord, "activity": activity})
 
