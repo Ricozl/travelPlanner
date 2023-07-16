@@ -122,10 +122,11 @@ function load_site(site) {
 function updateRecord(title) {
     // update 'content' in database
     //post_id = parseInt(post_id)
+    const csrftoken = getCookie('csrftoken');
     site = title
     fetch(`/updateRecord/${title}`, {
         method: 'PUT',
-        //headers: {'X-CSRFToken': csrftoken},
+        headers: {'X-CSRFToken': csrftoken},
         mode: 'same-origin',
         body: JSON.stringify({
             title: site,
@@ -162,8 +163,8 @@ function getCookie(name) {
         }
     }
     return cookieValue;
-}
-const csrftoken = getCookie('csrftoken');
+};
+
 
 function pick_place() {
     console.log('Got to pick_place')
