@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //document.querySelector('section-content').style.display = 'none';
     //document.querySelector('#jumpto').addEventListener('click', choose_site);
     //document.querySelector('#destinations').addEventListener('click', pick_place);
-    //document.querySelector('#food').addEventListener('click', compose_email);
+    document.querySelector('#food').addEventListener('click', favorites);
     const el = document.getElementById("#ancient-rome");
     if (el) {
         //el.addEventListener('click', load_site('Ancient Rome'));
@@ -113,6 +113,9 @@ function load_site(site) {
         });
 };
 
+function favorites() {
+    console.log('got to favorites');
+}
 
 function pick_place() {
     console.log('Got to pick_place')
