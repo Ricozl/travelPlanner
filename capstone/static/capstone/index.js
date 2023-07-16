@@ -99,6 +99,7 @@ function load_site(site) {
                         const element = e.target;
                         console.log(element)
                         element.previousSibling.innerText = "Added Successfully!"
+                        console.log
                         // update favorites table in database, set to active
                     });
 
@@ -114,7 +115,7 @@ function load_site(site) {
         });
 };
 
-function editFavs(post_id, eleContent) {
+function editFavs(sites_id, eleContent) {
     // update 'content' in database
     post_id = parseInt(post_id)
     fetch(`/posts/${post_id}`, {
