@@ -14,7 +14,7 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("places", views.places, name="places"),
     path("favorites", views.favorites, name="favorites"),
-    path("updateRecord", views.updateRecord, name="updateRecord"),
+    path("updateRecord/<str:title>", views.updateRecord, name="updateRecord"),
 
 # API routes
     path("sites/<str:site>", views.sites, name="sites"),

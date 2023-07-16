@@ -90,9 +90,9 @@ def favorites(request, name):
 
 
 @requires_csrf_token
-def updateRecord(request):
+def updateRecord(request, title):
     print(request)
-    name = request.title
+    name = title
     # check if record exists. if not, create new one
     newRecord = False
     activity = ""
