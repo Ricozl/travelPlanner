@@ -101,7 +101,7 @@ def checkRecord(request, name):
         folName = User.objects.get(username__exact=follower)
     except User.DoesNotExist:
         # follower's record not found
-        return JsonResponse({"Error": "Error. Follower not found."}, status=404)
+        return JsonResponse({"Error": "Error. User not found."}, status=404)
 
     # find out if follow record already exists. If not, create it
     try:
