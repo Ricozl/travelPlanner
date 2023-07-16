@@ -68,12 +68,12 @@ def favorites(request):
 # make header one or the other.
 
     favorites = Favorites.objects.filter(
-        name=watcher.fav_user)
+        name=favorites.watcher)
     print(favorites)
 
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
-    return JsonResponse([site.serialize() for site in sites], safe=False)
+    return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
 
 def login_view(request):
     if request.method == "POST":
