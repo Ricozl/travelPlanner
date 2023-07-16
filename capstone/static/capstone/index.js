@@ -117,7 +117,6 @@ function load_site(site) {
         });
 };
 
-@login_required
 function updateRecord(title) {
     // update 'content' in database
     //post_id = parseInt(post_id)
