@@ -87,7 +87,7 @@ def favorites(request, name):
 def updateRecord(request, name):
     # check if record exists. if not, create new one
     newRecord = False
-    activity = data.get("is_active")
+    activity = ""
 
     # query for requested profile to follow
     try:
