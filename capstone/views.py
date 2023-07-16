@@ -91,7 +91,7 @@ def checkRecord(request, name):
 
     # query for requested profile to follow
     try:
-        siteToBefaved = Sites.objects.get(title__exact=name)
+        favsite = Sites.objects.get(title__exact=name)
     except Sites.DoesNotExist:
         # requested profile to follow does not exist
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
@@ -106,7 +106,7 @@ def checkRecord(request, name):
     # find out if follow record already exists. If not, create it
     try:
         follow = Favorites.objects.get(
-            follower__exact=folName, followed__exact=userToBefollowed)
+            watcher__exact=folName, site__exact=userToBefollowed)
     except Follow.DoesNotExist:
         # record not found so create record
         newRecord = True
