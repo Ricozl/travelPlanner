@@ -97,6 +97,7 @@ def updateRecord(request, name):
         favsite = Sites.objects.get(title__exact=name)
     except Sites.DoesNotExist:
         # requested profile to follow does not exist
+        print("site does not exist")
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
     # query for follower's record
     follower = request.user.username
@@ -104,6 +105,7 @@ def updateRecord(request, name):
         folName = User.objects.get(username__exact=follower)
     except User.DoesNotExist:
         # follower's record not found
+        print("user does not exist")
         return JsonResponse({"Error": "Error. User not found."}, status=404)
 
     # find out if favorites record already exists. If not, create it
@@ -114,12 +116,14 @@ def updateRecord(request, name):
         # record not found so create record
         #newRecord = True
         #activity = True
+        print("got to look for favorites record")
         favorite = Favorites(watcher=folName,
                         item=favsite, is_active=True)
         favorite.save()
         return JsonResponse(favorite.serialize(), safe=False)
 
     if request.method == "PUT":
+        print("got to PUT")
         data = json.loads(request.body)
         favorite.is_active = data["is_active"]
         activity = favorite.is_active
