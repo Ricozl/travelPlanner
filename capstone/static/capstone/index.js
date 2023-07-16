@@ -89,14 +89,16 @@ function load_site(site) {
                     ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p>`
                     element.appendChild(ele);
                     const jump = document.createElement('span');
-                    jump.innerHTML = `<span><p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></p></span>`;
+                    jump.innerHTML = `<span><p class="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  <img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;"></p></span>`;
 
                     element.appendChild(jump);
                     // add event listener for clicking on a site
                     jump.addEventListener('click', function(e) {
                         const etarget = e.target;
                         console.log(etarget)
-                        
+                        const eclass = e.className;
+                        console.log(eclass)
+
                     });
 
                     document.querySelector('#sites').append(element);
