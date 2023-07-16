@@ -2,15 +2,16 @@
 
 
 function form() {
-    const [useState] = React
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    function Form() {
+        const [useState] = React
+        const [email, setEmail] = useState("")
+        const [password, setPassword] = useState("")
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log("email", email)
-        console.log("password", password)
-    }
+        function handleSubmit(e) {
+            e.preventDefault()
+            console.log("email", email)
+            console.log("password", password)
+        }
     return (
         <form className="at-8 space-y-6" onSubmit="handleSubmit(e)">
             <div>
@@ -41,6 +42,7 @@ function form() {
             </div>
         </form>
     )
+    }
 };
 ReactDOM.render(<form.html />, document.querySelector("#form"))
 
