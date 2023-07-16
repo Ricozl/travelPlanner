@@ -101,7 +101,6 @@ function load_site(site) {
                         element.previousSibling.innerText = "Added Successfully!"
                         title = data[i].title
                         console.log(title)
-                        //console.log({data[i].id})
                         // update favorites table in database, set to active
                     });
 
