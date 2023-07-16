@@ -99,7 +99,8 @@ function load_site(site) {
                         const element = e.target;
                         console.log(element)
                         element.previousSibling.innerText = "Added Successfully!"
-                        console.log
+                        console.log({data[i].title})
+                        console.log({data[i].id})
                         // update favorites table in database, set to active
                     });
 
