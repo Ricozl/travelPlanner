@@ -107,6 +107,7 @@ def updateRecord(request, title):
     print(favsite)
     # query for follower's record
     follower = request.user.username
+    print(follower)
     try:
         folName = User.objects.get(username__exact=follower)
     except User.DoesNotExist:
