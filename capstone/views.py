@@ -69,10 +69,10 @@ def favorites(request, name):
 
     if request.method == "PUT":
         data = json.loads(request.body)
-        if data.get("title"):
-            post.content = data.get("content")
+        if data.get("is_active"):
+            site.is_active = data.get("is_active")
         else:
-            post.likes = data.get("likes")
+            site.is_active = data.get("likes")
         post.save()
     return JsonResponse(post.serialize(), safe=False)
 
