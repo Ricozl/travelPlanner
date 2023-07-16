@@ -43,5 +43,12 @@ class Favorites(models.Model):
     class Meta:
         ordering = ['watcher', 'item']
 
+    def serialize(self):
+        return {
+            "item": self.item.fav_list,
+            "watcher": self.watcher.fav_user,
+            "is_active": self.is_active
+        }
+
     def __str__(self):
         return "Watcher: {}, Site: {}, Is_active: {}".format(self.watcher.username, self.item.title, self.is_active)

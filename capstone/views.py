@@ -66,7 +66,7 @@ def favorites(request):
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
 
-    sites = Sites.objects.filter(
+    favorites = Favorites.objects.filter(
         sites_category__cat_name=site)
 
     #return HttpResponse({"sites": sites})
