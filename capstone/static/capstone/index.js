@@ -94,9 +94,9 @@ function load_site(site) {
                     element.appendChild(jump);
                     // add event listener for clicking on a site
                     jump.addEventListener('click', function(e) {
-                        const etarget = e.target;
-                        console.log(etarget)
-                        etarget.previousSibling.innerText = "Added Successfully!"
+                        const element = e.target;
+                        console.log(element)
+                        element.previousSibling.innerText = "Added Successfully!"
 
                     });
 
