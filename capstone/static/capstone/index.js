@@ -101,10 +101,14 @@ function load_site(site) {
                         const element = e.target;
                         console.log(element)
                         element.previousSibling.innerText = "Added Successfully!"
+                         // update 'favorites' in database
+                    //var post_id = parseInt(paginatedItems[i].id)
+                        var site_id = parseInt(data[i].id)
+                    //checkLike(post_id, counter)
                         title = data[i].title
                         console.log(title)
                         // update favorites table in database, set to active
-                        updateRecord(title)
+                        updateRecord(site_id)
                     })
                 }
                     document.querySelector('#sites').append(element);
@@ -119,7 +123,7 @@ function load_site(site) {
         });
 };
 
-function updateRecord(title) {
+function updateRecord(site_id) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
