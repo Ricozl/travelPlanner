@@ -91,24 +91,26 @@ function load_site(site) {
                     element.appendChild(ele);
                     //const jump = document.createElement('span');
                     userName = document.getElementById('user_name')
-                    if (!userName) {
-                    const jump = document.createElement('p');
-                    jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">`;
+                    if (userName) {
+                        const jump = document.createElement('p');
+                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="https://www.publicdomainpictures.net/pictures/40000/velka/red-heart-1362916005N5Z.jpg" style="width:20px; height:20px;">`;
 
-                    element.appendChild(jump);
-                    // add event listener for clicking on a site
-                    jump.addEventListener('click', function(e) {
-                        const element = e.target;
-                        console.log(element)
-                        element.previousSibling.innerText = "Added Successfully!"
+                        element.appendChild(jump);
+                        // add event listener for clicking on a site
+                        jump.addEventListener('click', function(e) {
+                            const element = e.target;
+                            console.log(element)
+                            element.previousSibling.innerText = "Added Successfully!"
                          // update 'favorites' in database
                     //var post_id = parseInt(paginatedItems[i].id)
-                        var site_id = parseInt(data[i].id)
+                            var site_id = parseInt(data[i].id)
                     //checkLike(post_id, counter)
-                        title = data[i].title
-                        console.log(title)
-                        // update favorites table in database, set to active
-                        updateRecord(site_id)
+                            title = data[i].title
+                            console.log(title)
+                            // update favorites table in database, set to active
+                            updateRecord(site_id)
+                        })
+                    
                     })
                 }
                     document.querySelector('#sites').append(element);
