@@ -1,7 +1,12 @@
 {% extends "capstone/layout.html" %}
 
 {% block body %}
+
+{% if user.is_authenticated %}
 <div id="favorites">
+    <h2>Favorites for {{ user.username }}</h2>
+    {% csrf_token %}
+
     <h2>{{ user.username }}'s Favorites</h2>
 
     {% for favorite in favorites %}
@@ -21,9 +26,7 @@
 {% endblock %}
 
 {% block body %}
-{% if user.is_authenticated %}
-    <h2>Watchlist for {{ user.username }}</h2>
-    {% csrf_token %}
+
 
     <ul>
     {% for watch in watch_list %}
