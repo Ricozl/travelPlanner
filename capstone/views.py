@@ -130,8 +130,8 @@ def favorites(request):
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
-
-    return render(request, "capstone/favorites.html favorites")
+    return render(request, "capstone/favorites.html", {
+        "favorites": favorites})
 
 def login_view(request):
     if request.method == "POST":
