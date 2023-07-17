@@ -110,8 +110,8 @@ function load_site(site) {
                             // update favorites table in database, set to active
                             updateRecord(site_id)
                         })
+                    }
                     
-                    })
                 }
                     document.querySelector('#sites').append(element);
                 };
