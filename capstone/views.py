@@ -120,7 +120,7 @@ def updateRecord(request, site_id):
     follower = request.user.username
     print(follower)
     try:
-        folName = User.objects.get(username__exact=follower)
+        folName = User.objects.get(username__exact=current_user_id)
     except User.DoesNotExist:
         # follower's record not found
         print("user does not exist")
