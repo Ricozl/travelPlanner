@@ -111,8 +111,7 @@ function load_site(site) {
                             updateRecord(site_id)
                         })
                     }
-                    
-                }
+
                     document.querySelector('#sites').append(element);
                 };
             console.log("got to focus")
