@@ -160,12 +160,12 @@ def fav(request):
 def favorites(request):
     print(request)
     # get signed-in user's id
-    user_id = request.user.id
-    print(user_id)
+    wat_user = request.user.id
+    print(wat_user)
     # get all items on signed-in user's favorites list
     wat_lists = favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
-    # display user's watchlist
+    # display user's favlist
     return render(request, 'auctions/watch_list.html', {
         'watch_list': wat_lists
     })
