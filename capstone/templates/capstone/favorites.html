@@ -20,12 +20,12 @@
 
     {% for favorite in favorites %}
 
-        <h2>{{ favorite.title }}</h2>
-        {% if favorite.image_url %}
-            <p><img src="{{ favorite.image_url }}" style="width:400px; height:400px;"></p>
+        <h2>{{ favorite.item.title }}</h2>
+        {% if favorite.item.image_url %}
+            <p><img src="{{ favorite.item.image_url }}" style="width:400px; height:400px;"></p>
         {% endif %}
 
-        <p>{{ favorite.description }}</p>
+        <p>{{ favorite.item.description }}</p>
 
     {% empty %}
         <p>No Favorites yet.</p>
