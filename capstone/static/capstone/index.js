@@ -142,9 +142,9 @@ function updateRecord(site_id) {
             if (!response.ok) {
                 //document.querySelector("#siteName").innerHTML = "Updating post content in database was unsuccessful."
                 console.log("response not ok")
-            } //else {
-                //load_site(site)
-            //}
+            } else {
+                console.log("response ok")
+            }
         })
         .catch(error => {
             console.error("Error:", error);
