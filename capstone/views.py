@@ -124,8 +124,12 @@ def favorites(request):
     print(user_id)
 
     favs = Favorites.objects.filter(
-        watcher=user_id, is_active=True)
+        watcher=user_id, is_active=True).values()
     print(favs)
+
+    favorites = Sites.objects.filter(
+        id=favs.item
+    )
 
 # get all active listings in this category
     active_list = Listing.objects.filter(
