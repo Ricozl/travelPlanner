@@ -117,6 +117,18 @@ def updateRecord(request, site_id):
     activity = favorite.is_active
     return JsonResponse({"activity": activity})
 
+ # check if listing already on watchlist, post warning message
+            if Watchlist.objects.filter(watcher=u_w, item=listing_id, is_active=True).exists():
+                messages.add_message(
+                    request, messages.WARNING, "Listing is already on Watchlist")
+            else:
+                # if not already on watchlist, save to watchlist and send success message
+                Watchlist.objects.create(
+                    watcher=u_w, item=lists, is_active=True)
+                messages.add_message(
+                    request, messages.SUCCESS, "Listing is now on Watchlist")
+            # display watchlist
+            return HttpResponseRedirect(reverse('watch_list'))
 
 def favorites(request):
     print(request)
@@ -126,6 +138,12 @@ def favorites(request):
     favs = Favorites.objects.filter(
         watcher=user_id, is_active=True).values()
     print(favs)
+      cats = Categories.objects.filter(list_cat__exact=listing_id)
+    for cat in cats:
+        cat_list = cat.cat_name
+    for fav in favs:
+        fav_list = fav.item
+    print(favs[1])
 
     favorites = Sites.objects.filter(
         id=favs.item_id).values()
@@ -138,6 +156,18 @@ def favorites(request):
 
     return render(request, "capstone/favorites.html", {
         "favorites": favorites})
+
+def watch_list(request):
+    # get signed-in user's id
+    wat_user = request.user.id
+    # get all items on signed-in user's watchlist
+    wat_lists = Watchlist.objects.filter(
+        watcher=wat_user, is_active=True).select_related('item').order_by('item')
+    # display user's watchlist
+    return render(request, 'auctions/watch_list.html', {
+        'watch_list': wat_lists
+    })
+
 
 def login_view(request):
     if request.method == "POST":
