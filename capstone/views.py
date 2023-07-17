@@ -161,7 +161,7 @@ def favorites(request):
 # make header one or the other.
 
     favorites = Favorites.objects.filter(
-        user_id=favorites.watcher)
+        user_id__exact=watcher)
     print(favorites)
 
     #return HttpResponse({"sites": sites})
