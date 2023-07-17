@@ -6,17 +6,13 @@
 
     {% for favorite in favorites %}
 
-        <h2>{{ favorite.item }}</h2>
-        {% if listing.image_url %}
-            <p><img src="{{ listing.image_url }}" style="width:400px; height:400px;"></p>
+        <h2>{{ favorite.title }}</h2>
+        {% if favorite.image_url %}
+            <p><img src="{{ favorite.image_url }}" style="width:400px; height:400px;"></p>
         {% endif %}
-        <ul>
-            <li>{{ listing.description }}</li>
-            <li>Current Price:  ${{ price }}</li>
-            {% if user.is_authenticated and listing.is_active == True %}
-            <li>{{ form }}{% csrf_token %}<input class="btn btn-primary" type="submit" name="place_bid" value="Place Bid"></li>
-            {% endif %}
-        </ul>
+
+        <p>{{ favorite.description }}</p>
+
     {% empty %}
         <p>No Favorites yet.</p>
     {% endfor %}
