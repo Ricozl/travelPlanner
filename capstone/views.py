@@ -138,7 +138,7 @@ def fav(request):
     favs = Favorites.objects.filter(
         watcher=user_id, is_active=True).values()
     print(favs)
-      cats = Categories.objects.filter(list_cat__exact=listing_id)
+    cats = Categories.objects.filter(list_cat__exact=id)
     for cat in cats:
         cat_list = cat.cat_name
     for fav in favs:
