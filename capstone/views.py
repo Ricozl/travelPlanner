@@ -165,9 +165,9 @@ def favorites(request):
     # get all items on signed-in user's favorites list
     wat_lists = favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
-    # display user's favlist
-    return render(request, 'auctions/watch_list.html', {
-        'watch_list': wat_lists
+    # display user's favorites list
+    return render(request, 'capstone/favorites.html', {
+        'favorites': wat_lists
     })
 
 
