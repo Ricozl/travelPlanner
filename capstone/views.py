@@ -120,7 +120,7 @@ def updateRecord(request, site_id):
     follower = request.user.username
     print(follower)
     try:
-        folName = User.objects.get(username__exact=current_user_id)
+        folName = User.objects.get(id__exact=current_user_id)
     except User.DoesNotExist:
         # follower's record not found
         print("user does not exist")
@@ -129,7 +129,7 @@ def updateRecord(request, site_id):
     # find out if favorites record already exists. If not, create it
     try:
         favorite = Favorites.objects.get(
-            watcher__exact=folName, item__exact=favsite.id)
+            watcher__exact=folName, item__exact=favsite)
     except Favorites.DoesNotExist:
         # record not found so create record
         #newRecord = True
