@@ -104,7 +104,7 @@ def updateRecord(request, site_id):
         print("got to look for favorites record")
         favorites = Favorites(watcher=folName,
                         item=favsite, is_active=True)
-        favorite.save()
+        favorites.save()
         return JsonResponse({"is_active": True})
 
     if request.method == "PUT":
