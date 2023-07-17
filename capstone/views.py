@@ -127,6 +127,9 @@ def favorites(request):
         user_id__exact=Favorites.watcher)
     print(favorites)
 
+    followsNo = Follow.objects.filter(
+        follower=profileId, is_active=True).count()
+
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
