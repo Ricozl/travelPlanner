@@ -151,7 +151,7 @@ def updateRecord(request, site_id):
     return JsonResponse({"activity": activity})
 
 
-def favor(request):
+def favorites(request):
     print(request)
     name = request.user.username
     #if site == "ancient-rome":
