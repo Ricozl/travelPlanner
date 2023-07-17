@@ -128,17 +128,14 @@ def favorites(request):
     print(favs)
 
     favorites = Sites.objects.filter(
-        id=favs.item
-    )
+        id=favs.item).values()
+    print(favorites)
 
 # get all active listings in this category
-    active_list = Listing.objects.filter(
-        listing_category__cat_name=title, is_active="True").values()
-    favorites = Sites.objects.filter(
-        title, is_active="True").values()
-    #return HttpResponse({"sites": sites})
-    #return JsonResponse(sites, safe=False)
-    #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
+    #listing_category__cat_name=title, is_active="True").values()
+    #favorites = Sites.objects.filter(
+        #title, is_active="True").values()
+
     return render(request, "capstone/favorites.html", {
         "favorites": favorites})
 
