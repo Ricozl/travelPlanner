@@ -63,39 +63,6 @@ def sites(request, site):
     #return JsonResponse([post.serialize() for post in posts], safe=False)
             return JsonResponse([site.serialize() for site in sites], safe=False)
 
-def favorites(request, siteName):
-    # update a specific site in database (title, is_active)
-    # query for requested post
-    print(request)
-
-    try:#screwy
-        favorites = Sites.objects.get(title=siteName)
-    except Sites.DoesNotExist:
-        return JsonResponse({"Error": "site not found"}, status=404)
-    #return JsonResponse(site.serialize(), safe=False)
-
-    try:
-        site = Sites.objects.get(title=siteName)
-    except Sites.DoesNotExist:
-        return JsonResponse({"Error": "site not found"}, status=404)
-    return JsonResponse(site.serialize(), safe=False)
-
-    if request.method == "PUT":
-        data = json.loads(request.body)
-        activity = data.get("is_active")
-        print(activity)
-        try:
-            favorite = Favorites.objects.get(item=name)
-        except Favorites.DoesNotExist:
-            favorite.item = name,
-            favorite.is_active = activity
-            favorite.save()
-            return JsonResponse(favorite.serialize(), safe=False)
-
-        favorite.is_active = activity
-        favorite.save()
-    return JsonResponse(favorite.serialize(), safe=False)
-
 
 @requires_csrf_token
 def updateRecord(request, site_id):
