@@ -9,6 +9,15 @@
 
     <h2>{{ user.username }}'s Favorites</h2>
 
+    <ul>
+        {% for watch in watch_list %}
+            <li><a href="{% url 'listing_page' watch.item.id %}">{{ watch.item.title }}</a></li>
+        {% empty %}
+            <li>No Listings in Watchlist.</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
     {% for favorite in favorites %}
 
         <h2>{{ favorite.title }}</h2>
@@ -28,12 +37,5 @@
 {% block body %}
 
 
-    <ul>
-    {% for watch in watch_list %}
-        <li><a href="{% url 'listing_page' watch.item.id %}">{{ watch.item.title }}</a></li>
-    {% empty %}
-        <li>No Listings in Watchlist.</li>
-    {% endfor %}
-    </ul>
-{% endif %}
+
 {% endblock %}
