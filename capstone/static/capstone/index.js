@@ -128,12 +128,12 @@ function updateRecord(site_id) {
     //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
     //site = title
-    fetch(`/updateRecord/${title}`, {
+    fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
         headers: {'X-CSRFToken': csrftoken},
         mode: 'same-origin',
         body: JSON.stringify({
-            title: site,
+            id: site_id,
             is_active: true
         })
     })
