@@ -153,14 +153,15 @@ def updateRecord(request, site_id):
 
 def favorites(request):
     print(request)
-    name = request.user.username
+    user_id = request.user.id
+    print(user_id)
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
 
     favorites = Favorites.objects.filter(
-        name=favorites.watcher)
+        user_id=favorites.watcher)
     print(favorites)
 
     #return HttpResponse({"sites": sites})
