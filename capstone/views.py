@@ -130,7 +130,7 @@ def updateRecord(request, site_id):
             # display watchlist
             return HttpResponseRedirect(reverse('watch_list'))
 
-def favorites(request):
+def fav(request):
     print(request)
     user_id = request.user.id
     print(user_id)
@@ -157,11 +157,13 @@ def favorites(request):
     return render(request, "capstone/favorites.html", {
         "favorites": favorites})
 
-def watch_list(request):
+def favorites(request):
+    print(request)
     # get signed-in user's id
-    wat_user = request.user.id
-    # get all items on signed-in user's watchlist
-    wat_lists = Watchlist.objects.filter(
+    user_id = request.user.id
+    print(user_id)
+    # get all items on signed-in user's favorites list
+    wat_lists = favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's watchlist
     return render(request, 'auctions/watch_list.html', {
