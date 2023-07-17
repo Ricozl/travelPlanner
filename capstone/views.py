@@ -98,16 +98,16 @@ def favorites(request, siteName):
 
 
 @requires_csrf_token
-def updateRecord(request, title):
+def updateRecord(request, site_id):
     print(request)
-    name = title
+    #name = title
     # check if record exists. if not, create new one
     newRecord = False
     activity = ""
 
     # query for requested profile to follow
     try:
-        favsite = Sites.objects.get(title__exact=name)
+        favsite = Sites.objects.get(id__exact=site_id)
     except Sites.DoesNotExist:
         # requested profile to follow does not exist
         print("site does not exist")
