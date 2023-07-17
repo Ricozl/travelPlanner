@@ -127,7 +127,7 @@ def favorites(request):
         watcher=user_id, is_active=True)
     print(favorites)
 
-    active_list = Listing.objects.filter(
+    active_list = Sites.objects.filter(
         listing_category__cat_name=title, is_active="True").values()
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
