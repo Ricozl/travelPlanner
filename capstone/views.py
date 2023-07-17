@@ -124,17 +124,14 @@ def favorites(request):
     print(user_id)
 
     favorites = Favorites.objects.filter(
-        user_id__exact=Favorites.watcher)
+        watcher=user_id, is_active=True)
     print(favorites)
-
-    followsNo = Follow.objects.filter(
-        follower=profileId, is_active=True).count()
 
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
 
-    return render(request, "capstone/favorites.html")
+    return render(request, "capstone/favorites.html favorites")
 
 def login_view(request):
     if request.method == "POST":
