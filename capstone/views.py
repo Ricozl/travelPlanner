@@ -123,12 +123,12 @@ def favorites(request):
     user_id = request.user.id
     print(user_id)
 
-    favlist = Favorites.objects.filter(
+    favs = Favorites.objects.filter(
         watcher=user_id, is_active=True)
-    print(favlist)
+    print(favs)
 
     active_list = Sites.objects.filter(
-        listing_category__cat_name=title, is_active="True").values()
+        id__cat_name=title, is_active="True").values()
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
