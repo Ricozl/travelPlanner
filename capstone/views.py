@@ -127,7 +127,7 @@ def favorites(request):
         watcher=user_id, is_active=True)
     print(favs)
 
-    active_list = Sites.objects.filter(
+    favorites = Sites.objects.filter(
         id=favs, is_active="True").values()
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
