@@ -100,6 +100,8 @@ def favorites(request, siteName):
 @requires_csrf_token
 def updateRecord(request, site_id):
     print(request)
+    current_user_id = request.user.id
+    print(current_user_id)
     #name = title
     # check if record exists. if not, create new one
     newRecord = False
