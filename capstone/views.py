@@ -113,6 +113,7 @@ def updateRecord(request, site_id):
         print("site does not exist")
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
     print(favsite)
+    print(favsite.id)
     # query for follower's record
     follower = request.user.username
     print(follower)
@@ -122,7 +123,7 @@ def updateRecord(request, site_id):
         # follower's record not found
         print("user does not exist")
         return JsonResponse({"Error": "Error. User not found."}, status=404)
-    
+
     # find out if favorites record already exists. If not, create it
     try:
         favorite = Favorites.objects.get(
