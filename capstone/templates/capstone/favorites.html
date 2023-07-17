@@ -3,8 +3,20 @@
 {% block body %}
 <div id="favorites">
     <h2>{{ user.username }}'s Favorites</h2>
+
     {% for favorite in favorites %}
-    
+
+        <h2>{{ favorite.title }}</h2>
+        {% if listing.image_url %}
+            <p><img src="{{ listing.image_url }}" style="width:400px; height:400px;"></p>
+        {% endif %}
+        <ul>
+            <li>{{ listing.description }}</li>
+            <li>Current Price:  ${{ price }}</li>
+            {% if user.is_authenticated and listing.is_active == True %}
+            <li>{{ form }}{% csrf_token %}<input class="btn btn-primary" type="submit" name="place_bid" value="Place Bid"></li>
+            {% endif %}
+        </ul>
 
 
 </div>
