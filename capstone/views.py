@@ -128,7 +128,7 @@ def favorites(request):
     print(favs)
 
     active_list = Sites.objects.filter(
-        id__cat_name=, is_active="True").values()
+        id=favs, is_active="True").values()
     #return HttpResponse({"sites": sites})
     #return JsonResponse(sites, safe=False)
     #return JsonResponse([favorites.serialize() for favorite in favorites], safe=False)
