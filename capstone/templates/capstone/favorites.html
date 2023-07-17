@@ -6,7 +6,7 @@
 
     {% for favorite in favorites %}
 
-        <h2>{{ favorite.title }}</h2>
+        <h2>{{ favorite.item }}</h2>
         {% if listing.image_url %}
             <p><img src="{{ listing.image_url }}" style="width:400px; height:400px;"></p>
         {% endif %}
