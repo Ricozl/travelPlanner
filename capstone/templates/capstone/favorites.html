@@ -17,7 +17,9 @@
             <li>{{ form }}{% csrf_token %}<input class="btn btn-primary" type="submit" name="place_bid" value="Place Bid"></li>
             {% endif %}
         </ul>
-
+    {% empty %}
+        <p>No Favorites yet.</p>
+    {% endfor %}
 
 </div>
 {% endblock %}
