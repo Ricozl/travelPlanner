@@ -105,7 +105,13 @@ def updateRecord(request, site_id):
         favorites = Favorites(watcher=folName,
                         item=favsite, is_active=True)
         favorites.save()
-        return JsonResponse({"is_active": True})
+        #return JsonResponse({"is_active": True})
+
+    # if not already on watchlist, save to watchlist and send success message
+                Watchlist.objects.create(
+                    watcher=u_w, item=lists, is_active=True)
+                messages.add_message(
+                    request, messages.SUCCESS, "Listing is now on Watchlist")
 
     if request.method == "PUT":
         print("got to PUT")
