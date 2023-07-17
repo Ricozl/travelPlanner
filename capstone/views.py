@@ -118,17 +118,17 @@ def updateRecord(request, site_id):
     return JsonResponse({"activity": activity})
 
  # check if listing already on watchlist, post warning message
-            if Watchlist.objects.filter(watcher=u_w, item=listing_id, is_active=True).exists():
-                messages.add_message(
-                    request, messages.WARNING, "Listing is already on Watchlist")
-            else:
-                # if not already on watchlist, save to watchlist and send success message
-                Watchlist.objects.create(
-                    watcher=u_w, item=lists, is_active=True)
-                messages.add_message(
-                    request, messages.SUCCESS, "Listing is now on Watchlist")
-            # display watchlist
-            return HttpResponseRedirect(reverse('watch_list'))
+    if Watchlist.objects.filter(watcher=u_w, item=listing_id, is_active=True).exists():
+        messages.add_message(
+            request, messages.WARNING, "Listing is already on Watchlist")
+    else:
+         # if not already on watchlist, save to watchlist and send success message
+        Watchlist.objects.create(
+            watcher=u_w, item=lists, is_active=True)
+        messages.add_message(
+            request, messages.SUCCESS, "Listing is now on Watchlist")
+        # display watchlist
+        return HttpResponseRedirect(reverse('watch_list'))
 
 def fav(request):
     print(request)
