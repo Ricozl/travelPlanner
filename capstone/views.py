@@ -39,6 +39,10 @@ def sites(request, site):
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
        #posts = Posto.objects.filter(poster__id__in=followedNms)
+       #current_user.maps.all() to get all instances of your Map model that have a relation to current_user.
+
+        favors = fav_list.sites.all()
+        print(favors)
         favSites = Favorites.objects.filter(
             watcher=wat_user, is_active=True).values_list('item')
             #watcher=wat_user, is_active=True)
