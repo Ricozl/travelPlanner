@@ -32,7 +32,7 @@ def sites(request, site):
             watcher=wat_user, is_active=True).select_related('item').order_by('item')
         # display user's favorites list
         print(wat_lists)
-        return JsonResponse({"favorites": wat_lists}, safe=False)
+        return HttpResponse({"favorites": wat_lists}, safe=False)
     else:
         print(site)
         print(request)
