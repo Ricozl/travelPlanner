@@ -32,7 +32,8 @@ def sites(request, site):
             watcher=wat_user, is_active=True).select_related('item').order_by('item')
         # display user's favorites list
         print(siteList)
-        sites = json.dumps(siteList)
+        
+        sites = json.dumps(list(siteList))
         #return HttpResponse({"sites": wat_lists})
         return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
