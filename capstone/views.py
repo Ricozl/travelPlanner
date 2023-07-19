@@ -45,9 +45,9 @@ def sites(request, site):
         print(favSites)
         print(favSites[1])
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
-        sites = Sites.objects.filter(title__
+        sites = Sites.objects.filter(title__item__in=favSites)
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
-            watcher=wat_user, is_active=True).select_related('item')
+            #watcher=wat_user, is_active=True).select_related('item')
         # display user's favorites list
         print(sites)
 
