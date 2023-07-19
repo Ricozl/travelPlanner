@@ -34,11 +34,11 @@ def sites(request, site):
 
         #except User.DoesNotExist:
             #return JsonResponse({"Error": "User not found"})
-        followedNms = Follow.objects.filter(
-            follower=usernm, is_active=True).values_list('followed')
-        posts = Posto.objects.filter(poster__id__in=followedNms)
+        #followedNms = Follow.objects.filter(
+            #follower=usernm, is_active=True).values_list('followed')
+       #posts = Posto.objects.filter(poster__id__in=followedNms)
         favSites = Favorites.objects.filter(
-            watcher=usernm, is_active=True).values()
+            watcher=wat_user, is_active=True).values()
         print(favSites)
         print(favSites[1])
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
