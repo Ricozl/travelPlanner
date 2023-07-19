@@ -35,8 +35,8 @@ def sites(request, site):
         favSites = Favorites.objects.filter(
             watcher=usernm, is_active=True).values_list('item')
         print(favSites)
-        print(favSites('item'))
-        sites = Sites.objects.filter(pk__exact=favSites.item)
+        print(favSites[1])
+        sites = Sites.objects.filter(pk=favSites)
         #siteList = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).values('item')
