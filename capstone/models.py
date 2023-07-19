@@ -41,7 +41,7 @@ class Favorites(models.Model):
     is_active = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['watcher', 'item']
+        ordering = ['watcher', 'item', 'is_active']
 
     def serialize(self):
         return {
