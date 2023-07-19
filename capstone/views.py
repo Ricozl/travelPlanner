@@ -157,7 +157,22 @@ def fav(request):
     return render(request, "capstone/favorites.html", {
         "favorites": favorites})
 
+
 def favorites(request):
+    print(request)
+    # get signed-in user's id
+    wat_user = request.user.id
+    print(wat_user)
+    # get all items on signed-in user's favorites list
+    wat_lists = Favorites.objects.filter(
+        watcher=wat_user, is_active=True).select_related('item').order_by('item')
+    # display user's favorites list
+    #return render(request, 'capstone/favorites.html', {
+        #'favorites': wat_lists
+    return jsonResponse
+    })
+
+def htmlfavorites(request):
     print(request)
     # get signed-in user's id
     wat_user = request.user.id
