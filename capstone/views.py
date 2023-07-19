@@ -33,7 +33,7 @@ def sites(request, site):
         except User.DoesNotExist:
             return JsonResponse({"Error": "User not found"});
         favSites = Favorites.objects.filter(
-            watcher=usernm, is_active=True).values_list('item')
+            watcher=usernm, is_active=True).values()
         print(favSites)
         print(favSites[1])
         sites = Sites.objects.filter(pk=favSites)
