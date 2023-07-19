@@ -35,12 +35,12 @@ def sites(request, site):
         favSites = Favorites.objects.filter(
             watcher=usernm, is_active=True).values_list('item')
         print(favSites)
-        sites = Sites.objects.filter(title__id__in=followedNms)
+        sites = Sites.objects.filter(title__id__in=favSites)
         #siteList = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).values('item')
         # display user's favorites list
-        print(siteList)
+        print(sites)
 
         #sites = json.dumps(list(siteList))
         #return HttpResponse({"sites": wat_lists})
