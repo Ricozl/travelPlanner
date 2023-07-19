@@ -25,13 +25,18 @@ def places(request):
 def sites(request, site):
     if site == "favorites":
          # get signed-in user's id
-        wat_user = request.user.username
+        wat_user = request.user.id
         print(wat_user)
         # get all items on signed-in user's favorites list
-        try:
-            usernm = User.objects.get(username__exact=wat_user)
-        except User.DoesNotExist:
-            return JsonResponse({"Error": "User not found"});
+        #try:
+            #usernm = User.objects.get(username__exact=wat_user)
+        #    return JsonResponse({"Error": "User not found"});
+
+        #except User.DoesNotExist:
+            #return JsonResponse({"Error": "User not found"})
+        followedNms = Follow.objects.filter(
+            follower=usernm, is_active=True).values_list('followed')
+        posts = Posto.objects.filter(poster__id__in=followedNms)
         favSites = Favorites.objects.filter(
             watcher=usernm, is_active=True).values()
         print(favSites)
