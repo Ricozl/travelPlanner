@@ -169,6 +169,7 @@ def favorites(request):
     # display user's favorites list
     #return render(request, 'capstone/favorites.html', {
         #'favorites': wat_lists
+    print(wat_user)
     return JsonResponse({"favorites": wat_lists})
 
 
