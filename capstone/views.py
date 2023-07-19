@@ -30,7 +30,7 @@ def sites(request, site):
         # get all items on signed-in user's favorites list
         siteList = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
-            watcher=wat_user, is_active=True).values('site')
+            watcher=wat_user, is_active=True).values('item')
         # display user's favorites list
         print(siteList)
 
