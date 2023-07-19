@@ -24,20 +24,27 @@ def places(request):
 
 def sites(request, site):
     if site = "favorites":
-        
-    print(site)
-    print(request)
+         # get signed-in user's id
+        wat_user = request.user.id
+        print(wat_user)
+        # get all items on signed-in user's favorites list
+        wat_lists = Favorites.objects.filter(
+            watcher=wat_user, is_active=True).select_related('item').order_by('item')
+        # display user's favorites list
+        print(wat_user)
+        return JsonResponse({"favorites": wat_lists})
+    else:
+        print(site)
+        print(request)
     #if site == "ancient-rome":
 # check to see if 'site' is in category list. if so, print out all sites with that category.
 # if not in category list, check to see if it is a 'title' and print that out.
 # make header one or the other.
 
-    sites = Sites.objects.filter(
-        sites_category__cat_name=site)
-
-    #return HttpResponse({"sites": sites})
-    #return JsonResponse(sites, safe=False)
-    return JsonResponse([site.serialize() for site in sites], safe=False)
+        sites = Sites.objects.filter(
+            sites_category__cat_name=site)
+        return JsonResponse([site.serialize() for site in sites], safe=False)
+    
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
     if catno is None:
@@ -169,8 +176,6 @@ def favorites(request):
     wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    #return render(request, 'capstone/favorites.html', {
-        #'favorites': wat_lists
     print(wat_user)
     return JsonResponse({"favorites": wat_lists})
 
