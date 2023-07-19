@@ -23,7 +23,7 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request, site):
-    if site = "favorites":
+    if site == "favorites":
          # get signed-in user's id
         wat_user = request.user.id
         print(wat_user)
@@ -36,15 +36,11 @@ def sites(request, site):
     else:
         print(site)
         print(request)
-    #if site == "ancient-rome":
-# check to see if 'site' is in category list. if so, print out all sites with that category.
-# if not in category list, check to see if it is a 'title' and print that out.
-# make header one or the other.
 
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
         return JsonResponse([site.serialize() for site in sites], safe=False)
-    
+
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
     if catno is None:
