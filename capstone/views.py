@@ -28,12 +28,12 @@ def sites(request, site):
         wat_user = request.user.id
         print(wat_user)
         # get all items on signed-in user's favorites list
-         try:
+        try:
             usernm = User.objects.get(username__exact=wat_user)
         except User.DoesNotExist:
             return JsonResponse({"Error": "User not found"});
         favSites = Favorites.objects.filter(
-            watcher=usernm, is_active=True).values_list('followed')
+            watcher=usernm, is_active=True).values_list('item')
         posts = Posto.objects.filter(poster__id__in=followedNms)
         siteList = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
