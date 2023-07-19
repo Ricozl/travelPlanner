@@ -71,7 +71,7 @@ def updateRecord(request, site_id):
     print(current_user_id)
     #name = title
     # check if record exists. if not, create new one
-    newRecord = False
+    #newRecord = False
     activity = ""
 
     # query for requested profile to follow
@@ -163,7 +163,7 @@ def favorites(request):
     wat_user = request.user.id
     print(wat_user)
     # get all items on signed-in user's favorites list
-    wat_lists = favorites.objects.filter(
+    wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
     return render(request, 'capstone/favorites.html', {

@@ -75,7 +75,7 @@ body, html {
   }
 }
 
-/* Style the tab */
+/* Style the tab for the navigation bar */
 .tab {
   overflow: hidden;
   /*border: 1px solid #ccc;*/
@@ -223,7 +223,7 @@ img {
   height: auto;
 }
 */
-
+/* form is for login page */
 #form-page {
   background-color: #e6fff7;
   margin: 50px 100px;
@@ -247,11 +247,18 @@ h4 {
   color: red;
 }
 
+#favorites {
+  margin: 20px;
+  text-align: center;
+  color: red;
+}
+
+/* playing with React
 #hello {
   text-align: center;
   font-size: 36px;
   color: black;
-}
+}*/
 /*
 #romeMap {
   background-image: url("rome-area-map1.jpg");
@@ -320,7 +327,7 @@ h4 {
   height: 300px;
   width: 300px;
 }
-
+/* for React code */
 #app {
   background-color: green;
   text-align: center;
