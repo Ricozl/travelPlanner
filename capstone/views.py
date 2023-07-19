@@ -23,6 +23,8 @@ def places(request):
     return render(request, "capstone/mapPlaces.html")
 
 def sites(request, site):
+    if site = "favorites":
+        
     print(site)
     print(request)
     #if site == "ancient-rome":
