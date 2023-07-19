@@ -33,14 +33,14 @@ def sites(request, site):
         # display user's favorites list
         print(sites)
         #return HttpResponse({"sites": wat_lists})
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
+        return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
 
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
-    return JsonResponse([site.serialize() for site in sites], safe=False)
+        return JsonResponse([site.serialize() for site in sites], safe=False)
 
     catno = Categories.objects.get(cat_name = sitenm)
     print(catno)
