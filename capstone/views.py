@@ -25,7 +25,7 @@ def places(request):
 def sites(request, site):
     if site == "favorites":
          # get signed-in user's id
-        wat_user = request.user.id
+        wat_user = request.user.username
         print(wat_user)
         # get all items on signed-in user's favorites list
         try:
