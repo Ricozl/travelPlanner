@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 });
 
-function compose_email() {
+//function compose_email() {
     // Show compose view and hide other views
-    document.querySelector('#showImgs').style.display = 'none';
+    //document.querySelector('#showImgs').style.display = 'none';
     //document.querySelector('#emails-list').style.display = 'none';
     //document.querySelector('#oneEmail').style.display = 'none';
     //document.querySelector('#compose-view').style.display = 'block';
-};
+//};
 
-function choose_site() {
-    document.querySelector('#showImgs').style.display = 'none';
-    document.querySelector('#sites').style.display = 'block';
-};
+//function choose_site() {
+    //document.querySelector('#showImgs').style.display = 'none';
+    //document.querySelector('#sites').style.display = 'block';
+//};
 
 function load_site(site) {
     console.log('got to load_site')
