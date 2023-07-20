@@ -29,8 +29,6 @@ def sites(request, site):
         print(wat_user)
         # get all items on signed-in user's favorites list
 
-        followedNms = Follow.objects.filter(
-            follower=usernm, is_active=True).values_list('followed')
 
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
@@ -47,8 +45,7 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-        #places = Favorites.objects.select_related('item', 'watcher')
-        #print(places)
+   
         #active_list = Favorites.objects.filter(
             #item=favSites.title, is_active="True").values()
         #print(active_list)
