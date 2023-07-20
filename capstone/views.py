@@ -46,7 +46,7 @@ def sites(request, site):
         sites = Sites.objects.filter(title__id__in=favSites)
 
         #sites = Sites.objects.filter(sites_id__favorites_id__in=favSites)
-        #print(sites)
+        print(sites)
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
@@ -66,8 +66,8 @@ def sites(request, site):
         #print(sites)
 
         #sites = json.dumps(list(siteList))
-        return HttpResponse({"sites": favSites})
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
+        #return HttpResponse({"sites": favSites})
+        return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
