@@ -48,13 +48,14 @@ def sites(request, site):
             watcher=wat_user, is_active=True)
         print(favSites)
 
-        active_list = Favorites.objects.filter(
-            item=sites.title, is_active="True").values()
-        print(active_list)
+
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
         places = Favorites.objects.select_related('item', 'watcher')
         print(places)
+        active_list = Favorites.objects.filter(
+            item=favSites.title, is_active="True").values()
+        print(active_list)
         #pubs = publication.objects.select_related('country', 'country_state', 'city')
         sites = Sites.objects.filter(
             watcher=wat_user, title=site).select_related('item').order_by('item')
