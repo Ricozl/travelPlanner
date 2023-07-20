@@ -36,11 +36,11 @@ def sites(request, site):
 
         #favors = fav_list.sites.all()
         #print(favors)
-        sites = Favorites.objects.filter(
+        sitelist = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).values_list('item')
             watcher=wat_user, is_active=True)
         #print(favSites)
-        print(sites)
+        print(sitelist)
         ##print(favSites[1].watcher)
 
         #followedNms = Follow.objects.filter(
@@ -67,8 +67,8 @@ def sites(request, site):
         # display user's favorites list
         #print(sites)
 
-        #sites = json.dumps(list(siteList))
-        return HttpResponse({"sites": sites})
+        sites = json.dumps(list(sitelist))
+        return HttpResponse({"sites": sites}, safe=False)
         #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
