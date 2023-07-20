@@ -40,6 +40,8 @@ def sites(request, site):
             watcher=wat_user, is_active=True).values_list('item')
             #watcher=wat_user, is_active=True)
         print(favSites)
+
+        for i < len(favSites):
         sites = Sites.objects.filter(title__fav_list__in=favSites)
         print(sites)
 
