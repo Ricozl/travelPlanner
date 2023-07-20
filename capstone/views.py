@@ -50,6 +50,8 @@ def sites(request, site):
         print(favSites[1])
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
+        places = sites.objects.select_related('country', 'country_state', 'city')
+        #pubs = publication.objects.select_related('country', 'country_state', 'city')
         sites = Sites.objects.filter(
             watcher=wat_user, is_active=True).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).select_related('item')
