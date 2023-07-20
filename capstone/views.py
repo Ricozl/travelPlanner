@@ -60,7 +60,7 @@ def sites(request, site):
         favs = set()
 
         sites = Favorites.objects.filter(
-            watcher=wat_user, is_active="True").select_related('item__title')
+            watcher=wat_user, is_active="True").select_related('item')
 
         #print(active_list)).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).select_related('item')
