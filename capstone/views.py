@@ -68,8 +68,8 @@ def sites(request, site):
         #print(sites)
 
         #sites = json.dumps(list(siteList))
-        #return HttpResponse({"sites": favSites})
-        return JsonResponse([site.serialize() for site in sites], safe=False)
+        return HttpResponse({"sites": sites})
+        #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
