@@ -48,8 +48,7 @@ def sites(request, site):
             watcher=wat_user, is_active=True)
         print(favSites)
 
-        maybe = favSites.Favorites.site.all()
-        print(maybe)
+       
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
         places = Favorites.objects.select_related('item', 'watcher')
