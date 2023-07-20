@@ -59,7 +59,7 @@ def sites(request, site):
         #pubs = publication.objects.select_related('country', 'country_state', 'city')
         favs = set()
 
-        Favorites.objects.filter(
+        sites = Favorites.objects.filter(
             watcher=wat_user, is_active="True").select_related('item__title')
 
         #print(active_list)).select_related('item').order_by('item')
