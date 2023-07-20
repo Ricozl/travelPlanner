@@ -55,7 +55,7 @@ def sites(request, site):
         print(places)
         #pubs = publication.objects.select_related('country', 'country_state', 'city')
         sites = Sites.objects.filter(
-            watcher=wat_user, is_active=True).select_related('item').order_by('item')
+            watcher=wat_user, title=site).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).select_related('item')
         # display user's favorites list
         print(sites)
