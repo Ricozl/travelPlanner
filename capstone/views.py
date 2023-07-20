@@ -37,11 +37,10 @@ def sites(request, site):
         #favors = fav_list.sites.all()
         #print(favors)
         favSites = Favorites.objects.filter(
-            watcher=wat_user, is_active=True).values_list('item')
-            #watcher=wat_user, is_active=True)
+            #watcher=wat_user, is_active=True).values_list('item')
+            watcher=wat_user, is_active=True)
         print(favSites)
-        cats = Sites.objects.filter(fav_list__exact=id)
-        print(cats)
+
         #sites = Sites.objects.filter(sites_id__favorites_id__in=favSites)
         #print(sites)
 
@@ -60,11 +59,11 @@ def sites(request, site):
         #print(active_list)).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).select_related('item')
         # display user's favorites list
-        print(sites)
+        #print(sites)
 
         #sites = json.dumps(list(siteList))
-        #return HttpResponse({"sites": wat_lists})
-        return JsonResponse([site.serialize() for site in sites], safe=False)
+        return HttpResponse({"sites": "favSites"})
+        #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
