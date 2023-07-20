@@ -33,27 +33,27 @@ def sites(request, site):
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
        #posts = Posto.objects.filter(poster__id__in=followedNms)
-       #current_user.maps.all() to get all instances of your Map model that have a relation to current_user.
 
         #favors = fav_list.sites.all()
         #print(favors)
         favSites = Favorites.objects.filter(
-            #watcher=wat_user, is_active=True).values_list('item')
-            watcher=wat_user, is_active=True)
+            watcher=wat_user, is_active=True).values_list('item')
+            #watcher=wat_user, is_active=True)
         print(favSites)
-
+        sites = Sites.objects.filter(id__id__in=favSites)
+        print(sites)
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-   
+
         #active_list = Favorites.objects.filter(
             #item=favSites.title, is_active="True").values()
         #print(active_list)
         #pubs = publication.objects.select_related('country', 'country_state', 'city')
         favs = set()
 
-        sites = Favorites.objects.filter(
-            watcher=wat_user, is_active="True").select_related('item')
+        #sites = Favorites.objects.filter(
+            #watcher=wat_user, is_active="True").select_related('item')
 
         #print(active_list)).select_related('item').order_by('item')
             #watcher=wat_user, is_active=True).select_related('item')
