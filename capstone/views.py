@@ -36,19 +36,19 @@ def sites(request, site):
 
         #favors = fav_list.sites.all()
         #print(favors)
-        favSites = Favorites.objects.filter(
+        sites = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).values_list('item')
             watcher=wat_user, is_active=True)
-        print(favSites)
-        print(favSites[0].item)
-        print(favSites[1].watcher)
+        #print(favSites)
+        print(sites)
+        ##print(favSites[1].watcher)
 
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
-        sites = Sites.objects.filter(title__site__in=favSites)
+       # sites = Sites.objects.filter(title__site__in=favSites)
 
         #sites = Sites.objects.filter(sites_id__favorites_id__in=favSites)
-        print(sites)
+        #print(sites)
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
