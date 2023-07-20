@@ -58,7 +58,7 @@ def sites(request, site):
         print(active_list)
         #pubs = publication.objects.select_related('country', 'country_state', 'city')
         favs = set()
-        for e in 
+        
         Favorites.objects.filter(
             watcher=wat_user, is_active="True").select_related('item'): favs.add(e.item)
 
