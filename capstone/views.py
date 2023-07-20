@@ -49,7 +49,7 @@ def sites(request, site):
         print(favSites)
 
         active_list = Favorites.objects.filter(
-            item__title, is_active="True").values()
+            item=sites.title, is_active="True").values()
         print(active_list)
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
