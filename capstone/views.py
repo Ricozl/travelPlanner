@@ -40,12 +40,8 @@ def sites(request, site):
             watcher=wat_user, is_active=True).values_list('item')
             #watcher=wat_user, is_active=True)
         print(favSites)
-        sites=[]
-        var i = 0;
-        for i < len(favSites):
-            e = Sites.objects.filter(title__fav_list[i]__in=favSites)
-            sites.append(e)
-            i = i + 1
+
+        sites = Sites.objects.filter(title__fav_list[i]__in=favSites)
         print(sites)
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
