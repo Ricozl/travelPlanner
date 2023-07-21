@@ -36,10 +36,12 @@ def sites(request, site):
 
         #favors = fav_list.sites.all()
         #print(favors)
-        sites = Favorites.objects.filter(
+        sitelist = Favorites.objects.filter(
             #watcher=wat_user, is_active=True).values_list('item')
             watcher=wat_user, is_active=True)
-        #print(favSites)
+        print(sitelist)
+
+        sites = Sites.objects.filter(title__fav_list__in=sitelist)
         print(sites)
         ##print(favSites[1].watcher)
 
@@ -67,11 +69,11 @@ def sites(request, site):
         # display user's favorites list
         #print(sites)
 
-        return render(request, "capstone/favorites.html", {
-            "sites": sites
-        })
+        #return render(request, "capstone/favorites.html", {
+            #"sites": sites
+        #})
         #sites = json.dumps(list(sitelist))
-        #return HttpResponse({"sites": sites}, safe=False)
+        return HttpResponse({"sites": sites}, safe=False)
         #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
