@@ -42,7 +42,7 @@ def sites(request, site):
         print(sitelist)
         #print(sitelist.item.title[0])
 
-        sites = Sites.objects.filter(title__in=sitelist)
+        sites = Sites.objects.filter(title__item__in=sitelist)
         print(sites)
         ##print(favSites[1].watcher)
 
