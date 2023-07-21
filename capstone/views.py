@@ -55,10 +55,9 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-        var i = 0;
-        for i < len(sitelist):
-            sites = Sites.objects.filter(
-            id= sitelist[i])
+        i = 0;
+        for i < len(sitelist); i++:
+            sites = Sites.objects.filter(id= sitelist[i])
             print(sites)
             i = i + 1
         print(sites)
