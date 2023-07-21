@@ -40,8 +40,9 @@ def sites(request, site):
             #watcher=wat_user, is_active=True).values_list('item')
             watcher=wat_user, is_active=True)
         print(sitelist)
+        print(sitelist.site[0])
 
-        sites = Sites.objects.filter(title__fav_list__in=sitelist)
+        sites = Sites.objects.filter(id__item__in=sitelist)
         print(sites)
         ##print(favSites[1].watcher)
 
