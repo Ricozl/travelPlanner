@@ -56,7 +56,7 @@ def sites(request, site):
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
         sites = Sites.objects.filter(
-            "sites": sitelist
+            sites= sitelist
         )
         print(sites)
         #active_list = Favorites.objects.filter(
