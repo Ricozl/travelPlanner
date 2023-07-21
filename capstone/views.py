@@ -55,9 +55,12 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-        sites = Sites.objects.filter(
-            id= sitelist
-        )
+        var i = 0;
+        for i < len(sitelist):
+            sites = Sites.objects.filter(
+            id= sitelist[i])
+            print(sites)
+            i = i + 1
         print(sites)
         #active_list = Favorites.objects.filter(
             #item=favSites.title, is_active="True").values()
