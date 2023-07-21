@@ -74,7 +74,10 @@ def sites(request, site):
             #"sites": sites
         #})
         #sites = json.dumps(list(sitelist))
-        return HttpResponse({"sites": sites})
+        return render(request, "auctions/cat_listings.html", {
+        "title": title, "listings": active_list
+    })
+
         #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
