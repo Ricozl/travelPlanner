@@ -37,10 +37,10 @@ def sites(request, site):
         #favors = fav_list.sites.all()
         #print(favors)
         sitelist = Favorites.objects.filter(
-            #watcher=wat_user, is_active=True).values_list('item')
-            watcher=wat_user, is_active=True)
+            watcher=wat_user, is_active=True).values_list('item')
+            #watcher=wat_user, is_active=True)
         print(sitelist)
-        print(sitelist.item.title[0])
+        #print(sitelist.item.title[0])
 
         sites = Sites.objects.filter(id__item__in=sitelist)
         print(sites)
