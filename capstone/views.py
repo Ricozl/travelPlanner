@@ -42,8 +42,8 @@ def sites(request, site):
         print(sitelist)
         #print(sitelist.item.title[0])
 
-        sites = Sites.objects.filter(title__item__in=sitelist)
-        print(sites)
+        #sites = Sites.objects.filter(title__item__in=sitelist)
+        #print(sites)
         ##print(favSites[1].watcher)
 
         #followedNms = Follow.objects.filter(
@@ -55,7 +55,10 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-
+        sites = Sites.objects.filter(
+            "sites": sitelist
+        )
+        print(sites)
         #active_list = Favorites.objects.filter(
             #item=favSites.title, is_active="True").values()
         #print(active_list)
@@ -74,10 +77,10 @@ def sites(request, site):
             #"sites": sites
         #})
         #sites = json.dumps(list(sitelist))
-        return render(request, "auctions/cat_listings.html", {
-        "title": title, "listings": active_list
-    })
-
+        #return render(request, "auctions/cat_listings.html", {
+            #"title": title, "listings": active_list
+        #})
+        return JsonResponse({"sites": sites}, safe=False)
         #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
