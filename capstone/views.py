@@ -31,7 +31,8 @@ def sites(request, site):
 
         followedNms = Favorites.objects.filter(
             watcher=wat_user, is_active=True).values_list('item')
-        sites = Sites.objects.filter(id__id__in=followedNms)
+        sites = Sites.objects.filter(title__item__in=followedNms)
+        #sites = Sites.objects.filter(id__id__in=followedNms)
         print(sites)
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
