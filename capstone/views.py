@@ -29,10 +29,10 @@ def sites(request, site):
         print(wat_user)
         # get all items on signed-in user's favorites list
 
-        followedNms = Favorites.objects.filter(
+        sites = Favorites.objects.filter(
             watcher=wat_user, is_active=True)
-        print(followedNms)
-        sites = Sites.objects.filter(title__in=followedNms)
+        
+        #sites = Sites.objects.filter(title__in=followedNms)
         #sites = Sites.objects.filter(id__id__in=followedNms)
         print(sites)
         #followedNms = Follow.objects.filter(
