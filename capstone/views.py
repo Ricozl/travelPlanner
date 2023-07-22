@@ -228,9 +228,10 @@ def favorites(request):
     wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    print(wat_user)
-    return JsonResponse({"favorites": wat_lists})
-
+    print(wat_lists)
+    #return JsonResponse({"favorites": wat_lists})
+return render(request, "capstone/favorites.html", {
+        "favorites": favorites})
 
 def htmlfavorites(request):
     print(request)
