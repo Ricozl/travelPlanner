@@ -31,6 +31,7 @@ def sites(request, site):
 
         followedNms = Favorites.objects.filter(
             watcher=wat_user, is_active=True)
+        print(followedNms)
         sites = Sites.objects.filter(title__in=followedNms)
         #sites = Sites.objects.filter(id__id__in=followedNms)
         print(sites)
