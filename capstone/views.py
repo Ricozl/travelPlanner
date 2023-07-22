@@ -31,7 +31,7 @@ def sites(request, site):
 
         sites = Favorites.objects.filter(
             watcher=wat_user, is_active=True)
-        
+
         #sites = Sites.objects.filter(title__in=followedNms)
         #sites = Sites.objects.filter(id__id__in=followedNms)
         print(sites)
@@ -85,11 +85,10 @@ def sites(request, site):
             #"sites": sites
         #})
         #sites = json.dumps(list(sitelist))
-        #return render(request, "auctions/cat_listings.html", {
-            #"title": title, "listings": active_list
-        #})
+        return render(request, "capstone/favorites.html", {
+            "sites": sites})
         #return JsonResponse({"sites": sites}, safe=False)
-        return JsonResponse([site.serialize() for site in sites], safe=False)
+        #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
