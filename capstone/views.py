@@ -42,7 +42,7 @@ def sites(request, site):
             #watcher=wat_user, is_active=True)
         print(sitelist)
         #print(sitelist.item.title[0])
-        result = Sites.objects.filter(sites_id__in=sitelist)
+        result = Sites.objects.filter(title__in=sitelist)
         #wat_lists = Sites.objects.filter('all').filter(sitelist)
 
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
