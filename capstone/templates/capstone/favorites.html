@@ -7,8 +7,6 @@
     <h2>Favorites for {{ user.username }}</h2>
     {% csrf_token %}
 
-    <h2>{{ user.username }}'s Favorites</h2>
-
     {% for favorite in favorites %}
 
         <h2>{{ favorite.item.title }}</h2>
