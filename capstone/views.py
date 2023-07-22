@@ -32,20 +32,16 @@ def sites(request, site):
         followedNms = Favorites.objects.filter(
             watcher=wat_user, is_active=True).values_list('item')
         sites = Sites.objects.filter(id__item__in=followedNms)
-
+        print(sites)
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
        #posts = Posto.objects.filter(poster__id__in=followedNms)
 
         #favors = fav_list.sites.all()
         #print(favors)
-        sitelist = Favorites.objects.filter(
-            watcher=wat_user, is_active=True)
-            #watcher=wat_user, is_active=True).values_list('item')
-            #watcher=wat_user, is_active=True)
-        print(sitelist)
-        #print(sitelist.item.title[0])
-        result = Sites.objects.filter(title__in=sitelist)
+        ####followedNms = Follow.objects.filter(
+            #follower=usernm, is_active=True).values_list('followed')
+        #posts = Posto.objects.filter(poster__id__in=followedNms)result = Sites.objects.filter(title__in=sitelist)
         #wat_lists = Sites.objects.filter('all').filter(sitelist)
 
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
