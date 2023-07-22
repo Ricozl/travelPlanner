@@ -42,8 +42,9 @@ def sites(request, site):
         print(sitelist)
         #print(sitelist.item.title[0])
 
-        wat_lists = Favorites.objects.filter(
-            watcher=wat_user, is_active=True).select_related('item').order_by('item')
+        wat_lists = Sites.objects.filter(
+            id__item
+            #watcher=wat_user, is_active=True).select_related('item').order_by('item')
         print(wat_lists)
             # display user's watchlist
             #return render(request, 'auctions/watch_list.html', {
