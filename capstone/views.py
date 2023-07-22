@@ -45,7 +45,7 @@ def sites(request, site):
         #wat_lists = Sites.objects.filter('all').filter(sitelist)
 
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
-        print(result)
+        #print(result)
             # display user's watchlist
             #return render(request, 'auctions/watch_list.html', {
                 #'watch_list': wat_lists})
@@ -86,8 +86,8 @@ def sites(request, site):
         #return render(request, "auctions/cat_listings.html", {
             #"title": title, "listings": active_list
         #})
-        return JsonResponse({"sites": sites}, safe=False)
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
+        #return JsonResponse({"sites": sites}, safe=False)
+        return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         print(site)
         print(request)
