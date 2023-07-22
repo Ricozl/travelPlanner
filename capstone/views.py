@@ -42,6 +42,13 @@ def sites(request, site):
         print(sitelist)
         #print(sitelist.item.title[0])
 
+        wat_lists = Favorites.objects.filter(
+            watcher=wat_user, is_active=True).select_related('item').order_by('item')
+        print(wat_lists)
+            # display user's watchlist
+            #return render(request, 'auctions/watch_list.html', {
+                #'watch_list': wat_lists})
+
         #sites = Sites.objects.filter(title__item__in=sitelist)
         #print(sites)
         ##print(favSites[1].watcher)
@@ -55,12 +62,8 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(pk__exact=item_id=favSites)
         #sites = Sites.objects.filter(id__site__in=favSites)
-        i = 0;
-        for i < len(sitelist); i++:
-            sites = Sites.objects.filter(id= sitelist[i])
-            print(sites)
-            i = i + 1
-        print(sites)
+
+
         #active_list = Favorites.objects.filter(
             #item=favSites.title, is_active="True").values()
         #print(active_list)
