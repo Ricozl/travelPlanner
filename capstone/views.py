@@ -41,9 +41,9 @@ def sites(request, site):
             #watcher=wat_user, is_active=True)
         print(sitelist)
         #print(sitelist.item.title[0])
-
+        result = Sites.objects.filter(sites_id__in=sitelist_items)
         wat_lists = Sites.objects.filter('all').filter(sitelist)
-            
+
             #watcher=wat_user, is_active=True).select_related('item').order_by('item')
         print(wat_lists)
             # display user's watchlist
