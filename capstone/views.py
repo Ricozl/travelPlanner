@@ -30,7 +30,7 @@ def sites(request, site):
         # get all items on signed-in user's favorites list
 
         followedNms = Favorites.objects.filter(
-            watcher=usernm, is_active=True).values_list('followed')
+            watcher=wat_user, is_active=True).values_list('followed')
         posts = Posto.objects.filter(poster__id__in=followedNms)
 
         #followedNms = Follow.objects.filter(
