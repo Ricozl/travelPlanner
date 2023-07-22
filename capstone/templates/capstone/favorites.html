@@ -3,8 +3,9 @@
 {% block body %}
 
 {% if user.is_authenticated %}
+
+<h2 style="color:black; margin:10px;">Favorites for {{ user.username }}</h2>
 <div id="favorites">
-    <h2 style="color:black; margin:10px;">Favorites for {{ user.username }}</h2>
     {% csrf_token %}
 
     {% for favorite in favorites %}
