@@ -3,27 +3,10 @@
 document.addEventListener('DOMContentLoaded', function (event) {
     // by default, load all posts
     event.preventDefault();
-    //load_page('all_posts');
     console.log("got to js page")
 
     document.querySelector('#topofpage').style.display = 'block';
     document.querySelector('#top-site').style.display = 'block';
-
-    // toggle between buttons
-    //document.querySelector('section-content').style.display = 'none';
-    //document.querySelector('#jumpto').addEventListener('click', choose_site);
-    //document.querySelector('#destinations').addEventListener('click', pick_place);
-    //document.querySelector('#food').addEventListener('click', favorites);
-
-    //const el = document.getElementById("#ancient-rome");
-    //if (el) {
-        //el.addEventListener('click', load_site('Ancient Rome'));
-    //}
-        //document.querySelector('#ancient-rome').addEventListener('click', function(event) {
-            //event.preventDefault();
-            //load_page('Ancient Rome')
-        //});
-    //}
 
 });
 
