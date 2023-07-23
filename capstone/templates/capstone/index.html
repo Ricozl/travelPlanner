@@ -3,27 +3,28 @@
 
 {% block body %}
 
-    <div class="navClass">
-        <div class="container">
+<div class="navClass">
+    <div class="container">
 
-            <div class="tab" id="navbar">
+        <div class="tab" id="navbar">
 
-                <!--<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>-->
-                <button class="tablinks" id="defaultOpen"><a href="{% url 'index' %}"><img src="static/capstone/favicon.ico" style="width:30px; height:30px; margin-right:10px;">Rome Travel</a></button>
-                <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
-                <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
-                <button class="tablinks" onclick="openCity(event, 'Map-of-rome')">Map of Rome</button>
+            <!--<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>-->
+            <button class="tablinks" id="defaultOpen"><a href="{% url 'index' %}"><img src="static/capstone/favicon.ico"
+                        style="width:30px; height:30px; margin-right:10px;">Rome Travel</a></button>
+            <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
+            <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
+            <button class="tablinks" onclick="openCity(event, 'Map-of-rome')">Map of Rome</button>
 
-                {% if user.is_authenticated %}
-                <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
-                <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
-                {% else %}
-                <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
-                <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
-                {% endif %}
-            </div>
+            {% if user.is_authenticated %}
+            <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
+            <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
+            {% else %}
+            <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
+            <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
+            {% endif %}
+        </div>
 
-            <div id="Home"></div>
+        <!--<div id="Home"></div>-->
             <div id="Destinations" class="tabcontent">
                 <h3>Where To Go</h3>
                 <p><a href="#nav-pics">Attractions, </a><a href="#churches">Churches, </a><a href="#ancientrome">Ancient Rome, </a><a href="#museums">and Museums. </a></p>
@@ -42,49 +43,51 @@
                 <h3>Favorites for </h3><h3 id="user_name">{{ user.username }}</h3>
                 <p>See your <a href="{% url 'favorites' %}">favorites</a> to help plan your trip.</p>
             <!--<p>See your <a href="#" onclick="load_site('favorites')">favorites</a> to help plan your trip.</p>-->
-            <div id="Logout" class="tabcontent">
-                <h3>Logout</h3>
-                <p><a href="{% url 'logout' %}">Please Logout here.</a></p>
-            </div>
-            {% else %}
-            <div id="Login" class="tabcontent">
-                <h3>Login</h3>
-                <p><a href="{% url 'login' %}">Please Login here.</a></p>
-            </div>
-            <div id="Register" class="tabcontent">
-                <h3>Register</h3>
-                <p><a href="{% url 'register' %}">Please Register here.</a></p>
-            </div>
-            {% endif %}
+        <div id="Logout" class="tabcontent">
+            <h3>Logout</h3>
+            <p><a href="{% url 'logout' %}">Please Logout here.</a></p>
         </div>
-        <script>
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace("active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-            document.getElementById("defaultOpen").click();
-        </script>
-
+        {% else %}
+        <div id="Login" class="tabcontent">
+            <h3>Login</h3>
+            <p><a href="{% url 'login' %}">Please Login here.</a></p>
+        </div>
+        <div id="Register" class="tabcontent">
+            <h3>Register</h3>
+            <p><a href="{% url 'register' %}">Please Register here.</a></p>
+        </div>
+        {% endif %}
     </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace("active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</div>
 <div id="topofpage">
     <div id="showImgs">
         <div class="img1">
             <div class="caption">
-                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME IS THE ETERNAL CITY</strong></span>
+                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME
+                        IS THE ETERNAL CITY</strong></span>
             </div>
         </div>
         <!--<h4 id="page-name" style="margin:10px; display:inline-block;">Travel</h4>-->
         <div style="position:relative;">
-            <div style="color: #777; background-color:white; text-align:center; padding: 50px 80px; text-align:justify;">
+            <div
+                style="color: #777; background-color:white; text-align:center; padding: 50px 80px; text-align:justify;">
                 <!--<h3 style="text-align:center;">But, it's full of restaurants, bars, and young people.</h3>-->
                 <p style="text-align:center">BUT, IT'S FULL OF RESTAURANTS, BARS, AND YOUNG PEOPLE.</p>
             </div>
@@ -93,12 +96,14 @@
         <div class="img2">
             <!--<img src="{% static 'capstone/rome-street.jpg' %}" width="100%" height="400px" alt="Rome street">-->
             <div class="caption">
-                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME IS A SPIRITUAL PLACE</strong></span>
+                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME
+                        IS A SPIRITUAL PLACE</strong></span>
             </div>
         </div>
 
         <div style="position:relative;">
-            <div style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
+            <div
+                style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
                 <p style="text-align:center">BUT, IT'S A GREAT PLACE FOR DRINKING, DANCING, AND ROMANCE.</p>
             </div>
         </div>
@@ -106,90 +111,93 @@
         <div class="img3">
             <!--<img src="{% static 'capstone/view-from-pincio-park.jpg' %}" width="100%" height="400px" alt="Rome view from Pincio Park">-->
             <div class="caption">
-                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME IS LIVELY AND EXCITING</strong></span>
+                <span class="border" style="background-color:transparent; font-size:25px; color:#f7f7f7;"><strong>ROME
+                        IS LIVELY AND EXCITING</strong></span>
             </div>
         </div>
 
         <div style="position:relative;">
-            <div style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
+            <div
+                style="color:#ddd; background-color:#282E34; text-align:center; padding:50px 80px; text-align:justify;">
                 <p style="text-align:center">BUT, IT'S RELAXED, EASYGOING, AND PEACEFUL.</p>
             </div>
         </div>
     </div>
 </div>
-    <div id="top-site" name="top-site">
-        <a href="#" id="sitefocus" tabindex="-1"></a>
-        <div id="siteName"></div>
-        <div id="sites" class="sites"></div>
-    </div>
+<div id="top-site" name="top-site">
+    <a href="#" id="sitefocus" tabindex="-1"></a>
+    <div id="siteName"></div>
+    <div id="sites" class="sites"></div>
+</div>
 
-    <div id="banner">
-        <div style="color:black; background-color:white; font-size:30px; text-align:center; padding:30px 80px; text-align:justify;">
-            <p>Things to do and see.</p>
+<div id="banner">
+    <div
+        style="color:black; background-color:white; font-size:30px; text-align:center; padding:30px 80px; text-align:justify;">
+        <p>Things to do and see.</p>
+    </div>
+</div>
+<div class="navigation-pics" id="nav-pics" style="box-sizing:border-box;">
+    <div class="row">
+        <div class="column">
+            <div class="pic-container" id="attractions" onclick="load_site('Attractions')">
+                <img src="static/capstone/fontana-di-trevi.jpg" style="width:100%; height:275px">
+                <div class="text-block">
+                    <h5>Attractions</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="food" onclick="load_site('Food and Wine')">
+                <img src="static/capstone/cafe-in-rome.jpg" style="width:100%; height:225px">
+                <div class="text-block">
+                    <h5>Food and Wine</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="churches" onclick="load_site('Churches')">
+                <img src="static/capstone/santa-catarina-dei-funari-spandrel.jpg" style="width:100%; height:245px">
+                <div class="text-block">
+                    <h5>Churches</h5>
+                </div>
+            </div>
+
         </div>
-    </div>
-    <div class="navigation-pics" id="nav-pics" style="box-sizing:border-box;">
-        <div class="row">
-            <div class="column">
-                <div class="pic-container" id="attractions" onclick="load_site('Attractions')">
-                    <img src="static/capstone/fontana-di-trevi.jpg" style="width:100%; height:275px">
-                    <div class="text-block">
-                        <h5>Attractions</h5>
-                    </div>
-                </div>
-                <div class="pic-container" id="food" onclick="load_site('Food and Wine')">
-                    <img src="static/capstone/cafe-in-rome.jpg" style="width:100%; height:225px">
-                    <div class="text-block">
-                        <h5>Food and Wine</h5>
-                    </div>
-                </div>
-                <div class="pic-container" id="churches" onclick="load_site('Churches')">
-                    <img src="static/capstone/santa-catarina-dei-funari-spandrel.jpg" style="width:100%; height:245px">
-                    <div class="text-block">
-                        <h5>Churches</h5>
-                    </div>
-                </div>
-
-            </div>
-            <div class="column">
-                <div class="pic-container" id="gelaterie" onclick="load_site('Gelaterie')">
-                    <img src="static/capstone/two-gelati.jpg" style="width:100%; height:175px">
-                    <div class="text-block">
-                        <h5>Gelaterie</h5>
-                    </div>
-                </div>
-                <div class="pic-container" id="markets" onclick="load_site('Markets')">
-                    <img src="static/capstone/campo-dei-fiori.jpg" style="width:100%; height:250px">
-                    <div class="text-block">
-                        <h5>Markets</h5>
-                    </div>
-                </div>
-                <div class="pic-container" id="ancientrome" onclick="load_site('Ancient Rome')">
-                    <img src="static/capstone/pantheon-square.jpg" style="width:100%; height:320px">
-                    <div class="text-block">
-                        <h5>Ancient Rome</h5>
-                    </div>
+        <div class="column">
+            <div class="pic-container" id="gelaterie" onclick="load_site('Gelaterie')">
+                <img src="static/capstone/two-gelati.jpg" style="width:100%; height:175px">
+                <div class="text-block">
+                    <h5>Gelaterie</h5>
                 </div>
             </div>
-            <div class="column">
-                <div class="pic-container" id="museums" onclick="load_site('Museums')">
-                    <img src="static/capstone/vatican-museum-rome.jpg" style="width:100%; height:270px">
-                    <div class="text-block">
-                        <h5>Museums</h5>
-                    </div>
+            <div class="pic-container" id="markets" onclick="load_site('Markets')">
+                <img src="static/capstone/campo-dei-fiori.jpg" style="width:100%; height:250px">
+                <div class="text-block">
+                    <h5>Markets</h5>
                 </div>
-                <div class="pic-container" id="parks" onclick="load_site('Parks')">
-                    <img src="static/capstone/rapids-tiber.jpg" style="width:100%; height:275px">
-                    <div class="text-block">
-                        <h5>Parks</h5>
-                    </div>
+            </div>
+            <div class="pic-container" id="ancientrome" onclick="load_site('Ancient Rome')">
+                <img src="static/capstone/pantheon-square.jpg" style="width:100%; height:320px">
+                <div class="text-block">
+                    <h5>Ancient Rome</h5>
                 </div>
-                <div class="pic-container" id="shopping" onclick="load_site('Shopping')">
-                    <img src="static/capstone/more-guanti.jpg" style="width:100%; height:200px">
-                    <div class="text-block">
-                        <h5>Shopping</h5>
-                    </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pic-container" id="museums" onclick="load_site('Museums')">
+                <img src="static/capstone/vatican-museum-rome.jpg" style="width:100%; height:270px">
+                <div class="text-block">
+                    <h5>Museums</h5>
                 </div>
+            </div>
+            <div class="pic-container" id="parks" onclick="load_site('Parks')">
+                <img src="static/capstone/rapids-tiber.jpg" style="width:100%; height:275px">
+                <div class="text-block">
+                    <h5>Parks</h5>
+                </div>
+            </div>
+            <div class="pic-container" id="shopping" onclick="load_site('Shopping')">
+                <img src="static/capstone/more-guanti.jpg" style="width:100%; height:200px">
+                <div class="text-block">
+                    <h5>Shopping</h5>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -215,9 +223,9 @@
         ReactDOM.render(<App />, document.querySelector("#app"));
     </script>
 
-{% endblock %}
+    {% endblock %}
 
-{% block script %}
+    {% block script %}
     <script src="{% static 'capstone/index.js' %}"></script>
 
-{% endblock %}
+    {% endblock %}
