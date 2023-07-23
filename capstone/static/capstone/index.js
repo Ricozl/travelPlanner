@@ -96,7 +96,6 @@ function updateRecord(site_id) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
-    //site = title
     fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
         headers: {'X-CSRFToken': csrftoken},
