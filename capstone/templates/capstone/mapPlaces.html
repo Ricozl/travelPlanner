@@ -19,6 +19,7 @@
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
 {% block nav %}
+{% endblock %}
 <div class="topnav" id="myTopnav">
     <a href="{% url 'index' %}" class="active">Rome Travel</a>
     <a href="{% url 'index' %}">Where to Go</a>
@@ -39,7 +40,7 @@
       }
     }
 </script>
-{% endblock %}
+
 
 <div id="backmap">
     <div id="map"></div>
