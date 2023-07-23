@@ -214,4 +214,35 @@ function getCookie(name) {
             .setHTML(description)
             .addTo(map);
     });
-    
+     map.on('load', () => {
+        // Add an image to use as a custom marker
+        map.loadImage(
+            'https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev/static/capstone/mapbox-marker-icon-20px-green.png',
+
+            //'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            (error, image) => {
+                if (error) throw error;
+                map.addImage('marker2', image)
+
+                map.addSource('places', {
+                // This GeoJSON contains features that include an "icon"
+                // property. The value of the "icon" property corresponds
+                // to an image in the Mapbox Streets style's sprite.
+                'type': 'geojson',
+                    'data': {
+                        'type': 'FeatureCollection',
+                        'features': [
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        //'<strong>Trevi Fountain</strong><p><a href="#sidebar" target="_blank" title="Opens in a new window">Visit the Trevi Fountain</a> where a coin tossed over your shoulder will guarantee your return to Rome.</p>',
+                                        '<strong>Trevi Fountain</strong><p>Visit the Trevi Fountain where a coin tossed over your shoulder will guarantee your return to Rome. For more, see Attractions</p>',
+                                    //'icon': 'marker2',
+                                    //'iconSize': [60, 60]
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [12.483239912221268, 41.90110677437803]
+                                }
+                                
