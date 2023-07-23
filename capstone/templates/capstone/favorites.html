@@ -7,7 +7,7 @@
     <a href="{% url 'index' %}" class="active"><img src="static/capstone/favicon.ico"
         style="width:30px; height:30px; margin-right:10px;">Rome Travel</a>
     <!--<a href="{% url 'index' %}" class="active">Rome Travel</a>-->
-    <a href="{% url 'places' %}">Reload Map of Rome</a>
+    <a href="{% url 'places' %}">Map of Rome</a>
     {% if user.is_authenticated %}
     <a href="{% url 'favorites' %}">Favorites</a>
     <a href="{% url 'logout' %}">Logout</a>
