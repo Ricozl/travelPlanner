@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     document.querySelector('#topofpage').style.display = 'block';
     document.querySelector('#top-site').style.display = 'block';
-    document.querySelector('#backmap').style.display = 'none';
+    document.querySelector('#map').style.display = 'none';
 
 });
 
@@ -19,7 +19,7 @@ function load_site(site) {
 
     //document.querySelector('#messages').innerHTML = "";
     document.querySelector('#topofpage').style.display = "none";
-    document.querySelector('#backmap').style.display = 'none';
+    document.querySelector('#map').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     console.log({site})
     // Show the site name
@@ -188,7 +188,7 @@ function getCookie(name) {
 Function load_map() {
     document.querySelector('#topofpage').style.display = 'none';
     document.querySelector('#top-site').style.display = 'none';
-    document.querySelector('#backmap').style.display = 'block';
+    document.querySelector('#map').style.display = 'block';
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
