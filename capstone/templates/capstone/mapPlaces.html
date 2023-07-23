@@ -26,12 +26,12 @@
     <!--<a href="{% url 'index' %}" class="active">Rome Travel</a>-->
     <a href="{% url 'places' %}">Reload Map of Rome</a>
     {% if user.is_authenticated %}
-                <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
-                <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
-                {% else %}
-                <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
-                <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
-                {% endif %}
+    <a href="{% url 'favorites' %}">Favorites</a>
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    {% endif %}
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
