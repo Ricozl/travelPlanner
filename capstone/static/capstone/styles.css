@@ -99,7 +99,8 @@ body, html {
 }
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  background-color: #f2ffe6;
 }
 /* Style the tab content */
 .tabcontent {
