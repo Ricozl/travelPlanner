@@ -29,7 +29,8 @@
 </head>
 
 <body>
-    <!--<div class="navClass">
+{% block nav %}
+    <div class="navClass">
         <div class="container">
             <div class="tab" id="navbar">
 
@@ -111,7 +112,8 @@
                 }
             }
         </script>
-    </div>-->
+    </div>
+{% endblock %}
 
     <div class="body">
         {% block body %}
