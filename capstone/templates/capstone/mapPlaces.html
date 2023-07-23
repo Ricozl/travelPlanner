@@ -4,14 +4,14 @@
 {% block body %}
 
 <style>
-    .marker {
+    /*.marker {
         display: block;
         border: none;
         color: blue;
         border-radius: 50%;
         cursor: pointer;
         padding: 0;
-    }
+    }*/
     .mapboxgl-popup {
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -29,7 +29,7 @@
 <div class="topnav" id="myTopnav">
     <a href="{% url 'index' %}" class="active">Rome Travel</a>
     <a href="{% url 'index' %}">Where to Go</a>
-    <a href="#contact">Places to Eat</a>
+    <a href="{% url 'index' %}">Places to Eat</a>
     <a href="{% url 'places' %}">Map of Rome</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
