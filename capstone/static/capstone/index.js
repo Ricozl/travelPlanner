@@ -185,7 +185,9 @@ function getCookie(name) {
 
 
 Function load_map() {
-    document.querySelector('#topofpage').
+    document.querySelector('#topofpage').style.display = 'none';
+    document.querySelector('#top-site').style.display = 'none';
+    document.querySelector('#backmap').style.display = 'block';
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
