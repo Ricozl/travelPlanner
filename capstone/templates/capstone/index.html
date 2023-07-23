@@ -3,18 +3,15 @@
 
 {% block body %}
 
-<div class="navClass">
+<!--<div class="navClass">
     <div class="container">
 
         <div class="tab" id="navbar">
-
-            <!--<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Rome Travel</button>-->
             <button class="tablinks" id="defaultOpen"><a href="{% url 'index' %}"><img src="static/capstone/favicon.ico"
                         style="width:30px; height:30px; margin-right:10px;">Rome Travel</a></button>
             <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
             <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
             <button class="tablinks" onclick="openCity(event, 'Map-of-rome')">Map of Rome</button>
-            <!--<button class="tablinks" onclick="load_map()">Map of Rome</button>-->
 
             {% if user.is_authenticated %}
             <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
@@ -25,7 +22,6 @@
             {% endif %}
         </div>
 
-        <!--<div id="Home"></div>-->
             <div id="Destinations" class="tabcontent">
                 <h3>Where To Go</h3>
                 <p><a href="#nav-pics">Attractions, </a><a href="#churches">Churches, </a><a href="#ancientrome">Ancient Rome, </a><a href="#museums">and Museums. </a></p>
@@ -43,7 +39,6 @@
             <div id="Favorites" class="tabcontent">
                 <h3>Favorites for </h3><h3 id="user_name">{{ user.username }}</h3>
                 <p>See your <a href="{% url 'favorites' %}">favorites</a> to help plan your trip.</p>
-            <!--<p>See your <a href="#" onclick="load_site('favorites')">favorites</a> to help plan your trip.</p>-->
         <div id="Logout" class="tabcontent">
             <h3>Logout</h3>
             <p><a href="{% url 'logout' %}">Please Logout here.</a></p>
@@ -75,8 +70,8 @@
         }
         document.getElementById("defaultOpen").click();
     </script>
+</div>-->
 
-</div>
 <div id="topofpage">
     <div id="showImgs">
         <div class="img1">
