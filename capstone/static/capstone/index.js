@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     document.querySelector('#topofpage').style.display = 'block';
     document.querySelector('#top-site').style.display = 'block';
+    document.querySelector('#backmap').style.display = 'none';
 
 });
 
@@ -18,7 +19,7 @@ function load_site(site) {
 
     //document.querySelector('#messages').innerHTML = "";
     document.querySelector('#topofpage').style.display = "none";
-    //document.querySelector('#nav-pics').style.display = 'none';
+    document.querySelector('#backmap').style.display = 'none';
     document.querySelector('#top-site').style.display = 'block';
     console.log({site})
     // Show the site name
