@@ -140,26 +140,6 @@ function getCookie(name) {
 };
 
 
-function pick_place() {
-    console.log('Got to pick_place')
-    // show newPage and hide main page
-    //document.querySelector('#showImgs').style.display = 'none';
-    //document.querySelector('#app').style.display ='none';
-    //document.querySelector('#newPage').style.display = 'block';
-    //const mymap = L.map('map').setView([51.505, -0.09], 13);
-    const mymap = L.map('map').setView([41.893, 12.493], 13)
-
-    //L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        maxZoom: 19,
-        id: 'mapbox/streets=v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: apikey,
-    }).addTo(mymap);
-
-};
-
 //function form() {
     //const [useState] = React
     //const [email, setEmail] = useState("")
