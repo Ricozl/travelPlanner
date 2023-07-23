@@ -290,6 +290,7 @@ h4 {
   background-color: #e6ffff;
   /*height: 100%;
   width: 500px;*/
+  position: absolute;
   height: 400px;
   width: 400px;
   margin: 5rem auto;
