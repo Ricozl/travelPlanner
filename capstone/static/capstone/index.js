@@ -184,3 +184,20 @@ function getCookie(name) {
 //};
 
 
+<script>
+    // my apikey
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
+
+   const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [12.49723, 41.89281], // Rome starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', (e) => {
+        // Copy coordinates array.
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const description = e.features[0].properties.description;
