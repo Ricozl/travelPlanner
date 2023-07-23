@@ -185,6 +185,7 @@ function getCookie(name) {
 
 
 Function load_map() {
+    document.querySelector
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
@@ -285,7 +286,7 @@ Function load_map() {
                                 'properties': {
                                     'description':
                                         '<strong>Monument to Victor Emmanuele II</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year\'s <a href="http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/" target="_blank" title="Opens in a new window">Seersucker Social</a> bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>',
-                                    
+
                                 },
                                 'geometry': {
                                     'type': 'Point',
