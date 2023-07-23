@@ -251,9 +251,6 @@ Function load_map() {
                                 'properties': {
                                     'description':
                                         '<strong>The Pantheon</strong><p>Built during Ancient Rome, the Pantheon sits in a lively square with cafes all around.</p><a href="https://www.pantheonroma.com/home-eng/" target="_blank" title="Opens in a new window" id="#pic">For more about the Pantheon</a>',
-
-                                    //'icon': 'bar',
-                                    //'iconSize': [30, 30]
                                 },
                                 'geometry': {
                                     'type': 'Point',
@@ -265,8 +262,7 @@ Function load_map() {
                                 'properties': {
                                     'description':
                                         '<strong>The Roman Forum</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a <a href="http://tallulaeatbar.ticketleap.com/2012beachblanket/" target="_blank" title="Opens in a new window">Big Backyard Beach Bash and Wine Fest</a> on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.grill hot dogs.</p>',
-                                    //'icon': 'bar',
-                                    //'iconSize': [30, 30]
+
                                 },
                                 'geometry': {
                                     'type': 'Point',
@@ -289,7 +285,7 @@ Function load_map() {
                                 'properties': {
                                     'description':
                                         '<strong>Monument to Victor Emmanuele II</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year\'s <a href="http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/" target="_blank" title="Opens in a new window">Seersucker Social</a> bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>',
-                                    //'iconSize': [30, 30]
+                                    
                                 },
                                 'geometry': {
                                     'type': 'Point',
