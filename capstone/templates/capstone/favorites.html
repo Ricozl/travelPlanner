@@ -126,7 +126,7 @@
         return (
             <div>
                 <div className={state.incorrect ? "incorrect" : ""} id="problem">{state.num1} + {state.num2}</div>
-                <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value{state.response} />
+                <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
                 <div>Score: {state.score}</div>
             </div>
         )
