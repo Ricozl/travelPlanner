@@ -352,3 +352,6 @@ h4 {
 #problem {
     font-size: 72px;
 }
+.incorrect {
+    color: red;
+}
