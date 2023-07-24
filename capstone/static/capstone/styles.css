@@ -5,7 +5,9 @@ body, html {
    color: #777;
    background-color: #f1f1f1;
 }
-
+a:hover {
+  cursor: pointer;
+}
 .img1, .img2, .img3 {
   position: relative;
   opacity: 0.65;
@@ -121,9 +123,7 @@ body, html {
   padding-top: 60px;
 }
 */
-a:hover {
-  cursor: pointer;
-}
+
 .img2 {
   background-image: url("rome-sky.jpg");
   min-height: 400px;
