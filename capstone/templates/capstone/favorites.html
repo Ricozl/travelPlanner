@@ -78,6 +78,11 @@
     ReactDOM.render(<App />, document.querySelector("#app"));
 </script>
 
+function App() {
+    const [num1, setNum1] = React.useState(1);
+    const [num2, setNum2] = React.useState(2);
+    React.useState(
+}
 function inputKeyPress(event) {
     if (event.key === "Enter") {
         const answer = parseInt(state.response);
