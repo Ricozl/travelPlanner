@@ -95,7 +95,7 @@ function App() {
     return (
         <div>
             <div>{state.num1} + {state.num2}</div>
-            <input onChange={updateResponse} value{state.response} />
+            <input onKeyPress={inputKeyPress} onChange={updateResponse} value{state.response} />
         </div>
     )
 }
