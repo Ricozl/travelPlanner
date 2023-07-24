@@ -26,7 +26,7 @@ def sites(request, site):
     if site == "favorites":
          # get signed-in user's id
         wat_user = request.user.id
-        print(wat_user)
+
         # get all items on signed-in user's favorites list
 
         sites = Favorites.objects.filter(
@@ -34,7 +34,7 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(title__in=followedNms)
         #sites = Sites.objects.filter(id__id__in=followedNms)
-        print(sites)
+       
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
        #posts = Posto.objects.filter(poster__id__in=followedNms)
