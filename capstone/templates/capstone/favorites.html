@@ -85,6 +85,12 @@ function App() {
         response: ""
     });
 
+    function updateResponse(event) {
+        setState({
+            response: event.target.value
+        })
+    }
+    
     return (
         <div>
             <div>{state.num1} + {state.num2}</div>
