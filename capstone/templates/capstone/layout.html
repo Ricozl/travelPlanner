@@ -40,7 +40,7 @@
                 <button class="tablinks"><a href="{% url 'places' %}">Map of Rome</a></button>
 
                 {% if user.is_authenticated %}
-                <button class="tablinks"><a href="{% url 'Favorites' %}">Favorites</button>
+                <button class="tablinks"><a href="{% url 'favorites' %}">Favorites</button>
                 <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
                 {% else %}
                 <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
