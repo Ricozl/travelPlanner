@@ -346,6 +346,9 @@ h4 {
 }
 /* for React code */
 #app {
-  background-color: green;
   text-align: center;
+  font-family: sans-serif;
+}
+#problem {
+    font-size: 72px;
 }
