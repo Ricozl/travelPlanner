@@ -51,13 +51,12 @@
         </div>
     </div>
 </div>
+
 <div id="top-site" name="top-site">
     <a href="#" id="sitefocus" tabindex="-1"></a>
     <div id="siteName"></div>
     <div id="sites" class="sites"></div>
 </div>
-
-<!--<div id="backmap"></div>-->
 
 <div id="banner">
     <div
@@ -130,27 +129,6 @@
 
         </div>
     </div>
-
-    <!-- code for react -->
-    <div id="app">
-    </div>
-    <script type="text/babel">
-        function App() {
-            const [count, setCount] = React.useState(0);
-
-            function updateCount() {
-                setCount(count + 1);
-            }
-            return (
-                <div>
-                    <div>{count}</div>
-                    <button onClick={updateCount}>Count</button>
-                </div>
-            );
-        }
-
-        ReactDOM.render(<App />, document.querySelector("#app"));
-    </script>
 
     {% endblock %}
 
