@@ -161,6 +161,9 @@ h3 {
  .pic-container {
     position: relative;
 }
+.pic-container:hover {
+    cursor: pointer;
+}
 
 /* Bottom right text */
 .text-block {
