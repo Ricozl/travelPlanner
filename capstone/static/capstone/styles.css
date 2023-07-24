@@ -164,7 +164,7 @@ h3 {
  .pic-container {
     position: relative;
 }
-#nav-pics {
+#nav-pics:hover {
     cursor: pointer;
 }
 
