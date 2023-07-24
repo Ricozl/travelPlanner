@@ -121,6 +121,9 @@ body, html {
   padding-top: 60px;
 }
 */
+a:hover {
+  cursor: pointer;
+}
 .img2 {
   background-image: url("rome-sky.jpg");
   min-height: 400px;
