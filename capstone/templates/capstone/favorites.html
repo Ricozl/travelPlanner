@@ -81,7 +81,14 @@
 function App() {
     const [num1, setNum1] = React.useState(1);
     const [num2, setNum2] = React.useState(2);
-    React.useState(
+    React.useState({
+        num1: 1,
+        num2: 2
+    });
+
+    return (
+        <div></div>
+    )
 }
 function inputKeyPress(event) {
     if (event.key === "Enter") {
