@@ -355,3 +355,7 @@ h4 {
 .incorrect {
     color: red;
 }
+#winner {
+  font-size: 72px;
+  color: green;
+}
