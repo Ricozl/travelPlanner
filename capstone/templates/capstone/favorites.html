@@ -34,7 +34,7 @@
 
 {% if user.is_authenticated %}
 
-<h3>Favorites for {{ user.username }}</h3>
+<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>
 <!--<h2 style="color:black; margin:10px;">Favorites for {{ user.username }}</h2>-->
 <div id="favorites">
     {% csrf_token %}
