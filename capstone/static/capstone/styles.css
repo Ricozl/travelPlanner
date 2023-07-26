@@ -232,6 +232,10 @@ img {
   height: auto;
 }
 */
+#heart {
+  width: 20px;
+  height:20px;
+}
 /* form is for login page */
 #form-page {
   background-color: #e6fff7;
