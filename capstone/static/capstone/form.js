@@ -1,8 +1,8 @@
 
 
 
-function form() {
-    function Form() {
+
+function Form() {
         const [useState] = React
         const [email, setEmail] = useState("")
         const [password, setPassword] = useState("")
