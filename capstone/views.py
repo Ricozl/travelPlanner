@@ -34,7 +34,7 @@ def sites(request, site):
 
         #sites = Sites.objects.filter(title__in=followedNms)
         #sites = Sites.objects.filter(id__id__in=followedNms)
-       
+
         #followedNms = Follow.objects.filter(
             #follower=usernm, is_active=True).values_list('followed')
        #posts = Posto.objects.filter(poster__id__in=followedNms)
@@ -223,12 +223,10 @@ def favorites(request):
     print(request)
     # get signed-in user's id
     wat_user = request.user.id
-    print(wat_user)
     # get all items on signed-in user's favorites list
     wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    print(wat_lists)
     #return JsonResponse({"favorites": wat_lists})
     return render(request, "capstone/favorites.html", {
         "favorites": wat_lists})
