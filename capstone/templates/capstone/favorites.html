@@ -62,6 +62,23 @@
 <!--<script src="static/capstone/form.js" type="text/babel"></script>-->
 <div id="app">
 </div>
+<script type="text/babel">
+    function App() {
+        const [count, setCount] = React.useState(0);
+
+        function updateCount() {
+            setCount(count + 1);
+        }
+        return (
+            <div>
+                <div>{count}</div>
+                <button onClick={updateCount}>Count</button>
+            </div>
+        );
+    }
+
+    ReactDOM.render(<App />, document.querySelector("#app"));
+</script>
 <!--<script type="text/babel">
     function App() {
         const [count, setCount] = React.useState(0);
