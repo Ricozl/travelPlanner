@@ -42,8 +42,8 @@ function Form() {
             </div>
         </form>
     )
-    }
+
 };
-ReactDOM.render(<form.html />, document.querySelector("#form"))
+ReactDOM.render(<Form />, document.querySelector("#form"))
 
 
