@@ -24,7 +24,7 @@ function Form() {
                     required
                     placeholder="Email address"
                     value={email}
-                    onInput="(e) => setEmail(e.target.value)"
+                    onInput=[(e) => setEmail(e.target.value)]
                     />
             </div>
             <div>
