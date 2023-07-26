@@ -2,7 +2,7 @@
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-<script type="text/babel">
+/*<script type="text/babel">*/
     function App() {
         const [count, setCount] = React.useState(0);
 
@@ -18,4 +18,4 @@
     }
 
     ReactDOM.render(<App />, document.querySelector("#app"));
-</script>
+/*</script>*/
