@@ -65,6 +65,12 @@
 
 <div id="app">
 </div>
+
+{% endblock %}
+{% block script %}
+<script src="static/capstone/fav.js" type="text/babel"></script>
+{% endblock %}
+
 <!--<script type="text/babel">
     function App() {
         const [count, setCount] = React.useState(0);
@@ -157,8 +163,5 @@
     ReactDOM.render(<App />, document.querySelector("#app"));
 </script>-->
 
-{% endblock %}
-{% block script %}
-<script src="static/capstone/fav.js" type="text/babel"></script>
-{% endblock %}
+
 
