@@ -11,7 +11,7 @@
         }
         return (
             <div>
-                <p onclick="updateCount">Click to remove from Favorites  <img id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/></p>
+                <img onclick="updateCount" id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/>
                 <div>{count}</div>
             </div>
         );
