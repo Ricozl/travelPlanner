@@ -58,7 +58,7 @@ function load_site(site) {
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
-                        
+
                         jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                         element.appendChild(jump);
                         // add event listener for clicking on a site
@@ -67,7 +67,6 @@ function load_site(site) {
                             console.log(element)
                             element.previousSibling.innerText = "Added Successfully!"
                          // update 'favorites' in database
-                    //var post_id = parseInt(paginatedItems[i].id)
                             var site_id = parseInt(data[i].id)
                     //checkLike(post_id, counter)
                             title = data[i].title
