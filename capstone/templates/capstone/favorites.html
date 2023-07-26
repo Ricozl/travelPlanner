@@ -3,9 +3,6 @@
 {% block body %}
 {% block nav %}
 {% endblock %}
-<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <div class="topnav" id="myTopnav">
     <a href="{% url 'index' %}" class="active"><img src="static/capstone/favicon.ico"
@@ -50,7 +47,7 @@
         {% endif %}
 
         <p>{{ favorite.item.description }}</p>
-        <p id="heart">Click to remove from Favorites<img src="static/capstone/red-heart.png"</p>
+        <p id="heart">Click to remove from Favorites<img src="static/capstone/red-heart.png" style="width:20px; height:20px;"</p>
         <p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove</p>
         <br><br>
     {% empty %}
