@@ -12,7 +12,7 @@
         return (
             <div>
                 <div>
-                <img onclick="updateCount" id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/>
+                    <img onclick="updateCount" id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/>
                 </div>
                 <div>{count}</div>
             </div>
