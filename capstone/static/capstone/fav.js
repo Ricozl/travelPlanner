@@ -10,12 +10,12 @@
             setCount(count + 1);
         }
         return (
-            <div>
-                <div>
-                    <img onclick="updateCount" id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/>
-                </div>
+            <React.Fragment>
+                <img onclick="updateCount" id="heart" src="static/capstone/red-heart.png" style={{width:"20px", height:"20px"}}/>
+
                 <div>{count}</div>
-            </div>
+
+            </React.Fragment>
         );
     }
 
