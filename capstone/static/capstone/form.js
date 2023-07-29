@@ -27,6 +27,7 @@ export default function App() {
 
     const handleAnswerButtonClick = () => {
         const nextQuestion = currentQuestion + 1;
+        set currentQuestion(nextQuestion);
     }
 
     return {
