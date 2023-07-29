@@ -44,7 +44,8 @@ export default function App() {
                     <div className='question-text'>{questionsText[currentQuestion]}</div>
                     </div>
                     <div className='answer-section'>
-                        (questions[currentQuestion].answerOptions.map([answerOptions] => <button>{answerOptions.answerText}</button>))
+                        (questions[currentQuestion].answerOptions.map([answerOptions] =>
+                            <button onClick = (handleAnswerButtonClick)>{answerOptions.answerText}</button>))
 
                     </div>
                 </>
