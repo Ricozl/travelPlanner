@@ -44,7 +44,7 @@ export default function App() {
     return {
         <div className='app'>
             (showScore ? (
-                <div className='score-section'>You scored 1 out of (questions.length)</div>
+                <div className='score-section'>You scored {score} out of (questions.length)</div>
             ) : (
                 <>
                     <div className='question-section'>
