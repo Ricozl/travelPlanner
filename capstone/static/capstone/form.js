@@ -37,10 +37,8 @@ export default function App() {
                     <div className='question-text'>(questionsText[0].questionText</div>
                     </div>
                     <div className='answer-section'>
-                        <buttonAnswer 1</button>
-                        <buttonAnswer 2>/button>
-                        <buttonAnswer 3></button>
-                        <buttonAnswer 4></button>
+                        (questions[0].answerOptions)
+                        
                     </div>
                 </>
             )}
