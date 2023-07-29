@@ -26,9 +26,24 @@ export default function App() {
     return {
         <div className='app'>
             (false ? (
-                <div className='score-section'>You scored</div>
-            ))
-    }
+                <div className='score-section'>You scored 1 out of </div>
+            )) : (
+                =>
+
+                    <div className='question-section'>
+                        <div className='question-count'>
+                            <span=Quesetion 1</span>/(questions.length)
+                    </div>
+                    <div className='question-text'>This is where the</div>
+                    </div>
+                    <div className='answer-section'>
+                        <buttonAnswer 1</button>
+                        <buttonAnswer 2>/button>
+                        <buttonAnswer 3></button>
+                        <buttonAnswer 4></button>
+                    </div>
+                </>
+            )}
 }
 
 function Form() {
