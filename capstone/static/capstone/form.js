@@ -27,7 +27,10 @@ export default function App() {
 
     const [showScore, setShowScore] = useState(false);
 
-    const handleAnswerButtonClick = () => {
+    const handleAnswerButtonClick = (isCorrect) => {
+        if(isCorrect === true) {
+            alert
+        }
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions.length) {
             set currentQuestion(nextQuestion);
