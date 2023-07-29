@@ -39,7 +39,7 @@ export default function App() {
                     <div className='question-text'>{questionsText[currentQuestion]}</div>
                     </div>
                     <div className='answer-section'>
-                        (questions[0].answerOptions.map([answerOptions] => <button>{answerOptions.answerText}</button>))
+                        (questions[currentQuestion].answerOptions.map([answerOptions] => <button>{answerOptions.answerText}</button>))
 
                     </div>
                 </>
