@@ -32,54 +32,32 @@
     }
 </script>
 
-{% if user.is_authenticated %}
 
-<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>
-<!--<h2 style="color:black; margin:10px;">Favorites for {{ user.username }}</h2>-->
-<div id="favorites">
-    {% csrf_token %}
+<h3 style="margin:10px;">Quiz for {{ user.username }}</h3>
 
-    {% for favorite in favorites %}
-
-        <h4>{{ favorite.item.title }}</h4>
-        {% if favorite.item.image_url %}
-            <p><img src="{{ favorite.item.image_url }}" style="width:400px; height:400px;"></p>
-        {% endif %}
-
-        <p>{{ favorite.item.description }}</p>
-        <p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">Click to add to Favorites</p>
-        <p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove</p>
-        <br><br>
-    {% empty %}
-        <p>No Favorites yet.</p>
-    {% endfor %}
-
-</div>
-{% endif %}
 
 <!-- code for react -->
-<div id="form"></div>
 
 <div id="app"></div>
 
 <script type="text/babel">
-function App() {
-    const questions = [
-        {
-            questionText: "What is the capital of France?",
-            answerOptions: [
-                { answerText: 'New York', isCorrect: false},
-                { answerText: 'London', isCorrect: false },
-                { answerText: 'Paris', isCorrect: true },
-                { answerText: 'Dublin', isCorrect: false }
-            ],
+    function App() {
+        const questions = [
+            {
+                questionText: "What is the capital of France?",
+                answerOptions: [
+                    { answerText: 'New York', isCorrect: false},
+                    { answerText: 'London', isCorrect: false },
+                    { answerText: 'Paris', isCorrect: true },
+                    { answerText: 'Dublin', isCorrect: false }
+                ],
 
-        },
-        {
-            questionText: 'Who is CEO of Tesla?',
-            answerOptions: [
-                { answerText: 'Jeff Bezos', isCorrect: false },
-                { answerText: 'Elon Musk', isCorrect: true },
+            },
+            {
+                questionText: 'Who is CEO of Tesla?',
+                answerOptions: [
+                    { answerText: 'Jeff Bezos', isCorrect: false },
+                    { answerText: 'Elon Musk', isCorrect: true },
                 { answerText: 'Bill Gates', isCorrect: false },
                 { answerText: 'Tony Stark', isCorrect: false }
             ],
@@ -131,26 +109,4 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 </script>
 
 {% endblock %}
-
-
-<script type="text/babel">
-    function App() {
-        const [count, setCount] = React.useState(0);
-
-        function updateCount() {
-            setCount(count + 1);
-        }
-        return (
-            <div>
-                <div>{count}</div>
-                <button onClick={updateCount}>Count</button>
-            </div>
-        );
-    }
-
-    ReactDOM.render(<App />, document.querySelector("#app"));
-</script>
-
-{% endblock %}
-
 
