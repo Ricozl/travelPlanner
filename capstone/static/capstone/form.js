@@ -25,7 +25,9 @@ export default function App() {
 
     return {
         <div className='app'>
-            (false ? )
+            (false ? (
+                <div className='score-section'>You scored</div>
+            ))
     }
 }
 
