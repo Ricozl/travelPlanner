@@ -58,43 +58,43 @@
                 answerOptions: [
                     { answerText: 'Jeff Bezos', isCorrect: false },
                     { answerText: 'Elon Musk', isCorrect: true },
-                { answerText: 'Bill Gates', isCorrect: false },
-                { answerText: 'Tony Stark', isCorrect: false }
-            ],
-        },
-    ];
+                    { answerText: 'Bill Gates', isCorrect: false },
+                    { answerText: 'Tony Stark', isCorrect: false }
+                ],
+            },
+        ];
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+        const [currentQuestion, setCurrentQuestion] = useState(0);
 
-    const [showScore, setShowScore] = useState(false);
-    const [score, setScore] = useState(0);
+        const [showScore, setShowScore] = useState(false);
+        const [score, setScore] = useState(0);
 
-    const handleAnswerButtonClick = (isCorrect) => {
-        if(isCorrect === true) {
-            setScore(score + 1);
-        }
-        const nextQuestion = currentQuestion + 1;
-        if (nextQuestion < questions.length) {
-            set currentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }
+        const handleAnswerButtonClick = (isCorrect) => {
+            if(isCorrect === true) {
+                setScore(score + 1);
+            }
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                set currentQuestion(nextQuestion);
+            } else {
+                setShowScore(true);
+            }
 
-    };
+        };
 
-    return {
-        <div className='app'>
-            showScore ? (
-                <div className='score-section'>You scored {score} out of (questions.length)</div>
-            ) : (
-                <>
-                    <div className='question-section'>
-                        <div className='question-count'>
-                            <span>Question {currentQuestion + 1}</span>/(questions.length)
-                    </div>
-                    <div className='question-text'>{questionsText[currentQuestion]}</div>
-                    </div>
-                    <div className='answer-section'>
+        return {
+            <div className='app'>
+                showScore ? (
+                    <div className='score-section'>You scored {score} out of (questions.length)</div>
+                ) : (
+                    <>
+                        <div className='question-section'>
+                            <div className='question-count'>
+                                <span>Question {currentQuestion + 1}</span>/(questions.length)
+                        </div>
+                        <div className='question-text'>{questionsText[currentQuestion]}
+                        </div>
+                        <div className='answer-section'>
                         (questions[currentQuestion].answerOptions.map([answerOption] =>
                             <button onClick(() => handleAnswerButtonClick(answerOption.isCorrect)>{answerOptions.answerText}</button>
                         )))
