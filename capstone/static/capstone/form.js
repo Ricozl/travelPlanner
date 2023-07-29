@@ -43,7 +43,6 @@ export default function App() {
                 <div className='score-section'>You scored 1 out of (questions.length)</div>
             ) : (
                 =>
-
                     <div className='question-section'>
                         <div className='question-count'>
                             <span=Quesetion 1</span>/(questions.length)
