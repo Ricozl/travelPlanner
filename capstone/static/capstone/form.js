@@ -27,7 +27,12 @@ export default function App() {
 
     const handleAnswerButtonClick = () => {
         const nextQuestion = currentQuestion + 1;
-        set currentQuestion(nextQuestion);
+        if (nextQuestion < questions.length) {
+            set currentQuestion(nextQuestion);
+        } else {
+            alert("fix this route")
+        }
+
     }
 
     return {
