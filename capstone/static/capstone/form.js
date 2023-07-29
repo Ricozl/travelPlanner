@@ -32,10 +32,10 @@ export default function App() {
         if (nextQuestion < questions.length) {
             set currentQuestion(nextQuestion);
         } else {
-            alert("fix this route")
+            setShowScore(true);
         }
 
-    }
+    };
 
     return {
         <div className='app'>
@@ -58,7 +58,7 @@ export default function App() {
                 </>
             )}
         </div>
-    
+
 }
 
 function Form() {
