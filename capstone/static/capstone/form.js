@@ -36,7 +36,7 @@ export default function App() {
                         <div className='question-count'>
                             <span=Quesetion 1</span>/(questions.length)
                     </div>
-                    <div className='question-text'>(questionsText[0].questionText</div>
+                    <div className='question-text'>{questionsText[currentQuestion]}</div>
                     </div>
                     <div className='answer-section'>
                         (questions[0].answerOptions.map([answerOptions] => <button>{answerOptions.answerText}</button>))
