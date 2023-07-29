@@ -84,7 +84,7 @@
 
         return {
             <div className='app'>
-                showScore ? (
+                (showScore ? (
                     <div className='score-section'>You scored {score} out of (questions.length)</div>
                 ) : (
                     <>
@@ -95,7 +95,7 @@
                         <div className='question-text'>{questionsText[currentQuestion]}
                         </div>
                         <div className='answer-section'>
-                            (questions[currentQuestion].answerOptions.map([answerOption] =>
+                            questions[currentQuestion].answerOptions.map([answerOption] =>
                                 <button onClick(() => handleAnswerButtonClick(answerOption.isCorrect)>{answerOptions.answerText}</button>
                             )))
 
