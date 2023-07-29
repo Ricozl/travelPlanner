@@ -51,11 +51,13 @@ export default function App() {
                     </div>
                     <div className='answer-section'>
                         (questions[currentQuestion].answerOptions.map([answerOptions] =>
-                            <button onClick = {handleAnswerButtonClick}>{answerOptions.answerText}</button>))
+                            <button onClick = {handleAnswerButtonClick}>{answerOptions.answerText}</button>
+                        )))
 
                     </div>
                 </>
             )}
+        </div>
 }
 
 function Form() {
