@@ -21,7 +21,11 @@ export default function App() {
                 { answerText: 'Tony Stark', isCorrect: false }
             ],
         },
-    ]
+    ];
+
+    return {
+        <div className='app'>
+    }
 }
 
 function Form() {
