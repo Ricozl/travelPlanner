@@ -33,7 +33,7 @@ export default function App() {
     return {
         <div className='app'>
             (false ? (
-                <div className='score-section'>You scored 1 out of </div>
+                <div className='score-section'>You scored 1 out of (questions.length)</div>
             )) : (
                 =>
 
@@ -45,7 +45,7 @@ export default function App() {
                     </div>
                     <div className='answer-section'>
                         (questions[currentQuestion].answerOptions.map([answerOptions] =>
-                            <button onClick = (handleAnswerButtonClick)>{answerOptions.answerText}</button>))
+                            <button onClick = {handleAnswerButtonClick}>{answerOptions.answerText}</button>))
 
                     </div>
                 </>
