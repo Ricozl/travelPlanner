@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'capstone/styles.css' %}" rel="stylesheet" type="text/css"/>
 
-    <!-- needed for Mapbox gl 
+    <!-- needed for Mapbox gl
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"-->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
@@ -38,6 +38,7 @@
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
                 <button class="tablinks"><a href="{% url 'places' %}">Map of Rome</a></button>
+                <button class="tablinks"><a href="{% url 'quiz' %}">Quiz</a></button>
 
                 {% if user.is_authenticated %}
                 <button class="tablinks"><a href="{% url 'favorites' %}">Favorites</button>
