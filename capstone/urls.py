@@ -14,6 +14,7 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("places", views.places, name="places"),
     path("favorites", views.favorites, name="favorites"),
+    path("quiz", views.quiz, name="quiz"),
     path("updateRecord/<int:site_id>", views.updateRecord, name="updateRecord"),
 
 # API routes

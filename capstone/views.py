@@ -22,6 +22,9 @@ def index(request):
 def places(request):
     return render(request, "capstone/mapPlaces.html")
 
+def quiz(request):
+    return render(request, "capstone/quiz.html")
+
 def sites(request, site):
     if site == "favorites":
          # get signed-in user's id
