@@ -67,7 +67,7 @@
         const [currentQuestion, setCurrentQuestion] = useState(0);
 
         const [showScore, setShowScore] = useState(false);
-        
+
         const [score, setScore] = useState(0);
 
         const handleAnswerButtonClick = (isCorrect) => {
@@ -92,6 +92,7 @@
                         <div className='question-section'>
                             <div className='question-count'>
                                 <span>Question {currentQuestion + 1}</span>/(questions.length)
+                            </div>
                         </div>
                         <div className='question-text'>{questionsText[currentQuestion]}
                         </div>
