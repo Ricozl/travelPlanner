@@ -98,7 +98,7 @@
 
                         </div>
                         <div className='answer-section'>
-                            {questions[currentQuestion].answerOptions.map(answerOption => 
+                            const ques = questions[currentQuestion].answerOptions.map((answerOption) => (
                                 <button onClick () => handleAnswerButtonClick(answerOption.isCorrect){answerOptions.answerText}</button>
                             ))}
                         </div>
