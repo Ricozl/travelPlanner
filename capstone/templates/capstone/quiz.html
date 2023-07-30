@@ -98,12 +98,10 @@
 
                         </div>
                         <div className='answer-section'>
-                            const ques = questions[currentQuestion].answerOptions.map((answerOption) => (
+                            questions[currentQuestion].answerOptions.map((answerOption) => (
                                 <button onClick () => handleAnswerButtonClick(answerOption.isCorrect)/>{answerOptions.answerText}</button>
                             ))}
                         </div>
-
-
                     </div>
                     ))
                 ))
