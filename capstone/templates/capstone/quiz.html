@@ -87,7 +87,7 @@
                 {showScore ? (
                     <div className='score-section'>You scored {score} out of (questions.length)</div>
                 ) : (
-                    <>
+                    <div>
                         <div className='question-section'>
                             <div className='question-count'>
                                 <span>Question {currentQuestion + 1}</span>/(questions.length)
@@ -96,11 +96,12 @@
                         </div>
                         <div className='answer-section'>
                             questions[currentQuestion].answerOptions.map([answerOption] =>
-                                <button onClick(() => handleAnswerButtonClick(answerOption.isCorrect)>{answerOptions.answerText}</button>
-                            )))
-
+                                <button onClick(() => handleAnswerButtonClick(answerOption.isCorrect)>{answerOptions.answerText}</button>)
                         </div>
-                    </>
+
+
+                    </div>
+                    ))
                 }}
             </div>
 
