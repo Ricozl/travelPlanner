@@ -26,7 +26,7 @@ function load_site(site) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
-            'origin': 'https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94.github.dev/
+            'origin': 'https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94.github.dev/'
         }
     })
         .then(response => response.json())
