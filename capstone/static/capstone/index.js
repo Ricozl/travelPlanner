@@ -26,7 +26,7 @@ function load_site(site) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-Content-Type-Options: nosniff'
+            'X-Content-Type-Options': 'nosniff'
         }
     })
         .then(response => response.json())
