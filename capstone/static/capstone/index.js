@@ -26,7 +26,7 @@ function load_site(site) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'access
+            'access-control-allow-origin': '*'
         }
     })
         .then(response => response.json())
