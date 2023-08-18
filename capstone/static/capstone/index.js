@@ -25,8 +25,7 @@ function load_site(site) {
     fetch(`/sites/${site}`, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
-            'X-Content-Type-Options': 'nosniff'
+            'Content-Type': 'application/json'
         }
     })
         .then(response => response.json())
