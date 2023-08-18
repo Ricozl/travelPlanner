@@ -26,7 +26,7 @@ function load_site(site) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'access-control-allow-origin': '*'
+            'mode': 'no-cors'
         }
     })
         .then(response => response.json())
