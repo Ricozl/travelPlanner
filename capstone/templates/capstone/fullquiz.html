@@ -73,15 +73,12 @@
         const handleAnswerButtonClick = (isCorrect) => {
             if(isCorrect === true) {
                 setScore(score + 1);
-                console.log (isCorrect)
             }
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion[nextQuestion]
-                console.log (nextQuestion)
             } else {
                 setShowScore(true);
-                console.log("where score is shown")
             }
 
         };
