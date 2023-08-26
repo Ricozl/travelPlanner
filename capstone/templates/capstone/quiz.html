@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <div className='answer-section'>
-                            {questions[currentQuestion].answerOptions.map[(answerOptions) => (
+                            let newanswer = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
                                 <button onClick {() => handleAnswerButtonClick[answerOptions]}></button>
 
                             )]}
