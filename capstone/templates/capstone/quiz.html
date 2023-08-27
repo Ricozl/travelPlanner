@@ -42,77 +42,18 @@
 
 <script type="text/babel">
     function App() {
-        const questions = [
-            {
-                questionText: "What is the capital of France?",
-                answerOptions: [
-                    { answerText: 'New York', isCorrect: false},
-                    { answerText: 'London', isCorrect: false },
-                    { answerText: 'Paris', isCorrect: true },
-                    { answerText: 'Dublin', isCorrect: false }
-                ],
-
-            },
-            {
-                questionText: 'Who is CEO of Tesla?',
-                answerOptions: [
-                    { answerText: 'Jeff Bezos', isCorrect: false },
-                    { answerText: 'Elon Musk', isCorrect: true },
-                    { answerText: 'Bill Gates', isCorrect: false },
-                    { answerText: 'Tony Stark', isCorrect: false }
-                ],
-            },
-        ];
-
-        const [currentQuestion, setCurrentQuestion] = useState(0);
-
-        const [showScore, setShowScore] = useState(false);
-
-        const [score, setScore] = useState(0);
-
-        const handleAnswerButtonClick = (isCorrect) => {
-            if(isCorrect === true) {
-                setScore(score + 1);
-                console.log (isCorrect)
-            }
-            const nextQuestion = currentQuestion + 1;
-            if (nextQuestion < questions.length) {
-                setCurrentQuestion[nextQuestion]
-                console.log (nextQuestion)
-            } else {
-                setShowScore(true);
-                console.log("where score is shown")
-            }
-
+        class Counter extends Component {
+            state = {
+                counter: 0
+            };
+        handleCount = () => {
+            this.setState({
+                count: this.state.count + 1
+            });
         };
 
-        return (
-            <div className ="app">
-                (showScore = true ? (
-                    <div className='score-section'>You scored {score} out of (questions.length)</div>
-                ) : (
+        }
 
-                    <div>
-                        <div className='question-section'>
-                            <div className='question-count'>
-                                <span>Question {currentQuestion + 1}</span>/(questions.length)
-
-                            </div>
-                            <div className='question-text'>{questionsText[currentQuestion]}
-                            </div>
-                        </div>
-                        <div className='answer-section'>
-                            let newanswer = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
-                                <button onClick {() => handleAnswerButtonClick[newanswer]}></button>
-
-                            )]}
-                        </div>
-                    </div>
-
-                    ));
-                )
-            </div>
-        )
     }
     ReactDOM.render(<App />, document.querySelector("#app"));
 </script>
