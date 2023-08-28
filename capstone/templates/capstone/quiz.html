@@ -41,8 +41,15 @@
 <div id="app"></div>
 
 <script type="text/babel">
-    
-    ReactDOM.render(<App />, document.querySelector("#app"));
+    const hello = React.createElement(
+        "p",
+        {className:"featured" },
+        "Hello, World"
+    );
+
+    ReactDOM.render(
+        hello,
+        document.querySelector("#app"));
 </script>
 
 {% endblock %}
