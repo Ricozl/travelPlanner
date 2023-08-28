@@ -41,48 +41,14 @@
 <div id="app"></div>
 
 <script type="text/babel">
-  function Welcome() {
-    return React.createElement (
-      "h1",
-      {className: "welcome" },
-      React.createElement(
-        "a",
-        { href: "https://reactjs.org/" },
-        "Welcome, Susan!"
-      )
-    );
-  };
-
-  function Footer() {
-    return React.createElement(
-      "footer",
-      { className: "entry-footer" },
-      Divider(),
-      React.createElement("p", {}, "Goodbye")
-    );
-  };
-
-  function Divider() {
-    return React.createElement( "hr" );
-  };
-
-  function Main() {
-    return React.createElement(
-      "article",
-      { className: "post" },
-      Welcome(),
-      Divider(),
-      React.createElement(
-        "div",
-        { className: "entry-content" },
-        React.createElement("p", {}, "Main content")
-      ),
-      Footer()
-    );
-  };
+  const hello = (
+    "p",
+    {},
+    "Hello, React."
+  );
 
     ReactDOM.render(
-        Main(),
+        hello,
         document.querySelector("#app"));
 </script>
 
