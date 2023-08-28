@@ -41,27 +41,7 @@
 <div id="app"></div>
 
 <script type="text/babel">
-    function App() {
-        class Counter extends Component {
-            state = {
-                counter: 0
-            };
-        handleCount = () => {
-            this.setState({
-                count: this.state.count + 1
-            });
-        };
-
-        render() {
-            return  (
-                <div>
-                    <PageHeader count={this.state.count} />
-                    <Button<handleCount={this.handleCount}</>
-                </div>
-            );
-        }
-
-    }
+    
     ReactDOM.render(<App />, document.querySelector("#app"));
 </script>
 
