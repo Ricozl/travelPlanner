@@ -41,7 +41,8 @@
 <div id="app"></div>
 
 <script type="text/babel">
-  function hello = React.createElement (
+  function Hello() {
+    return React.createElement (
     "h1",
     { className: "entry-header" },
     React.createElement(
@@ -49,7 +50,7 @@
       { href:"https://reactjs.org" },
       "React"
     )
-  );
+  };
 
   function Pele = React.createElement (
     "p",
