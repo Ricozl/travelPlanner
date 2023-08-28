@@ -62,11 +62,14 @@
   };
 
   function Header() {
-    
+    return React.createElement (
+      "header",
+      { id: "main"}
+    )
   }
 
     ReactDOM.render(
-        hello,
+        Header(),
         document.querySelector("#app"));
 </script>
 
