@@ -1,0 +1,82 @@
+{% extends "capstone/layout.html" %}
+
+{% block body %}
+{% block nav %}
+{% endblock %}
+
+<div class="topnav" id="myTopnav">
+    <a href="{% url 'index' %}" class="active"><img src="static/capstone/favicon.ico"
+        style="width:30px; height:30px; margin-right:10px;">Rome Travel</a>
+
+    <a href="{% url 'places' %}">Map of Rome</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'favorites' %}">Favorites</a>
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    {% endif %}
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+
+
+<h3 style="margin:10px;">Quiz for Rome Travel</h3>
+
+
+<!-- code for react -->
+
+<div id="app"></div>
+
+<script type="text/babel">
+
+  function Header() {
+    return (
+      React.createElement ("header", { id: "main" }, "Header")
+    )
+  }
+
+  function List() {
+    return (
+      React.createElement ("ul", { className: "react-links", id: "top"},
+        React.createElement ("li", {},
+          React.createElement ("a", { href: "https://reactjs.org/docs" }, "React docs.")
+        ),
+        React.createElement ("li", {},
+          React.createElement ("a", { href: "https://reactjs.org/docs/react-dom.html"}, "ReactDOM docs.")
+        ),
+        React.createElement ("li", {},
+          React.createElement ("a", { href: "https://reactexplained.com/"}, "React Explained Book.")
+        ),
+      )
+    );
+  };
+
+  function App() {
+    return (
+      React.createElement(React.Fragment, {},
+        Header(),
+        List()
+      )
+    )
+  };
+
+    ReactDOM.render(
+        App(),
+        document.querySelector("#app"));
+</script>
+
+{% endblock %}
+
