@@ -46,15 +46,14 @@ const pEL = <p>Hello React</p>
 
 const h1LinkEL = (
   <h1 className="entry-header">
-    
+    <a href="https://reactjs.org">React</a>
+  </h1>
 )
 
 function Header() {
   return (
     <header id="main">
-      <h1 className="entry-header">
-        <a href="https://reactjs.org">React</a>
-      </h1>
+      {h1LinkEL}
       {pEL}
   )
 
