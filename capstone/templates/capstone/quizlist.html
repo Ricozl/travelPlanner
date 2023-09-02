@@ -44,7 +44,7 @@
 
   function Header() {
     return (
-      React.createElement ("header", { id: "main" }, "Header")
+      <header id: "main">
     )
   }
 
@@ -55,21 +55,19 @@
           <a href:"https//reactjs.org/docs">React docs.</a>
         </li>
         <li>
-          <a href:"https://reactjs.org/docs/react-dom.html">ReactDom docs."</a>
+          <a href:"https://reactjs.org/docs/react-dom.html">ReactDom docs.</a>
         </li>
         <li>
-          <a href:"https://reactexplained.com/">React Explained Book."</a>
+          <a href:"https://reactexplained.com/">React Explained Book.</a>
         </li>
-
+      </ul>
       )
-    );
   };
 
   function App() {
     return (
-      React.createElement(React.Fragment, {},
-        Header(),
-        List()
+        <Header />,
+        <List />
       )
     )
   };
