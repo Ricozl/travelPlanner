@@ -50,20 +50,17 @@
 
   function List() {
     return (
-      <ul class:"react-links", id: "top">
+      <ul className:"react-links", id: "top">
         <li>
           <a href:"https//reactjs.org/docs">React docs.</a>
         </li>
-        <li
-        React.createElement ("li", {},
-          React.createElement ("a", { href: "https://reactjs.org/docs" }, "React docs.")
-        ),
-        React.createElement ("li", {},
-          React.createElement ("a", { href: "https://reactjs.org/docs/react-dom.html"}, "ReactDOM docs.")
-        ),
-        React.createElement ("li", {},
-          React.createElement ("a", { href: "https://reactexplained.com/"}, "React Explained Book.")
-        ),
+        <li>
+          <a href:"https://reactjs.org/docs/react-dom.html">ReactDom docs."</a>
+        </li>
+        <li>
+          <a href:"https://reactexplained.com/">React Explained Book."</a>
+        </li>
+
       )
     );
   };
