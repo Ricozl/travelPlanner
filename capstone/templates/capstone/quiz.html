@@ -42,28 +42,30 @@
 
 <script type="text/babel">
 
-const pEL = <p>Hello React</p>
+  const header = <header id= "main">React</header>
 
-const h1LinkEL = (
-  <h1 className="entry-header">
-    <a href="https://reactjs.org">React</a>
-  </h1>
-)
 
-function Header() {
-  return (
-    <header id="main">
-      {h1LinkEL}
-      {pEL}
-    </header>
-  );
-}
-
+  function List() {
+    return (
+      <ul className="react-links" id="top">
+        <li>
+          <a href="https//reactjs.org/docs">React docs.</a>
+        </li>
+        <li>
+          <a href="https://reactjs.org/docs/react-dom.html">ReactDom docs.</a>
+        </li>
+        <li>
+          <a href="https://reactexplained.com/">React Explained Book.</a>
+        </li>
+      </ul>
+      )
+  };
 
   function App() {
     return (
-      <Header />
-    )
+        {header},
+        <List />
+      )
   };
 
     ReactDOM.render(
