@@ -42,11 +42,8 @@
 
 <script type="text/babel">
 
-  const header = (
-    return (
-      <header id: "main"></header>
-    )
-  
+  const header = <header id: "main">React</header>
+
 
   function List() {
     return (
@@ -66,7 +63,7 @@
 
   function App() {
     return (
-        <Header />,
+        {header},
         <List />
       )
     )
