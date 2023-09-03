@@ -42,7 +42,15 @@
 
 <script type="text/babel">
 
-  const header = <header id= "main">React</header>
+  const header = <header id= "main">
+    <h1>
+      <a href="https://reactjs.org">
+        React
+      </a>
+    </h1>
+  </header>
+
+  const pEL = <p>Hello, React</p>
 
 
   function List() {
@@ -64,6 +72,7 @@
   function App() {
     return (
         {header},
+        {pEL},
         <List />
       )
   };
