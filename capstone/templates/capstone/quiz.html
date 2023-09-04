@@ -42,19 +42,18 @@
 
 <script type="text/babel">
 
-  const User = () => {
+  const GetUser = () => {
     return (
-      
+      <div className="getuser">
+        <User
+          id="primary"
+          username="name"
+        />
+        username
+      </div>
     )
   }
-    <h1>
-      <a href="https://reactjs.org">
-        React
-      </a>
-    </h1>
-  </header>
 
-  const pEL = <p>Hello, React</p>
 
 
   function List() {
@@ -75,11 +74,7 @@
 
   function App() {
     return (
-      <React.Fragment>
-        {header}
-        {pEL}
-        <List />
-      </React.Fragment>
+        <GetUser />
       )
   };
 
