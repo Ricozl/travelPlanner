@@ -44,8 +44,8 @@
 
   const Practice2 = () => {
     const post = {
-      id = 1;
-      title = "New Post";
+      id : 1,
+      title : "New Post",
     }
     return (
       <div className="practice">
@@ -57,7 +57,7 @@
   const Post = props => {
     return (
       <p>
-        {props.username} {props.id}
+        {props.post.title} {props.post.id}
       </p>
     );
   };
