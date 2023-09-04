@@ -44,7 +44,12 @@
 
   function App() {
 
-    const [count, setcount] = React.useState(0);
+    const [count, setCount] = React.useState(0);
+
+    function updateCount() {
+      setCount(count + 1);
+    }
+    
     return (
       <div>
         <div>{count}</div>
