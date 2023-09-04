@@ -47,8 +47,8 @@
     const [count, setcount] = React.useState(0);
     return (
       <div>
-        <div>0</div>
-        <button>Count</button>
+        <div>{count}</div>
+        <button onClick={updateCount}>Count</button>
       </div>
       )
   };
