@@ -49,14 +49,10 @@
       num2: 2
     })
 
-    function updateCount() {
-      setCount(count + 1);
-    }
-
     return (
       <div>
-        <div>{count}</div>
-        <button onClick={updateCount}>Count</button>
+        <div>{state.num1} + {state.num2}</div>
+        <input />
       </div>
       )
   };
