@@ -42,17 +42,23 @@
 
 <script type="text/babel">
 
-  const User = () => {
+  const Practice1 = () => {
+    const id = 1;
+    const username = "zgordon";
     return (
-      <div className="User">
-        <User
-          id="primary"
-          username="name"
-        />
-        username
+      <div className="practice">
+        <User id={id} username={username}/>
       </div>
     )
-  }
+  };
+
+  const User = props => {
+    return (
+      <p>
+        {props.username} [{props.id}]
+      </p>
+    );
+  };
 
 
 
