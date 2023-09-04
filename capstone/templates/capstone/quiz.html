@@ -49,12 +49,12 @@
     }
     return (
       <div className="practice">
-        <User id={id} username={username}/>
+        <Post post={post} />
       </div>
     )
   };
 
-  const User = props => {
+  const Post = props => {
     return (
       <p>
         {props.username} {props.id}
