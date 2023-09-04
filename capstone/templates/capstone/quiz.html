@@ -41,7 +41,6 @@
 <div id="app"></div>
 
 <script type="text/babel">
-import React from "react";
 
   const Practice1 = () => {
     const id = 1;
@@ -56,7 +55,7 @@ import React from "react";
   const User = props => {
     return (
       <p>
-        {props.username} [{props.id}]
+        {props.username} {props.id}
       </p>
     );
   };
