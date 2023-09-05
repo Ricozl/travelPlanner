@@ -56,6 +56,10 @@
         const answer = parseInt(state.response);
         if (state.num1 + state.num2 === answer) {
           // user got right
+          setState({
+            ...state,
+            score: state.score + 1
+          })
         } else {
           //user got wrong
         }
