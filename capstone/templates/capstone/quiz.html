@@ -59,9 +59,13 @@
           setState({
             ...state,
             score: state.score + 1
-          })
+          });
         } else {
           //user got wrong
+          setState({
+            ...state,
+            score: state.score - 1
+          });
         }
       }
     }
