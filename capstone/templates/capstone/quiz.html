@@ -103,7 +103,7 @@
     function inputKeyPress(event) {
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
-        if (answer ? "iscorrect" : ) {
+        if (questions[currentQuestion].answerOption(answer) ? "iscorrect" : ) {
           // user got right
           setState({
             ...state,
