@@ -94,8 +94,7 @@
         ];
 
     const [state, setState] = React.useState({
-      num1: 1,
-      num2: 2,
+      currentQuestion: 0,
       response: "",
       score: 0,
       incorrect: false
@@ -108,7 +107,7 @@
           // user got right
           setState({
             ...state,
-            
+            currentQuestion: currentQuestion + 1,
             score: state.score + 1,
             response: "",
             incorrect: false
@@ -117,7 +116,6 @@
           //user got wrong
           setState({
             ...state,
-            score: state.score - 1,
             response: "",
             incorrect: true
           });
