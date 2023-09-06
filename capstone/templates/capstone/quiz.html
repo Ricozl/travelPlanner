@@ -111,7 +111,7 @@
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion[nextQuestion]
-            } 
+            }
 
         };
 
@@ -169,13 +169,12 @@
     return (
       <div>
         <div className='question-text'>{questionsText[currentQuestion]}</div>
+        
         <div className='answer-section'>
-            const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
-                <li>
-                  {answers}
-                </li>
-            )]}
+            {questions[currentQuestion].answerOptions.map[(answerOptions) => (
+                <button onClick () => handleAnswerButton(event) </button>
         </div>
+
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
