@@ -103,14 +103,15 @@
 
     const handleAnswerButton = (isCorrect) => {
             if(isCorrect === true) {
-                setScore(score + 1);
+                setState({
+                  ...state,
+                  score: state.score + 1
+                })
             }
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion[nextQuestion]
-            } else {
-                setShowScore(true);
-            }
+            } 
 
         };
 
