@@ -155,7 +155,14 @@
 
     return (
       <div>
-        <Question />
+        <div className='question-text'>{questions(currentQuestion).questionText}</div>
+        <div className='answer-section'>
+            const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
+                <li>
+                  {answers}
+                </li>
+            )]}
+        </div>
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
