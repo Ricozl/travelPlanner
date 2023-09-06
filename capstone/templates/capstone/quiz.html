@@ -101,8 +101,7 @@
     })
 
     function getCurrentQuestion() {
-      const curQuestion = questions[currentQuestion].questionText
-      <Question curQuestion />
+      <Question {questions[currentQuestion].questionText} />
     }
 
     function Question (props) {
