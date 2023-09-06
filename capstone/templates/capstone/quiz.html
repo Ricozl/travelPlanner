@@ -100,13 +100,9 @@
       incorrect: false
     })
 
-    function getCurrentQuestion() {
-      <Question {questions[currentQuestion].questionText} />
-    }
-
     function Question (props) {
       <div>
-        <div className='question-text'>{questions[{questionText[currentQuestion]}</div>
+        <div className='question-text'>{questions[{questionText(currentQuestion)}]}</div>
         <div className='answer-section'>
             const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
                 <li>
