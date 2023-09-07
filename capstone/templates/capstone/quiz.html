@@ -123,8 +123,8 @@
 
     function List() {
       const listItems = questions.map(questionText =>
-        <li key="id">{questionText}</li>
-      );
+        {<li key="id">{questionText}</li>
+    });
       return <ul>{listItems}</ul>;
     }
 
