@@ -181,7 +181,11 @@
 
     return (
       <div>
-        <List questions />
+        <List
+          questions={{
+            questions: 'questionText',
+            
+          }} />
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
