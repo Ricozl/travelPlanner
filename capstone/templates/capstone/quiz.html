@@ -121,7 +121,7 @@
 
         };
 
-    function List() {
+    function List({questions, currentQuestion}) {
       const listItems = questions.map(id =>
         <li key="id">{question}</li>
     );
