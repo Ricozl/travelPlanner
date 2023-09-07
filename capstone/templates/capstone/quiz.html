@@ -169,8 +169,8 @@
 
     return (
       <div>
-        const ques = {questions.map}
-        <div className='question-text'>Question: {ques}</div>
+
+        const myList = questions.map((item) => <p>{item}</p>)
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
