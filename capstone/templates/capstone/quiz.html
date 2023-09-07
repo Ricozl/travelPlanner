@@ -121,6 +121,13 @@
 
         };
 
+    function List() {
+      const listItems = questions.map(questionText =>
+        <li key="id">{questionText}</li>
+      );
+      return <ul>{listItems}</ul>;
+    }
+
     function Question (currentQuestion) {
       <div>
         <div className='question-text'>Question: [{questions.map}]</div>
@@ -174,11 +181,7 @@
 
     return (
       <div>
-        {questions.map( (question)=>
-       (
-           <p>{question}</p>
-       )
-       )}
+        <List />
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
