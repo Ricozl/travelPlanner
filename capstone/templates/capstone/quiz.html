@@ -4,6 +4,8 @@
 {% block nav %}
 {% endblock %}
 
+import React, { useEffect, useState } from "react";
+
 <div class="topnav" id="myTopnav">
     <a href="{% url 'index' %}" class="active"><img src="static/capstone/favicon.ico"
         style="width:30px; height:30px; margin-right:10px;">Rome Travel</a>
@@ -169,7 +171,7 @@
     return (
       <div>
         <Question currentQuestion />
-        
+
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
