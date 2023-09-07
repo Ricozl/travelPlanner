@@ -173,7 +173,7 @@
 
         <div className='answer-section'>
             {questions[currentQuestion].answerOptions.map[(answerOptions) => (
-                <button onClick () => handleAnswerButton(event) </button>)]
+                <button onClick {() => handleAnswerButton(event)} </button>)]
         </div>
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
