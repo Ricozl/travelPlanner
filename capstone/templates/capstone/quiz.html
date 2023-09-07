@@ -117,7 +117,7 @@
 
     function Question (currentQuestion) {
       <div>
-        <div className='question-text'>{questions(currentQuestion).questionText}</div>
+        <div className='question-text'>{questions[currentQuestion].questionText}</div>
         <div className='answer-section'>
             const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
                 <li>
@@ -168,6 +168,7 @@
 
     return (
       <div>
+        <Question currentQuestion />
         <div className='question-text'>{questionsText[currentQuestion]}</div>
 
         <div className='answer-section'>
