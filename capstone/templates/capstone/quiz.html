@@ -169,8 +169,8 @@
 
     return (
       <div>
-        <Question currentQuestion />
-
+        const ques = {questions.map}
+        <div className='question-text'>Question: {ques}</div>
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
