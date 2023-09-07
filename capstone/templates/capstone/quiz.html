@@ -118,7 +118,7 @@
 
     function Question (currentQuestion) {
       <div>
-        <div className='question-text'>Question: {questionText[currentQuestion]}</div>
+        <div className='question-text'>Question: {questions[currentQuestion].questionText}</div>
         <div className='answer-section'>
             const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
                 <li>
