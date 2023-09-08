@@ -179,17 +179,21 @@
       )
     };
 
-    const listques = questions.map(question =>
-      <li>{question}</li>);
+    function Listques() {
+      const listques = questions.map(question =>
+        <li>{question}</li>);
+    };
+    return <ul>{listques}</ul>;
+  }
 
     return (
-        <ul>{listques}</ul>
-
+        <Listques />>
+      <div>
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
-      )
-  };
+      );
+
 
     ReactDOM.render(
         <App />,
