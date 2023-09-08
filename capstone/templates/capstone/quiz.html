@@ -123,9 +123,9 @@
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     const answersList = answers.map((answer) => (
-      <h3 key={answer.id}>
+      <p key={answer.id}>
         {answer.answerText}: {answer.isCorrect}
-      </h3>
+      </p>
     ));
 
     //const wchques = questions.filter(questions =>
@@ -230,7 +230,7 @@
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div>{questions[currentQuestion + 1]}</div>
         <div>{answersList}</div>
-
+        
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
