@@ -117,12 +117,12 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-    const wchques = questions.filter(id =>
-      questions.id === currentQuestion
+    const wchques = questions.filter(question =>
+      question.id === currentQuestion
     );
 
     const curques = wchques.map(question =>
-      <li>{questions.text}</li>
+      <li>{question.text}</li>
     );
     return <ul>{curques}</ul>;
 
