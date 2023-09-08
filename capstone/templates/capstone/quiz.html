@@ -100,11 +100,11 @@
         //];
 
     const questions = [
-      { id: 0, text: "What is cacio et Pepe?"},
-      { id:1, text: 'The Colosseum is called that because?'},
-      { id:2, text: 'In classical architecture, Romans invented?'},
-      { id:3, text: 'Traditional Roman food is largely composed of?'},
-      { id:4, text: 'One hundred years ago, Romans avoided artichokes and eggplants because?'}
+      { id: 0, question: "What is cacio et Pepe?"},
+      { id:1, question: 'The Colosseum is called that because?'},
+      { id:2, question: 'In classical architecture, Romans invented?'},
+      { id:3, question: 'Traditional Roman food is largely composed of?'},
+      { id:4, question: 'One hundred years ago, Romans avoided artichokes and eggplants because?'}
     ]
 
 
@@ -118,7 +118,7 @@
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     const wchques = questions.filter(id =>
-      question.id === currentQuestion
+      questions.id === currentQuestion
     );
 
     const curques = wchques.map(question =>
