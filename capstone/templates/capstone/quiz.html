@@ -107,10 +107,6 @@
       'One hundred years ago, Romans avoided artichokes and eggplants because?'
     ]
 
-    const listques = questions.map(question =>
-        <li>{question}</li>
-    );
-    return <ul>{listques}</ul>;
 
 
     const [state, setState] = React.useState({
@@ -120,6 +116,12 @@
     })
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
+
+    const listques = questions.map(question =>
+        <li>{question}</li>
+    );
+    return <ul>{listques}</ul>;
+
 
     const handleAnswerButton = (isCorrect) => {
             if(isCorrect === true) {
