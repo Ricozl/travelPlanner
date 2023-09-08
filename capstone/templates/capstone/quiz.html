@@ -117,27 +117,25 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-    <div className='question-text'>
-      return <p>{questions[currentQuestion]}</p>;
-    </div>
 
-    const wchques = questions.filter(questions =>
-      questions.id === currentQuestion,
-      console.log(currentQuestion),
-      console.log(questions.id)
-    );
 
-    const curques = wchques.map(question =>
-      <li>{question.text}</li>
-    );
-    return <ul>{{curques}}</ul>;
+    //const wchques = questions.filter(questions =>
+      //questions.id === currentQuestion,
+      //console.log(currentQuestion),
+      //console.log(questions.id)
+    //);
 
-    const listques = questions.map(question =>
-        <li>{{question}}</li>
-    );
+    //const curques = wchques.map(question =>
+      //<li>{question.text}</li>
+    //);
+    //return <ul>{{curques}}</ul>;
 
-    const whichques = listques.filter
-    return <ul>{listques}</ul>;
+    //const listques = questions.map(question =>
+        //<li>{{question}}</li>
+    //);
+
+    //const whichques = listques.filter
+    //return <ul>{listques}</ul>;
 
 
     const handleAnswerButton = (isCorrect) => {
@@ -220,8 +218,8 @@
 
     return (
       <div>
+        <div className='question-text'>{questionsText[currentQuestion]}</div>
 
-        <ul>{{listques}}</ul>
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
