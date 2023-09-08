@@ -100,11 +100,11 @@
         //];
 
     const questions = [
-      { id: 0, question: "What is cacio et Pepe?"},
-      { id:1, question: 'The Colosseum is called that because?'},
-      { id:2, question: 'In classical architecture, Romans invented?'},
-      { id:3, question: 'Traditional Roman food is largely composed of?'},
-      { id:4, question: 'One hundred years ago, Romans avoided artichokes and eggplants because?'}
+      "What is cacio et Pepe?",
+      'The Colosseum is called that because?',
+      'In classical architecture, Romans invented?',
+      'Traditional Roman food is largely composed of?',
+      'One hundred years ago, Romans avoided artichokes and eggplants because?'
     ]
 
 
@@ -116,6 +116,8 @@
     })
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
+
+    <div className='question-text'>{questionsText[currentQuestion]}
 
     const wchques = questions.filter(questions =>
       questions.id === currentQuestion,
