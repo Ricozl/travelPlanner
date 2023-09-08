@@ -117,6 +117,15 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
+    const whichques = questions.filter(id =>
+      question.id === currentQuestion
+    );
+
+    const curques = whichques.map(question =>
+      <li>{question.ques}</li>
+    );
+    return <ul>{curques}</ul>;
+
     const listques = questions.map(question =>
         <li>{{question}}</li>
     );
