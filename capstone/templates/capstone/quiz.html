@@ -119,9 +119,10 @@
 
     const wchques = questions.filter(question =>
       question.id === currentQuestion
+      console.log
     );
 
-    const curques = wchques.map(question =>
+    const curques = wchques.map(question => 
       <li>{question.text}</li>
     );
     return <ul>{{curques}}</ul>;
