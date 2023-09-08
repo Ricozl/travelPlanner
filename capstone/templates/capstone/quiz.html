@@ -180,15 +180,10 @@
     };
 
     const listques = questions.map(question =>
-      <li>{question}>
-    const listItems = questions.map
-    return (
-      <div>
-        <List
-          questions={{
-            questions: 'questionText',
+      <li>{question}</li>);
 
-          }} />
+    return (
+        <ul>{listques}</ul>
 
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
