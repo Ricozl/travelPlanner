@@ -183,12 +183,13 @@
       const listques = questions.map(question =>
         <li>{question}</li>);
     };
-    return <ul>{listques}</ul>;
-  }
+
 
     return (
-        <Listques />>
       <div>
+        <Listques />
+  
+        <ul>{listques}</ul>
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
