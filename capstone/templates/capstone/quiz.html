@@ -100,11 +100,11 @@
         //];
 
     const questions = [
-      { id: 0, ques: "What is cacio et Pepe?"},
-      { id:1, ques: 'The Colosseum is called that because?'},
-      { id:2, ques: 'In classical architecture, Romans invented?'},
-      { id:3, ques: 'Traditional Roman food is largely composed of?'},
-      { id:4, ques: 'One hundred years ago, Romans avoided artichokes and eggplants because?'}
+      { id: 0, text: "What is cacio et Pepe?"},
+      { id:1, text: 'The Colosseum is called that because?'},
+      { id:2, text: 'In classical architecture, Romans invented?'},
+      { id:3, text: 'Traditional Roman food is largely composed of?'},
+      { id:4, text: 'One hundred years ago, Romans avoided artichokes and eggplants because?'}
     ]
 
 
@@ -122,7 +122,7 @@
     );
 
     const curques = wchques.map(question =>
-      <li>{question.ques}</li>
+      <li>{questions.text}</li>
     );
     return <ul>{curques}</ul>;
 
