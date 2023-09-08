@@ -123,8 +123,10 @@
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     const answersList = answers.map((answer) => (
-      <h3 key={answer.id}
-    ))
+      <h3 key={answer.id}>
+        {answer.answerText}: {answer.isCorrect}
+      </h3>
+    ));
 
     //const wchques = questions.filter(questions =>
       //questions.id === currentQuestion,
