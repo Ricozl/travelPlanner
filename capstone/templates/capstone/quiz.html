@@ -100,7 +100,8 @@
         ];
 
     const listques = questions.map(question =>
-        <p>{question.questionText}</p>);
+        {return <p>{question.questionText}</p>
+          });
 
 
     const [state, setState] = React.useState({
