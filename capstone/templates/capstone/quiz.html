@@ -117,7 +117,9 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-    <div className='question-text'>{questionsText[currentQuestion]}
+    <div className='question-text'>
+      return <p>{questions[currentQuestion]}</p>;
+    </div>
 
     const wchques = questions.filter(questions =>
       questions.id === currentQuestion,
