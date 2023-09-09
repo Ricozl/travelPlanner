@@ -137,10 +137,7 @@
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
-      <button>
-        {answer.answerOptions}
-        {questions[currentQuestion].answerOptions.map[(answerOptions) => (
-      </button>
+     {answerOptions.answerText}
     ));
 
     //const answersList = answers.map((answer) => (
