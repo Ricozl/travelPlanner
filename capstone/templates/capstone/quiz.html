@@ -138,7 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus=true, onClick={inputKeyPress(event)}>
+        <button autofocus={true}, onChange={updateResponse}, onClick={processEvent(event)}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
@@ -179,7 +179,7 @@
       </div>
     };
 
-    function inputKeyPress(event) {
+    function processEvent(event) {
       console.log("got to inputKeyPress")
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
