@@ -180,10 +180,7 @@
     };
 
     function inputKeyPress(event) {
-      setState({
-        ...state,
-        response: event.target.value
-      });
+      console.log("got to inputKeyPress")
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
