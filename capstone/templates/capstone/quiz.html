@@ -137,7 +137,9 @@
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
-     {answerOptions.answerText}
+      <button>
+        {answerOptions.answerText}
+      </button>
     ));
 
     //const answersList = answers.map((answer) => (
