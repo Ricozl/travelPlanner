@@ -138,7 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button onClick={() => {handleAnswerButton(answerOptions.isCorrect)}}>
+        <button onClick={() => {handleAnswerButton(isCorrect)}}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
@@ -151,8 +151,8 @@
     //));
 
 
-    const handleAnswerButton = (answerOptions.isCorrect) => {
-            if(answerOptions.isCorrect === true) {
+    const handleAnswerButton = (isCorrect) => {
+            if(isCorrect === true) {
                 setState({
                   ...state,
                   score: state.score + 1
