@@ -138,7 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus={true}, onChange={updateResponse}, onClick={processEvent(event)}>
+        <button autofocus={true} onClick={processEvent(event)}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
