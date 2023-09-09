@@ -136,7 +136,7 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-    const answersList = answers.map((answer) => (
+    const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <button key={answer.id}>
         {answer.answerOptions}
         {questions[currentQuestion].answerOptions.map[(answerOptions) => (
