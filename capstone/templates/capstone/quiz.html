@@ -230,7 +230,6 @@
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
         <div>{questions[currentQuestion + 1]}</div>
-        <input autoFocus={true} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
       </div>
       );
