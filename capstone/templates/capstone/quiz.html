@@ -225,7 +225,7 @@
     return (
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
-        <div>{answersList}</div>
+        <div className='answer-text'>{answersList}</div>
         <div>{questions[currentQuestion + 1]}</div>
         <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
         <div>Score: {state.score}</div>
