@@ -181,6 +181,7 @@
 
     function processEvent(event) {
       console.log("got to inputKeyPress")
+      event.preventDefault()
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
