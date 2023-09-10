@@ -139,7 +139,7 @@
     let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
-        <button autofocus={true} onClick={(event) => handleClick(event)}>
+        <button autofocus={true} onClick={(event, answersList) => handleClick(event, answersList)}>
           {choice = choice + 1}
         </button>
         <li id="quiznotext">
@@ -183,7 +183,7 @@
       </div>
     };
 
-    const handleClick = (event) => {
+    const handleClick = (event, props) => {
       console.log("got to processEvent")
       event.preventDefault()
       console.log(event.target)
