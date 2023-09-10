@@ -209,6 +209,7 @@
         } else {
           //user got wrong
           console.log("got it wrong")
+          console.log(answers[currentQuestion.answerOptions[answer]])
           setState({
             ...state,
             isCorrect: true
