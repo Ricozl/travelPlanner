@@ -190,8 +190,8 @@
       console.log(event.target.innerText)
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr);
-
-      if (answers[currentQuestion].answerOptions.map(answerOptions) ? "isCorrect" : "") {
+      let answer = answr
+      if (answers[currentQuestion].answerOptions.map(answer) ? "isCorrect" : "") {
           //<p>
             //{answerOptions.answerText} {answerOptions.isCorrect}
           //</p>
@@ -199,6 +199,7 @@
 
       //if (props.answerOptions(answr) ? "isCorrect" : "") {
         // user got right
+          console.log("got right")
           setState({
             ...state,
             currentQuestion: currentQuestion + 1,
@@ -207,6 +208,7 @@
           });
         } else {
           //user got wrong
+          console.log("got it wrong")
           setState({
             ...state,
             isCorrect: true
