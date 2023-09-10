@@ -185,7 +185,7 @@
       console.log(event.target)
       console.log(event.target.innerText)
       choice = event.target.innerText
-
+      if (answers[currentQuestion].answerOptions)
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
           setState({
@@ -203,7 +203,7 @@
             incorrect: true
           });
         }
-      
+
     };
 
     function updateResponse(event) {
