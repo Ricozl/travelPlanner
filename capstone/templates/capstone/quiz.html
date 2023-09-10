@@ -135,17 +135,17 @@
     })
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
-    const choice = 0;
+
+    const choice = -1;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p display: inline-block>
         <button autofocus={true} onClick={(event) => handleClick(event)}>
-          {choice}
+          {choice + 1}
         </button>
         <p display: inline-block>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </p>
       </p>
-      choice = choice + 1
     ));
 
     //const answersList = answers.map((answer) => (
