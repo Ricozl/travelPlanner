@@ -179,13 +179,13 @@
       </div>
     };
 
-    const handleClick = (event, answersList) => {
+    const handleClick = (event) => {
       console.log("got to processEvent")
       event.preventDefault()
       console.log(event.target)
       console.log(event.target.innerText)
       const choice = event.target.innerText
-      console.log(answersList)
+    
       if (answersList(choice) ? "isCorrect" : "") {
         //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
