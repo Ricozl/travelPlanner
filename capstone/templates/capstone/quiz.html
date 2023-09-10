@@ -131,7 +131,7 @@
     const [state, setState] = React.useState({
       response: "",
       score: 0,
-      incorrect: false
+      isCorrect: false
     })
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
@@ -190,19 +190,19 @@
       console.log(event.target.innerText)
       let answr = parseInt(event.target.innerText) - 1;
 
-      if (answers[currentQuestion].answerOptions(answr) ? "iscorrect" : "") {
+      if (answers[currentQuestion].answerOptions(answr) ? "isCorrect" : "") {
         // user got right
           setState({
             ...state,
             currentQuestion: currentQuestion + 1,
             score: state.score + 1,
-            incorrect: false
+            isCorrect: false
           });
         } else {
           //user got wrong
           setState({
             ...state,
-            incorrect: true
+            isCorrect: true
           });
         }
 
