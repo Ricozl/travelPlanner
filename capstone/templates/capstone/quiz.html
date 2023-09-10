@@ -191,10 +191,10 @@
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr)
 
-      {answers[currentQuestion].answerOptions.map[(answerOptions) => (
-                                <button onClick {() => handleAnswerButtonClick[answerOptions.isCorrect]}>{answerOptions.answerText}</button>
+      {answers[currentQuestion].answerOptions.map[(answerOptions.isCorrect) => (
+          <button onClick {() => handleAnswerButtonClick[answerOptions.isCorrect]}>{answerOptions.answerText}</button>
 
-                            )]}
+      )]}
 
       if (props.answerOptions(answr) ? "isCorrect" : "") {
         // user got right
