@@ -191,8 +191,10 @@
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr);
 
-      answrText = answers[currentQuestion].answerOptions.map((answerOptions.answerText[answr]) => (
-          <p>{answerOptions.answerText} {answerOptions.isCorrect}</p>
+      const answrText = answers[currentQuestion].answerOptions.map((answerOptions.answerText[answr]) => (
+          <p>
+            {answerOptions.answerText} {answerOptions.isCorrect}
+          </p>
         ));
 
       //if (props.answerOptions(answr) ? "isCorrect" : "") {
