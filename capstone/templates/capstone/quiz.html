@@ -192,8 +192,8 @@
       console.log(answr)
 
       answers[currentQuestion].answerOptions.map((answerOptions.answerText[answr]) => (
-          <p>{answerOptions.isCorrect}</p>
-        )];
+          <p>{answerOptions.answerText} {answerOptions.isCorrect}</p>
+        ));
 
       //if (props.answerOptions(answr) ? "isCorrect" : "") {
         // user got right
@@ -241,7 +241,7 @@
         <div>Score: {state.score}</div>
       </div>
       );
-  //};
+  };
 
 
     ReactDOM.render(
