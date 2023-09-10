@@ -366,10 +366,12 @@ h4 {
 
 #quizno {
   white-space: nowrap;
+  text-align: left;
 }
 
 #quiznotext {
   display: inline-block;
+  margin-left: 10px;
 }
 
 #problem {
