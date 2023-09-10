@@ -138,16 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus={true} onClick={(event) => handleClick1(event)}>
-          {answerOptions.answerText}{answerOptions.isCorrect}
-        </button>
-        <button autofocus={true} onClick={(event) => handleClick2(event)}>
-          {answerOptions.answerText}{answerOptions.isCorrect}
-        </button>
-        <button autofocus={true} onClick={(event) => handleClick3(event)}>
-          {answerOptions.answerText}{answerOptions.isCorrect}
-        </button>
-        <button autofocus={true} onClick={(event) => handleClick4(event)}>
+        <button autofocus={true} onClick={(event) => handleClick(event)}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
