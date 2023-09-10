@@ -183,6 +183,7 @@
       console.log("got to processEvent")
       event.preventDefault()
       console.log(event.target)
+      console.log(event.target.value)
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
