@@ -191,7 +191,7 @@
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr)
 
-      const answrtext = 
+      const answrtext = answers[currentQuestion].answerOptions.map((answerOptions)
       if (props.answerOptions(answr) ? "isCorrect" : "") {
         // user got right
           setState({
