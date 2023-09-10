@@ -136,15 +136,15 @@
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-    const choice = 0;
+    let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
         <button autofocus={true} onClick={(event) => handleClick(event)}>
           {choice = choice + 1}
         </button>
-        <p id="quiznotext">
+        <li id="quiznotext">
           {answerOptions.answerText}{answerOptions.isCorrect}
-        </p>
+        </li>
       </p>
     ));
 
