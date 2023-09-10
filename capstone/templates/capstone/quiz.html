@@ -138,7 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus={true} onClick={processEvent}>
+        <button autofocus={true} onClick={handleClick}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
@@ -179,7 +179,7 @@
       </div>
     };
 
-    function processEvent(event) {
+    function handleClick() {
       console.log("got to processEvent")
       event.preventDefault()
       if (event.key === "Enter") {
@@ -202,7 +202,7 @@
           });
         }
       }
-    }
+    };
 
     function updateResponse(event) {
       setState({
