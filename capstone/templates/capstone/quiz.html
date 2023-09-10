@@ -186,7 +186,7 @@
       console.log(event.target.innerText)
       const choice = event.target.innerText
       console.log(answersList)
-      if (answersList.answerOptions(choice) ? "isCorrect" : "") {
+      if (answersList(choice) ? "isCorrect" : "") {
         //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
           setState({
