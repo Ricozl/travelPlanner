@@ -191,28 +191,27 @@
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr)
 
-      {answers[currentQuestion].answerOptions.map[(answerOptions.answerText[answr]) => (
+      answers[currentQuestion].answerOptions.map[(answerOptions.answerText[answr]) => (
           <p>{answerOptions.isCorrect}</p>
+        )]};
 
-      )]};
-
-      if (props.answerOptions(answr) ? "isCorrect" : "") {
+      //if (props.answerOptions(answr) ? "isCorrect" : "") {
         // user got right
-          setState({
-            ...state,
-            currentQuestion: currentQuestion + 1,
-            score: state.score + 1,
-            isCorrect: false
-          });
-        } else {
+          //setState({
+            //...state,
+            //currentQuestion: currentQuestion + 1,
+            //score: state.score + 1,
+            //isCorrect: false
+          //});
+        //} else {
           //user got wrong
-          setState({
-            ...state,
-            isCorrect: true
-          });
-        }
+          //setState({
+            //...state,
+            //isCorrect: true
+          //});
+        //}
 
-    };
+    //};
 
     function updateResponse(event) {
       setState({
@@ -242,7 +241,7 @@
         <div>Score: {state.score}</div>
       </div>
       );
-  };
+  //};
 
 
     ReactDOM.render(
