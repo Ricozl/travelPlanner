@@ -138,7 +138,16 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus={true} onClick={(event) => handleClick(event)}>
+        <button autofocus={true} onClick={(event) => handleClick1(event)}>
+          {answerOptions.answerText}{answerOptions.isCorrect}
+        </button>
+        <button autofocus={true} onClick={(event) => handleClick2(event)}>
+          {answerOptions.answerText}{answerOptions.isCorrect}
+        </button>
+        <button autofocus={true} onClick={(event) => handleClick3(event)}>
+          {answerOptions.answerText}{answerOptions.isCorrect}
+        </button>
+        <button autofocus={true} onClick={(event) => handleClick4(event)}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
@@ -179,31 +188,53 @@
       </div>
     };
 
-    const handleClick = (event) => {
+    const handleClick1 = (event) => {
       console.log("got to processEvent")
       event.preventDefault()
       console.log(event.target)
       console.log(event.target.innerText)
       const choice = event.target.innerText
-    
-      if (answersList(choice) ? "isCorrect" : "") {
+    };
+    const handleClick2 = (event) => {
+      console.log("got to processEvent")
+      event.preventDefault()
+      console.log(event.target)
+      console.log(event.target.innerText)
+      const choice = event.target.innerText
+    };
+    const handleClick3 = (event) => {
+      console.log("got to processEvent")
+      event.preventDefault()
+      console.log(event.target)
+      console.log(event.target.innerText)
+      const choice = event.target.innerText
+    };
+    const handleClick4 = (event) => {
+      console.log("got to processEvent")
+      event.preventDefault()
+      console.log(event.target)
+      console.log(event.target.innerText)
+      const choice = event.target.innerText
+    };
+
+      //if (answersList(choice) ? "isCorrect" : "") {
         //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
-          setState({
-            ...state,
-            currentQuestion: currentQuestion + 1,
-            score: state.score + 1,
-            incorrect: false
-          });
-        } else {
+          //setState({
+            //...state,
+            //currentQuestion: currentQuestion + 1,
+            //score: state.score + 1,
+            //incorrect: false
+          //});
+       // } else {
           //user got wrong
-          setState({
-            ...state,
-            incorrect: true
-          });
-        }
+          //setState({
+            //...state,
+            //incorrect: true
+          //});
+        //}
 
-    };
+    //};
 
     function updateResponse(event) {
       setState({
