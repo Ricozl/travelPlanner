@@ -185,21 +185,19 @@
       console.log(event.target)
       console.log(event.target.innerText)
       choice = event.target.innerText
-      if (answers[currentQuestion].answerOptions)
-        if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
+      if (answers[currentQuestion].answerOptions(choice) ? "isCorrect" : "") {
+        //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
           setState({
             ...state,
             currentQuestion: currentQuestion + 1,
             score: state.score + 1,
-            response: "",
             incorrect: false
           });
         } else {
           //user got wrong
           setState({
             ...state,
-            response: "",
             incorrect: true
           });
         }
