@@ -182,6 +182,7 @@
     function handleClick() {
       console.log("got to processEvent")
       event.preventDefault()
+      console.log(event)
       if (event.key === "Enter") {
         const answer = parseInt(state.response);
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
