@@ -191,7 +191,7 @@
       let answr = parseInt(event.target.innerText) - 1;
       console.log(answr);
 
-      const answrText = answers[currentQuestion].answerOptions.map((answerOptions.answerText[answr]) (
+      answers[currentQuestion].answerOptions.map((answerOptions.isCorrect[answr]) (
           <p>
             {answerOptions.answerText} {answerOptions.isCorrect}
           </p>
@@ -240,7 +240,7 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-     
+
         <div>Score: {state.score}</div>
       </div>
       );
