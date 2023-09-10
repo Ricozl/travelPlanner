@@ -186,7 +186,6 @@
       console.log(event.target.innerText)
 
       if (event.key === "Enter") {
-        const answer = parseInt(state.response);
         if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
           setState({
