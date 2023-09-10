@@ -188,27 +188,25 @@
       event.preventDefault()
       console.log(event.target)
       console.log(event.target.innerText)
-      const choice = event.target.innerText
-    };
+      let answr = parseInt(event.target.innerText) - 1;
 
-      //if (answersList(choice) ? "isCorrect" : "") {
-        //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
-          // user got right
-          //setState({
-            //...state,
-            //currentQuestion: currentQuestion + 1,
-            //score: state.score + 1,
-            //incorrect: false
-          //});
-       // } else {
+      if (answers[currentQuestion].answerOptions(answr) ? "iscorrect" : "") {
+        // user got right
+          setState({
+            ...state,
+            currentQuestion: currentQuestion + 1,
+            score: state.score + 1,
+            incorrect: false
+          });
+        } else {
           //user got wrong
-          //setState({
-            //...state,
-            //incorrect: true
-          //});
-        //}
+          setState({
+            ...state,
+            incorrect: true
+          });
+        }
 
-    //};
+    };
 
     function updateResponse(event) {
       setState({
@@ -235,7 +233,6 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-        <div>{questions[currentQuestion + 1]}</div>
         <div>Score: {state.score}</div>
       </div>
       );
