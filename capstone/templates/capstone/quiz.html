@@ -138,7 +138,7 @@
 
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p>
-        <button autofocus={true} onClick={(event, currentQuestion) => handleClick(event)}>
+        <button autofocus={true} onClick={(event, answersList) => handleClick(event)}>
           {answerOptions.answerText}{answerOptions.isCorrect}
         </button>
       </p>
@@ -179,14 +179,14 @@
       </div>
     };
 
-    const handleClick = (event, currentQuestion) => {
+    const handleClick = (event, answersList) => {
       console.log("got to processEvent")
       event.preventDefault()
       console.log(event.target)
       console.log(event.target.innerText)
       const choice = event.target.innerText
-      console.log(currentQuestion)
-      if (answers[currentQuestion].answerOptions(choice) ? "isCorrect" : "") {
+      console.log(answersList)
+      if (answersList.answerOptions(choice) ? "isCorrect" : "") {
         //if (answers[currentQuestion].answerOptions(answer) ? "iscorrect" : "") {
           // user got right
           setState({
