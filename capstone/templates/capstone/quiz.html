@@ -138,11 +138,11 @@
 
     const choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
-      <p style={{display: inline-block}}>
+      <p id="quizno">
         <button autofocus={true} onClick={(event) => handleClick(event)}>
           {choice + 1}
         </button>
-        <p style={{display: inline-block}}>
+        <p id="quiznotext">
           {answerOptions.answerText}{answerOptions.isCorrect}
         </p>
       </p>

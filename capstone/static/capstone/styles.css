@@ -363,6 +363,15 @@ h4 {
 .answer-text {
   margin: 10px;
 }
+
+#quizno {
+  white-space: nowrap;
+}
+
+#quiznotext {
+  display: inline-block;
+}
+
 #problem {
     font-size: 72px;
 }
