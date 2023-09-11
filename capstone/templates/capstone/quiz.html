@@ -198,7 +198,7 @@
       updateResponse(event)
       //const answr = parseInt(state.response);
 
-      pick = filterList()
+      let pick = filterList()
       console.log(pick)
 
 
@@ -255,7 +255,7 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-        <div>{filterList}</div>
+        <filterList />
         <div>Score: {state.score}</div>
       </div>
       );
