@@ -189,13 +189,13 @@
       updateResponse(event)
       const answr = parseInt(state.response);
       console.log(answr);
-
+      
       {answers[currentQuestion].filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
       <li>
         {filteredAnswer.answerText}
       </li>
     ))};
-      
+
       console.log("isCorrect")
     };
 
@@ -263,7 +263,7 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-        <div>{filterList}</div>
+
         <div>Score: {state.score}</div>
       </div>
       );
