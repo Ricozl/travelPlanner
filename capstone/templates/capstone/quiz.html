@@ -148,7 +148,7 @@
       </p>
     ));
 
-    const filterList = answers.filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
+    const filterList = answers[currentQuestion].filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
       <li>
         {filteredAnswer.answerText}
       </li>
@@ -194,7 +194,7 @@
       const answr = parseInt(state.response);
       console.log(answr);
 
-      checkResponse(answr);
+      handleResponse;
       console.log("isCorrect")
     };
 
