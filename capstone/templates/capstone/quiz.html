@@ -197,17 +197,15 @@
       updateResponse(event)
       //const answr = parseInt(state.response);
 
-      const list = answers[currentQuestion].answerOptions.map(item, index)
+      //const list = answers[currentQuestion].answerOptions.map(item, index)
 
-
-
-      //checkResponse()
+      checkResponse()
 
       console.log("returned from checkResponse")
     };
 
-    const checkResponse = (props) => {
-      if (answers[currentQuestion].answerOptions.map[isCorrect] ? "isCorrect" : "") {
+    const checkResponse = () => {
+      if (answers[currentQuestion].answerOptions.map(item, index) ? "isCorrect" : "") {
         // user got right
           console.log("got right")
           setState({
