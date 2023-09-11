@@ -148,7 +148,11 @@
       </p>
     ));
 
-    const filterList = answers
+    const filterList = answers.filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
+      <li>
+        {filteredAnswer.answerText}
+      </li>
+    ))
 
 
     const handleAnswerButton = (props) => {
