@@ -149,7 +149,7 @@
     ));
 
 
-    function filterList (currentQuestion) {
+    function filterList () {
       answers[currentQuestion].answerOptions.map((item, index) => {
       return (
         <div key={index}>
@@ -198,7 +198,7 @@
       updateResponse(event)
       //const answr = parseInt(state.response);
 
-      filterList(currentQuestion)
+      //filterList(currentQuestion)
 
 
       //checkResponse()
@@ -254,7 +254,7 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-
+        <div>{filterList}</div>
         <div>Score: {state.score}</div>
       </div>
       );
