@@ -109,7 +109,7 @@
 
     const answers = [
       {
-        id: 0,
+        id: 1,
         answerOptions: [
           { answerText: 'Italian football (soccer) and Pete.', isCorrect: false},
           { answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
@@ -118,7 +118,7 @@
         ],
       },
       {
-        id: 1,
+        id: 2,
         answerOptions: [
           { answerText: 'It is the Greek name for amphitheater.', isCorrect: false },
           { answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
@@ -185,7 +185,7 @@
       console.log(event.type)
 
       updateResponse(event)
-      const answr = parseInt(state.response) - 1;
+      const answr = parseInt(state.response);
       console.log(answr);
 
       checkResponse(answr);
