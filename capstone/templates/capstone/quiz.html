@@ -193,9 +193,9 @@
       updateResponse(event)
       const answr = parseInt(state.response);
 
-      filterList()
+      checkResponse(answr)
 
-      console.log("isCorrect")
+      console.log("returned from checkResponse")
     };
 
     const checkResponse = (answr) => {
