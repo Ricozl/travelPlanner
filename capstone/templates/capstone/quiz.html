@@ -149,14 +149,14 @@
     ));
 
 
-    function filterList = () => {
+    function filterList = () => (
       answers[currentQuestion].answerOptions.map((item, index) => {
       return (
         <div key={index}>
           <div>answerText: {item.answerText}</div>
           <div>isCorrect: {item.isCorrect}</div>
         </div>
-      )})};
+      )}));
 
 
     const handleAnswerButton = (props) => {
