@@ -129,7 +129,7 @@
     ];
 
     const [state, setState] = React.useState({
-      response: 0,
+      response: "",
       score: 0,
       isCorrect: false
     })
@@ -225,7 +225,7 @@
     function updateResponse(event) {
       setState({
         ...state,
-        response: event.target.value
+        response: event.target.innerText
       })
     }
 
