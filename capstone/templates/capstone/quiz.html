@@ -139,7 +139,7 @@
     let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
-        <button autofocus={true} onClick={(event) => handleResponse(event); checkResponse(event)}>
+        <button autofocus={true} onClick: function(event) { handleResponse(); checkResponse()}>
           {choice = choice + 1}
         </button>
         <li id="quiznotext">
@@ -147,10 +147,11 @@
         </li>
       </p>
     ));
+    //<button autofocus={true} onClick={(event) => handleResponse(event)}>
     //onClick: function(event){
       //func1();
       //func2();
-   },
+   //},
 
     const filterList = answers[currentQuestion].answerOptions.map((item, index) => {
       return (
