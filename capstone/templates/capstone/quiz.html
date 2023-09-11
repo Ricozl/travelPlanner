@@ -193,8 +193,15 @@
       updateResponse(event)
       const answr = parseInt(state.response) - 1;
       console.log(answr);
-      {answers[currentQuestion].answerOptions.map[(answerOptions) => (
-            [answerOptions.isCorrect]}>
+
+      checkResponse(answr);
+    };
+
+    const checkResponse = (answr) => {
+      {answers[currentQuestion].answerOptions[answr] => (
+            {answerOptions.isCorrect}}>
+    }
+
 
       //let answr = parseInt(event.target.innerText) - 1;
       //console.log(answr);
