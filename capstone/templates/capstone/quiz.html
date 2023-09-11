@@ -195,12 +195,15 @@
       console.log(answr);
 
       checkResponse(answr);
+      console.log("isCorrect")
     };
 
     const checkResponse = (answr) => {
-      {answers[currentQuestion].answerOptions[answr] => (
-            {answerOptions.isCorrect}}>
-    }
+      if (answers[currentQuestion].answerOptions[answr] ? "isCorrect" : "") {
+        <p>
+            {answerOptions.answerText} {answerOptions.isCorrect}
+        </p>
+    }};
 
 
       //let answr = parseInt(event.target.innerText) - 1;
