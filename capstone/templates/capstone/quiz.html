@@ -205,7 +205,7 @@
     };
 
     const checkResponse = () => {
-      answers[currentQuestion].answerOptions.map(item, index) => {
+      if (answers[currentQuestion].answerOptions.map(item, index) => {
         return (
           <div key={index}>
             <div>answerText: {item.answerText}</div>
