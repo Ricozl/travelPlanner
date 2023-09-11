@@ -139,7 +139,7 @@
     let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
-        <button autofocus={true} onClick={(event) => this.handleResponse(event); this.checkResponse(event)}>
+        <button autofocus={true} onClick={(event) => {this.handleResponse(event); this.checkResponse(event)}}>
           {choice = choice + 1}
         </button>
         <li id="quiznotext">
@@ -203,12 +203,13 @@
 
       //const list = answers[currentQuestion].answerOptions.map(item, index)
 
-      checkResponse()
+      //checkResponse()
 
       console.log("returned from checkResponse")
     };
 
     const checkResponse = (event) => {
+      console.log("got to checkResponse")
       //if (props.index.isCorrect) ? "isCorrect" : "" {
       if (answers[currentQuestion].answerOptions.map((index) ? "isCorrect" : "")) {
         //if {item.isCorrect}
