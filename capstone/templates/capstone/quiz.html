@@ -154,6 +154,7 @@
         <div key={index}>
           <div>answerText: {item.answerText}</div>
           <div>isCorrect: {item.isCorrect}</div>
+          <div>filterList: {filterList}</div>
         </div>
       )});
 
@@ -233,7 +234,6 @@
         ...state,
         response: event.target.innerText
       })
-      console.log("response: ", state.response)
     }
 
     if (state.score === 10) {
