@@ -139,7 +139,7 @@
     let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
-        <button autofocus={true} onClick={(event) => handleResponse(event, answersList)}>
+        <button autofocus={true} onClick={(event) => handleResponse(event, answers[currentQuestion].answerOptions.isCorrect)}>
           {choice = choice + 1}
         </button>
         <li id="quiznotext">
