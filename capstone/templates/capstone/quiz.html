@@ -205,15 +205,15 @@
     };
 
     const checkResponse = () => {
-      if (answers[currentQuestion].answerOptions.map(item, index) => {
+      if (answers[currentQuestion].answerOptions.map((item, index) => {
         return (
           <div key={index}>
             <div>answerText: {item.answerText}</div>
             <div>isCorrect: {item.isCorrect}</div>
           </div>
-      )};
+      ))};
 
-      ? "isCorrect" : "") {
+      //? "isCorrect" : "") {
         // user got right
           console.log("got right")
           setState({
