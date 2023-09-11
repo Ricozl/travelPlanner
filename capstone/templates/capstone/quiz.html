@@ -139,7 +139,7 @@
     let choice = 0;
     const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
       <p id="quizno">
-        <button autofocus={true} onClick={(event) => handleResponse(event, answers[currentQuestion].answerOptions.isCorrect)}>
+        <button autofocus={true} onClick={(event) => handleResponse(event}>
           {choice = choice + 1}
         </button>
         <li id="quiznotext">
@@ -183,9 +183,9 @@
       </div>
     };
 
-    const handleResponse = (event, props) => {
+    const handleResponse = (event) => {
       console.log("got to handleResponse")
-      console.log({props})
+
       event.preventDefault()
       console.log(event.target)
       console.log(event.target.innerText)
@@ -194,7 +194,7 @@
       updateResponse(event)
       //const answr = parseInt(state.response);
 
-      checkResponse(props)
+      checkResponse()
 
       console.log("returned from checkResponse")
     };
