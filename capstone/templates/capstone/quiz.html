@@ -149,7 +149,7 @@
     ));
 
 
-    const filterList = answers.map((item, index) => {
+    const filterList = answers[currentQuestion].answerOptions.map((item, index) => {
       return (
         <div key={index}>
           <div>answerText: {item.answerText}</div>
