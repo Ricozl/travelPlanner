@@ -205,13 +205,14 @@
 
       //checkResponse()
 
-      console.log("returned from checkResponse")
+      //console.log("returned from checkResponse")
     };
 
     const checkResponse = (event) => {
       console.log("got to checkResponse")
       //if (props.index.isCorrect) ? "isCorrect" : "" {
-      if (answers[currentQuestion].answerOptions.map((index) ? "isCorrect" : "")) {
+      targ = parseInt(event.target.innerText)
+      if (answers[currentQuestion].answerOptions.map(({targ}) ? "isCorrect" : "")) {
         //if {item.isCorrect}
         //return (
           //<div key={index}>
