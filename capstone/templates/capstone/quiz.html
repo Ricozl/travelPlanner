@@ -149,7 +149,14 @@
     ));
 
 
-    const filterList = answers[currentQuestion].answerOptions.map((answerOptions) => )
+    const filterList = answers.map((item, index) => (
+      <div key={index}>
+        <div>answerText: {item.answerText}</div>
+        <div>isCorrect: {item.isCorrect}</div>
+      </div>
+    ))
+
+
       //<li>
         //{filteredAnswer.answerText}
      // </li>
@@ -193,11 +200,7 @@
 
       updateResponse(event)
       //const answr = parseInt(state.response);
-      if (answers[currentQuestion].answerOptions.map(answerOptions.isCorrect) ? "inCorrect" : "") {
-        console.log("user got right")
-      } else {
-        console.log("user got wrong")
-      }
+      
 
 
 
@@ -254,7 +257,7 @@
       <div>
         <div className='question-text'>{questions[currentQuestion]}</div>
         <div className='answer-text'>{answersList}</div>
-
+        <div>{filterList}</div>
         <div>Score: {state.score}</div>
       </div>
       );
