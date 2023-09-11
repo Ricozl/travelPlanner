@@ -148,11 +148,7 @@
       </p>
     ));
 
-    const filterList = answers[currentQuestion].filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
-      <li>
-        {filteredAnswer.answerText}
-      </li>
-    ));
+
 
 
     const handleAnswerButton = (props) => {
@@ -194,6 +190,11 @@
       const answr = parseInt(state.response);
       console.log(answr);
 
+      answers[currentQuestion].filter(answer => answer.answerOptions.isCorrect == true).map(filteredAnswer => (
+      <li>
+        {filteredAnswer.answerText}
+      </li>
+    ));
       handleResponse;
       console.log("isCorrect")
     };
