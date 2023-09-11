@@ -151,6 +151,7 @@
 
     const filterList = answers[currentQuestion].answerOptions.map((item, index) => {
       let choice = parseInt(state.response)
+      console.log(choice)
       return (
         <div key={index}>
           <div>answerText: {item.answerText}</div>
