@@ -238,13 +238,13 @@
       })
     }
 
-    //if (state.score === 10) {
-      //return (
-        //<div id="winner">
-          //You Won!
-        //</div>
-      //)
-    //};
+    if (state.score === 10) {
+      return (
+        <div id="winner">
+          You Won!
+        </div>
+      )
+    };
 
     function Listques() {
       const listques = questions.map(question =>
@@ -260,7 +260,7 @@
         <div>Score: {state.score}</div>
       </div>
       );
-  ;
+  };
 
 
     ReactDOM.render(
