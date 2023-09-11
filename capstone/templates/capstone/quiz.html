@@ -149,18 +149,14 @@
     ));
 
 
-    const filterList = answers.map((item, index) => (
-      <div key={index}>
-        <div>answerText: {item.answerText}</div>
-        <div>isCorrect: {item.isCorrect}</div>
-      </div>
-    ))
+    const filterList = answers.map((item, index) => {
+      return (
+        <div key={index}>
+          <div>answerText: {item.answerText}</div>
+          <div>isCorrect: {item.isCorrect}</div>
+        </div>
+      ))};
 
-
-      //<li>
-        //{filteredAnswer.answerText}
-     // </li>
-    //));
 
     const handleAnswerButton = (props) => {
             if(props.isCorrect === true) {
@@ -200,7 +196,7 @@
 
       updateResponse(event)
       //const answr = parseInt(state.response);
-      
+
 
 
 
