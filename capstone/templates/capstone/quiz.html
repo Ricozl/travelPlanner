@@ -150,9 +150,9 @@
 
 
     const filterList = answers[currentQuestion].answerOptions.map((item, index) => {
-      let choice = parse
+      let choice = parseInt(state.response)
       return (
-        <div key={index}>
+        <div key={choice}>
           <div>answerText: {item.answerText}</div>
           <div>isCorrect: {item.isCorrect}</div>
         </div>
