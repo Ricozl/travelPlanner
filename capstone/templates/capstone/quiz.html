@@ -199,12 +199,13 @@
 
       //const list = answers[currentQuestion].answerOptions.map(item, index)
 
-      checkResponse()
+      checkResponse(answers[currentQuestion].answerOptions.map((item, index)))
 
       console.log("returned from checkResponse")
     };
 
-    const checkResponse = () => {
+    const checkResponse = (answers[currentQuestion].answerOptions.map(index)) => {
+      //if (props.index.isCorrect) ? "isCorrect" : "" {
       if (answers[currentQuestion].answerOptions.map((index) ? "isCorrect" : "")) {
         //if {item.isCorrect}
         //return (
