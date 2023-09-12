@@ -112,13 +112,12 @@
                                     setScore(score + 1);
                                 }
                                 const nextQuestion = currentQuestion + 1;
-                                    if (nextQuestion < questions.length) {
+                                if (nextQuestion < questions.length) {
                                     setCurrentQuestion[nextQuestion]
-            } else {
-            setShowScore(true);
-            }
-                                if answerOption.isCorrect === true)>{answerOption.answerText}</button>
-
+                                } else {
+                                    setShowScore(true);
+                                }
+                            }
                         ))}
                     </div>
                 </div>
