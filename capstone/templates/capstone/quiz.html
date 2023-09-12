@@ -104,7 +104,7 @@
                         </div>
                         <div className='answer-section'>
                             {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                <button onClick {...() => handleAnswerButtonClick(answerOption)}>{answerOption.answerText}</button>
+                                <button onClick {...() => handleAnswerButtonClick(event,answerOption)}>{answerOption.answerText}</button>
 
                             ))}
                         </div>
