@@ -110,7 +110,7 @@
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick = {e => answerOption.isCorrect ? AddtoDo(e) : handleClick(e)}</button>
+                            <button onClick = {event => {answerOption.isCorrect} ? AddtoDo(event) : handleClick(event)}</button>
                         ))};
                     </div>
                 </div>
