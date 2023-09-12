@@ -71,7 +71,7 @@
 
         const [score, setScore] = React.useState(0);
 
-        const handleAnswerButtonClick = (event, answerOption) => {
+        const handleAnswerButtonClick = (event) => {
             {questions[currentQuestion].answerOptions.map((answerOption) => (
                 if(answerOption.isCorrect === true) {
                     setScore(score + 1);
@@ -87,7 +87,7 @@
 
         return (
             <div className ="app">
-                (showScore = true ? (
+                if (showScore = true ? (
                     <div className='score-section'>You scored {score} out of (questions.length)</div>
                 ) : (
                     <div>
