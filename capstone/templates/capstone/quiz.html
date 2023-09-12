@@ -89,30 +89,29 @@
 
         return (
             <div className ="app">
-                if (showScore = true ? (
-                    <div className='score-section'>You scored {score} out of {questions.length}</div>
-                ) : (
-                    <div>
-                        <div className='question-section'>
-                            <div className='question-count'>
-                                <span>Question {currentQuestion + 1}</span>/{questions.length}
+                <div className='score-section'>You scored {score} out of {questions.length}</div>
 
-                            </div>
+                <div>
+                    <div className='question-section'>
+                        <div className='question-count'>
+                            <span>Question {currentQuestion + 1}</span>/{questions.length}
 
-                            <div className='question-text'>
-                                <p>{questions[currentQuestion].questionText}</p>
-
-                            </div>
                         </div>
-                        <div className='answer-section'>
-                            {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                <button onClick {...(event) => handleAnswerButtonClick(event)}>{answerOption.answerText}</button>
 
-                            ))}
+                        <div className='question-text'>
+                            <p>{questions[currentQuestion].questionText}</p>
+
                         </div>
                     </div>
+                    <div className='answer-section'>
+                        {questions[currentQuestion].answerOptions.map((answerOption) => (
+                            <button onClick {...(event) => handleAnswerButtonClick(event)}>{answerOption.answerText}</button>
 
-                    ));
+                        ))}
+                    </div>
+                </div>
+
+                );
 
             </div>
         )
