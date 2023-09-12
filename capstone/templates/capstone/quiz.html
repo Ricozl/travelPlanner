@@ -72,9 +72,9 @@
 
         const [score, setScore] = React.useState(0);
 
-        function handleAnswerButtonClick (answerOption.isCorrect) {
-            getAnswer(answerOption.isCorrect)
-        }
+        function handleAnswerButtonClick = (answerOption.isCorrect) => (
+            getAnswer(answerOption.isCorrect),
+        );
 
         const getAnswer = () => {
             if(answerOption.isCorrect === true) {
