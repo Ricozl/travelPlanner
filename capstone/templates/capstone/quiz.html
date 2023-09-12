@@ -72,24 +72,22 @@
 
         const [score, setScore] = React.useState(0);
 
-        function handleAnswerButtonClick (event) {
-            getAnswer()
+        function handleAnswerButtonClick (answerOption.isCorrect) {
+            getAnswer(answerOption.isCorrect)
         }
 
-        const getAnswer()
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <p>{answerOption.answerText}{answerOption.isCorrect}</p>))};
-                if(answerOption.isCorrect === true) {
-                    setScore(score + 1);
-                }
-                const nextQuestion = currentQuestion + 1;
-                if (nextQuestion < questions.length) {
-                    setCurrentQuestion[nextQuestion]
-                } else {
-                setShowScore(true);
-                }
+        const getAnswer = () => {
+            if(answerOption.isCorrect === true) {
+                setScore(score + 1);
+            }
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion[nextQuestion]
+            } else {
+            setShowScore(true);
+            }
 
-        };
+        }};
 
         return (
             <div className ="app">
