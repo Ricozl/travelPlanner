@@ -105,13 +105,13 @@
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick {...(event) => handleAnswerButtonClick(event)}>{answerOption.answerText}</button>
+                            <button onClick {...(event) => {handleAnswerButtonClick(answerOption.isCorrect)}}>{answerOption.answerText}</button>
 
                         ))}
                     </div>
                 </div>
 
-                
+
 
             </div>
         );
