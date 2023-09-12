@@ -103,7 +103,7 @@
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick = function() {
+                            <button onClick = function() => {
                                 if (answerOption.isCorrect === true) {
                                     setScore(score + 1);
                                 }
