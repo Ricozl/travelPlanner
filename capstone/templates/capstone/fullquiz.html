@@ -99,8 +99,8 @@
                             </div>
                         </div>
                         <div className='answer-section'>
-                            {questions[currentQuestion].answerOptions.map((answerOptions) => (
-                                <button onClick {() => handleAnswerButtonClick[answerOptions.isCorrect]}>{answerOptions.answerText}</button>
+                            {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                <button onClick {() => handleAnswerButtonClick[answerOption.isCorrect]}>{answerOption.answerText}</button>
 
                             ))}
                         </div>
