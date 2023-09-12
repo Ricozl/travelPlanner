@@ -65,6 +65,8 @@
             },
         ];
 
+        len = questions.length;
+
         const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
         const [showScore, setShowScore] = React.useState(false);
@@ -89,7 +91,7 @@
         return (
             <div className ="app">
                 if (showScore = true ? (
-                    <div className='score-section'>You scored {score} out of (questions.length)</div>
+                    <div className='score-section'>You scored {score} out of (len)</div>
                 ) : (
                     <div>
                         <div className='question-section'>
