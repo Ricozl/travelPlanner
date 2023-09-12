@@ -4,7 +4,6 @@
 {% block nav %}
 {% endblock %}
 
-
 <div class="topnav" id="myTopnav">
     <a href="{% url 'index' %}" class="active"><img src="static/capstone/favicon.ico"
         style="width:30px; height:30px; margin-right:10px;">Rome Travel</a>
@@ -34,7 +33,7 @@
 </script>
 
 
-<h3 style="margin:10px;">Quiz for Rome Travel</h3>
+<h3 style="margin:10px;">Quiz for {{ user.username }}</h3>
 
 
 <!-- code for react -->
@@ -42,235 +41,79 @@
 <div id="app"></div>
 
 <script type="text/babel">
+    function App() {
+        const questions = [
+            {
+                questionText: "What is the capital of France?",
+                answerOptions: [
+                    { answerText: 'New York', isCorrect: false},
+                    { answerText: 'London', isCorrect: false },
+                    { answerText: 'Paris', isCorrect: true },
+                    { answerText: 'Dublin', isCorrect: false }
+                ],
 
-  function App() {
+            },
+            {
+                questionText: 'Who is CEO of Tesla?',
+                answerOptions: [
+                    { answerText: 'Jeff Bezos', isCorrect: false },
+                    { answerText: 'Elon Musk', isCorrect: true },
+                    { answerText: 'Bill Gates', isCorrect: false },
+                    { answerText: 'Tony Stark', isCorrect: false }
+                ],
+            },
+        ];
 
-    //const finalquestions = [
-            //{
-                //id: 0,
-                //questionText: "What is cacio et Pepe?",
-                //answerOptions: [
-                    //{ answerText: 'Italian football (soccer) and Pete.', isCorrect: false},
-                    //{ answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
-                    //{ answerText: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
-                    //{ answerText: 'The main ingredients of Roman concrete.', isCorrect: false }
-                //],
+        const [currentQuestion, setCurrentQuestion] = useState(0);
 
-            //},
-            //{
-                //id: 1,
-                //questionText: 'The Colosseum is called that because?',
-                //answerOptions: [
-                    //{ answerText: 'It is the Greek name for amphitheater.', isCorrect: false },
-                    //{ answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
-                    //{ answerText: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true },
-                    //{ answerText: 'collo means hill in Italian and it is built on a hill.', isCorrect: false }
-                //],
-            //},
-            //{
-                //id: 2,
-                //questionText: 'In classical architecture, Romans invented?',
-                //answerOptions: [
-                    //{ answerText: 'The Arch.', isCorrect: false },
-                    //{ answerText: 'Concrete buildings.', isCorrect: false },
-                    //{ answerText: 'Long, straight roads.', isCorrect: false },
-                    //{ answerText: 'All of the above.', isCorrect: true }
-                //],
-            //},
-            //{
-                //id: 3,
-                //questionText: 'Traditional Roman food is largely composed of?',
-                //answerOptions: [
-                    //{ answerText: 'Guts.', isCorrect: true },
-                    //{ answerText: 'Steaks.', isCorrect: false },
-                    //{ answerText: 'Beans.', isCorrect: false },
-                    //{ answerText: 'Pasta and tomato sauce.', isCorrect: false }
-                //],
-            //},
-            //{
-                //id: 4,
-                //questionText: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
-                //answerOptions: [
-                    //{ answerText: 'They were poisonous.', isCorrect: false },
-                    //{ answerText: 'They were from America.', isCorrect: false },
-                    //{ answerText: 'They were Jewish.', isCorrect: true },
-                    //{ answerText: 'They were expensive.', isCorrect: false }
-                //],
-            //},
-        //];
+        const [showScore, setShowScore] = useState(false);
 
-    const questions = [
-      "What is cacio et Pepe?",
-      'The Colosseum is called that because?',
-      'In classical architecture, Romans invented?',
-      'Traditional Roman food is largely composed of?',
-      'One hundred years ago, Romans avoided artichokes and eggplants because?'
-    ]
+        const [score, setScore] = useState(0);
 
-    const answers = [
-      {
-        id: 0,
-        answerOptions: [
-          { answerText: 'Italian football (soccer) and Pete.', isCorrect: "false"},
-          { answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: "true" },
-          { answerText: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: "false" },
-          { answerText: 'The main ingredients of Roman concrete.', isCorrect: "false" },
-        ],
-      },
-      {
-        id: 1,
-        answerOptions: [
-          { answerText: 'It is the Greek name for amphitheater.', isCorrect: "false" },
-          { answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: "false" },
-          { answerText: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: "true" },
-          { answerText: 'collo means hill in Italian and it is built on a hill.', isCorrect: "false" },
-        ],
-      },
-    ];
-
-    const [state, setState] = React.useState({
-      response: "",
-      score: 0,
-      isCorrect: false
-    })
-
-    const [currentQuestion, setCurrentQuestion] = React.useState(0);
-
-    let choice = 0;
-    const answersList = answers[currentQuestion].answerOptions.map((answerOptions) => (
-      <p id="quizno">
-        <button autofocus={true} onClick={(event) => {handleResponse(event); checkResponse(event)}}>
-          {choice = choice + 1}
-        </button>
-        <li id="quiznotext">
-          {answerOptions.answerText}
-        </li>
-      </p>
-    ));
-    //<button autofocus={true} onClick={(event) => handleResponse(event)}>
-    //onClick: function(event){
-      //func1();
-      //func2();
-   //},
-
-    const filterList = answers[currentQuestion].answerOptions.map((item, index) => {
-      return (
-        <div key={index}>
-          <div>answerText: {item.answerText}</div>
-          <div>isCorrect: {item.isCorrect}</div>
-        </div>
-    )});
-
-
-    const handleAnswerButton = (props) => {
-            if(props.isCorrect === true) {
-                setState({
-                  ...state,
-                  score: state.score + 1
-                })
+        const handleAnswerButtonClick = (isCorrect) => {
+            if(isCorrect === true) {
+                setScore(score + 1);
             }
             const nextQuestion = currentQuestion + 1;
-            console.log(nextQuestion)
             if (nextQuestion < questions.length) {
                 setCurrentQuestion[nextQuestion]
+            } else {
+                setShowScore(true);
             }
 
         };
 
-    function Question (currentQuestion) {
-      <div>
-        <div className='question-text'>Question: [{questions.map}]</div>
-        <div className='answer-section'>
-            const answers = {questions[currentQuestion].answerOptions.map[(answerOptions) => (
-                <li>
-                  {answers}
-                </li>
-            )]}
-        </div>
-      </div>
-    };
+        return (
+            <div className ="app">
+                (showScore = true ? (
+                    <div className='score-section'>You scored {score} out of (questions.length)</div>
+                ) : (
+                <>
+                    <div>
+                        <div className='question-section'>
+                            <div className='question-count'>
+                                <span>Question {currentQuestion + 1}</span>/(questions.length)
 
-    const handleResponse = (event) => {
-      console.log("got to handleResponse")
+                            </div>
+                            <div className='question-text'>{questionsText[currentQuestion]}
+                            </div>
+                        </div>
+                        <div className='answer-section'>
+                            {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                <button onClick {...() => handleAnswerButtonClick[answerOption.isCorrect]}>{answerOption.answerText}</button>
 
-      event.preventDefault()
-      console.log(event.target)
-      console.log(event.target.innerText)
-      console.log(event.type)
+                            ))}
+                        </div>
+                    </div>
 
-      updateResponse(event)
-      //const answr = parseInt(state.response);
-
-      //const list = answers[currentQuestion].answerOptions.map(item, index)
-
-      //checkResponse()
-
-      //console.log("returned from checkResponse")
-    };
-
-    const checkResponse = (event) => {
-      console.log("got to checkResponse")
-      //if (props.index.isCorrect) ? "isCorrect" : "" {
-      let targ = parseInt(event.target.innerText)
-      //if (answers[currentQuestion].answerOptions.map(({targ}) ? "isCorrect" : "")) {
-      if (answers[currentQuestion].answerOptions.map(({isCorrect}) === "true") {
-        const answer = parseInt(state.response);
-      //? "isCorrect" : "") {
-        // user got right
-          console.log("got right")
-          setState({
-            ...state,
-            currentQuestion: currentQuestion + 1,
-            score: state.score + 1,
-            //isCorrect: false
-          });
-        } else {
-          //user got wrong
-          console.log("got it wrong")
-          //console.log(answers[currentQuestion.answerOptions[answer]])
-          //setState({
-            //...state,
-            //isCorrect: true
-          };
-        }
-
-    //};
-
-    function updateResponse(event) {
-      setState({
-        ...state,
-        response: event.target.innerText
-      })
+                    ));
+                )
+            </>
+            </div>
+        )
     }
-
-    if (state.score === 10) {
-      return (
-        <div id="winner">
-          You Won!
-        </div>
-      )
-    };
-
-    function Listques() {
-      const listques = questions.map(question =>
-        <li>{question}</li>);
-    };
-
-
-    return (
-      <div>
-        <div className='question-text'>{questions[currentQuestion]}</div>
-        <div className='answer-text'>{answersList}</div>
-        <div>{filterList}</div>
-        <div>Score: {state.score}</div>
-      </div>
-      );
-  };
-
-
-    ReactDOM.render(
-        <App />,
-        document.querySelector("#app"));
+    ReactDOM.render(<App />, document.querySelector("#app"));
 </script>
 
 {% endblock %}
+
