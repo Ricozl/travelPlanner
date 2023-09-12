@@ -71,7 +71,7 @@
 
         const [score, setScore] = React.useState(0);
 
-        const handleAnswerButtonClick = (isCorrect) => {
+        const handleAnswerButtonClick = (answerOption.isCorrect) => {
             if(isCorrect === true) {
                 setScore(score + 1);
             }
@@ -103,7 +103,7 @@
                         </div>
                         <div className='answer-section'>
                             {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                <button onClick {...() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                <button onClick {...() => handleAnswerButtonClick(answerOption)}>{answerOption.answerText}</button>
 
                             ))}
                         </div>
