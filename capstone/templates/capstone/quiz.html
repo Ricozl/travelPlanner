@@ -72,7 +72,7 @@
 
         const [score, setScore] = React.useState(0);
 
-        function handleAnswerButtonClick = (isCorrect) => (
+        function handleAnswerButtonClick = (isCorrect) => {
             if(isCorrect === true) {
                 setScore(score + 1);
             }
@@ -83,7 +83,7 @@
             setShowScore(true);
             }
 
-        }};
+        };
 
         return (
             <div className ="app">
