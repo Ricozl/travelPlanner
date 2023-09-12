@@ -72,9 +72,8 @@
 
         const [score, setScore] = React.useState(0);
 
-        function handleAnswerButtonClick = (isCorrect) => {
-            if(isCorrect === true) {
-                setScore(score + 1);
+        function addTodo (e) {
+            setScore(score + 1);
             }
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
@@ -82,7 +81,15 @@
             } else {
             setShowScore(true);
             }
+         };
 
+        function handleClick (e) {
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion[nextQuestion]
+            } else {
+            setShowScore(true);
+            }
         };
 
         return (
@@ -103,7 +110,7 @@
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick = {e => if (answerOption.isCorrect === true) ? AddtoDo(e) : handleClick(e)})
+                            <button onClick = {e => if ({answerOption.isCorrect} === true) ? AddtoDo(e) : handleClick(e)})
 
 
                                 {
