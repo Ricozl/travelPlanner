@@ -73,6 +73,10 @@
         const [score, setScore] = React.useState(0);
 
         function handleAnswerButtonClick (event) {
+            getAnswer()
+        }
+
+        const getAnswer()
             {questions[currentQuestion].answerOptions.map((answerOption) => (
                 <p>{answerOption.answerText}{answerOption.isCorrect}</p>))};
                 if(answerOption.isCorrect === true) {
