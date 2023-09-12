@@ -72,12 +72,8 @@
 
         const [score, setScore] = React.useState(0);
 
-        function handleAnswerButtonClick = (answerOption.isCorrect) => (
-            getAnswer(props),
-        );
-
-        const getAnswer = (props) => {
-            if(props.isCorrect === true) {
+        function handleAnswerButtonClick = (isCorrect) => (
+            if(isCorrect === true) {
                 setScore(score + 1);
             }
             const nextQuestion = currentQuestion + 1;
