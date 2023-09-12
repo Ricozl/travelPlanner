@@ -76,8 +76,8 @@
             getAnswer(props),
         );
 
-        const getAnswer = () => {
-            if(answerOption.isCorrect === true) {
+        const getAnswer = (props) => {
+            if(props.isCorrect === true) {
                 setScore(score + 1);
             }
             const nextQuestion = currentQuestion + 1;
