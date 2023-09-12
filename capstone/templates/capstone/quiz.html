@@ -97,8 +97,10 @@
                             </div>
 
                             <div className='question-text'>
-                                {questions[currentQuestion].}
-                                {questionText[currentQuestion]}
+                                {questions[currentQuestion].map((questionText) => (
+                                    <p>{questionText[currentQuestion]}</p>
+                                ))}
+                                
                             </div>
                         </div>
                         <div className='answer-section'>
