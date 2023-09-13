@@ -364,12 +364,12 @@ h4 {
   margin: 10px;
 }
 
-#question-section {
+.question-section {
   white-space: nowrap;
   text-align: left;
 }
 
-#answer-section {
+.answer-section {
   display: inline-block;
   margin-left: 10px;
 }
