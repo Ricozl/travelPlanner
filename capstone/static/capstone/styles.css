@@ -372,11 +372,11 @@ h4 {
 
 
 #answers {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  left: 50%;
+  margin: 50%;
 }
 
 #problem {
