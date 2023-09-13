@@ -106,13 +106,13 @@
                 setCurrentQuestion(nextQuestion),
                 <p>{questions[currentQuestion].questionText}</p>
             } else {
-                if (score === questions.length) {
+                setShowScore(true);
+            }
+            if (score === questions.length) {
                     <div id="winner">
                         You won!
                     </div>
                 }
-                setShowScore(true);
-            }
          };
 
         function handleClick (e) {
