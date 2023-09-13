@@ -93,13 +93,17 @@
             }
         };
 
-        function onClickNext (e) {
-            <p>{questions[currentQuestion].questionText}</p>
-        }
+        if (showScore === 2) {
+            return (
+                <div id="winner">
+                You Won!
+                </div>
+            )
+        };
 
         return (
             <div className ="app">
-                {showScore ? }
+
                 <div>
                     <div className='score-section'>You scored {score} out of {questions.length}</div>
                     <div className='question-section'>
