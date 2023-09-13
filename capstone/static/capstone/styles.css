@@ -364,12 +364,12 @@ h4 {
   margin: 10px;
 }
 
-#quizno {
+#question-section {
   white-space: nowrap;
   text-align: left;
 }
 
-#quiznotext {
+#answer-section {
   display: inline-block;
   margin-left: 10px;
 }
