@@ -119,7 +119,11 @@
                 setCurrentQuestion(nextQuestion)
             } else {
                 if (score === questions.length) {
-                    let winner = true;
+                    <div id="winner">
+                        You won!
+                    </div>
+                }
+
                 }
             setShowScore(true);
             }
@@ -159,14 +163,6 @@
                     <p>
                         Total Score:<span> {score}</span>
                     </p>
-
-
-                    (if (score === 5) {
-                        <div id="winner">
-                            You won!
-                        </div>
-                    })
-
 
                 </div>
                 )}
