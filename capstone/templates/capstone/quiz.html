@@ -94,7 +94,7 @@
         };
 
         const checkScore = {
-            
+
             return (
                 <div id="winner">
                 You Won!
@@ -125,7 +125,14 @@
                             ))};
                     </div>
                 </div>
-
+                ) : (
+                <div className="result">
+                    <h3>Result</h3>
+                    <p>
+                        Total Questions: <span>{questions.length}</span>
+                    </p>
+                    <p>
+                        Total Score:<span> {}
             </div>
         )
     };
