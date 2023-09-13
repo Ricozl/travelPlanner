@@ -102,26 +102,26 @@
                 (showScore = true ? (
                     <div className='score-section'>You scored {score} out of (questions.length)</div>
                 ) : (
-                <div className='score-section'>You scored {score} out of {questions.length}</div>
 
                 <div>
                     <div className='question-section'>
-                        <div className='question-count'>
-                            <span>Question {currentQuestion + 1}</span>/{questions.length}
+                            <div className='question-count'>
+                                <span>Question {currentQuestion + 1}</span>/{questions.length}
 
+                            </div>
+
+                            <div className='question-text'>
+                                <p id="ques">{questions[currentQuestion].questionText}</p>
+
+                            </div>
                         </div>
-
-                        <div className='question-text'>
-                            <p id="ques">{questions[currentQuestion].questionText}</p>
-
-                        </div>
-                    </div>
-                    <div className='answer-section'>
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick = {() => answerOption.isCorrect ? addTodo() : handleClick()}>{answerOption.answerText}</button>
-                        ))};
+                        <div className='answer-section'>
+                            {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                <button onClick = {() => answerOption.isCorrect ? addTodo() : handleClick()}>{answerOption.answerText}</button>
+                            ))};
                     </div>
                 </div>
+                )
             </div>
         )
     };
