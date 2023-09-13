@@ -109,9 +109,9 @@
                         </div>
                     </div>
                     <div className='answer-section'>
-                        (questions[currentQuestion].answerOptions.map((answerOption) => (
+                        {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button onClick = if(answerOption.isCorrect ? addTodo(e) : handleClick(e))</button>
-                        )));
+                        ))};
                     </div>
                 </div>
             </div>
