@@ -109,7 +109,7 @@
                         </div>
 
                         <div className='question-text'>
-                            <p>{questions[currentQuestion].questionText}</p>
+                            <p id="ques">{questions[currentQuestion].questionText}</p>
 
                         </div>
                     </div>
@@ -119,7 +119,10 @@
                         ))};
                     </div>
                     <div>
-                        <button onClick={onClickNext}>Next</button>
+                        <button onClick={onClickNext}>
+                            <p id="ques">{questions[currentQuestion].questionText}</p>
+                            {currentQuestion === questions.length = 1 ? 'Finish' : 'Next'}
+                        </button>
                     </div>
                 </div>
             </div>
