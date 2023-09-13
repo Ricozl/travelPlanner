@@ -77,7 +77,8 @@
 
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
-                setCurrentQuestion[nextQuestion]
+                setCurrentQuestion[nextQuestion],
+                <p>{questions[currentQuestion].questionText}</p>
             } else {
             setShowScore(true);
             }
