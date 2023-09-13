@@ -369,13 +369,11 @@ h4 {
   text-align: center;
 }
 
-.answer-section {
-  display: flex;
-  align-items: center;
-}
+
 
 #answers {
   display: block;
+  align-items: center;
   text-align: center;
   margin: 20px;
 }
