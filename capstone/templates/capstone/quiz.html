@@ -107,9 +107,11 @@
                 <p>{questions[currentQuestion].questionText}</p>
             } else {
                 if (score === questions.length) {
-                    let winner = true;
+                    <div id="winner">
+                        You won!
+                    </div>
                 }
-            setShowScore(true);
+                setShowScore(true);
             }
          };
 
@@ -118,11 +120,7 @@
             if (nextQuestion < questions.length) {
                 setCurrentQuestion(nextQuestion)
             } else {
-                if (score === questions.length) {
-                    <div id="winner">
-                        You won!
-                    </div>
-                }
+
             setShowScore(true);
             }
         };
