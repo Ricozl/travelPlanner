@@ -375,6 +375,7 @@ h4 {
 
 #answers {
   display: block;
+  left: 50%;
   text-align: center;
   margin: 20px;
 }
