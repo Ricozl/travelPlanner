@@ -109,10 +109,12 @@
                 setShowScore(true);
             }
             if (score === questions.length) {
+                return (
                     <div id="winner">
                         You won!
                     </div>
-                }
+                )
+            }
          };
 
         function handleClick (e) {
