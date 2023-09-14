@@ -115,9 +115,13 @@
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion(nextQuestion)
-            } else {
-
+            } else if score < 5 {
             setShowScore(true);
+            return (
+                <div id="winner">
+                    Nice try but no cigar!
+                </div>
+            )
             }
         };
 
@@ -127,12 +131,7 @@
                         You won!
                     </div>
                 )
-            } else if (score < 5 && questions.length === 5) {
-                return (
-                    <div id="winner">
-                        Nice try but no cigar!
-                    </div>
-                )
+
             };
 
 
