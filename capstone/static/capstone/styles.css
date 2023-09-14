@@ -22,7 +22,7 @@ a:hover {
   position: relative;
 }
 
-#quizmap {
+.app {
   background-image: url("rome-vector-map.jpg");
   width: 100%;
   opacity: 0.33;
