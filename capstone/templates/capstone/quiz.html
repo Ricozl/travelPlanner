@@ -127,7 +127,7 @@
                         You won!
                     </div>
                 )
-            } else {
+            } else (score < 5 && questions.length === 5) {
                 return (
                     <div id="winner">
                         Nice try but no cigar!
