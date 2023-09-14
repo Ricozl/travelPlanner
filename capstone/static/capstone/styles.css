@@ -22,8 +22,11 @@ a:hover {
   position: relative;
 }
 
-.img4 {
+#quizmap {
   background-image: url("rome-vector-map.jpg");
+  width: 100%;
+  opacity: 0.65;
+  background-size: cover;
 }
 /* Postion the navbar container inside the image
 .container {
