@@ -334,6 +334,12 @@ h4 {
   color: black;
 }
 
+.app {
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+}
+
 .question-text {
   font-size: 32px;
 }
