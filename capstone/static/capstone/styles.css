@@ -8,7 +8,7 @@ body, html {
 a:hover {
   cursor: pointer;
 }
-.img1, .img2, .img3 {
+.img1, .img2, .img3, img4 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -22,6 +22,9 @@ a:hover {
   position: relative;
 }
 
+.img4 {
+  background-image: url("rome-vector-map.jpg");
+}
 /* Postion the navbar container inside the image
 .container {
   position: absolute;
