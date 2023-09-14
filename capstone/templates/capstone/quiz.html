@@ -101,6 +101,7 @@
         const [result, setResult] = React.useState("")
 
         function addTodo (e) {
+            // got question right
             setScore(score + 1);
 
             const nextQuestion = currentQuestion + 1;
@@ -110,6 +111,7 @@
             } else {
                 setResult("You won!")
                 setShowScore(true);
+                setResult
             }
 
          };
@@ -120,6 +122,7 @@
                 setCurrentQuestion(nextQuestion)
             } else {
                 setShowScore(true);
+                setResult("Nice try but no cigar!")
 
             }
         };
