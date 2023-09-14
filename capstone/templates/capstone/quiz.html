@@ -34,141 +34,141 @@
 
 <div id="quizmap">
 
-    <h3 style="margin:10px;">Quiz for Rome Travel</h3>
+<h3 style="margin:10px;">Quiz for Rome Travel</h3>
 
 
 <!-- code for react -->
 
 
-    <div id="app"></div>
+<div id="app"></div>
 
-    <script type="text/babel">
-        function App() {
-            const questions = [
-                {
-                    questionText:  "What is cacio e Pepe?",
-                    answerOptions: [
-                        { answerText: 'Italian football (soccer) and Pete.', isCorrect: false},
-                        { answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
-                        { answerText: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
-                        { answerText: 'The main ingredients of Roman concrete.', isCorrect: false },
-                    ],
-                },
-                {
-                    questionText: 'The Colosseum is called that because?',
-                    answerOptions: [
-                        { answerText: 'It is the Greek name for amphitheater.', isCorrect: false },
-                        { answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
-                        { answerText: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true },
-                        { answerText: 'collo means hill in Italian and it is built on a hill.', isCorrect: false },
-                    ],
-                },
-                {
-                    questionText: 'In classical architecture, Romans invented?',
-                    answerOptions: [
-                        { answerText: 'The Arch.', isCorrect: false },
-                        { answerText: 'Concrete buildings.', isCorrect: false },
-                        { answerText: 'Long, straight roads.', isCorrect: false },
-                        { answerText: 'All of the above.', isCorrect: true }
-                    ],
-                },
-                {
-                    questionText: 'Traditional Roman food is largely composed of?',
-                    answerOptions: [
-                        { answerText: 'Guts.', isCorrect: true },
-                        { answerText: 'Steaks.', isCorrect: false },
-                        { answerText: 'Beans.', isCorrect: false },
-                        { answerText: 'Pasta and tomato sauce.', isCorrect: false }
-                    ],
-                },
-                {
-                    questionText: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
-                    answerOptions: [
-                        { answerText: 'They were poisonous.', isCorrect: false },
-                        { answerText: 'They were from America.', isCorrect: false },
-                        { answerText: 'They were Jewish.', isCorrect: true },
-                        { answerText: 'They were expensive.', isCorrect: false }
-                    ],
-                },
-            ];
+<script type="text/babel">
+    function App() {
+        const questions = [
+            {
+                questionText:  "What is cacio e Pepe?",
+                answerOptions: [
+                    { answerText: 'Italian football (soccer) and Pete.', isCorrect: false},
+                    { answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
+                    { answerText: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
+                    { answerText: 'The main ingredients of Roman concrete.', isCorrect: false },
+                ],
+            },
+            {
+                questionText: 'The Colosseum is called that because?',
+                answerOptions: [
+                    { answerText: 'It is the Greek name for amphitheater.', isCorrect: false },
+                    { answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
+                    { answerText: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true },
+                    { answerText: 'collo means hill in Italian and it is built on a hill.', isCorrect: false },
+                ],
+            },
+            {
+                questionText: 'In classical architecture, Romans invented?',
+                answerOptions: [
+                    { answerText: 'The Arch.', isCorrect: false },
+                    { answerText: 'Concrete buildings.', isCorrect: false },
+                    { answerText: 'Long, straight roads.', isCorrect: false },
+                    { answerText: 'All of the above.', isCorrect: true }
+                ],
+            },
+            {
+                questionText: 'Traditional Roman food is largely composed of?',
+                answerOptions: [
+                    { answerText: 'Guts.', isCorrect: true },
+                    { answerText: 'Steaks.', isCorrect: false },
+                    { answerText: 'Beans.', isCorrect: false },
+                    { answerText: 'Pasta and tomato sauce.', isCorrect: false }
+                ],
+            },
+            {
+                questionText: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
+                answerOptions: [
+                    { answerText: 'They were poisonous.', isCorrect: false },
+                    { answerText: 'They were from America.', isCorrect: false },
+                    { answerText: 'They were Jewish.', isCorrect: true },
+                    { answerText: 'They were expensive.', isCorrect: false }
+                ],
+            },
+        ];
 
 
-            const [currentQuestion, setCurrentQuestion] = React.useState(0);
+        const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
-            const [showScore, setShowScore] = React.useState(false);
+        const [showScore, setShowScore] = React.useState(false);
 
-            const [score, setScore] = React.useState(0);
+        const [score, setScore] = React.useState(0);
 
-            const [result, setResult] = React.useState("")
+        const [result, setResult] = React.useState("")
 
-            function addTodo (e) {
-                // got question right
-                setScore(score + 1);
+        function addTodo (e) {
+            // got question right
+            setScore(score + 1);
 
-                const nextQuestion = currentQuestion + 1;
-                if (nextQuestion < questions.length) {
-                    setCurrentQuestion(nextQuestion),
-                    <p>{questions[currentQuestion].questionText}</p>
-                } else {
-                    setShowScore(true);
-                    setResult("Fantastico! You Won!")
-                }
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion(nextQuestion),
+                <p>{questions[currentQuestion].questionText}</p>
+            } else {
+                setShowScore(true);
+                setResult("Fantastico! You Won!")
+            }
 
-            };
-
-            function handleClick (e) {
-                // got answer wrong
-                const nextQuestion = currentQuestion + 1;
-                if (nextQuestion < questions.length) {
-                    setCurrentQuestion(nextQuestion)
-                } else {
-                    setShowScore(true);
-                    setResult("Nice try, but no cigar!")
-
-                }
-            };
-
-            return (
-                <div className ="app">
-                    {!showScore ? (
-
-                    <div>
-                        <div className='score-section'>You scored {score} out of {questions.length}</div>
-                        <div className='question-section'>
-                                <div className='question-count'>
-                                    <span>Question {currentQuestion + 1}</span>/{questions.length}
-
-                                </div>
-
-                                <div className='question-text'>
-                                    <p id="ques">{questions[currentQuestion].questionText}</p>
-
-                                </div>
-                            </div>
-                            <div className='answer-section'>
-                                {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                    <button id="answers" onClick = {() => answerOption.isCorrect ? addTodo() : handleClick()}>{answerOption.answerText}</button>
-                                ))};
-                        </div>
-                    </div>
-                    ) : (
-                    <div className="result">
-                        <h3>Result</h3>
-                        <p>
-                            Total Questions: <span>{questions.length}</span>
-                        </p>
-                        <p>
-                            Total Score:<span> {score}</span>
-                        </p>
-                        <div id="winner">
-                            {result}
-                        </div>
-                    </div>
-                    )}
-                </div>
-            )
         };
-    
+
+        function handleClick (e) {
+            // got answer wrong
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion(nextQuestion)
+            } else {
+                setShowScore(true);
+                setResult("Nice try, but no cigar!")
+
+            }
+        };
+
+        return (
+            <div className ="app">
+                {!showScore ? (
+
+                <div>
+                    <div className='score-section'>You scored {score} out of {questions.length}</div>
+                    <div className='question-section'>
+                            <div className='question-count'>
+                                <span>Question {currentQuestion + 1}</span>/{questions.length}
+
+                            </div>
+
+                            <div className='question-text'>
+                                <p id="ques">{questions[currentQuestion].questionText}</p>
+
+                            </div>
+                        </div>
+                        <div className='answer-section'>
+                            {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                <button id="answers" onClick = {() => answerOption.isCorrect ? addTodo() : handleClick()}>{answerOption.answerText}</button>
+                            ))};
+                    </div>
+                </div>
+                ) : (
+                <div className="result">
+                    <h3>Result</h3>
+                    <p>
+                        Total Questions: <span>{questions.length}</span>
+                    </p>
+                    <p>
+                        Total Score:<span> {score}</span>
+                    </p>
+                    <div id="winner">
+                        {result}
+                    </div>
+                </div>
+                )}
+            </div>
+        )
+    };
+
 
     ReactDOM.render(<App />, document.querySelector("#app"));
 </script>

@@ -118,17 +118,6 @@ a:hover {
   border: 1px solid #ccc;
   border-top: none;
 }
-/* sticky class is added to navbar with JS when reaches scroll position
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-/* add some top padding to the page content to prevent quick movement as navbar gets new position
-.sticky + .navClass {
-  padding-top: 60px;
-}
-*/
 
 .img2 {
   background-image: url("rome-sky.jpg");
