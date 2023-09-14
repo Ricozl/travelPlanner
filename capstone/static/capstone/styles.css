@@ -8,7 +8,7 @@ body, html {
 a:hover {
   cursor: pointer;
 }
-.img1, .img2, .img3, img4 {
+.img1, .img2, .img3 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -329,6 +329,7 @@ h4 {
 #app {
   text-align: center;
   font-family: sans-serif;
+  background-image:
 }
 
 .question-text {
