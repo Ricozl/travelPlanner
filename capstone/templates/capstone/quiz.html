@@ -109,14 +109,14 @@
                 setCurrentQuestion(nextQuestion),
                 <p>{questions[currentQuestion].questionText}</p>
             } else {
-                setResult("You won!")
                 setShowScore(true);
-                setResult
+                setResult("You Won!")
             }
 
          };
 
         function handleClick (e) {
+            // got answer wrong
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion(nextQuestion)
@@ -127,19 +127,19 @@
             }
         };
 
-        if (score === 5) {
-            return (
-                <div id="winner">
-                    You won!
-                </div>
-            )
-        } else if (score < 5 && questions.length === 5) {
-            setShowScore(true);
-            return (
-                <div id="winner">
-                    Nice try but no cigar!
-                </div>
-            )
+        //if (score === 5) {
+            //return (
+                //<div id="winner">
+                    //You won!
+                //</div>
+            //)
+        //} else if (score < 5 && questions.length === 5) {
+            //setShowScore(true);
+            //return (
+                //<div id="winner">
+                    //Nice try but no cigar!
+                //</div>
+            //)
 
         };
 
