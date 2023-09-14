@@ -311,11 +311,6 @@ h4 {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
-/*#sidebar {
-  width: 500px;
-  flex-shrink: 0;
-  height: 100%;
-}*/
 
 .marker {
   background-image: url('mapbox-marker-icon-20px-green.png');
@@ -325,21 +320,6 @@ h4 {
   border-radius: 50%;
   cursor: pointer;
 }
-
-/*#sidebar {
-  background-color: #e6ffff;
-  color: #fff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 12px;
-  border-radius: 4px;
-  height: 300px;
-  width: 300px;
-}*/
 
 #pic {
   height: 300px;
