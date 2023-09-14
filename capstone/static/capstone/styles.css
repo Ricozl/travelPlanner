@@ -334,9 +334,9 @@ h4 {
 }
 
 .img4 {
-  background: url("rome-vector-map.jpg") no-repeat center;
+  background-image: url("rome-vector-map.jpg") no-repeat center;
   width: 100%;
-  height: 400px;
+  height: auto;
   opacity: 0.50;
   background-size: cover;
   position: relative;
@@ -344,10 +344,12 @@ h4 {
 
 .question-text {
   font-size: 32px;
+  color: black;
 }
 
 .answer-text {
   margin: 10px;
+  color: black;
 }
 
 .question-section {
@@ -367,6 +369,7 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+  color: black;
 }
 
 #problem {
