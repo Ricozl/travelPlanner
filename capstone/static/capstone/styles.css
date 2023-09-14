@@ -331,9 +331,7 @@ h4 {
 #app {
   text-align: center;
   font-family: sans-serif;
-  background-image: url("rome-vector-map.jpg");
-  width: 100%;
-  opacity: 0.33;
+  color: black;
 }
 
 .question-text {
