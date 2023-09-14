@@ -141,11 +141,11 @@
                 //</div>
             //)
 
-        };
+        //};
 
         return (
             <div className ="app">
-
+                {!showScore ? (
 
                 <div>
                     <div className='score-section'>You scored {score} out of {questions.length}</div>
@@ -166,7 +166,20 @@
                             ))};
                     </div>
                 </div>
-
+                ) : (
+                <div className="result">
+                    <h3>Result</h3>
+                    <p>
+                        Total Questions: <span>{questions.length}</span>
+                    </p>
+                    <p>
+                        Total Score:<span> {score}</span>
+                    </p>
+                    <div id="winner">
+                        {result}
+                    </div>
+                </div>
+                )}
             </div>
         )
     };
