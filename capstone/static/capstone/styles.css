@@ -25,7 +25,7 @@ a:hover {
 #quizmap {
   background-image: url("rome-vector-map.jpg");
   width: 100%;
-  opacity: 0.65;
+  opacity: 0.33;
   background-size: cover;
 }
 /* Postion the navbar container inside the image
