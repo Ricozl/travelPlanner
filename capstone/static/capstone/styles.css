@@ -333,8 +333,8 @@ h4 {
   color: black;
 }
 
-.img4 {
-  background-image: url("rome-vector-map.jpg") no-repeat center;
+#quizmap {
+  background: url("rome-vector-map.jpg") no-repeat center;
   width: 100%;
   height: auto;
   opacity: 0.50;
