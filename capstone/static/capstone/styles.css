@@ -330,6 +330,8 @@ h4 {
   text-align: center;
   font-family: sans-serif;
   background-image: url("rome-vector-map.jpg");
+  width: 100%;
+  opacity: 0.33;
 }
 
 .question-text {
