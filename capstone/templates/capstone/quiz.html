@@ -116,7 +116,7 @@
 
         };
 
-        function handleWrongAns (e) {
+        function handleClick (e) {
             // got answer wrong
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
@@ -149,7 +149,7 @@
                         </div>
                         <div className='answer-section'>
                             {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                <button id="answers" onClick = {() => answerOption.isCorrect ? handleRightAns() : handleWrongAns()}>{answerOption.answerText}</button>
+                                <button id="answers" onClick = {() => answerOption.isCorrect ? handleRightAns() : handleClick()}>{answerOption.answerText}</button>
                             ))}
                     </div>
                 </div>
