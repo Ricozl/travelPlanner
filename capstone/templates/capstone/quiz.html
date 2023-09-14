@@ -108,13 +108,7 @@
             } else {
                 setShowScore(true);
             }
-            if (score === 5) {
-                return (
-                    <div id="winner">
-                        You won!
-                    </div>
-                )
-            }
+
          };
 
         function handleClick (e) {
@@ -126,6 +120,20 @@
             setShowScore(true);
             }
         };
+
+        if (score === 5) {
+                return (
+                    <div id="winner">
+                        You won!
+                    </div>
+                )
+            } else {
+                return (
+                    <div id="winner">
+                        Nice try but no cigar!
+                    </div>
+                )
+            };
 
 
 
@@ -152,7 +160,7 @@
                             ))};
                     </div>
                 </div>
-                
+
             </div>
         )
     };
