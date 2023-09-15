@@ -327,12 +327,6 @@ h4 {
   color: black;
 }
 
-.app {
-  text-align: center;
-  font-family: sans-serif;
-  color: black;
-}
-
 #quizmap {
   background: url("rome-vector-map.jpg") no-repeat center;
   width: 100%;
