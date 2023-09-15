@@ -22,6 +22,33 @@ a:hover {
   position: relative;
 }
 
+.img2 {
+  background-image: url("rome-sky.jpg");
+  min-height: 400px;
+}
+
+.img3 {
+  background-image: url("view-from-pincio-park.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
 /* The navbar */
 .topnav {
   overflow: hidden;
@@ -104,33 +131,6 @@ a:hover {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-}
-
-.img2 {
-  background-image: url("rome-sky.jpg");
-  min-height: 400px;
-}
-
-.img3 {
-  background-image: url("view-from-pincio-park.jpg");
-  min-height: 400px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
 }
 
 h3 {
