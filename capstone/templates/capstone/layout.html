@@ -37,10 +37,11 @@
                     style="width:30px; height:30px; margin-right:10px;">Rome Travel</a></button>
                 <button class="tablinks" onclick="openCity(event, 'Destinations')">Where To Go</button>
                 <button class="tablinks" onclick="openCity(event, 'Food')">Places to Eat</button>
-                <button class="tablinks"><a href="{% url 'places' %}">Map of Rome</a></button>
-                <button class="tablinks"><a href="{% url 'quiz' %}">Quiz</a></button>
+
 
                 {% if user.is_authenticated %}
+                <button class="tablinks"><a href="{% url 'places' %}">Map of Rome</a></button>
+                <button class="tablinks"><a href="{% url 'quiz' %}">Quiz</a></button>
                 <button class="tablinks"><a href="{% url 'favorites' %}">Favorites</button>
                 <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
                 {% else %}
