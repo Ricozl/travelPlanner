@@ -208,18 +208,12 @@ h3 {
   }
 }
 
-/* turn off for testing parallax
-img {
-  width: 100%;
-  height: auto;
-}
-*/
 #heart {
-
   width: 20px;
   height:20px;
   text-align: center;
 }
+
 /* form is for login page */
 #form-page {
   background-color: #e6fff7;
@@ -284,6 +278,7 @@ h4 {
   height: 300px;
   width: 300px;
 }
+
 /* for React code */
 #app {
   text-align: center;
@@ -313,6 +308,10 @@ h4 {
 .question-section {
   white-space: nowrap;
   text-align: center;
+}
+
+.score-section {
+  font-size: 32px;
 }
 
 #answers {
