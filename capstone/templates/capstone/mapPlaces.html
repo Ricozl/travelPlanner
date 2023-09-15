@@ -38,6 +38,7 @@
     }
 </script>
 
+<!--using mapbox API to create a map of Rome-->
 
 <div id="backmap">
     <div id="map"></div>
@@ -85,9 +86,6 @@
                 map.addImage('marker2', image)
 
                 map.addSource('places', {
-                // This GeoJSON contains features that include an "icon"
-                // property. The value of the "icon" property corresponds
-                // to an image in the Mapbox Streets style's sprite.
                     'type': 'geojson',
                     'data': {
                         'type': 'FeatureCollection',
