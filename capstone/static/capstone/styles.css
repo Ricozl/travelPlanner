@@ -101,8 +101,6 @@ a:hover {
 /* Style the tab for the navigation bar */
 .tab {
   overflow: hidden;
-  /*border: 1px solid #ccc;*/
-  /*background-color: #f1f1f1;*/
   background-color: #f2ffe6;
 }
 /* Style the buttons inside the tab */
@@ -122,7 +120,6 @@ a:hover {
 }
 /* Create an active/current tablink class */
 .tab button.active {
-  /*background-color: #ccc;*/
   background-color: #f2ffe6;
 }
 /* Style the tab content */
