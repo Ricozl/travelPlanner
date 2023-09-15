@@ -295,7 +295,7 @@ h4 {
   position: relative;
 }
 
-.question-text {
+.quesText {
   font-size: 32px;
   color: black;
 }
@@ -305,7 +305,7 @@ h4 {
   color: black;
 }
 
-.question-section {
+.questions {
   white-space: nowrap;
   text-align: center;
 }

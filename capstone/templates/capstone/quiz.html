@@ -135,18 +135,18 @@
 
                 <div>
                     <div className='score'>You scored {score} out of {questions.length}</div>
-                    <div className='question-section'>
-                            <div className='question-count'>
+                    <div className='questions'>
+                            <div className='quesCount'>
                                 <span>Question {currentQuestion + 1}</span>/{questions.length}
 
                             </div>
 
-                            <div className='question-text'>
+                            <div className='quesText'>
                                 <p id="ques">{questions[currentQuestion].text}</p>
 
                             </div>
                         </div>
-                        <div className='answer-section'>
+                        <div className='answerSection'>
                             {questions[currentQuestion].answers.map((answer) => (
                                 <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.choice}</button>
                             ))}
