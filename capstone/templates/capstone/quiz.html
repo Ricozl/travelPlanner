@@ -46,7 +46,7 @@
     function App() {
         const questions = [
             {
-                questionText:  "What is cacio e Pepe?",
+                text:  "What is cacio e Pepe?",
                 answerOptions: [
                     { answerText: 'Italian football (soccer) and Pete.', isCorrect: false},
                     { answerText: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
@@ -55,7 +55,7 @@
                 ],
             },
             {
-                questionText: 'The Colosseum is called that because?',
+                text: 'The Colosseum is called that because?',
                 answerOptions: [
                     { answerText: 'It is the Greek name for amphitheater.', isCorrect: false },
                     { answerText: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
@@ -64,7 +64,7 @@
                 ],
             },
             {
-                questionText: 'In classical architecture, Romans invented?',
+                text: 'In classical architecture, Romans invented?',
                 answerOptions: [
                     { answerText: 'The Arch.', isCorrect: false },
                     { answerText: 'Concrete buildings.', isCorrect: false },
@@ -73,7 +73,7 @@
                 ],
             },
             {
-                questionText: 'Traditional Roman food is largely composed of?',
+                text: 'Traditional Roman food is largely composed of?',
                 answerOptions: [
                     { answerText: 'Guts.', isCorrect: true },
                     { answerText: 'Steaks.', isCorrect: false },
@@ -82,7 +82,7 @@
                 ],
             },
             {
-                questionText: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
+                text: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
                 answerOptions: [
                     { answerText: 'They were poisonous.', isCorrect: false },
                     { answerText: 'They were from America.', isCorrect: false },
@@ -108,7 +108,7 @@
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion(nextQuestion),
-                <p>{questions[currentQuestion].questionText}</p>
+                <p>{questions[currentQuestion].text}</p>
             } else {
                 setShowScore(true);
                 setResult("Fantastico! You Won!")
@@ -142,7 +142,7 @@
                             </div>
 
                             <div className='question-text'>
-                                <p id="ques">{questions[currentQuestion].questionText}</p>
+                                <p id="ques">{questions[currentQuestion].text}</p>
 
                             </div>
                         </div>
