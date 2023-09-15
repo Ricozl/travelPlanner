@@ -258,34 +258,6 @@ h4 {
   color: red;
 }
 
-/* playing with React
-#hello {
-  text-align: center;
-  font-size: 36px;
-  color: black;
-}*/
-/*
-#romeMap {
-  background-image: url("rome-area-map1.jpg");
-
-  opacity: 0.33;
-  background-attachment: fixed;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: 800px 500px;
-  min-height: 100%;
-  width: 100%;
-}
-#canvasMap {
-  opacity: 0.33;
-  background-attachment: fixed;
-  background-size: 800px 500px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  min-height: 100%;
-  width: 100%;
-} */
-
 #backmap {
   background-color: #e6ffff;
   display: flex;
