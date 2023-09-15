@@ -148,7 +148,7 @@
                         </div>
                         <div className='answer-section'>
                             {questions[currentQuestion].answers.map((answer) => (
-                                <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.answerText}</button>
+                                <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.choice}</button>
                             ))}
                     </div>
                 </div>
