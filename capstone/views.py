@@ -155,7 +155,7 @@ def updateRecord(request, site_id):
         return JsonResponse({"Error": "Error. User not found."}, status=404)
 
     # find out if favorites record already exists. If not, create it
-    if activity == "true":
+
         try:
             favorite = Favorites.objects.get(
                 watcher__exact=folName, item__exact=favsite)
@@ -163,6 +163,7 @@ def updateRecord(request, site_id):
         # record not found so create record
         #newRecord = True
         #activity = True
+            if activity == "true":
             print("got to look for favorites record")
             favorites = Favorites(watcher=folName,
                         item=favsite, is_active=True)
