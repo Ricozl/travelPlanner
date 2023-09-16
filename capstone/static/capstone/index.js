@@ -116,7 +116,7 @@ function updateRecord(site_id, activity) {
 };
 
 
-function favorites() {
+function removeFav() {
     console.log('got to favorites');
 }
 
