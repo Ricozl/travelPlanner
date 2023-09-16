@@ -99,7 +99,7 @@ function updateRecord(site_id) {
         mode: 'same-origin',
         body: JSON.stringify({
             id: site_id,
-            is_active: activity
+            is_active: true,
         })
     })
         .then(response => {
