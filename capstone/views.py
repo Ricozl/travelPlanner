@@ -129,6 +129,7 @@ def sites(request, site):
 def updateRecord(request, site_id, activity):
     print("got to updateRecord")
     print(request)
+    print(activity)
     current_user_id = request.user.id
     print(current_user_id)
     #name = title
