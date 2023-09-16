@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     event.preventDefault();
     console.log("got to js page")
 
-    document.querySelector('#topofpage').style.display = 'block';
+    //document.querySelector('#topofpage').style.display = 'block';
     document.querySelector('#top-site').style.display = 'block';
 });
 
