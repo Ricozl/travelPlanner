@@ -1,12 +1,12 @@
 
 
 document.addEventListener('DOMContentLoaded', function (event) {
-    // by default, load all posts
+    // by default, load all
     event.preventDefault();
     console.log("got to js page")
 
     //document.querySelector('#topofpage').style.display = 'block';
-    document.querySelector('#top-site').style.display = 'block';
+    //document.querySelector('#top-site').style.display = 'block';
 });
 
 
