@@ -126,7 +126,7 @@ def sites(request, site):
 
 
 @requires_csrf_token
-def updateRecord(request, site_id):
+def updateRecord(request, site_id, activity):
     print("got to updateRecord")
     print(request)
     current_user_id = request.user.id
@@ -134,7 +134,7 @@ def updateRecord(request, site_id):
     #name = title
     # check if record exists. if not, create new one
     #newRecord = False
-    activity = ""
+    #activity = ""
 
     # query for requested profile to follow
     try:
