@@ -72,7 +72,7 @@ function load_site(site) {
                             console.log(title)
                             // update favorites table in database, set to active
                             activity = "true"
-                            msg = updateRecord(site_id, activity)
+                            msg = updateRecord(site_id)
                             console.log(msg)
                         })
                     }
@@ -89,7 +89,7 @@ function load_site(site) {
         });
 };
 
-function updateRecord(site_id, activity) {
+function updateRecord(site_id) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
