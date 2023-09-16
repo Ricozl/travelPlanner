@@ -90,7 +90,7 @@ def sites(request, site):
         #return JsonResponse({"sites": sites}, safe=False)
         #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
-        print(site)
+        #print(site)
         print(request)
 
         sites = Sites.objects.filter(
