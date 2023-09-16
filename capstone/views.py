@@ -129,8 +129,7 @@ def sites(request, site):
 def updateRecord(request, site_id):
     print("got to updateRecord")
     print(request)
-    print(request.activity)
-    print(activity)
+
     current_user_id = request.user.id
     print(current_user_id)
     #name = title
@@ -166,12 +165,12 @@ def updateRecord(request, site_id):
     # record not found so create record
         #newRecord = True
         #activity = True
-        if activity == 'true':
-            print("got to look for favorites record")
-            favorites = Favorites(watcher=folName,
-                        item=favsite, is_active=True)
-            favorites.save()
-            return JsonResponse({"is_active": True})
+
+        print("got to look for favorites record")
+        favorites = Favorites(watcher=folName,
+                item=favsite, is_active=True)
+        favorites.save()
+        return JsonResponse({"is_active": True})
 
     if request.method == "PUT":
         print("got to PUT")
