@@ -134,7 +134,7 @@ def updateRecord(request, site_id):
     #name = title
     # check if record exists. if not, create new one
     #newRecord = False
-    #activity = ""
+    activity = ""
 
     # query for requested profile to follow
     try:
