@@ -15,7 +15,6 @@ function load_site(site) {
     // Show the site and hide other views
     document.querySelector('#sites').innerHTML = "";
 
-    //document.querySelector('#messages').innerHTML = "";
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
     console.log({site})
