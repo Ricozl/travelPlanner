@@ -127,6 +127,7 @@ def sites(request, site):
 
 @requires_csrf_token
 def updateRecord(request, site_id):
+    print("got to updateRecord")
     print(request)
     current_user_id = request.user.id
     print(current_user_id)
