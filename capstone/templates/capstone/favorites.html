@@ -48,8 +48,7 @@
         {% endif %}
 
         <p>{{ favorite.item.description }}</p>
-        <p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">Click to add to Favorites</p>
-        <p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove</p>
+        <p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove from Favorites</p>
         <br><br>
     {% empty %}
         <p>No Favorites yet.</p>
@@ -57,30 +56,5 @@
 
 </div>
 {% endif %}
-
-<!-- code for react -->
-<div id="form"></div>
-
-<div id="app"></div>
-
-<script type="text/babel">
-    function App() {
-        const [count, setCount] = React.useState(0);
-
-        function updateCount() {
-            setCount(count + 1);
-        }
-        return (
-            <div>
-                <div>{count}</div>
-                <button onClick={updateCount}>Count</button>
-            </div>
-        );
-    }
-
-    ReactDOM.render(<App />, document.querySelector("#app"));
-</script>
-
-{% endblock %}
 
 
