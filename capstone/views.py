@@ -142,7 +142,7 @@ def updateRecord(request, site_id):
         # requested profile to follow does not exist
         print("site does not exist")
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
-    print(favsite)
+    #print(favsite)
     print(favsite.id)
     # query for follower's record
     follower = request.user.username
