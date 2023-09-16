@@ -71,7 +71,7 @@ function load_site(site) {
                             title = data[i].title
                             console.log(title)
                             // update favorites table in database, set to active
-                            activity = true
+                            let activity = "true"
                             msg = updateRecord(site_id, activity)
                             console.log(msg)
                         })
