@@ -165,12 +165,12 @@ def updateRecord(request, site_id):
     # record not found so create record
         #newRecord = True
         #activity = True
-
-        print("got to look for favorites record")
-        favorites = Favorites(watcher=folName,
-                item=favsite, is_active=True)
-        favorites.save()
-        return JsonResponse({"is_active": True})
+        if activity === true:
+            print("got to look for favorites record")
+            favorites = Favorites(watcher=folName,
+                    item=favsite, is_active=True)
+            favorites.save()
+            return JsonResponse({"is_active": True})
 
     if request.method == "PUT":
         print("got to PUT")
