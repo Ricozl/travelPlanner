@@ -147,8 +147,8 @@ def updateRecord(request, site_id):
     #print(favsite)
     print(favsite.id)
     # query for follower's record
-    follower = request.user.username
-    print(follower)
+    watcher = request.user.username
+    print(watcher)
     try:
         folName = User.objects.get(id__exact=current_user_id)
     except User.DoesNotExist:
