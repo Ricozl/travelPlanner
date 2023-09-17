@@ -88,7 +88,7 @@ function load_site(site) {
                         })
                     }
                     document.querySelector('#sites').append(element);
-                    })
+                    //})
                 }
         };
             console.log("got to focus")
