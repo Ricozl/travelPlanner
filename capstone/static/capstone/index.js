@@ -118,6 +118,7 @@ function updateRecord(site_id) {
 
 function removeFav() {
     console.log('got to favorites');
+    console.log(request)
 }
 
 function getCookie(name) {
