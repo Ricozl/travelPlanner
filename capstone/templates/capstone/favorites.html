@@ -49,7 +49,7 @@
         {% endif %}
 
         <p>{{ favorite.item.description }}</p>
-        <p onclick="removeFav(favorite.item.title)"><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove from Favorites</p>
+        <p id="remFav"><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">Click to remove from Favorites</p>
         <br><br>
     {% empty %}
         <p>No Favorites yet.</p>
