@@ -95,9 +95,9 @@ function load_site(site) {
 
 
 
-        .catch(error => {
+    .catch(error => {
             console.log('Error:', error);
-        });
+    });
 };
 
 function updateRecord(site_id) {
