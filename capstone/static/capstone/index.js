@@ -86,7 +86,7 @@ function load_site(site) {
                             //msg = updateRecord(site_id)
                             //console.log(msg)
                         //})
-                    }
+                    })
 
                     document.querySelector('#sites').append(element);
                 };
