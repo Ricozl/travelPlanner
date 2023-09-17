@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // by default, load all
     event.preventDefault();
     console.log("got to js page")
-    if (document.querySelector('form') != null) {
-        document.getElementById("myBtn").addEventListener("click", displayDate);
+    if (document.getElementById('remFav') != null) {
+        document.getElementById("remFav").addEventListener("click", removeFav(event));
     //document.querySelector('#topofpage').style.display = 'block';
     //document.querySelector('#top-site').style.display = 'block';
 });
@@ -117,9 +117,9 @@ function updateRecord(site_id) {
 };
 
 
-function removeFav(title) {
+function removeFav(event) {
     console.log('got to favorites');
-    console.log(title)
+    console.log(event)
 }
 
 function getCookie(name) {
