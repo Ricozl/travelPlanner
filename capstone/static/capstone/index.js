@@ -64,18 +64,18 @@ function load_site(site) {
                             //const btn = document.getElementById('lastp')
                         element.appendChild(jump);
                         // add event listener for addFav or remFav
-                        jump.addEventListener('click', event => {
-                            checkRecord(event)
-                        });
+                        //jump.addEventListener('click', event => {
+                            //checkRecord(event)
+                        //});
                             //btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-                    };
+                   // };
 
                         //element.appendChild(jump);
                         // add event listener for clicking on a site
-                        //jump.addEventListener('click', function(e) {
-                            //const element = e.target;
-                            //console.log(element)
-                            //element.previousSibling.innerText = "Added Successfully!"
+                        jump.addEventListener('click', function(e) {
+                            const element = e.target;
+                            console.log(element)
+                            element.previousSibling.innerText = "Added Successfully!"
                          // update 'favorites' in database
                             //var site_id = parseInt(data[i].id)
 
@@ -85,7 +85,7 @@ function load_site(site) {
                             //activity = "true"
                             //msg = updateRecord(site_id)
                             //console.log(msg)
-                        //})
+                        })
 
                     document.querySelector('#sites').append(element);
                 }
