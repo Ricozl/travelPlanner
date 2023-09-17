@@ -66,9 +66,9 @@ function load_site(site) {
                             const element = e.target;
                             console.log(element)
                             element.previousSibling.innerText = "Added Successfully!"
+
                             // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
-
                             title = data[i].title
                             console.log(title)
                             // update favorites table in database, set to active
@@ -86,6 +86,14 @@ function load_site(site) {
                             console.log(element)
                             element.previousSibling.innerText = "Removed Successfully!"
                             // update 'favorites' in database
+                            // update 'favorites' in database
+                            var site_id = parseInt(data[i].id)
+                            title = data[i].title
+                            console.log(title)
+                            // update favorites table in database, set to active
+                            activity = false
+                            msg = updateRecord(site_id, activity)
+                            console.log(msg)
                         })
                     }
                     document.querySelector('#sites').append(element);
