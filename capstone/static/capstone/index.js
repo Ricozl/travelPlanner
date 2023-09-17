@@ -68,7 +68,7 @@ function load_site(site) {
                             element.previousSibling.innerText = "Added Successfully!"
                          // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
-                    //checkLike(post_id, counter)
+                    
                             title = data[i].title
                             console.log(title)
                             // update favorites table in database, set to active
