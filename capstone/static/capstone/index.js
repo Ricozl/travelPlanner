@@ -67,14 +67,14 @@ function load_site(site) {
                             console.log(element)
                             element.previousSibling.innerText = "Added Successfully!"
                             // update 'favorites' in database
-                            //var site_id = parseInt(data[i].id)
+                            var site_id = parseInt(data[i].id)
 
-                            //title = data[i].title
-                            //console.log(title)
+                            title = data[i].title
+                            console.log(title)
                             // update favorites table in database, set to active
-                            //activity = "true"
-                            //msg = updateRecord(site_id)
-                            //console.log(msg)
+                            activity = true
+                            msg = updateRecord(site_id, activity)
+                            console.log(msg)
                         })
                         const jumptwo = document.createElement('p');
                         jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
