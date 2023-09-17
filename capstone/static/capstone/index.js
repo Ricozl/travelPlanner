@@ -87,8 +87,8 @@ function load_site(site) {
                             //console.log(msg)
                         //})
 
-            document.querySelector('#sites').append(element);
-            }
+                    document.querySelector('#sites').append(element);
+                }
         }});
             console.log("got to focus")
             document.querySelector('#sitefocus').focus();
