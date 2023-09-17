@@ -68,7 +68,7 @@ function load_site(site) {
                                 checkRecord(event)
                             });
                             //btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-                        };
+                    };
 
                         //element.appendChild(jump);
                         // add event listener for clicking on a site
@@ -86,13 +86,13 @@ function load_site(site) {
                             //msg = updateRecord(site_id)
                             //console.log(msg)
                         //})
-                    })
+                })
 
-                    document.querySelector('#sites').append(element);
-                };
+                document.querySelector('#sites').append(element);
+            };
             console.log("got to focus")
             document.querySelector('#sitefocus').focus();
-            }
+            
 
         })
         .catch(error => {
