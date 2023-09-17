@@ -58,10 +58,9 @@ function load_site(site) {
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
-                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">
-                            <p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
-
+                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                         element.appendChild(jump);
+
                         // add event listener for clicking on a site
                         jump.addEventListener('click', function(e) {
                             const element = e.target;
@@ -77,6 +76,16 @@ function load_site(site) {
                             //msg = updateRecord(site_id)
                             //console.log(msg)
                         })
+                        const jumptwo = document.createElement('p');
+                        jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
+                        element.appendChild(jumptwo);
+
+                        // add event listener for clicking on a site
+                        jumptwo.addEventListener('click', function(e) {
+                            const element = e.target;
+                            console.log(element)
+                            element.previousSibling.innerText = "Removed Successfully!"
+                            // update 'favorites' in database
                     }
                     document.querySelector('#sites').append(element);
                     //})
