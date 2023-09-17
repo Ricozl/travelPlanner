@@ -62,14 +62,6 @@ function load_site(site) {
                             <p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
 
                         element.appendChild(jump);
-                        // add event listener for addFav or remFav
-                        //jump.addEventListener('click', event => {
-                            //checkRecord(event)
-                        //});
-                            //btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-                   // };
-
-                        //element.appendChild(jump);
                         // add event listener for clicking on a site
                         jump.addEventListener('click', function(e) {
                             const element = e.target;
@@ -97,7 +89,7 @@ function load_site(site) {
         .catch(error => {
             console.log('Error:', error);
         });
-    
+
 };
 
 function updateRecord(site_id) {
