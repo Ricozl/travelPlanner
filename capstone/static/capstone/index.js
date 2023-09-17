@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
     console.log("got to js page")
@@ -18,7 +18,7 @@ function load_site(site) {
 
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
-    console.log({site})
+    console.log({ site })
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
@@ -67,7 +67,7 @@ function load_site(site) {
                             const element = e.target;
                             console.log(element)
                             element.previousSibling.innerText = "Added Successfully!"
-                         // update 'favorites' in database
+                            // update 'favorites' in database
                             //var site_id = parseInt(data[i].id)
 
                             //title = data[i].title
@@ -81,9 +81,9 @@ function load_site(site) {
                     document.querySelector('#sites').append(element);
                     //})
                 }
-        //};
-            console.log("got to focus")
-            document.querySelector('#sitefocus').focus();
+                //};
+                console.log("got to focus")
+                document.querySelector('#sitefocus').focus();
             }
         })
         .catch(error => {
@@ -98,7 +98,7 @@ function updateRecord(site_id) {
     const csrftoken = getCookie('csrftoken');
     fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
-        headers: {'X-CSRFToken': csrftoken},
+        headers: { 'X-CSRFToken': csrftoken },
         mode: 'same-origin',
         body: JSON.stringify({
             id: site_id,
