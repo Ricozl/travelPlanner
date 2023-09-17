@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // by default, load all
     event.preventDefault();
     console.log("got to js page")
-
-    document.getElementById("myBtn").addEventListener("click", displayDate);
+    if (document.querySelector('form') != null) {
+        document.getElementById("myBtn").addEventListener("click", displayDate);
     //document.querySelector('#topofpage').style.display = 'block';
     //document.querySelector('#top-site').style.display = 'block';
 });
