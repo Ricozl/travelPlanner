@@ -86,6 +86,7 @@ function load_site(site) {
                             console.log(element)
                             element.previousSibling.innerText = "Removed Successfully!"
                             // update 'favorites' in database
+                        })
                     }
                     document.querySelector('#sites').append(element);
                     //})
