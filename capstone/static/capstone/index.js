@@ -92,7 +92,7 @@ function load_site(site) {
         //};
             console.log("got to focus")
             document.querySelector('#sitefocus').focus();
-        }
+        })
 
         .catch(error => {
             console.log('Error:', error);
