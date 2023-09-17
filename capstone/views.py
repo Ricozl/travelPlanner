@@ -172,6 +172,7 @@ def updateRecord(request, site_id):
             favorites.save()
             return JsonResponse({"is_active": True})
 
+
     if request.method == "PUT":
         print("got to PUT")
         data = json.loads(request.body)
