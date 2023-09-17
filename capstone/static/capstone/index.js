@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // by default, load all
     event.preventDefault();
     console.log("got to js page")
-    let activity = ""
+
+    document.getElementById("myBtn").addEventListener("click", displayDate);
     //document.querySelector('#topofpage').style.display = 'block';
     //document.querySelector('#top-site').style.display = 'block';
 });
