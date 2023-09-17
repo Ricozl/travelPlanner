@@ -102,7 +102,7 @@ function load_site(site) {
 
 };
 
-function updateRecord(site_id) {
+function updateRecord(site_id, activity) {
     // update 'content' in database
     //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
@@ -112,7 +112,7 @@ function updateRecord(site_id) {
         mode: 'same-origin',
         body: JSON.stringify({
             id: site_id,
-            is_active: true,
+            is_active: activity,
         })
     })
         .then(response => {
