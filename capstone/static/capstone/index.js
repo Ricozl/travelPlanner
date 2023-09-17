@@ -58,7 +58,7 @@ function load_site(site) {
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
-
+                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                             let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
                             const btn = document.getElementById('lastp')
 
@@ -66,7 +66,7 @@ function load_site(site) {
                             element.addEventListener('click', event => {
                                 checkRecord(profile, event)
                             });
-                            btn.insertAdjacentHTML("afterend", html)
+                            btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                         };
 
                         //element.appendChild(jump);
