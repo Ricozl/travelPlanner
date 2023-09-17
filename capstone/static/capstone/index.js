@@ -58,24 +58,34 @@ function load_site(site) {
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
-
-                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-                        element.appendChild(jump);
-                        // add event listener for clicking on a site
-                        jump.addEventListener('click', function(e) {
-                            const element = e.target;
-                            console.log(element)
-                            element.previousSibling.innerText = "Added Successfully!"
-                         // update 'favorites' in database
-                            var site_id = parseInt(data[i].id)
                     
-                            title = data[i].title
-                            console.log(title)
+                            let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
+                            const btn = document.getElementById('lastp')
+
+                            // add event listener for "follow" and "unfollow" buttons
+                            element.addEventListener('click', event => {
+                                checkRecord(profile, event)
+                            });
+                            btn.insertAdjacentHTML("afterend", html)
+                        };
+
+                        //jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
+                        //element.appendChild(jump);
+                        // add event listener for clicking on a site
+                        //jump.addEventListener('click', function(e) {
+                            //const element = e.target;
+                            //console.log(element)
+                            //element.previousSibling.innerText = "Added Successfully!"
+                         // update 'favorites' in database
+                            //var site_id = parseInt(data[i].id)
+
+                            //title = data[i].title
+                            //console.log(title)
                             // update favorites table in database, set to active
-                            activity = "true"
-                            msg = updateRecord(site_id)
-                            console.log(msg)
-                        })
+                            //activity = "true"
+                            //msg = updateRecord(site_id)
+                            //console.log(msg)
+                        //})
                     }
 
                     document.querySelector('#sites').append(element);
