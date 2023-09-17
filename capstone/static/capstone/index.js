@@ -95,10 +95,10 @@ function load_site(site) {
             document.querySelector('#sitefocus').focus();
 
 
-
-    .catch(error => {
+        .catch(error => {
             console.log('Error:', error);
-    });
+        });
+    }
 };
 
 function updateRecord(site_id) {
