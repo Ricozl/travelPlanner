@@ -65,9 +65,9 @@ function load_site(site) {
 
                             // add event listener for "follow" and "unfollow" buttons
                             element.addEventListener('click', event => {
-                                checkRecord(profievent)
+                                checkRecord(event)
                             });
-                            btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
+                            //btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                         };
 
                         //element.appendChild(jump);
