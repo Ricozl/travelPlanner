@@ -58,14 +58,14 @@ function load_site(site) {
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
-                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-
-                        let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
-                            const btn = document.getElementById('lastp')
+                        jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">
+                            <p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
+                        //let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
+                            //const btn = document.getElementById('lastp')
 
                             // add event listener for "follow" and "unfollow" buttons
                             element.addEventListener('click', event => {
-                                checkRecord(profile, event)
+                                checkRecord(profievent)
                             });
                             btn.insertAdjacentHTML("afterend", html)jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                         };
