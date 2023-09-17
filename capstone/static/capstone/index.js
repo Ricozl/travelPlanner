@@ -59,7 +59,8 @@ function load_site(site) {
                     if (userName) {
                         const jump = document.createElement('p');
                         jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
-                            let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
+
+                        let html = `<button class="follow" id="follow" style="margin:10px;">Follow</button><button class="unfollow" id="unfollow">Unfollow</button>`;
                             const btn = document.getElementById('lastp')
 
                             // add event listener for "follow" and "unfollow" buttons
