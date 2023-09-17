@@ -137,7 +137,7 @@ def updateRecord(request, site_id):
     #newRecord = False
     #activity = ""
 
-    # query for requested profile to follow
+    # query for requested site to follow
     try:
         favsite = Sites.objects.get(id__exact=site_id)
     except Sites.DoesNotExist:
