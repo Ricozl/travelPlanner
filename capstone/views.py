@@ -161,7 +161,6 @@ def updateRecord(request, site_id):
     # record not found so create record
         if activity == True:
             print("got to look for favorites record")
-            #favorite.is_active = data["is_active"]
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
