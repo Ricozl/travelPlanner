@@ -32,63 +32,8 @@ def sites(request, site):
         sites = Favorites.objects.filter(
             watcher=wat_user, is_active=True)
 
-        #sites = Sites.objects.filter(title__in=followedNms)
-        #sites = Sites.objects.filter(id__id__in=followedNms)
-
-        #followedNms = Follow.objects.filter(
-            #follower=usernm, is_active=True).values_list('followed')
-       #posts = Posto.objects.filter(poster__id__in=followedNms)
-
-        #favors = fav_list.sites.all()
-        #print(favors)
-        ####followedNms = Follow.objects.filter(
-            #follower=usernm, is_active=True).values_list('followed')
-        #posts = Posto.objects.filter(poster__id__in=followedNms)result = Sites.objects.filter(title__in=sitelist)
-        #wat_lists = Sites.objects.filter('all').filter(sitelist)
-
-            #watcher=wat_user, is_active=True).select_related('item').order_by('item')
-        #print(result)
-            # display user's watchlist
-            #return render(request, 'auctions/watch_list.html', {
-                #'watch_list': wat_lists})
-
-        #sites = Sites.objects.filter(title__item__in=sitelist)
-        #print(sites)
-        ##print(favSites[1].watcher)
-
-        #followedNms = Follow.objects.filter(
-            #follower=usernm, is_active=True).values_list('followed')
-       # sites = Sites.objects.filter(title__site__in=favSites)
-
-        #sites = Sites.objects.filter(sites_id__favorites_id__in=favSites)
-        #print(sites)
-
-        #sites = Sites.objects.filter(pk__exact=item_id=favSites)
-        #sites = Sites.objects.filter(id__site__in=favSites)
-
-
-        #active_list = Favorites.objects.filter(
-            #item=favSites.title, is_active="True").values()
-        #print(active_list)
-        #pubs = publication.objects.select_related('country', 'country_state', 'city')
-        #favs = set()
-
-        #sites = Favorites.objects.filter(
-            #watcher=wat_user, is_active="True").select_related('item')
-
-        #print(active_list)).select_related('item').order_by('item')
-            #watcher=wat_user, is_active=True).select_related('item')
-        # display user's favorites list
-        #print(sites)
-
-        #return render(request, "capstone/favorites.html", {
-            #"sites": sites
-        #})
-        #sites = json.dumps(list(sitelist))
         return render(request, "capstone/favorites.html", {
             "sites": sites})
-        #return JsonResponse({"sites": sites}, safe=False)
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
     else:
         #print(site)
         print(request)
