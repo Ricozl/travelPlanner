@@ -129,7 +129,9 @@ def sites(request, site):
 def updateRecord(request, site_id):
     print("got to updateRecord")
     print(request)
-
+    data = json.loads(request.body)
+        favorite.is_active = data["is_active"]
+        activity = favorite.is_active
     current_user_id = request.user.id
     print(current_user_id)
     #name = title
