@@ -128,24 +128,21 @@ def sites(request, site):
 @requires_csrf_token
 def updateRecord(request, site_id):
     print("got to updateRecord")
-    print(request)
     data = json.loads(request.body)
-    #favorite.is_active = data["is_active"]
     activity = data["is_active"]
     print(activity)
     current_user_id = request.user.id
     print(current_user_id)
-    #name = title
-    # check if record exists. if not, create new one
 
     # query for requested site for favorites
     try:
         favsite = Sites.objects.get(id__exact=site_id)
     except Sites.DoesNotExist:
-        # requested profile does not exist
+        # requested site does not exist
         print("site does not exist")
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
     print(favsite.id)
+
     # query for user's record
     watcher = request.user.username
     print(watcher)
