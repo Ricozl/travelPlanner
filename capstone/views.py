@@ -133,22 +133,21 @@ def favorites(request):
     wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    #return JsonResponse({"favorites": wat_lists})
     return render(request, "capstone/favorites.html", {
         "favorites": wat_lists})
 
-def htmlfavorites(request):
-    print(request)
+#def htmlfavorites(request):
+    #print(request)
     # get signed-in user's id
-    wat_user = request.user.id
-    print(wat_user)
+    #wat_user = request.user.id
+    #print(wat_user)
     # get all items on signed-in user's favorites list
-    wat_lists = Favorites.objects.filter(
-        watcher=wat_user, is_active=True).select_related('item').order_by('item')
+    #wat_lists = Favorites.objects.filter(
+       #watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    return render(request, 'capstone/favorites.html', {
-        'favorites': wat_lists
-    })
+    #return render(request, 'capstone/favorites.html', {
+        #'favorites': wat_lists
+    #})
 
 
 def login_view(request):
