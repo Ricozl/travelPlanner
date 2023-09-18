@@ -102,32 +102,27 @@ def updateRecord(request, site_id):
         # display watchlist
         return HttpResponseRedirect(reverse('watch_list'))
 
-def fav(request):
-    print(request)
-    user_id = request.user.id
-    print(user_id)
+#def fav(request):
+    #print(request)
+    #user_id = request.user.id
+    #print(user_id)
 
-    favs = Favorites.objects.filter(
-        watcher=user_id, is_active=True).values()
-    print(favs)
-    cats = Categories.objects.filter(list_cat__exact=id)
-    for cat in cats:
-        cat_list = cat.cat_name
-    for fav in favs:
-        fav_list = fav.item
-    print(favs[1])
+    #favs = Favorites.objects.filter(
+       # watcher=user_id, is_active=True).values()
+    #print(favs)
+    #cats = Categories.objects.filter(list_cat__exact=id)
+    #for cat in cats:
+        #cat_list = cat.cat_name
+    #for fav in favs:
+        #fav_list = fav.item
+    #print(favs[1])
 
-    favorites = Sites.objects.filter(
-        id=favs.item_id).values()
-    print(favorites)
-
-# get all active listings in this category
-    #listing_category__cat_name=title, is_active="True").values()
     #favorites = Sites.objects.filter(
-        #title, is_active="True").values()
+        #id=favs.item_id).values()
+    #print(favorites)
 
-    return render(request, "capstone/favorites.html", {
-        "favorites": favorites})
+    #return render(request, "capstone/favorites.html", {
+        #"favorites": favorites})
 
 
 def favorites(request):
