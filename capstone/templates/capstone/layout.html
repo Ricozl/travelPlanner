@@ -66,7 +66,6 @@
 
             {% if user.is_authenticated %}
             <div id="Favorites" class="tabcontent">
-                <!-- <h3>Favorites for </h3><h3 id="user_name">{{ user.username }}</h3> -->
                 <h3>Favorites for {{ user.username }}</h3>
                 <p>See your <a href="{% url 'favorites' %}">favorites</a> to help plan your trip.</p>
             </div>
