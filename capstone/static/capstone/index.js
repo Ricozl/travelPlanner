@@ -112,7 +112,6 @@ function load_site(site) {
 
 function updateRecord(site_id, activity) {
     // update 'content' in database
-    //post_id = parseInt(post_id)
     const csrftoken = getCookie('csrftoken');
     fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
