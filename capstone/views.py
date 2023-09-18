@@ -130,9 +130,9 @@ def updateRecord(request, site_id):
     print("got to updateRecord")
     print(request)
     data = json.loads(request.body)
-        favorite.is_active = data["is_active"]
-        activity = favorite.is_active
-        print(activity)
+    favorite.is_active = data["is_active"]
+    activity = favorite.is_active
+    print(activity)
     current_user_id = request.user.id
     print(current_user_id)
     #name = title
@@ -165,14 +165,12 @@ def updateRecord(request, site_id):
             watcher__exact=folName, item__exact=favsite)
     except Favorites.DoesNotExist:
     # record not found so create record
-        #newRecord = True
-        #activity = True
         if activity == "true":
             print("got to look for favorites record")
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
-            return JsonResponse({"is_active": True})
+            return JsonResponse({"is_active": activity})
 
 
     if request.method == "PUT":
