@@ -135,12 +135,6 @@ function updateRecord(site_id, activity) {
         })
 };
 
-
-function removeFav(event) {
-    console.log('got to favorites');
-    console.log(event)
-}
-
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
