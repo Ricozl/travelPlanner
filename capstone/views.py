@@ -93,7 +93,6 @@ def updateRecord(request, site_id):
 
 
 def favorites(request):
-    print(request)
     # get signed-in user's id
     wat_user = request.user.id
     # get all items on signed-in user's favorites list
