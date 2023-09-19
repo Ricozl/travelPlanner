@@ -123,16 +123,10 @@ function updateRecord(site_id, activity) {
         })
     })
         .then(response => {
-            if (response.status == 200) {
-                if (response.activity === true) {
-                    if (response.newRecord === true) {
-                        msg = "Added Successfully!"
-                    } else {
-                        msg = "Added Successfully!"
-                    }
-                } else {
-                    if (response.newRecord === false)
-                }
+            if (!response.ok) {
+                console.log("update unsuccessful")
+            } else {
+                console.log("update good")
             }
         })
         .catch(error => {
