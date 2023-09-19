@@ -130,6 +130,8 @@ function updateRecord(site_id, activity) {
                     } else {
                         msg = "Added Successfully!"
                     }
+                } else {
+                    if (response.newRecord === false)
                 }
 
             } else {
