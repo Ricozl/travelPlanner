@@ -65,7 +65,7 @@ function load_site(site) {
                         jump.addEventListener('click', function(e) {
                             const element = e.target;
                             console.log(element)
-                            element.previousSibling.innerText = "Added Successfully!"
+                            element.previousSibling.innerText = "Site is in your Favorites List!"
 
                             // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
@@ -75,7 +75,6 @@ function load_site(site) {
                             activity = true
                             msg = updateRecord(site_id, activity)
                             console.log(msg)
-                            element.previousSibling.innerText = msg
                         })
                         const jumptwo = document.createElement('p');
                         jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
