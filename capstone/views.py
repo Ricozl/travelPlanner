@@ -85,7 +85,7 @@ def updateRecord(request, site_id):
         favorite.is_active = data["is_active"]
         activity = favorite.is_active
         favorite.save()
-        return JsonResponse({"is_active": activity})
+        return JsonResponse({"activity": activity, "newRecord": False})
     activity = favorite.is_active
     return JsonResponse({"activity": activity})
 
