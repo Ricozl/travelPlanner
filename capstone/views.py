@@ -91,41 +91,6 @@ def updateRecord(request, site_id):
     activity = favorite.is_active
     return JsonResponse({"activity": activity})
 
- # check if listing already on watchlist, post warning message
-    #if Watchlist.objects.filter(watcher=u_w, item=listing_id, is_active=True).exists():
-        #messages.add_message(
-            #request, messages.WARNING, "Listing is already on Watchlist")
-    #else:
-         # if not already on watchlist, save to watchlist and send success message
-        #Watchlist.objects.create(
-            #watcher=u_w, item=lists, is_active=True)
-        #messages.add_message(
-            #request, messages.SUCCESS, "Listing is now on Watchlist")
-        # display watchlist
-        #return HttpResponseRedirect(reverse('watch_list'))
-
-#def fav(request):
-    #print(request)
-    #user_id = request.user.id
-    #print(user_id)
-
-    #favs = Favorites.objects.filter(
-       # watcher=user_id, is_active=True).values()
-    #print(favs)
-    #cats = Categories.objects.filter(list_cat__exact=id)
-    #for cat in cats:
-        #cat_list = cat.cat_name
-    #for fav in favs:
-        #fav_list = fav.item
-    #print(favs[1])
-
-    #favorites = Sites.objects.filter(
-        #id=favs.item_id).values()
-    #print(favorites)
-
-    #return render(request, "capstone/favorites.html", {
-        #"favorites": favorites})
-
 
 def favorites(request):
     print(request)
@@ -137,19 +102,6 @@ def favorites(request):
     # display user's favorites list
     return render(request, "capstone/favorites.html", {
         "favorites": wat_lists})
-
-#def htmlfavorites(request):
-    #print(request)
-    # get signed-in user's id
-    #wat_user = request.user.id
-    #print(wat_user)
-    # get all items on signed-in user's favorites list
-    #wat_lists = Favorites.objects.filter(
-       #watcher=wat_user, is_active=True).select_related('item').order_by('item')
-    # display user's favorites list
-    #return render(request, 'capstone/favorites.html', {
-        #'favorites': wat_lists
-    #})
 
 
 def login_view(request):
