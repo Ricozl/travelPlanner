@@ -134,9 +134,6 @@ function updateRecord(site_id, activity) {
                 } else {
                     if (response.newRecord === false)
                 }
-
-            } else {
-                console.log("response ok")
             }
         })
         .catch(error => {
