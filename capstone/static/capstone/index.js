@@ -84,7 +84,7 @@ function load_site(site) {
                         jumptwo.addEventListener('click', function(e) {
                             const element = e.target;
                             console.log(element)
-                            element.previousSibling.innerText = "Removed Successfully!"
+                            element.previousSibling.innerText = "Site is not in your Favorites List!"
                             // update 'favorites' in database
                             // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
