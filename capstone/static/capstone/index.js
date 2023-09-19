@@ -65,7 +65,7 @@ function load_site(site) {
                         jump.addEventListener('click', function(e) {
                             const element = e.target;
                             console.log(element)
-                            //element.previousSibling.innerText = "Added Successfully!"
+                            element.previousSibling.innerText = "Added Successfully!"
 
                             // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
@@ -133,7 +133,7 @@ function updateRecord(site_id, activity) {
                     }
                 } else {
                     if (response.newRecord === false)
-                //}
+                }
             }
         })
         .catch(error => {
