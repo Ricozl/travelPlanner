@@ -42,9 +42,7 @@ def updateRecord(request, site_id):
     print("got to updateRecord")
     data = json.loads(request.body)
     activity = data["is_active"]
-    print(activity)
     current_user_id = request.user.id
-    print(current_user_id)
     newRecord = ""
 
     # query for requested site for favorites
@@ -58,7 +56,6 @@ def updateRecord(request, site_id):
 
     # query for user's record
     watcher = request.user.username
-    print(watcher)
     try:
         folName = User.objects.get(id__exact=current_user_id)
     except User.DoesNotExist:

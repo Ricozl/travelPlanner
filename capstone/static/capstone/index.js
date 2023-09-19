@@ -73,8 +73,7 @@ function load_site(site) {
                             console.log(title)
                             // update favorites table in database, set to active
                             activity = true
-                            msg = updateRecord(site_id, activity)
-                            console.log(msg)
+                            updateRecord(site_id, activity)
                         })
                         const jumptwo = document.createElement('p');
                         jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
@@ -86,14 +85,13 @@ function load_site(site) {
                             console.log(element)
                             element.previousSibling.innerText = "Site is not in your Favorites List!"
                             // update 'favorites' in database
-                            // update 'favorites' in database
+
                             var site_id = parseInt(data[i].id)
                             title = data[i].title
                             console.log(title)
                             // update favorites table in database, set to active
                             activity = false
-                            msg = updateRecord(site_id, activity)
-                            console.log(msg)
+                            updateRecord(site_id, activity)
                         })
                     }
                     document.querySelector('#sites').append(element);
