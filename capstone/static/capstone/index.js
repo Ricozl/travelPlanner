@@ -124,8 +124,10 @@ function updateRecord(site_id, activity) {
     })
         .then(response => {
             if (response.status === 200) {
-                
-                console.log("response not ok")
+                if (response.activity === true) {
+                    
+                }
+
             } else {
                 console.log("response ok")
             }
