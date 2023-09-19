@@ -133,7 +133,7 @@ function updateRecord(site_id, activity) {
                     }
                 } else {
                     if (response.newRecord === false)
-                }
+                //}
             }
         })
         .catch(error => {
