@@ -128,7 +128,7 @@ function updateRecord(site_id, activity) {
                     if (response.newRecord === true) {
                         msg = "Added Successfully!"
                     } else {
-                        
+                        msg = "Added Successfully!"
                     }
                 }
 
