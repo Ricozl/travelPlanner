@@ -83,7 +83,7 @@ def updateRecord(request, site_id):
                 print("no record and false activity")
                 return JsonResponse({"activity": False, "newRecord": False})
 
-
+    print(favorite.is_active)
     if request.method == "PUT":
         print("got to PUT")
         data = json.loads(request.body)
