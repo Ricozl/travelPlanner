@@ -123,7 +123,7 @@ function updateRecord(site_id, activity) {
         })
     })
         .then(response => {
-            if (!response.ok) {
+            if (response.ok) {
                 //document.querySelector("#siteName").innerHTML = "Updating post content in database was unsuccessful."
                 console.log("response not ok")
             } else {
