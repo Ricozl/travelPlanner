@@ -45,6 +45,7 @@ def updateRecord(request, site_id):
     print(activity)
     current_user_id = request.user.id
     print(current_user_id)
+    newRecord = ""
 
     # query for requested site for favorites
     try:
@@ -76,7 +77,7 @@ def updateRecord(request, site_id):
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
-            return JsonResponse({"is_active": True})
+            return JsonResponse({"is_active": True, "newRecord": True})
 
     if request.method == "PUT":
         print("got to PUT")
