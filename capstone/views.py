@@ -77,7 +77,7 @@ def updateRecord(request, site_id):
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
-            return JsonResponse({"is_active": True, "newRecord": True})
+            return JsonResponse({"activity": True, "newRecord": True})
 
     if request.method == "PUT":
         print("got to PUT")
