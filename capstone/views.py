@@ -73,11 +73,11 @@ def updateRecord(request, site_id):
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
-            return JsonResponse({"activity": True, "newRecord": True})
+            return JsonResponse({"activity": True})
         else:
             if activity == False:
                 print("no record and false activity")
-                return JsonResponse({"activity": False, "newRecord": False})
+                return JsonResponse({"activity": False})
 
     print(favorite.is_active)
     if request.method == "PUT":
@@ -86,7 +86,7 @@ def updateRecord(request, site_id):
         favorite.is_active = data["is_active"]
         activity = favorite.is_active
         favorite.save()
-        return JsonResponse({"activity": activity, "newRecord": False})
+        return JsonResponse({"activity": activity})
     activity = favorite.is_active
     return JsonResponse({"activity": activity})
 
