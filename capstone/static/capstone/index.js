@@ -3,9 +3,6 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
-
-    //document.querySelector('#topofpage').style.display = 'block';
-    //document.querySelector('#top-site').style.display = 'block';
 });
 
 
@@ -26,9 +23,6 @@ function load_site(site) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log('got to fetch sites')
-            console.log(data)
-
             if (data === undefined || data.length == 0) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
@@ -40,7 +34,6 @@ function load_site(site) {
 
                     var opt = document.createElement("img");
                     opt.setAttribute('src', data[i].image_url);
-                    //opt.setAttribute('Pick a date', 'alternate text');
                     opt.setAttribute('height', '80%');
                     opt.setAttribute('width', '60%');
                     opt.setAttribute('object-fit', 'cover');
