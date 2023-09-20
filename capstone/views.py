@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
-from django.contrib import messages
 from django.views.decorators.csrf import requires_csrf_token
 
 
@@ -39,7 +38,6 @@ def sites(request, site):
 
 @requires_csrf_token
 def updateRecord(request, site_id):
-    print("got to updateRecord")
     data = json.loads(request.body)
     activity = data["is_active"]
     current_user_id = request.user.id
@@ -49,7 +47,6 @@ def updateRecord(request, site_id):
         favsite = Sites.objects.get(id__exact=site_id)
     except Sites.DoesNotExist:
         # requested site does not exist
-        print("site does not exist")
         return JsonResponse({"Error": "Error. Site not found."}, status=404)
 
 
