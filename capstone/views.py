@@ -51,12 +51,11 @@ def updateRecord(request, site_id):
 
 
     # query for user's record
-    watcher = request.user.username
+    #watcher = request.user.username
     try:
         folName = User.objects.get(id__exact=current_user_id)
     except User.DoesNotExist:
         # user's record not found
-        print("user does not exist")
         return JsonResponse({"Error": "Error. User not found."}, status=404)
 
     # find out if favorites record already exists. If not, create it if activity is true
@@ -66,19 +65,15 @@ def updateRecord(request, site_id):
     except Favorites.DoesNotExist:
     # record not found so create record
         if activity == True:
-            print("got to look for favorites record")
             favorites = Favorites(watcher=folName,
                     item=favsite, is_active=True)
             favorites.save()
             return JsonResponse({"activity": True})
         else:
             if activity == False:
-                print("no record and false activity")
                 return JsonResponse({"activity": False})
 
-    print(favorite.is_active)
     if request.method == "PUT":
-        print("got to PUT")
         data = json.loads(request.body)
         favorite.is_active = data["is_active"]
         activity = favorite.is_active
