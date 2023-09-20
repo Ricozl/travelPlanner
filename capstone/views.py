@@ -50,7 +50,7 @@ def updateRecord(request, site_id):
     except Sites.DoesNotExist:
         # requested site does not exist
         print("site does not exist")
-        return JsonResponse({"Error": "Error. Site not found."}, status=404)
+    return JsonResponse({"Error": "Error. Site not found."}, status=404)
 
 
     # query for user's record
