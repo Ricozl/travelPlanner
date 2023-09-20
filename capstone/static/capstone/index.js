@@ -3,22 +3,18 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
-    console.log("got to js page")
 
-    //document.getElementById("remFav").addEventListener("click", removeFav(event));
     //document.querySelector('#topofpage').style.display = 'block';
     //document.querySelector('#top-site').style.display = 'block';
 });
 
 
 function load_site(site) {
-    console.log('got to load_site')
     // Show the site and hide other views
     document.querySelector('#sites').innerHTML = "";
 
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
-    console.log({ site })
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
