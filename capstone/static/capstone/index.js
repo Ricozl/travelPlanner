@@ -118,7 +118,7 @@ function updateRecord(site_id, activity) {
     })
         .then(response => {
             if (!response.ok) {
-                document.querySelector("#message").innerHTML = "Error: " + result.error
+                document.querySelector("#message").innerHTML = "Error: Update was unsuccessful."
             } else {
                 console.log("update good")
             }
