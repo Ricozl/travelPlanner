@@ -43,7 +43,6 @@ def updateRecord(request, site_id):
     data = json.loads(request.body)
     activity = data["is_active"]
     current_user_id = request.user.id
-    newRecord = ""
 
     # query for requested site for favorites
     try:
