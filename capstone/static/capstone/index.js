@@ -117,10 +117,9 @@ function updateRecord(site_id, activity) {
         })
     })
         .then(response => {
-            //if (!response.ok) {
-                //console.log("update unsuccessful")
-            //} else {
-            if (response.ok) {
+            if (!response.ok) {
+                document.querySelector("#message").innerHTML = "Error: " + result.error
+            } else {
                 console.log("update good")
             }
         })
