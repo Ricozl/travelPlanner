@@ -53,13 +53,11 @@ function load_site(site) {
                         // add event listener for clicking on a site
                         jump.addEventListener('click', function(e) {
                             const element = e.target;
-                            console.log(element)
                             element.previousSibling.innerText = "Site is in your Favorites List!"
 
                             // update 'favorites' in database
                             var site_id = parseInt(data[i].id)
                             title = data[i].title
-                            console.log(title)
                             // update favorites table in database, set to active
                             activity = true
                             updateRecord(site_id, activity)
@@ -71,23 +69,18 @@ function load_site(site) {
                         // add event listener for clicking on a site
                         jumptwo.addEventListener('click', function(e) {
                             const element = e.target;
-                            console.log(element)
                             element.previousSibling.innerText = "Site is not in your Favorites List!"
                             // update 'favorites' in database
 
                             var site_id = parseInt(data[i].id)
                             title = data[i].title
-                            console.log(title)
                             // update favorites table in database, set to active
                             activity = false
                             updateRecord(site_id, activity)
                         })
                     }
                     document.querySelector('#sites').append(element);
-                    //})
                 }
-                //};
-                console.log("got to focus")
                 document.querySelector('#sitefocus').focus();
             }
         })
