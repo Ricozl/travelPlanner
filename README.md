@@ -1,6 +1,6 @@
 My final project is a travel website about Rome, Italy. As outlined in the specs, The program uses the Django framework with Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites.
 
-The homepage design consists of a CSS parallax view. I have adjusted the opacity of the images in the parallax view to make them serve as a background to a more readable text.
+The homepage design consists of a CSS parallax view. Parallax scrolling is a web site trend where the background content (i.e. an image) is moved at a different speed than the foreground content while scrolling.I have adjusted the opacity of the images in the parallax view to make them serve as a background to a more readable text.
 
 The parallax viewis followed by a grid of images that is secondary navigation to sites grouped by topic. The images are internal links to pages of text and additional images with more information about each site.
 
