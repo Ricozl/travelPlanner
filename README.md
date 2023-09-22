@@ -5,8 +5,6 @@ The homepage design consists of a parallax scrolling effect using CSS. Parallax 
 For a navigation bar at the top of the page, I have used tabbed navigation to display choices to the User.
 The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is directed to a grid of images that is the secondary navigation at the bottom of the page where the option chosen is focused on. Here there are nine clickable images with category labels. When the User clicks on one, all of the options (images and text) in that category are displayed, including "Add to Favorites" and "Remove from Favorites" links at the bottom of each.
 
-The parallax viewis followed by a grid of images that is secondary navigation to sites grouped by topic. The images are internal links to pages of text and additional images with more information about each site.
-
 The principal navigation bar XX
 I have created my own favicon icon for this website. I'm using a single-page application for the front end with the exceptions of the Map of Rome and the Quiz.
 
