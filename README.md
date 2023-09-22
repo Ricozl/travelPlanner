@@ -1,4 +1,4 @@
-My final project is a travel website about Rome, Italy. As outlined in the specs, The program uses the Django framework with Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models:
+My final project is a travel website about Rome, Italy. As outlined in the specs, The program uses the Django framework with Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites.
 
 The homepage design consists of a CSS parallax view. I have adjusted the opacity of the images in the parallax view to make them serve as a background to a more readable text.
 
