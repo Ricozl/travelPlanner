@@ -3,7 +3,7 @@ My final project is a travel website about Rome, Italy. As outlined in the specs
 The homepage design consists of a parallax scrolling effect using CSS. Parallax scrolling is where the background content (i.e. an image) is moved at a different speed than the foreground content (in this case, bands of text) while scrolling. I have adjusted the opacity of the images to make them better serve as a background to a more readable text. Since parallax scrolling does not always work on mobile devices/smart phones, I have used media queries to turn off the effect on mobile devices.
 
 For a navigation bar at the top of the page, I have used tabbed navigation to display choices to the User.
-The openCity() function is called when the user clicks on one of the buttons in the menu.
+The openCity() function is called when the user clicks on one of the buttons in the menu. I am using custom 
 
 The function hides all elements with the class name "city" (display="none"), and displays the element with the given city name (display="block");
 The parallax viewis followed by a grid of images that is secondary navigation to sites grouped by topic. The images are internal links to pages of text and additional images with more information about each site.
