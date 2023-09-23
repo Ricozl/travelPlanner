@@ -25,9 +25,10 @@ def sites(request, site):
         wat_user = request.user.id
 
         # get all items on signed-in user's favorites list
+        #sites = Favorites.objects.filter(
+            #watcher=wat_user, is_active=True)
+
         sites = Favorites.objects.filter(
-            watcher=wat_user, is_active=True)
-          wat_lists = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
 
         return render(request, "capstone/favorites.html", {
