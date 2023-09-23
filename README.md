@@ -8,6 +8,7 @@ For a navigation bar at the top of the page, I have used tabbed navigation to di
 The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is taken to a grid of images that is the secondary navigation at the bottom of the page where the option chosen is focused on. Here there are nine clickable images with category labels. When the User clicks on one, the database is accessed for that category and all of the options (images and text) in that category are displayed.
 
 Sites
+When a category is clicked on, all of the options (images and text) in that category are displayed.
  including "Add to Favorites" and "Remove from Favorites" links at the bottom of each.
 
 Map of Rome page
