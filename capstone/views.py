@@ -33,8 +33,9 @@ def sites(request, site):
 
         #return render(request, "capstone/favorites.html", {
             #"sites": sites})
-        return JsonResponse([site.serialize() for site in sites], safe=False)
-    
+        #return JsonResponse([site.serialize() for site in sites], safe=False)
+        return JsonResponse({'sites': sites})
+
     else:
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
