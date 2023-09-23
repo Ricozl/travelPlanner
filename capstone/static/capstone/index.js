@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
 });
-
+   // Use navigation button to load 'all posts'
+   document.querySelector('#all_posts').addEventListener('click', function(event) {
+    event.preventDefault();
+    load_page('all_posts')
+});
 
 function load_site(site) {
     // Show the site and hide other views
