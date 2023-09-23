@@ -32,6 +32,11 @@ function load_site(site) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
             else {
+                if (sites == 'favorites') {
+                    console.log(data.item)
+                    console.log(data.watcher)
+                    console.log(data.is_active)
+                } else {
                 for (let i = 0; i < data.length; i++) {
                     // create separate div for each site
                     const element = document.createElement('div');
