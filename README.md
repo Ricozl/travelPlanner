@@ -11,7 +11,12 @@ When a User signs in, they have access to a Rome Quiz written in React which has
 ###Favorites page
 When a signed-in User clicks on one of the nine categories and sees the places in that category, they will notice that at the bottom of each item there are two links, "Add to Favorites" and "Remove from Favorites". These are not available to unsigned-in Users. A signed-in User can then access their Favorites page to see the list they have saved.
 
-As outlined in the specs, The program uses the Django framework, Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites. Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages. I have created my own favicon icon for this website.
+##Specs
+The program uses the Django framework, Python on the back-end and Javascript on the front-end.
+The web application is mobile-responsive.
+It has four models: the User model, Categories, Sites, and Favorites.
+Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages.
+I have created my own favicon icon for this website.
 
 Homepage
 The homepage design consists of a parallax scrolling effect using CSS. Parallax scrolling is where the background content (i.e. an image) is moved at a different speed than the foreground content (in this case, bands of text) while scrolling. I have adjusted the opacity of the images to make them better serve as a background to a more readable text. Since parallax scrolling does not always work on mobile devices/smart phones, I have used media queries to turn off the effect on mobile devices.
