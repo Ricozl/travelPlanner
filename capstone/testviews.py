@@ -33,6 +33,7 @@ def sites(request, site):
         print(wat_lists)
         sites = Sites.objects.filter(
             id=wat_lists.item)
+        print(sites)
 
         data = serializers.serialize("json", sites())
         return JsonResponse([data.serialize() for data in data], safe=False)
