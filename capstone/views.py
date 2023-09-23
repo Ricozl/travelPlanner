@@ -35,6 +35,7 @@ def sites(request, site):
             #"sites": sites})
         #return JsonResponse([site.serialize() for site in sites], safe=False)
         return JsonResponse({'sites': sites})
+        return JsonResponse(post.serialize(), safe=False)
 
     else:
         sites = Sites.objects.filter(
