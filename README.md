@@ -1,6 +1,8 @@
 # Capstone
 ***
-My final project is a travel website about Rome, Italy. As outlined in the specs, The program uses the Django framework, Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites. Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages. I have created my own favicon icon for this website.
+My final project is a travel website about Rome, Italy called ROME TRAVEL. The website presents images and information about activities to enjoy in Rome, organized in nine categories: Attractions, Gelaterie, Museums, Food & Caffes, Markets, Parks, Churches, Ancient Rome, and Shopping.
+
+As outlined in the specs, The program uses the Django framework, Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites. Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages. I have created my own favicon icon for this website.
 
 Homepage
 The homepage design consists of a parallax scrolling effect using CSS. Parallax scrolling is where the background content (i.e. an image) is moved at a different speed than the foreground content (in this case, bands of text) while scrolling. I have adjusted the opacity of the images to make them better serve as a background to a more readable text. Since parallax scrolling does not always work on mobile devices/smart phones, I have used media queries to turn off the effect on mobile devices.
