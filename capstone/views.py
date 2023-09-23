@@ -1,7 +1,7 @@
 import json
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
@@ -25,20 +25,11 @@ def sites(request, site):
         wat_user = request.user.id
 
         # get all items on signed-in user's favorites list
-        #sites = Favorites.objects.filter(
-            #watcher=wat_user, is_active=True)
-
         sites = Favorites.objects.filter(
-        watcher=wat_user, is_active=True).select_related('item').order_by('item')
-        data = serializers.serialize("json", sites)
-        print(data)
+            watcher=wat_user, is_active=True)
 
-        #return render(request, "capstone/favorites.html", {
-            #"sites": sites})
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
-        return JsonResponse({'sites': data}, safe=False)
-        #return JsonResponse(sites.serialize(), safe=False)
-
+        return render(request, "capstone/favorites.html", {
+            "sites": sites})
     else:
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
