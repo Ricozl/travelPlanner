@@ -6,6 +6,8 @@ A User who is not signed-in can see all of these sites and access a Map of Rome 
 
 When a User signs in, they have access to a Rome Quiz written in React. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they won or not.
 
+A signed-in User also has access to their Favorites page.
+
 As outlined in the specs, The program uses the Django framework, Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites. Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages. I have created my own favicon icon for this website.
 
 Homepage
