@@ -33,8 +33,8 @@ def sites(request, site):
 
         #return render(request, "capstone/favorites.html", {
             #"sites": sites})
-        #return JsonResponse([site.serialize() for site in sites], safe=False)
-        return HttpResponse({'sites': sites})
+        return JsonResponse([site.serialize() for site in sites], safe=False)
+        #return HttpResponse({'sites': sites})
         #return JsonResponse(sites.serialize(), safe=False)
 
     else:
