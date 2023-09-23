@@ -26,7 +26,7 @@ The homepage design consists of a parallax scrolling effect using CSS. Parallax 
 
 Navigation
 For a navigation bar at the top of the page, I have used tabbed navigation to display choices to the User.
-The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is taken to a grid of images that is the secondary navigation at the bottom of the page where the option chosen is focused on. Here there are nine clickable images with category labels. When the User clicks on one, the database is accessed for that category. I have opted for a simplified navigation bar for the Map of Rome page and the Quiz page.
+The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is taken to a grid of images that is the secondary navigation at the bottom of the page where the option chosen is focused on. Here there are nine clickable images with category labels. When the User clicks on one, the database is accessed for that category. I have opted for a third navigation bar for the Map of Rome page and the Quiz page.
 
 Sites
 When a category is clicked on, all of the options (images and text) in that category are displayed. If the user is signed-in, there are links for "Add to Favorites" and "Remove from Favorites" at the bottom of each site. If the user clicks "Add to Favorites", there will be a message that the site is in Favorites. The user can choose Favorites from the navigation bar to see all the sites in their favorites list.
