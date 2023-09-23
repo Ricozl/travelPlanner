@@ -27,6 +27,7 @@ function load_site(site) {
     })
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             if (data === undefined || data.length == 0) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
