@@ -24,7 +24,7 @@
     <link rel="icon" type="image/x-icon" href="/static/capstone/favicon.ico">
 
     {% block script %}
-
+        <script src="{% static 'capstone/index.js' %}"></script>
     {% endblock %}
 </head>
 
@@ -110,9 +110,5 @@
     </div>
 
 </body>
-{% block script %}
-    <script src="{% static 'capstone/index.js' %}"></script>
-
-{% endblock %}
 
 </html>
