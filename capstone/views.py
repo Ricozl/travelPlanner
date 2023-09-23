@@ -1,7 +1,7 @@
 import json
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
@@ -34,7 +34,7 @@ def sites(request, site):
         #return render(request, "capstone/favorites.html", {
             #"sites": sites})
         #return JsonResponse([site.serialize() for site in sites], safe=False)
-        return JsonResponse({'sites': sites})
+        return HttpResponse({'sites': sites})
         #return JsonResponse(sites.serialize(), safe=False)
 
     else:
