@@ -2,11 +2,12 @@
 ***
 My final project is a travel website about Rome, Italy called ROME TRAVEL. The website presents images and information about activities to enjoy in Rome, organized in nine categories: Attractions, Gelaterie, Museums, Food & Caffes, Markets, Parks, Churches, Ancient Rome, and Shopping. By clicking on one of the categories, the User can see images and more detailed information about each offering.
 
+###
 A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API. The map can be zoomed in and out. There are markers at the site locations that, when clicked, display a pop-up window with info about the site. Also, a link to an exterior webpage that opens in a window without leaving the website.
 
 When a User signs in, they have access to a Rome Quiz written in React. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they won or not.
 
-A signed-in User also has access to their Favorites page.
+When a signed-in User clicks on one of the nine categories and sees the places in that category, they will notice that at the bottom of each item there are two links, "Add to Favorites" and "Remove from Favorites". These are not available to unsigned-in Users. A signed-in User can then access their Favorites page to see the list they have saved.
 
 As outlined in the specs, The program uses the Django framework, Python on the back-end and Javascript on the front-end. My web application is mobile-responsive. It has four models: the User model, Categories, Sites, and Favorites. Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages. I have created my own favicon icon for this website.
 
