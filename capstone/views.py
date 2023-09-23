@@ -30,6 +30,7 @@ def sites(request, site):
 
         sites = Favorites.objects.filter(
         watcher=wat_user, is_active=True).select_related('item').order_by('item')
+        data = serializers.serialize("json", sites)
 
         #return render(request, "capstone/favorites.html", {
             #"sites": sites})
