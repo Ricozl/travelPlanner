@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
 });
-   // Use navigation button to load 'all posts'
-   document.querySelector('#all_posts').addEventListener('click', function(event) {
+   // Use navigation button to load 'favorites'
+   document.querySelector('#favorites').addEventListener('click', function(event) {
     event.preventDefault();
-    load_page('all_posts')
+    load_site('favorites')
 });
 
 function load_site(site) {
