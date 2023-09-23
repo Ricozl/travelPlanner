@@ -2,8 +2,8 @@
 ***
 My final project is a travel website about Rome, Italy called ROME TRAVEL. The website presents images and information about activities to enjoy in Rome, organized in nine categories: Attractions, Gelaterie, Museums, Food & Caffes, Markets, Parks, Churches, Ancient Rome, and Shopping. By clicking on one of the categories, the User can see images and more detailed information about each offering.
 
-###Available to All Users
-A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API. The map can be zoomed in and out. There are markers at the site locations that, when clicked, display a pop-up window with info about the site. Also, a link to an exterior webpage that opens in a window without leaving the website.
+###Map of Rome using Mapbox.com API
+A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API and has it's own html page. The map can be zoomed in and out. There are markers at the site locations that, when clicked, display a pop-up window with info about the site. Also, a link to an exterior webpage that opens in a window without leaving the website.
 
 ###Available to Signed-in Users only
 When a User signs in, they have access to a Rome Quiz written in React. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they won or not.
