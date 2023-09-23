@@ -42,7 +42,7 @@
                 {% if user.is_authenticated %}
 
                 <button class="tablinks"><a href="{% url 'quiz' %}">Quiz</a></button>
-                <button class="tablinks" onclick=”openCity(event, 'Favorites')">Favorites</button>
+                <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
                 <button class="tablinks" onclick="openCity(event, 'Logout')">Logout</button>
                 {% else %}
                 <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
