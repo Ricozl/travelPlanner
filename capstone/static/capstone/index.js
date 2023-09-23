@@ -3,11 +3,11 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
-});
+//});
    // Use navigation button to load 'favorites'
    document.querySelector('#favorites').addEventListener('click', function(event) {
-    event.preventDefault();
-    load_site('favorites')
+        event.preventDefault();
+        load_site('favorites')
 });
 
 function load_site(site) {
