@@ -31,8 +31,10 @@ def sites(request, site):
         wat_lists = Favorites.objects.filter(
             watcher=wat_user, is_active=True).select_related('item').order_by('item')
 
-        return render(request, "capstone/favorites.html", {
-            "sites": sites})
+        data = serializers.serialize("xml", SomeModel.objects.all())
+
+        #return render(request, "capstone/favorites.html", {
+            #"sites": sites})
     else:
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
