@@ -12,7 +12,7 @@ Map of Rome page
 The map of Rome has its own html page because it is using an external API to create the map. This page and the quiz page also have a secondary navigatioon bar. The map is created using Mapbox. The site markers are created using XXX. Clicking on a marker brings up a pop-up window with information and a link to an external webpage,opened in a window without leaving the Rome Travel Website.
 
 The Quiz page
-The quiz has its own html page which is created using REACT. The quiz is an interactive page in which the user inputs hiw answer and sees results immediately.
+The quiz has its own html page which is created using REACT. The quiz is an interactive page in which the user inputs hiw answer and sees results immediately. Only signed-in users can access it.
 
 The Favorites page XXX
-This page is built using javascript as the front end and python for the back end. The users can add or remove a favorite from their list. i've used a model and the "add and remove" are contained in the sites in the main program. The favorites page accesses the database and displays the favorites model data.
+This page is built using javascript as the front end and python for the back end. Only signed-in users can access it. The users can add or remove a favorite from their list. i've used a model and the "add and remove" are contained in the sites in the main program. The favorites page accesses the database and displays the favorites model data.
