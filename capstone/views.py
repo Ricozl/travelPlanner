@@ -25,7 +25,7 @@ def sites(request, site):
         wat_user = request.user.id
 
         # get all items on signed-in user's favorites list
-        favorites = Favorites.objects.filter(
+        sites = Favorites.objects.filter(
             watcher=wat_user, is_active=True)
 
         #sites = Favorites.objects.filter(
@@ -35,7 +35,7 @@ def sites(request, site):
             #"sites": sites})
         #return JsonResponse([site.serialize() for site in sites], safe=False)
         #return JsonResponse({'sites': sites})
-        return JsonResponse(favorites.serialize(), safe=False)
+        #return JsonResponse(sites.serialize(), safe=False)
 
     else:
         sites = Sites.objects.filter(
