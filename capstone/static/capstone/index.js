@@ -3,12 +3,8 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
-//});
-   // Use navigation button to load 'favorites'
-   document.querySelector('#favorites').addEventListener('click', function(event) {
-        event.preventDefault();
-        load_site('favorites')
 });
+
 
 function load_site(site) {
     // Show the site and hide other views
@@ -27,16 +23,10 @@ function load_site(site) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             if (data === undefined || data.length == 0) {
                 document.querySelector('#sites').innerHTML = "No Sites Found";
             }
             else {
-                if (sites == 'favorites') {
-                    console.log(data.item)
-                    console.log(data.watcher)
-                    console.log(data.is_active)
-                } else {
                 for (let i = 0; i < data.length; i++) {
                     // create separate div for each site
                     const element = document.createElement('div');
