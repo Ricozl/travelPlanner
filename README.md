@@ -6,7 +6,7 @@ For a navigation bar at the top of the page, I have used tabbed navigation to di
 The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is directed to a grid of images that is the secondary navigation at the bottom of the page where the option chosen is focused on. Here there are nine clickable images with category labels. When the User clicks on one, all of the options (images and text) in that category are displayed, including "Add to Favorites" and "Remove from Favorites" links at the bottom of each.
 
 The principal navigation bar XX
-I have created my own favicon icon for this website. I'm using a single-page application for the front end with the exceptions of the Map of Rome and the Quiz.
+I have created my own favicon icon for this website. 
 
 Map of Rome page
 The map of Rome has its own html page because it is using an external API to create the map. This page and the quiz page also have a secondary navigatioon bar. The map is created using Mapbox. The site markers are created using XXX. Clicking on a marke brings up a pop-up window with information and a link to an external webpage. This external website is opened in a window without leaving the Rome Travel Website.
