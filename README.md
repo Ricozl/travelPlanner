@@ -13,9 +13,9 @@ When a signed-in User clicks on one of the nine categories and sees the places i
 
 ##Specs
 The program uses the Django framework, Python on the back-end and Javascript on the front-end.
-The web application is mobile-responsive.
 It has four models: the User model, Categories, Sites, and Favorites.
 Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages.
+The web application is mobile-responsive.
 I have created my own favicon icon for this website.
 
 Homepage
