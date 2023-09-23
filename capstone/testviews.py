@@ -30,7 +30,7 @@ def sites(request, site):
 
         wat_lists = Favorites.objects.filter(
             watcher=wat_user, is_active=True).select_related('item').order_by('item')
-        sites = Favorites.objects.filter(
+        sites = Sites.objects.filter(
             watcher=wat_user, is_active=True)
 
         data = serializers.serialize("json", SomeModel.objects.all())
