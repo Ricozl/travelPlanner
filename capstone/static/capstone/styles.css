@@ -139,7 +139,7 @@ h3 {
 .section-content {
   position: relative;
 }
- /* Container holding the image and the text */
+ /* Container holding the image and text for Home page secondary navigation (using images) */
  .pic-container {
     position: relative;
 }
@@ -169,7 +169,7 @@ h3 {
   padding: 0 4px;
 }
 
-/* Create three equal columns that sit next to each other */
+/* Create three equal columns that sit next to each other for secondary navigation */
 .column {
   flex: 33%;
   max-width: 33%;
