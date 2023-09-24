@@ -9,8 +9,6 @@ A User who is not signed-in can see all of these sites and access a Map of Rome 
 
 ### Rome Quiz written in React
 When a User signs in, they have access to a **Quiz** written in React which has it's own html page. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they have won or not.
-The Quiz page
- The quiz is an interactive page in which the user inputs hiw answer and sees results immediately. Only signed-in users can access it.
 
 ## Specs
 The program uses the Django framework, Python on the back-end and Javascript on the front-end.
