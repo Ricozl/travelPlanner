@@ -14,11 +14,11 @@ A User who is not signed-in can see all of these sites and access a Map of Rome 
 When a User signs in, they have access to a **Quiz** written in React which has it's own html page. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they have won or not.
 
 ## Specs
-The program uses the Django framework, Python on the back-end and Javascript on the front-end.
-It has four models: the User model, Categories, Sites, and Favorites.
-Most of the website is designed as a single-page application, with the exception of the Map of Rome and the Quiz which each have their own html pages.
-The web application is mobile-responsive.
-I have created my own favicon icon for this website.
+* The program uses the Django framework, Python on the back-end and Javascript on the front-end.
+* It has four models: the User model, Categories, Sites, and Favorites.
+* The Home page is designed as a single-page application. The **Map of Rome**, the **Quiz** and the **Favorites** page each have their own html pages.
+* The web application is mobile-responsive.
+* I have created my own favicon icon for this website.
 
 ### Distinctiveness and Complexity
 This project is not based on any other projects in this course. There is no e-commerce involved, no creating posts or comments or following posters. There is a Favorites page which I don't believe is too much. The complexity is in the way the information is presented which has been detailed in the above paragraphs, including using the Mapbox API to create a Map of Rome with even more information available to the User. The overall design of the website has been created to maintain a cohesive look throughout. The Favorites page means the User can keep a list of what they like and add and subtract from it. For fun, I've created an interactive quiz about Rome written in React (which is new to me).
