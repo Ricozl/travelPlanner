@@ -242,6 +242,7 @@ h4 {
   color: red;
 }
 
+/* for Mapbox API Map of Rome */
 #backmap {
   background-color: #e6ffff;
   display: flex;
@@ -274,7 +275,7 @@ h4 {
   width: 300px;
 }
 
-/* for React code */
+/* for React code for Quiz */
 #app {
   text-align: center;
   font-family: sans-serif;
@@ -288,6 +289,7 @@ h4 {
   opacity: 0.75;
   background-size: cover;
   position: relative;
+  background-color: #e6ffff;
 }
 
 .quesText {
