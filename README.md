@@ -6,8 +6,6 @@ When a category is clicked on, all of the options (images and text) in that cate
 
 ### Map of Rome using Mapbox.com API
 A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API and has it's own html page. The map can be zoomed in and out. There are markers at the site locations that, when clicked, display a pop-up window with information and a link to an external webpage that opens in a window without leaving the Rome Travel Website.
-Map of Rome page
-  The site markers are created using XXX. Clicking on a marker brings up a pop-up window with information and a link to an external webpage,opened in a window
 
 ### Rome Quiz written in React
 When a User signs in, they have access to a Rome Quiz written in React which has it's own html page. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they have won or not.
