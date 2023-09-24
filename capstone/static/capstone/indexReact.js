@@ -98,7 +98,7 @@ function App() {
     <div id="quizmap">
         <div className ="app">
             {!showScore ? (
-
+            // show current score out of total questions, displays question with answers
             <div>
                 <div className='score'>You scored {score} out of {questions.length}</div>
                 <div className='questions'>
@@ -106,7 +106,6 @@ function App() {
                             <span>Question {currentQuestion + 1}</span>/{questions.length}
 
                         </div>
-
                         <div className='quesText'>
                             <p id="ques">{questions[currentQuestion].text}</p>
 
@@ -114,11 +113,13 @@ function App() {
                     </div>
                     <div className='answerSection'>
                         {questions[currentQuestion].answers.map((answer) => (
+                            // each answer is a button, checks if correct, goes to function to handle if right or wrong
                             <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.choice}</button>
                         ))}
                 </div>
             </div>
             ) : (
+            // game over, show results
             <div className="result">
                 <h3>Result</h3>
                 <p>
