@@ -3,8 +3,6 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     // by default, load all
     event.preventDefault();
-
-    document.querySelector('#favorites').addEventListener('click', load_sites('favorites'))
 });
 
 
