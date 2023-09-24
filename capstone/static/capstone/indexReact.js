@@ -1,4 +1,6 @@
 
+// javascript for React to run Quiz
+// Array of questions and answers for quiz
 
 function App() {
     const questions = [
@@ -49,6 +51,7 @@ function App() {
         },
     ];
 
+    // Set state for different variables
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
@@ -58,26 +61,32 @@ function App() {
 
     const [result, setResult] = React.useState("")
 
+    // function to handle right answers
     function handleRightAns (e) {
-        // got question right
+        // got question right, update score and move to next question
         setScore(score + 1);
 
         const nextQuestion = currentQuestion + 1;
+        // Check to see if at end of quiz, if not get next question
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion),
             <p>{questions[currentQuestion].text}</p>
         } else {
+            // end of quiz, display score and result
             setShowScore(true);
             setResult("Fantastico! You Won!")
         }
     };
 
+    // function to handle wrong answers
     function handleClick (e) {
-        // got answer wrong
+        // got answer wrong, move to next question
         const nextQuestion = currentQuestion + 1;
+        // check to see if end of quiz, if not move to next question
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion)
         } else {
+            // if end of quiz, show score and result
             setShowScore(true);
             setResult("Nice try, but no cigar!")
 
