@@ -25,21 +25,11 @@ def sites(request, site):
         wat_user = request.user.id
 
         # get all items on signed-in user's favorites list
-        #sites = Favorites.objects.filter(
-            #watcher=wat_user, is_active=True)
+        sites = Favorites.objects.filter(
+            watcher=wat_user, is_active=True)
 
-        wat_lists = Favorites.objects.filter(
-            watcher=wat_user, is_active=True).select_related('item').order_by('item')
-        print(wat_lists)
-        sites = Sites.objects.filter(
-            id=wat_lists.item)
-        print(sites)
-
-        data = serializers.serialize("json", sites())
-        return JsonResponse([data.serialize() for data in data], safe=False)
-
-        #return render(request, "capstone/favorites.html", {
-            #"sites": sites})
+        return render(request, "capstone/favorites.html", {
+            "sites": sites})
     else:
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
