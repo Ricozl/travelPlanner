@@ -1,4 +1,4 @@
-<script>
+
     // my apikey
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwLXVuNjIzIiwiYSI6ImNsamFsNmhxbjBjZmUzZ25sNGVlbDV6MXEifQ.JHQ6f3lO0v427Py_snS_Qg';
 
@@ -237,7 +237,4 @@
             map.getCanvas().style.cursor = '';
         });
     });
-
-
-</script>
 
