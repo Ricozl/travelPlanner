@@ -9,6 +9,7 @@ The User can choose **Favorites** from the navigation bar to see all the sites i
 
 ### Map of Rome using Mapbox.com API
 A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API and has it's own html page. The map can be zoomed in and out. There are markers at the site locations that, when clicked, display a pop-up window with information and a link to an external webpage that opens in a window without leaving the Rome Travel Website. This map uses geojson data for the coordinates to place the markers, and to load a description of each site.
+Mapbox GL JS is a client-side JavaScript library for building web maps and web applications with Mapbox's modern mapping technology. You can use Mapbox GL JS to display Mapbox maps in a web browser or client, add user interactivity, and customize the map experience in your application.
 
 ### Rome Quiz written in React
 When a User signs in, they have access to a **Quiz** written in React which has it's own html page. The Quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. Once answered, the question is immediately changed to the next one. When they have answered all five questions, they are shown their score and told whether they have won or not.
@@ -19,6 +20,9 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 * The Home page is designed as a single-page application. The **Map of Rome**, the **Quiz** and the **Favorites** page each have their own html pages.
 * The web application is mobile-responsive.
 * I have created my own favicon icon for this website.
+
+## Files
+* mapPlaces.html
 
 ### Distinctiveness and Complexity
 This project is not based on any other projects in this course. There is no e-commerce involved, no creating posts or comments or following posters. There is a Favorites page which I don't believe is too much. The complexity is in the way the information is presented, including interweaving the Mapbox API to create a Map of Rome, as well as an interactive Quiz written in React. I wanted to use the tools available to create a dynamic website that is engaging - not dull. The overall design of the website has been created to maintain a cohesive look throughout, as well as bringing variety and interest to each page. The inclusion of a Favorites page means the User can maintain a list of what they like, add and subtract from it, and return to it whenever they are signed in. The interactive quiz about Rome can be re-taken as many times as the User wants to. It introduces React (which is new to me) to the website.
