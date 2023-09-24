@@ -33,7 +33,7 @@ The openCity() function is called when the user clicks on one of the buttons in 
 
 
 Map of Rome page
-The map of Rome has its own html page because it is using an external API to create the map. This page and the quiz page also have a secondary navigatioon bar. The map is created using Mapbox. The site markers are created using XXX. Clicking on a marker brings up a pop-up window with information and a link to an external webpage,opened in a window without leaving the Rome Travel Website.
+The map of Rome has its own html page because it is using an external API to create the map. This page and the quiz page also have a secondary navigation bar. The map is created using Mapbox. The site markers are created using XXX. Clicking on a marker brings up a pop-up window with information and a link to an external webpage,opened in a window without leaving the Rome Travel Website.
 
 The Quiz page
 The quiz has its own html page which is created using REACT. The quiz is an interactive page in which the user inputs hiw answer and sees results immediately. Only signed-in users can access it.
