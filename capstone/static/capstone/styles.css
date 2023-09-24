@@ -276,11 +276,14 @@ h4 {
 }
 
 /* for React code for Quiz */
+#backapp {
+  background-color: #e6ffff;
+}
+
 #app {
   text-align: center;
   font-family: sans-serif;
   color: black;
-  background-color: #e6ffff;
 }
 
 #quizmap {
