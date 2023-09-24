@@ -1,6 +1,6 @@
 # Capstone
 ***
-My final project is a travel website about Rome, Italy called ROME TRAVEL. The website presents images and information about activities to enjoy in Rome, organized in nine categories: Attractions, Gelaterie, Museums, Food & Caffes, Markets, Parks, Churches, Ancient Rome, and Shopping.
+My final project is a travel website about Rome, Italy called **ROME TRAVEL**. The website presents images and information about activities to enjoy in Rome, organized in nine categories: Attractions, Gelaterie, Museums, Food & Caffes, Markets, Parks, Churches, Ancient Rome, and Shopping.
 
 When a category is clicked on, all of the options (images and text) in that category are displayed. If the user is signed-in, there are links for "Add to Favorites" and "Remove from Favorites" at the bottom of each site. If the user clicks "Add to Favorites", there will be a message that the site is in Favorites. If the user clicks "Remove from Favorites", there will be a message that the site is not in Favorites.
 
@@ -25,8 +25,8 @@ This project is not based on any other projects in this course. There is no e-co
 
 The complexity of the website is enhanced by using CSS effects to make the website visually appealing and lively. The **Home Page** design consists of a parallax scrolling effect using CSS. Parallax scrolling makes the background content (here, several images) move at a different speed than the foreground content (in this case, bands of text) while scrolling. I have adjusted the opacity of the images to make them better serve as a background to a more readable text. Since parallax scrolling does not always work on mobile devices/smart phones, I have used media queries to turn off the effect on mobile devices.
 
-Another area of complexity is in the use of different **Navigation** elements. For a navigation bar at the top of the page, I have used tabbed navigation to display choices to the User. The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is taken to a second level of navigation: a grid of nine clickable images with category labels at the bottom of the page where the option chosen is focused on. When the User clicks on one, the database is accessed for that category and the places in the category are displayed. The User can keep clicking on the images to see what is offered in each category. The other options in the top Navigation bar take the User to the respective pages directly.
+Another area of complexity is in the use of different **Navigation** elements. For a navigation bar at the top of the page, I have used **tabbed navigation** to display choices to the User. The openCity() function is called when the user clicks on one of the buttons in the menu. When the User chooses one of the categories presented from "Where to Go" or "Places to Eat", the User is taken to a second level of navigation: **a grid of nine clickable images** with category labels at the bottom of the page where the option chosen is focused on. When the User clicks on one, the database is accessed for that category and the places in the category are displayed. The User can keep clicking on the images to see what is offered in each category. The other options in the top Navigation bar take the User to the respective pages directly.
 
-I have opted for a responsive horizontal navigation bar for the Map of Rome page, the Quiz page, and the Favorites page.
+I have opted for a responsive **horizontal navigation bar** for the Map of Rome page, the Quiz page, and the Favorites page.
 
 
