@@ -280,6 +280,7 @@ h4 {
   text-align: center;
   font-family: sans-serif;
   color: black;
+  background-color: #e6ffff;
 }
 
 #quizmap {
@@ -289,7 +290,6 @@ h4 {
   opacity: 0.75;
   background-size: cover;
   position: relative;
-  background-color: #e6ffff;
 }
 
 .quesText {
