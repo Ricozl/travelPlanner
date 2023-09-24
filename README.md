@@ -9,7 +9,7 @@ A User who is not signed-in can see all of these sites and access a Map of Rome 
 When a User signs in, they have access to a Rome Quiz written in React which has it's own html page. The quiz is interactive; the User chooses from a list of multiple-choice answers and immediately sees their score. When they have answered all five questions, they are shown their score and told whether they have won or not.
 
 ### Favorites page
-When a signed-in User clicks on one of the nine categories and sees the places in that category, they will notice that at the bottom of each item there are two links, "Add to Favorites" and "Remove from Favorites". These are not available to unsigned-in Users. A signed-in User can then access their Favorites page to see the list they have saved.
+When a signed-in User clicks on one of the nine categories and sees the details for each place in that category, they will notice that at the bottom of each item there are two links, "Add to Favorites" and "Remove from Favorites". These are not available to unsigned-in Users. Clicking on "Add" will add the item to the favorites page, giving a message that it has been added. A signed-in User can then access their Favorites page to see the list they have saved.
 
 ## Specs
 The program uses the Django framework, Python on the back-end and Javascript on the front-end.
