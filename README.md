@@ -28,6 +28,7 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 * mapPlaces.html = Map of Rome created using Mapbox GL JS
 * favorites.html = User's saved favorite sites
 * quiz.html = Interactive Rome quiz built with REACT
+* topnavbar.html = 
 
 * views.py = back-end Python code
 * index.js = front-end Javascript code, not including Mapbox GL JS or React js
