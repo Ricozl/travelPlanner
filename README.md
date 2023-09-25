@@ -26,7 +26,8 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 * login.html = login page
 * register.html = register page
 * mapPlaces.html = Map of Rome created using Mapbox GL JS
-* favorites.html = 
+* favorites.html = User's saved favorite sites
+* quiz.html = Interactive Rome quiz built with REACT
 
 ### Distinctiveness and Complexity
 This project is not based on any other projects in this course. There is no e-commerce involved, no creating posts or comments or following posters. There is a Favorites page which I don't believe is too much. The complexity is in the way the information is presented, including interweaving the Mapbox API to create a Map of Rome, as well as an interactive Quiz written in React. I wanted to use the tools available to create a dynamic website that is engaging - not dull. The overall design of the website has been created to maintain a cohesive look throughout, as well as bringing variety and interest to each page. The inclusion of a Favorites page means the User can maintain a list of what they like, add and subtract from it, and return to it whenever they are signed in. The interactive quiz about Rome can be re-taken as many times as the User wants to. It introduces React (which is new to me) to the website.
