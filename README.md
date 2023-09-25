@@ -21,6 +21,8 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 * I have created my own favicon icon for this website.
 
 ## Files
+* layout.html = tabbed navigation for Home page
+* index.html = 
 * mapPlaces.html
 
 ### Distinctiveness and Complexity
