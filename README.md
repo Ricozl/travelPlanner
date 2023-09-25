@@ -17,7 +17,7 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 * The program uses the Django framework, Python on the back-end and Javascript on the front-end.
 * It has four models: the User model, Categories, Sites, and Favorites.
 * The Home page is designed as a single-page application. The **Map of Rome**, the **Quiz** and the **Favorites** page each have their own html pages.
-* The web application is mobile-responsive.
+* The web application is mobile-responsive, using media queries.
 * I have created my own favicon icon for this website.
 
 ## Files
