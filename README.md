@@ -22,7 +22,7 @@ When a User signs in, they have access to a **Quiz** written in React which has 
 
 ## Files
 * layout.html = tabbed navigation for Home page
-* index.html = 
+* index.html = Home page parallax scrolling, image grid navigation, display of sites
 * mapPlaces.html
 
 ### Distinctiveness and Complexity
