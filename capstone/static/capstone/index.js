@@ -73,7 +73,7 @@ function load_site(site) {
 
                             var site_id = parseInt(data[i].id)
                             title = data[i].title
-                            // update favorites table in database, set to active
+                            // update favorites table in database, set to inactive
                             activity = false
                             updateRecord(site_id, activity)
                         })
