@@ -21,6 +21,7 @@ def quiz(request):
 
 def sites(request, site):
     if site == "favorites":
+        print("got to favorites in sites function")
          # get signed-in user's id
         wat_user = request.user.id
 
@@ -86,6 +87,7 @@ def updateRecord(request, site_id):
 
 
 def favorites(request):
+    print("got to favorites function")
     # get signed-in user's id
     wat_user = request.user.id
     # get all items on signed-in user's favorites list
