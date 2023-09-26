@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 function load_site(site) {
-    // Show the site and hide other views
+    // Show the sites and hide other views
     document.querySelector('#sites').innerHTML = "";
 
     document.querySelector('#topofpage').style.display = "none";
