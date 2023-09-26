@@ -42,7 +42,7 @@ function load_site(site) {
                     const ele = document.createElement('p');
                     ele.innerHTML = `<p style="display:inline-block; width:50%;">${data[i].description}</p>`
                     element.appendChild(ele);
-                    //const jump = document.createElement('span');
+                    // for signed-in Users create Add and Remove Favorites
                     userName = document.getElementById('user_name')
                     if (userName) {
                         const jump = document.createElement('p');
