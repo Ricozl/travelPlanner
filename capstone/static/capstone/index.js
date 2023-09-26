@@ -89,10 +89,9 @@ function load_site(site) {
 
 };
 
-function remFavorite(id) {
+function remFavorite(site_id) {
     console.log("got to remFavorite")
     activity = false
-    site_id = id
     updateRecord(site_id, activity)
 }
 
