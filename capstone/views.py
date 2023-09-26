@@ -74,7 +74,7 @@ def updateRecord(request, site_id):
             if activity == False:
                 return JsonResponse({"activity": False})
 
-    # Update is_active in database
+    # Update "is_active" field in database
     if request.method == "PUT":
         data = json.loads(request.body)
         favorite.is_active = data["is_active"]
