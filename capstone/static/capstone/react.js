@@ -1,5 +1,5 @@
 
-// javascript for React to run Quiz
+// code for React to run Quiz
 // Array of questions and answers for quiz
 
 function App() {
