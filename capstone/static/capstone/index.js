@@ -89,7 +89,12 @@ function load_site(site) {
 
 };
 
-function remFavorite(site_id)
+function remFavorite(site_id) {
+    console.log("got to remFavorite")
+    activity = False
+    updateRecord(site_id, activity)
+    
+}
 
 function updateRecord(site_id, activity) {
     // update 'is_active' in database for both Add and Remove from Favorites
