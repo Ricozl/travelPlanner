@@ -1,7 +1,6 @@
 
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    // by default, load all
     event.preventDefault();
 });
 
