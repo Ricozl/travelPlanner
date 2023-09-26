@@ -91,7 +91,7 @@ function load_site(site) {
 
 function remFavorite(site_id) {
     console.log("got to remFavorite")
-    activity = False
+    activity = false
     updateRecord(site_id, activity)
 }
 
