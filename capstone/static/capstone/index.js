@@ -90,7 +90,7 @@ function load_site(site) {
 };
 
 function remFavorite(site_id) {
-    console.log("got to remFavorite")
+    // remove favorite from Favorites page
     activity = false
     updateRecord(site_id, activity)
 }
