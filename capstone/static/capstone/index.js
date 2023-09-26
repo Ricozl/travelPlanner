@@ -90,7 +90,7 @@ function load_site(site) {
 };
 
 function updateRecord(site_id, activity) {
-    // update 'content' in database
+    // update 'is_active' in database
     const csrftoken = getCookie('csrftoken');
     fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
