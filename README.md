@@ -5,7 +5,7 @@ My final project is a travel website about Rome, Italy called **ROME TRAVEL**. T
 When a category is clicked on, all of the options (images and text) in that category are displayed. If the user is signed-in, there are links for "Add to Favorites" and "Remove from Favorites" at the bottom of each site. If the user clicks "Add to Favorites", there will be a message that the site is in Favorites. If the user clicks "Remove from Favorites", there will be a message that the site is not in Favorites.
 
 ### Favorites Page ###
-The User can choose **Favorites** from the navigation bar to see all the sites in their favorites list. This page is only available to signed-in Users.
+The User can choose **Favorites** from the navigation bar to see all the sites in their favorites list. There is a "Remove from Favorites" icon at the bottom of each site. This page is only available to signed-in Users.
 
 ### Map of Rome using Mapbox.com API
 A User who is not signed-in can see all of these sites and access a Map of Rome to see where they are located. The map is created using the Mapbox.com API and has it's own html page. Mapbox GL JS is a client-side JavaScript library for building web maps and web applications with Mapbox's modern mapping technology. The map can be zoomed in and out. There are custom markers at the site locations that, when clicked, display a pop-up window with information and a link to an external webpage that opens in a window without leaving the Rome Travel Website. This map uses geojson data for the coordinates to place the markers, and to load a description of each site.
