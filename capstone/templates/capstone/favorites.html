@@ -20,8 +20,6 @@
         {% endif %}
 
         <p>{{ favorite.item.description }}</p>
-        <p>{{ favorite.item.sites_category }}</p>
-        <p>{{ favorite.item.id }}</p>
         <p onclick="remFavorite('{{ favorite.item.id }}')">Click to Remove from Favorites <img src="static/capstone/open-heart.png" style="width:20px; height:20px;"></p>
         <br><br>
     {% empty %}
