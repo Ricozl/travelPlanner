@@ -31,6 +31,7 @@ def sites(request, site):
         return render(request, "capstone/favorites.html", {
             "sites": sites})
     else:
+        # get all items in a category to display
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
         return JsonResponse([site.serialize() for site in sites], safe=False)
@@ -51,7 +52,6 @@ def updateRecord(request, site_id):
 
 
     # query for user's record
-    #watcher = request.user.username
     try:
         folName = User.objects.get(id__exact=current_user_id)
     except User.DoesNotExist:
@@ -70,9 +70,11 @@ def updateRecord(request, site_id):
             favorites.save()
             return JsonResponse({"activity": True})
         else:
+            # if not found and activity is false, just return
             if activity == False:
                 return JsonResponse({"activity": False})
 
+    # Update is_active in database
     if request.method == "PUT":
         data = json.loads(request.body)
         favorite.is_active = data["is_active"]
