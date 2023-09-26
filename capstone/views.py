@@ -20,22 +20,22 @@ def quiz(request):
     return render(request, "capstone/quiz.html")
 
 def sites(request, site):
-    if site == "favorites":
-        print("got to favorites in sites function")
+    #if site == "favorites":
+        #print("got to favorites in sites function")
          # get signed-in user's id
-        wat_user = request.user.id
+        #wat_user = request.user.id
 
         # get all items on signed-in user's favorites list
-        sites = Favorites.objects.filter(
-            watcher=wat_user, is_active=True)
+        #sites = Favorites.objects.filter(
+            #watcher=wat_user, is_active=True)
 
-        return render(request, "capstone/favorites.html", {
-            "sites": sites})
-    else:
-        # get all items in a category to display
-        sites = Sites.objects.filter(
-            sites_category__cat_name=site)
-        return JsonResponse([site.serialize() for site in sites], safe=False)
+        #return render(request, "capstone/favorites.html", {
+            #"sites": sites})
+    #else:
+    # get all items in a category to display
+    sites = Sites.objects.filter(
+        sites_category__cat_name=site)
+    return JsonResponse([site.serialize() for site in sites], safe=False)
 
 
 @requires_csrf_token
