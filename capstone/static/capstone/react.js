@@ -65,9 +65,9 @@ function App() {
     function handleRightAns (e) {
         // got question right, update score and move to next question
         setScore(score + 1);
-
         const nextQuestion = currentQuestion + 1;
-        // Check to see if at end of quiz, if not get next question
+
+        // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion),
             <p>{questions[currentQuestion].text}</p>
@@ -82,7 +82,8 @@ function App() {
     function handleClick (e) {
         // got answer wrong, move to next question
         const nextQuestion = currentQuestion + 1;
-        // check to see if end of quiz, if not move to next question
+
+        // check to see if end of quiz, if not, move to next question
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion)
         } else {
