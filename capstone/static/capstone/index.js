@@ -89,6 +89,8 @@ function load_site(site) {
 
 };
 
+function remFavorite(site_id)
+
 function updateRecord(site_id, activity) {
     // update 'is_active' in database for both Add and Remove from Favorites
     const csrftoken = getCookie('csrftoken');
