@@ -137,4 +137,5 @@ def register(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "capstone/register.html")
+        form - UserForm()
+        return render(request, "capstone/register.html", {"form": form})
