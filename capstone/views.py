@@ -7,8 +7,8 @@ from django.urls import reverse
 from django.core import serializers
 from django.views.decorators.csrf import requires_csrf_token
 
+
 from .models import User, Sites, Categories, Favorites
-from .forms import UserForm
 
 def index(request):
     return render(request, "capstone/index.html")
@@ -113,29 +113,26 @@ def logout_view(request):
 
 def register(request):
     if request.method == "POST":
-        form = UserForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data["username"]
-            email = form.cleaned_data["email"]
+        username = request.POST["username"]
+        email = request.POST["email"]
 
-            # Ensure password matches confirmation
-            password = form.cleaned_data["password"]
-            confirmation = form.cleaned_data["confirmation"]
-            if password != confirmation:
-                return render(request, "capstone/register.html", {
-                    "message": "Passwords must match."
+        # Ensure password matches confirmation
+        password = request.POST["password"]
+        confirmation = request.POST["confirmation"]
+        if password != confirmation:
+            return render(request, "capstone/register.html", {
+                "message": "Passwords must match."
             })
 
-            # Attempt to create new user
-            try:
-                user = User.objects.create_user(username, email, password)
-                user.save()
-            except IntegrityError:
-                return render(request, "capstone/register.html", {
-                    "message": "Username already taken."
-                })
-            login(request, user)
-            return HttpResponseRedirect(reverse("index"))
+        # Attempt to create new user
+        try:
+            user = User.objects.create_user(username, email, password)
+            user.save()
+        except IntegrityError:
+            return render(request, "capstone/register.html", {
+                "message": "Username already taken."
+            })
+        login(request, user)
+        return HttpResponseRedirect(reverse("index"))
     else:
-        form = UserForm()
-        return render(request, "capstone/register.html", {"form": form})
+        return render(request, "capstone/register.html")
