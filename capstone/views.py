@@ -7,8 +7,8 @@ from django.urls import reverse
 from django.core import serializers
 from django.views.decorators.csrf import requires_csrf_token
 
-
 from .models import User, Sites, Categories, Favorites
+from .forms import UserForm
 
 def index(request):
     return render(request, "capstone/index.html")
