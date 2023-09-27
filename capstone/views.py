@@ -126,15 +126,15 @@ def register(request):
                     "message": "Passwords must match."
             })
 
-        # Attempt to create new user
-        try:
-            user = User.objects.create_user(username, email, password)
-            user.save()
-        except IntegrityError:
-            return render(request, "capstone/register.html", {
-                "message": "Username already taken."
-            })
-        login(request, user)
-        return HttpResponseRedirect(reverse("index"))
+            # Attempt to create new user
+            try:
+                user = User.objects.create_user(username, email, password)
+                user.save()
+            except IntegrityError:
+                return render(request, "capstone/register.html", {
+                    "message": "Username already taken."
+                })
+            login(request, user)
+            return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "capstone/register.html")
