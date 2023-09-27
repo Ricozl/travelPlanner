@@ -115,12 +115,12 @@ def register(request):
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
-            username = request.POST["username"]
-            email = request.POST["email"]
+            username = form.cleaned_data["username"]
+            email = form.cleaned_data["email"]
 
             # Ensure password matches confirmation
-            password = request.POST["password"]
-            confirmation = request.POST["confirmation"]
+            password = form.cleaned_data["password"]
+            confirmation = form.cleaned_data["confirmation"]
             if password != confirmation:
                 return render(request, "capstone/register.html", {
                     "message": "Passwords must match."
@@ -137,5 +137,5 @@ def register(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
     else:
-        form - UserForm()
+        form = UserForm()
         return render(request, "capstone/register.html", {"form": form})
