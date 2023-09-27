@@ -113,15 +113,17 @@ def logout_view(request):
 
 def register(request):
     if request.method == "POST":
-        username = request.POST["username"]
-        email = request.POST["email"]
+        form = UserForm(request.POST)
+        if form.is_valid():
+            username = request.POST["username"]
+            email = request.POST["email"]
 
-        # Ensure password matches confirmation
-        password = request.POST["password"]
-        confirmation = request.POST["confirmation"]
-        if password != confirmation:
-            return render(request, "capstone/register.html", {
-                "message": "Passwords must match."
+            # Ensure password matches confirmation
+            password = request.POST["password"]
+            confirmation = request.POST["confirmation"]
+            if password != confirmation:
+                return render(request, "capstone/register.html", {
+                    "message": "Passwords must match."
             })
 
         # Attempt to create new user
