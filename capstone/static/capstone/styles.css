@@ -248,6 +248,9 @@ h4 {
 #remFavor:hover {
   cursor: pointer;
 }
+#message {
+  
+}
 
 /* for Mapbox API Map of Rome */
 #backmap {
