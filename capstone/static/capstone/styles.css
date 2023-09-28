@@ -249,7 +249,8 @@ h4 {
   cursor: pointer;
 }
 #message {
-  
+  font-size: 32px;
+  margin: 10px;
 }
 
 /* for Mapbox API Map of Rome */
