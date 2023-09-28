@@ -22,10 +22,10 @@
         {% endif %}
 
         <p>{{ favorite.item.description }}</p>
-        <p id="remFavor" onclick="remFavorite('{{ favorite.item.id }}')" <a href="#message"></a>>Click Here to Remove from Favorites <img src="static/capstone/open-heart.png" style="width:20px; height:20px;"></p>
+        <p id="remFavor" onclick="remFavorite('{{ favorite.item.id }}')">Click Here to Remove from Favorites <img src="static/capstone/open-heart.png" style="width:20px; height:20px;"></p>
         <br><br>
     {% empty %}
-        <p>No Favorites yet.</p>
+        <p style="font-size:32px;">No Favorites yet.</p>
     {% endfor %}
 
 </div>
