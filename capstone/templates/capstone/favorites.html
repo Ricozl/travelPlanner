@@ -11,7 +11,6 @@
 
 <div id="favorites">
     {% csrf_token %}
-    <p id="message"></p>
 
 
     {% for favorite in favorites %}
@@ -23,6 +22,7 @@
 
         <p>{{ favorite.item.description }}</p>
         <p id="remFavor" onclick="remFavorite('{{ favorite.item.id }}')">Click Here to Remove from Favorites <img src="static/capstone/open-heart.png" style="width:20px; height:20px;"></p>
+        <p id="message"></p>
         <br><br>
     {% empty %}
         <p style="font-size:32px;">No Favorites yet.</p>
