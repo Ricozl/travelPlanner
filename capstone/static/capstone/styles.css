@@ -250,7 +250,7 @@ h4 {
 }
 #message {
   font-size: 32px;
-  margin: 10px;
+  justify-content: left;
 }
 #message:focus {
   color: black;
