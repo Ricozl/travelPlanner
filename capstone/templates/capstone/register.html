@@ -8,7 +8,7 @@
         <div style="margin:20px;">{{ message }}</div>
     {% endif %}
 
-    <!-- requirements have been added to help User know what is expected in each field -->
+    <!-- Form validation is used to help User enter data in the correct format -->
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
