@@ -253,7 +253,7 @@ h4 {
   margin: 10px;
 }
 #message:focus {
-  color: red;
+  color: black;
 }
 
 /* for Mapbox API Map of Rome */
