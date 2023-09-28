@@ -8,6 +8,7 @@
         <div style="margin:20px;">{{ message }}</div>
     {% endif %}
 
+    <!-- requirements have been added to help User know what is expected in each field -->
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
