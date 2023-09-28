@@ -252,6 +252,9 @@ h4 {
   font-size: 32px;
   margin: 10px;
 }
+#message:focus {
+  color: red;
+}
 
 /* for Mapbox API Map of Rome */
 #backmap {
