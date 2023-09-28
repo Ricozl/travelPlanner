@@ -11,7 +11,7 @@
 
 <div id="favorites">
     {% csrf_token %}
-
+    <p id="message"></p>
     {% for favorite in favorites %}
 
         <h4>{{ favorite.item.title }}</h4>

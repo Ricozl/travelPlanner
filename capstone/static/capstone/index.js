@@ -94,7 +94,7 @@ function remFavorite(site_id) {
     activity = false
     console.log(site_id)
     updateRecord(site_id, activity)
-    document.getElementById("remFavor").innerHTML = "Site is not in your Favorites List!"
+    document.getElementById("message").innerHTML = "Site is removed from your Favorites List!"
 }
 
 function updateRecord(site_id, activity) {
