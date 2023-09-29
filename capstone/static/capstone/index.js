@@ -15,18 +15,7 @@ function load_site(site) {
     // Show the site name
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
     if (site == "favorites") {
-        //userName = document.getElementById('user_name')
-        //console.log(userName)
-        //if (userName) {
-            //document.querySelector("#siteName").innerHTML = `<h3>Favorites for {{ user.username }}</h3>`;
-            //<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>
-        //} else {
-            //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-        //}
         favFlag = 1;
-    //} else {
-        //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-        //favFlag = False;
     }
 
     fetch(`/sites/${site}`, {
