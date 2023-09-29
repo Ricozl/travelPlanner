@@ -67,14 +67,12 @@ function load_site(site) {
                                 updateRecord(site_id, activity)
                             })
                         } else {
-                            console.log("got to remfav")
                             const jumptwo = document.createElement('p');
                             jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
                             element.appendChild(jumptwo);
 
                             // add event listener for clicking on a site
                             jumptwo.addEventListener('click', function(e) {
-                                console.log("got to event Listener for remove")
                                 const element = e.target;
                                 element.previousSibling.innerText = "Site is not in your Favorites List!"
                                 // update 'favorites' in database
@@ -84,7 +82,6 @@ function load_site(site) {
                                 // update favorites table in database, set to inactive
                                 activity = false
                                 updateRecord(site_id, activity)
-                                console.log("return from updateRecord in remove")
                             })
                         }
                     }
@@ -99,16 +96,8 @@ function load_site(site) {
 
 };
 
-//function remFavorite(site_id) {
-    // remove favorite from Favorites page
-    //activity = false
-    //updateRecord(site_id, activity)
-    //document.getElementById("message").innerHTML = "Site is removed from your Favorites List!"
-//}
-
 function updateRecord(site_id, activity) {
     // update 'is_active' in database for both Add and Remove from Favorites
-    console.log(activity)
     const csrftoken = getCookie('csrftoken');
     fetch(`/updateRecord/${site_id}`, {
         method: 'PUT',
