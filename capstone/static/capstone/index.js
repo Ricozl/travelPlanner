@@ -12,8 +12,12 @@ function load_site(site) {
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
     // Show the site name
-    if site == "
-    document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+    if (site == "favorites") {
+        document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>`;
+        //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+    } else {
+        document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+    }
 
     fetch(`/sites/${site}`, {
         method: 'GET',
