@@ -85,6 +85,7 @@ function load_site(site) {
 
                             // add event listener for clicking on a site
                             jumptwo.addEventListener('click', function(e) {
+                                console.log("got to event Listener for remove")
                                 const element = e.target;
                                 element.previousSibling.innerText = "Site is not in your Favorites List!"
                                 // update 'favorites' in database
@@ -94,6 +95,7 @@ function load_site(site) {
                                 // update favorites table in database, set to inactive
                                 activity = false
                                 updateRecord(site_id, activity)
+                                console.log("return from updateRecord in remove")
                             })
                         }
                     }
