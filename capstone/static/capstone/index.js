@@ -12,6 +12,7 @@ function load_site(site) {
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
     // Show the site name
+    if site == "
     document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
 
     fetch(`/sites/${site}`, {
