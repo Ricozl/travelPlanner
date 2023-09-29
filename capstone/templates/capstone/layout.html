@@ -101,7 +101,7 @@
         </script>
 
     </div>
-{% endblock %}
+{% endblock nav %}
 
     <div class="body">
         {% block body %}
@@ -109,5 +109,8 @@
     </div>
 
 </body>
+{% block script %}
+    <script src="{% static 'capstone/index.js' %}"></script>
+{% endblock %}
 
 </html>
