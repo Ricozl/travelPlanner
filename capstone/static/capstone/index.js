@@ -11,14 +11,15 @@ function load_site(site) {
 
     document.querySelector('#topofpage').style.display = "none";
     document.querySelector('#top-site').style.display = 'block';
+    let favFlag = 0;
     // Show the site name
     if (site == "favorites") {
         document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>`;
         //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-        let favFlag = True;
+        favFlag = True;
     } else {
         document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
-        favFlag = False;
+        //favFlag = False;
     }
 
     fetch(`/sites/${site}`, {
@@ -52,7 +53,7 @@ function load_site(site) {
                     // for signed-in Users create Add and Remove Favorites
                     userName = document.getElementById('user_name')
                     if (userName) {
-                        if (favFlag == False) {
+                        if (!favFlag) {
                             const jump = document.createElement('p');
                             jump.innerHTML = `<p id="addfav" style="display:inline-block; padding:10px;">Click to add to Favorites  </p><img src="static/capstone/red-heart.png" style="width:20px; height:20px;">`;
                             element.appendChild(jump);
