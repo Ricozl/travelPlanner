@@ -21,13 +21,13 @@ def quiz(request):
 
 def sites(request, site):
     if site == "favorites":
-        items = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id))
+        sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id, is_active=True))
 
     else:
         # get all items in a category to display
         sites = Sites.objects.filter(
             sites_category__cat_name=site)
-        return JsonResponse([site.serialize() for site in sites], safe=False)
+    return JsonResponse([site.serialize() for site in sites], safe=False)
 
 
 @requires_csrf_token
@@ -78,15 +78,15 @@ def updateRecord(request, site_id):
     return JsonResponse({"activity": activity})
 
 
-def favorites(request):
+#def favorites(request):
     # get signed-in user's id
-    wat_user = request.user.id
+    #wat_user = request.user.id
     # get all items on signed-in user's favorites list
-    wat_lists = Favorites.objects.filter(
-        watcher=wat_user, is_active=True).select_related('item').order_by('item')
+    #wat_lists = Favorites.objects.filter(
+       #watcher=wat_user, is_active=True).select_related('item').order_by('item')
     # display user's favorites list
-    return render(request, "capstone/favorites.html", {
-        "favorites": wat_lists})
+    #return render(request, "capstone/favorites.html", {
+        #"favorites": wat_lists})
 
 
 def login_view(request):
