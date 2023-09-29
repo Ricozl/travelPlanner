@@ -23,6 +23,8 @@ def sites(request, site):
     if site == "favorites":
         #items = Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True)
         #print(items)
+        values = Blog.objects.filter(name__contains="Cheddar").values_list("pk", flat=True)
+        entries = Entry.objects.filter(blog__in=list(values))
         sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True))
         #sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id, is_active=True))
         print(sites)
