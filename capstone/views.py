@@ -21,13 +21,13 @@ def quiz(request):
 
 def sites(request, site):
     if site == "favorites":
-        #items = Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True)
-        #print(items)
-        qs1 = Sites.objects.values_list("id")
-        qs2 = Favorites.objects.values_list("watcher", "is)
-        qs1.union(qs2).order_by("name")
+        items = Favorites.objects.filter(watcher__exact=request.user.id) & (is_active__exact=True)
+        print(items)
+        #qs1 = Sites.objects.values_list("id")
+        #qs2 = Favorites.objects.values_list("watcher" & "is_)
+        #qs1.union(qs2).order_by("name")
         #values = Favorites.objects.filter(watcher__exact=request.user.id, is_active__exact=True).values_list()
-        print(values)
+        #print(values)
         #sites = Sites.objects.filter(id__in=list(values))
         #sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True))
         #sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id, is_active=True))
