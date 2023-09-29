@@ -15,6 +15,7 @@ function load_site(site) {
     if (site == "favorites") {
         document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>`;
         //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+        let favFlag = True;
     } else {
         document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
     }

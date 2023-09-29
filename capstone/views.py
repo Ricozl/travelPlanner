@@ -20,10 +20,9 @@ def quiz(request):
     return render(request, "capstone/quiz.html")
 
 def sites(request, site):
-    favFlag = ""
     if site == "favorites":
-        PriceWorld.objects.filter(product_id__in=PriceLocal.objects.filter(user_id=request.user.id))
-        favFlag = "true"
+        items = Sites.objects.filter(id__in=Favorites.objects.filter(user_id=request.user.id))
+
     else:
         # get all items in a category to display
         sites = Sites.objects.filter(
