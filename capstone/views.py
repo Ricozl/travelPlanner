@@ -22,7 +22,7 @@ def quiz(request):
 def sites(request, site):
     if site == "favorites":
         sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id, is_active=True))
-
+        print(sites)
     else:
         # get all items in a category to display
         sites = Sites.objects.filter(
