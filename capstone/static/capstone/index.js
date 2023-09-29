@@ -17,7 +17,7 @@ function load_site(site) {
         userName = document.getElementById('user_name')
         console.log(userName)
         if (userName) {
-            document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for ${ userName }</h3>`;
+            document.querySelector("#siteName").innerHTML = `<h3>Favorites<span id="user_name"{{ user.username }}</span></h3>`;
         } else {
             document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
         }
