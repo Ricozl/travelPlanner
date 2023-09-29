@@ -125,10 +125,6 @@ function updateRecord(site_id, activity) {
     })
         .then(response => {
             if (response.ok) {
-                if (activity == false) {
-                    load_site('favorites')
-                }
-            } else {
                 console.log("update was successful.")
             }
         })
