@@ -18,6 +18,7 @@ function load_site(site) {
         let favFlag = True;
     } else {
         document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+        favFlag = False;
     }
 
     fetch(`/sites/${site}`, {
