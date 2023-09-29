@@ -21,7 +21,7 @@ def quiz(request):
 
 def sites(request, site):
     if site == "favorites":
-        items = Sites.objects.filter(id__in=Favorites.objects.filter(user_id=request.user.id))
+        items = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id))
 
     else:
         # get all items in a category to display
