@@ -123,7 +123,7 @@ function updateRecord(site_id, activity) {
     })
         .then(response => {
             if (response.ok) {
-                if (activity == False) {
+                if (activity == false) {
                     load_site('favorites')
                 }
             } else {
