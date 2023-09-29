@@ -104,12 +104,12 @@ function load_site(site) {
 
 };
 
-function remFavorite(site_id) {
+//function remFavorite(site_id) {
     // remove favorite from Favorites page
-    activity = false
-    updateRecord(site_id, activity)
-    document.getElementById("message").innerHTML = "Site is removed from your Favorites List!"
-}
+    //activity = false
+    //updateRecord(site_id, activity)
+    //document.getElementById("message").innerHTML = "Site is removed from your Favorites List!"
+//}
 
 function updateRecord(site_id, activity) {
     // update 'is_active' in database for both Add and Remove from Favorites
