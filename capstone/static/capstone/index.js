@@ -17,7 +17,7 @@ function load_site(site) {
         userName = document.getElementById('user_name')
         console.log(userName)
         if (userName) {
-            document.querySelector("#siteName").innerHTML = `<h3>Favorites for <span id="user_name"{{ user.username }}</span></h3>`;
+            document.querySelector("#siteName").innerHTML = `<h3>Favorites for ${ userName }</h3>`;
             //<h3 style="margin:10px;">Favorites for {{ user.username }}</h3>
         } else {
             document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
@@ -77,6 +77,7 @@ function load_site(site) {
                                 updateRecord(site_id, activity)
                             })
                         } else {
+                            console.log("got to remfav")
                             const jumptwo = document.createElement('p');
                             jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
                             element.appendChild(jumptwo);
