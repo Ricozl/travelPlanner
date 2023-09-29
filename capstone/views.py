@@ -20,10 +20,15 @@ def quiz(request):
     return render(request, "capstone/quiz.html")
 
 def sites(request, site):
-    # get all items in a category to display
-    sites = Sites.objects.filter(
-        sites_category__cat_name=site)
-    return JsonResponse([site.serialize() for site in sites], safe=False)
+    favFlag = ""
+    if site == "favorites":
+        PriceWorld.objects.filter(product_id__in=PriceLocal.objects.filter(user_id=request.user.id))
+        favFlag = "true"
+    else:
+        # get all items in a category to display
+        sites = Sites.objects.filter(
+            sites_category__cat_name=site)
+        return JsonResponse([site.serialize() for site in sites], safe=False)
 
 
 @requires_csrf_token
