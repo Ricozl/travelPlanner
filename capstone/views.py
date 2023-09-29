@@ -23,11 +23,12 @@ def sites(request, site):
     if site == "favorites":
         #items = Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True)
         #print(items)
-        values = Blog.objects.filter(name__contains="Cheddar").values_list("pk", flat=True)
-        entries = Entry.objects.filter(blog__in=list(values))
-        sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True))
+        values = Favorites.objects.filter(watcher__exact=request.user.id).values_list(is_active=True)
+        print(values)
+        sites = Sites.objects.filter(id__in=list(values))
+        #sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True))
         #sites = Sites.objects.filter(id__in=Favorites.objects.filter(watcher=request.user.id, is_active=True))
-        print(sites)
+        #print(sites)
     else:
         # get all items in a category to display
         sites = Sites.objects.filter(
