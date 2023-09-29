@@ -14,10 +14,12 @@ function load_site(site) {
     let favFlag = 0;
     // Show the site name
     if (site == "favorites") {
-       // usernm = {{ user.username }}
-        //console.log(usernm)
-        //document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for ${ user.username }</h3>`;
-        //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+        userName = document.getElementById('user_name')
+        if (userName) {
+            document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for ${ userName }</h3>`;
+        } else {
+            document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
+        }
         favFlag = 1;
     } else {
         document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
@@ -73,7 +75,6 @@ function load_site(site) {
                                 updateRecord(site_id, activity)
                             })
                         } else {
-                            document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for ${ user.username }</h3>`;
                             const jumptwo = document.createElement('p');
                             jumptwo.innerHTML = `<p id="remfav" style="display:inline-block; padding:10px;">Click to remove from Favorites  </p><img src="static/capstone/open-heart.png" style="width:20px; height:20px;">`;
                             element.appendChild(jumptwo);
