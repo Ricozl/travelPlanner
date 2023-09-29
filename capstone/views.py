@@ -23,8 +23,8 @@ def sites(request, site):
     if site == "favorites":
         #items = Favorites.objects.filter(watcher__exact=request.user.id).filter(is_active__exact=True)
         #print(items)
-        qs1 = Author.objects.values_list("name")
-        qs2 = Entry.objects.values_list("headline")
+        qs1 = Sites.objects.values_list("id")
+        qs2 = Favorites.objects.values_list("watcher", "is)
         qs1.union(qs2).order_by("name")
         #values = Favorites.objects.filter(watcher__exact=request.user.id, is_active__exact=True).values_list()
         print(values)
