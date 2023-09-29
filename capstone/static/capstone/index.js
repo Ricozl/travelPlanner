@@ -14,8 +14,8 @@ function load_site(site) {
     let favFlag = 0;
     // Show the site name
     if (site == "favorites") {
-        usernm = {{ user.username }}
-        console.log(usernm)
+       // usernm = {{ user.username }}
+        //console.log(usernm)
         document.querySelector("#siteName").innerHTML = `<h3 style="margin:10px;">Favorites for ${ user.username }</h3>`;
         //document.querySelector('#siteName').innerHTML = `<h3>${site}</h3>`;
         favFlag = 1;
