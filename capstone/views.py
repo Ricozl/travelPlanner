@@ -21,7 +21,7 @@ def quiz(request):
 
 def sites(request, site):
     if site == "favorites":
-        items = Favorites.objects.filter(watcher__exact=request.user.id) & (is_active__exact=True)
+        items = Favorites.objects.filter(watcher__exact=request.user.id) & (is_active == True)
         print(items)
         #qs1 = Sites.objects.values_list("id")
         #qs2 = Favorites.objects.values_list("watcher" & "is_)
