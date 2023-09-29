@@ -65,10 +65,6 @@
 
             {% if user.is_authenticated %}
                 <span id="user_name"{{ user.username }}</span>
-            <!--<div id="Favorites" class="tabcontent">
-                <h3>Favorites<span id="user_name"{{ user.username }}</span></h3>
-                <p>See your <a href="#" onclick="load_site('favorites')">favorites</a> to help plan your trip.</p>
-            </div>-->
             <div id="Logout" class="tabcontent">
                 <h3>Logout</h3>
                 <p><a href="{% url 'logout' %}">Please Logout here.</a></p>
