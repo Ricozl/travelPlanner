@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['localhost',]
 CSRF_TRUSTED_ORIGINS = ['https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev',
                         'http://localhost:8000']
 
+CORS_ORIGIN_WHITELIST = ['http://localhost:8000',]
 
 # Application definition
 
