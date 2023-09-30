@@ -25,9 +25,11 @@ SECRET_KEY = '13kl@xtukpwe&xj2xoysxe9_6=tf@f8ewxer5n&ifnd46+6$%8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',]
 
-CSRF_TRUSTED_ORIGINS = ['https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev']
+CSRF_TRUSTED_ORIGINS = ['https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev',
+                        'http://localhost:8000']
+
 
 # Application definition
 
