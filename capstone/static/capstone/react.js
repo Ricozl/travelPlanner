@@ -71,6 +71,10 @@ function App() {
     function handleRightAns (e) {
         // got question right, update score and move to next question
         //setScore(score + 1);
+        setState({
+            ...state,
+            score: score + 1
+        })
         const nextQuestion = currentQuestion + 1;
 
         // Check to see if at end of quiz, if not, get next question
