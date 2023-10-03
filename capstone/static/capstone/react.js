@@ -76,6 +76,7 @@ function App() {
             score: score + 1
         })
         const nextQuestion = currentQuestion + 1;
+        console.log(nextQuestion)
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
