@@ -72,7 +72,7 @@ function App() {
         //setScore(score + 1);
         setState({
             ...state,
-            score: score + 1
+            score: (score + 1)
         })
         const nextQuestion = currentQuestion + 1;
         console.log(nextQuestion)
