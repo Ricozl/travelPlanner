@@ -53,13 +53,12 @@ function App() {
 
     // Set state for different variables
     const [state, setState] = React.useState({
-        currentQuestion: 0,
         showScore: false,
         score: 0,
         result: ""
     });
 
-    //const [currentQuestion, setCurrentQuestion] = React.useState(0);
+    const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     //const [showScore, setShowScore] = React.useState(false);
 
@@ -80,12 +79,8 @@ function App() {
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
-            setState({
-                ...state,
-                currentQuestion: nextQuestion
-            })
-            //setCurrentQuestion(nextQuestion),
-            <p>{questions[state.currentQuestion].text}</p>
+            setCurrentQuestion(nextQuestion),
+            <p>{questions[currentQuestion].text}</p>
         } else {
             // end of quiz, display score and result
             setState({
@@ -105,11 +100,7 @@ function App() {
 
         // check to see if end of quiz, if not, move to next question
         if (nextQuestion < questions.length) {
-            setState({
-                ...state,
-                currentQuestion: nextQuestion
-            })
-            //setCurrentQuestion(nextQuestion)
+            setCurrentQuestion(nextQuestion)
         } else {
             // if end of quiz, show score and result
             setState({
