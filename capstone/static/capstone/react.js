@@ -104,11 +104,20 @@ function App() {
 
         // check to see if end of quiz, if not, move to next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion)
+            setState({
+                ...state,
+                currentQuestion: nextQuestion
+            })
+            //setCurrentQuestion(nextQuestion)
         } else {
             // if end of quiz, show score and result
-            setShowScore(true);
-            setResult("Nice try, but no cigar!")
+            setState({
+                ...state,
+                showScore: true,
+                result: "Nice try, but no cigar!"
+            })
+            //setShowScore(true);
+            //setResult("Nice try, but no cigar!")
 
         }
     };
