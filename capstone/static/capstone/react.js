@@ -79,12 +79,21 @@ function App() {
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion),
+            setState({
+                ...state,
+                currentQuestion: nextQuestion
+            })
+            //setCurrentQuestion(nextQuestion),
             <p>{questions[currentQuestion].text}</p>
         } else {
             // end of quiz, display score and result
-            setShowScore(true);
-            setResult("Fantastico! You Won!")
+            setState({
+                ...state,
+                showScore: true,
+                result: "Fantastico: You Won!"
+            })
+            //setShowScore(true);
+            //setResult("Fantastico! You Won!")
         }
     };
 
