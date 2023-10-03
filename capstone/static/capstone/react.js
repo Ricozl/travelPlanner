@@ -100,9 +100,6 @@ function App() {
                 showScore: true,
                 result: "Nice try, but no cigar!"
             })
-            //setShowScore(true);
-            //setResult("Nice try, but no cigar!")
-
         }
     };
 
