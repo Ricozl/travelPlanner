@@ -85,7 +85,7 @@ function App() {
                 currentQuestion: nextQuestion
             })
             //setCurrentQuestion(nextQuestion),
-            <p>{questions[currentQuestion].text}</p>
+            <p>{questions[state.currentQuestion].text}</p>
         } else {
             // end of quiz, display score and result
             setState({
