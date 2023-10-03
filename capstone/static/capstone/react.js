@@ -69,7 +69,6 @@ function App() {
     // function to handle right answers
     function handleRightAns (e) {
         // got question right, update score and move to next question
-        //setScore(score + 1);
         setState({
             ...state,
             score: state.score + 1
