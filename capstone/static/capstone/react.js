@@ -118,10 +118,10 @@ function App() {
 
     <div id="quizmap">
         <div className ="app">
-            {!showScore ? (
+            {!state.showScore ? (
             // show current score out of total questions, displays question with answers
             <div>
-                <div className='score'>You scored {score} out of {questions.length}</div>
+                <div className='score'>You scored {state.score} out of {questions.length}</div>
                 <div className='questions'>
                         <div className='quesCount'>
                             <span>Question {currentQuestion + 1}</span>/{questions.length}
@@ -147,10 +147,10 @@ function App() {
                     Total Questions: <span>{questions.length}</span>
                 </p>
                 <p>
-                    Total Score:<span> {score}</span>
+                    Total Score:<span> {state.score}</span>
                 </p>
                 <div id="winner">
-                    {result}
+                    {state.result}
                 </div>
             </div>
             )}
