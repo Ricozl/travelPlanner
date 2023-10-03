@@ -52,6 +52,7 @@ function App() {
     ];
 
     // Set state for different variables
+    
 
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
