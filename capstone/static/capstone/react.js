@@ -69,7 +69,7 @@ function App() {
         // got question right, update score and move to next question
         setState({
             ...state,
-            score: state.score + 1
+            score: (state.score + 1)
         })
         console.log(state.score)
         const nextQuestion = currentQuestion + 1;
