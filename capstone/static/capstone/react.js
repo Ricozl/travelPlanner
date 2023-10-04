@@ -43,7 +43,7 @@ function App() {
             choice: 'They were Jewish.', isCorrect: true,
             choice: 'They were expensive.', isCorrect: false
         }
-    ];
+    ]
 
 
     //const questions = [
