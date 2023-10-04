@@ -57,13 +57,13 @@ function App() {
 
     // Set state for different variables
     const [state, setState] = React.useState({
-        
+        currentQuestion: 0,
         showScore: false,
         score: 0,
         result: ""
     });
 
-    const [currentQuestion, setCurrentQuestion] = React.useState(0);
+    //const [currentQuestion, setCurrentQuestion] = React.useState(0);
 
     // function to handle right answers
     function handleRightAns (e) {
@@ -76,7 +76,11 @@ function App() {
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion),
+            setState({
+                ...state,
+                currentQuestion:
+            })
+            //setCurrentQuestion(nextQuestion),
             <p>{questions[currentQuestion]}</p>
         } else {
             // end of quiz, display score and result
