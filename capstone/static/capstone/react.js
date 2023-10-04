@@ -58,7 +58,7 @@ function App() {
     // Set state for different variables
     const [state, setState] = React.useState({
         showScore: false,
-        score: 0,
+        score: 1,
         result: ""
     });
 
