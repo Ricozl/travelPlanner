@@ -165,7 +165,7 @@ function App() {
                         </div>
                     </div>
                     <div className='answerList'>
-                        {answers.map((answer) => (
+                        {answers.map[currentQuestion]((answer) => (
                             // each answer is a button, checks if correct, goes to function to handle if right or wrong
                             <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.choice}</button>
                         ))}
