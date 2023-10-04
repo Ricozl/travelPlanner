@@ -115,7 +115,7 @@ function App() {
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion),
-            <p>{questions[currentQuestion].text}</p>
+            <p>{questions[currentQuestion]}</p>
         } else {
             // end of quiz, display score and result
             setState({
