@@ -4,13 +4,25 @@
 
 function App() {
 
-    const questions = {
-        "What is cacio e Pepe?",
+    const questions = [
+        'What is cacio e Pepe?',
         'The Colosseum is called that because?',
         'In classical architecture, Romans invented?',
         'Traditional Roman food is largely composed of?',
         'One hundred years ago, Romans avoided artichokes and eggplants because?'
-    }
+    ]
+
+    const answers: [
+        { choice: 'Italian football (soccer) and Pete.', isCorrect: false},
+        { choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
+        { choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
+        { choice: 'The main ingredients of Roman concrete.', isCorrect: false },
+    ],
+    [
+        
+    ]
+
+
     //const questions = [
         //{
             //text:  "What is cacio e Pepe?",
