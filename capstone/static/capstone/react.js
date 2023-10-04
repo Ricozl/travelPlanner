@@ -9,7 +9,8 @@ function App() {
         'The Colosseum is called that because?',
         'In classical architecture, Romans invented?',
         'Traditional Roman food is largely composed of?',
-        'One hundred years ago, Romans avoided artichokes and eggplants because?'
+        'One hundred years ago, Romans avoided artichokes
+         and eggplants because?'
     ]
 
     const answerList = [
