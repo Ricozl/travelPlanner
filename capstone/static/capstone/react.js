@@ -71,7 +71,6 @@ function App() {
             ...state,
             score: (state.score = state.score + 1)
         })
-        console.log(state.score)
         const nextQuestion = currentQuestion + 1;
 
         // Check to see if at end of quiz, if not, get next question
