@@ -133,8 +133,6 @@ function App() {
                 showScore: true,
                 result: "Fantastico: You Won!"
             })
-            //setShowScore(true);
-            //setResult("Fantastico! You Won!")
         }
     };
 
