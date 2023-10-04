@@ -309,6 +309,8 @@ h4 {
 .quesText {
   font-size: 32px;
   color: black;
+  inline-size: 150px;
+  overflow-wrap: break-word;
 }
 
 .questions {
