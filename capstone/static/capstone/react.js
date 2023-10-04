@@ -112,9 +112,9 @@ function App() {
             {!state.showScore ? (
             // show current score out of total questions, displays question with answers
             <div>
-                <div>You scored {state.score} out of {questions.length}</div>
+                <div className-'score'>You scored {state.score} out of {questions.length}</div>
                 <div className='questions'>
-                        <div className='quesCount'>
+                        <div>
                             <span>Question {currentQues + 1}</span>/{questions.length}
 
                         </div>
