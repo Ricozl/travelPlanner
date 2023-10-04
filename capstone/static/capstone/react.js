@@ -81,7 +81,7 @@ function App() {
                 currentQuestion: nextQuestion
             })
             //setCurrentQuestion(nextQuestion),
-            <p>{questions[currentQuestion]}</p>
+            <p>{questions[state.currentQuestion]}</p>
         } else {
             // end of quiz, display score and result
             setState({
@@ -95,11 +95,15 @@ function App() {
     // function to handle wrong answers
     function handleClick (e) {
         // got answer wrong, move to next question
-        const nextQuestion = currentQuestion + 1;
+        const nextQuestion = state.currentQuestion + 1;
 
         // check to see if end of quiz, if not, move to next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion)
+            setState({
+                ...state,
+                currentQuestion: nextQuestion
+            })
+            //setCurrentQuestion(nextQuestion)
         } else {
             // if end of quiz, show score and result
             setState({
