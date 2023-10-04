@@ -58,7 +58,7 @@ function App() {
     // Set state for different variables
     const [state, setState] = React.useState({
         showScore: false,
-        score: 1,
+        score: 0,
         result: ""
     });
 
@@ -69,7 +69,7 @@ function App() {
         // got question right, update score and move to next question
         setState({
             ...state,
-            score: (state.score + 1)
+            score: (score + 1)
         })
         console.log(state.score)
         const nextQuestion = currentQuestion + 1;
