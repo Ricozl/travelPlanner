@@ -72,13 +72,13 @@ function App() {
             ...state,
             score: state.score + 1
         })
-        const nextQuestion = currentQuestion + 1;
+        const nextQuestion = state.currentQuestion + 1;
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
             setState({
                 ...state,
-                currentQuestion:
+                currentQuestion: nextQuestion
             })
             //setCurrentQuestion(nextQuestion),
             <p>{questions[currentQuestion]}</p>
