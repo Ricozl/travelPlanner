@@ -14,34 +14,44 @@ function App() {
 
     const answerList = [
         {
-            choice: 'Italian football (soccer) and Pete.', isCorrect: false,
-            choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true ,
-            choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false,
-            choice: 'The main ingredients of Roman concrete.', isCorrect: false
+            answers: [
+                {choice: 'Italian football (soccer) and Pete.', isCorrect: false},
+                {choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true},
+                {choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false},
+                {choice: 'The main ingredients of Roman concrete.', isCorrect: false},
+            ]
         },
         {
-            choice: 'It is the Greek name for amphitheater.', isCorrect: false,
-            choice: "It is built on the site of Emperor Nero's front yard.", isCorrect: false,
-            choice: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true,
-            choice: 'collo means hill in Italian and it is built on a hill.', isCorrect: false
+            answers: [
+                {choice: 'It is the Greek name for amphitheater.', isCorrect: false},
+                {choice: "It is built on the site of Emperor Nero's front yard.", isCorrect: false},
+                {choice: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true},
+                {choice: 'collo means hill in Italian and it is built on a hill.', isCorrect: false},
+            ]
         },
         {
-            choice: 'The Arch.', isCorrect: false,
-            choice: 'Concrete buildings.', isCorrect: false,
-            choice: 'Long, straight roads.', isCorrect: false,
-            choice: 'All of the above.', isCorrect: true
+            answers: [
+                {choice: 'The Arch.', isCorrect: false},
+                {choice: 'Concrete buildings.', isCorrect: false},
+                {choice: 'Long, straight roads.', isCorrect: false},
+                {choice: 'All of the above.', isCorrect: true},
+            ]
         },
         {
-            choice: 'Guts.', isCorrect: true,
-            choice: 'Steaks.', isCorrect: false,
-            choice: 'Beans.', isCorrect: false,
-            choice: 'Pasta and tomato sauce.', isCorrect: false
+            answers: [
+                {choice: 'Guts.', isCorrect: true},
+                {choice: 'Steaks.', isCorrect: false},
+                {choice: 'Beans.', isCorrect: false},
+                {choice: 'Pasta and tomato sauce.', isCorrect: false},
+            ]
         },
         {
-            choice: 'They were poisonous.', isCorrect: false,
-            choice: 'They were from America.', isCorrect: false,
-            choice: 'They were Jewish.', isCorrect: true,
-            choice: 'They were expensive.', isCorrect: false
+            answers: [
+                {choice: 'They were poisonous.', isCorrect: false},
+                {choice: 'They were from America.', isCorrect: false},
+                {choice: 'They were Jewish.', isCorrect: true},
+                {choice: 'They were expensive.', isCorrect: false},
+            ]
         },
     ]
 
