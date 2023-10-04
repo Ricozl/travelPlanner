@@ -13,13 +13,16 @@ function App() {
     ]
 
     const answers: [
-        { choice: 'Italian football (soccer) and Pete.', isCorrect: false},
-        { choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
-        { choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
-        { choice: 'The main ingredients of Roman concrete.', isCorrect: false },
-    ],
-    [
-        
+        {
+            choice: 'Italian football (soccer) and Pete.', isCorrect: false,
+            choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true ,
+            choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false,
+            choice: 'The main ingredients of Roman concrete.', isCorrect: false,
+        },
+        {
+
+        },
+
     ]
 
 
