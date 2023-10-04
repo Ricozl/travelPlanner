@@ -26,7 +26,7 @@ function App() {
                 {choice: 'It is the Greek name for amphitheater.', isCorrect: false},
                 {choice: "It is built on the site of Emperor Nero's front yard.", isCorrect: false},
                 {choice: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true},
-                {choice: 'collo means hill in Italian and it is built on a hill.', isCorrect: false},
+                {choice: 'Collo means hill in Italian and it is built on a hill.', isCorrect: false},
             ]
         },
         {
