@@ -71,6 +71,7 @@ function App() {
             ...state,
             score: state.score + 1
         })
+        console.log(state.score)
         const nextQuestion = currentQuestion + 1;
         console.log(questions.length)
 
