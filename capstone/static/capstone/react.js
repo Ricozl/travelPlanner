@@ -3,53 +3,61 @@
 // Array of questions and answers for quiz
 
 function App() {
-    const questions = [
-        {
-            text:  "What is cacio e Pepe?",
-            answers: [
-                { choice: 'Italian football (soccer) and Pete.', isCorrect: false},
-                { choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
-                { choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
-                { choice: 'The main ingredients of Roman concrete.', isCorrect: false },
-            ],
-        },
-        {
-            text: 'The Colosseum is called that because?',
-            answers: [
-                { choice: 'It is the Greek name for amphitheater.', isCorrect: false },
-                { choice: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
-                { choice: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true },
-                { choice: 'collo means hill in Italian and it is built on a hill.', isCorrect: false },
-            ],
-        },
-        {
-            text: 'In classical architecture, Romans invented?',
-            answers: [
-                { choice: 'The Arch.', isCorrect: false },
-                { choice: 'Concrete buildings.', isCorrect: false },
-                { choice: 'Long, straight roads.', isCorrect: false },
-                { choice: 'All of the above.', isCorrect: true }
-            ],
-        },
-        {
-            text: 'Traditional Roman food is largely composed of?',
-            answers: [
-                { choice: 'Guts.', isCorrect: true },
-                { choice: 'Steaks.', isCorrect: false },
-                { choice: 'Beans.', isCorrect: false },
-                { choice: 'Pasta and tomato sauce.', isCorrect: false }
-            ],
-        },
-        {
-            text: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
-            answers: [
-                { choice: 'They were poisonous.', isCorrect: false },
-                { choice: 'They were from America.', isCorrect: false },
-                { choice: 'They were Jewish.', isCorrect: true },
-                { choice: 'They were expensive.', isCorrect: false }
-            ],
-        },
-    ];
+
+    const questions = {
+        "What is cacio e Pepe?",
+        'The Colosseum is called that because?',
+        'In classical architecture, Romans invented?',
+        'Traditional Roman food is largely composed of?',
+        'One hundred years ago, Romans avoided artichokes and eggplants because?'
+    }
+    //const questions = [
+        //{
+            //text:  "What is cacio e Pepe?",
+            //answers: [
+                //{ choice: 'Italian football (soccer) and Pete.', isCorrect: false},
+                //{ choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true },
+                //{ choice: 'Calcium and Vitamin B pills popular with Roman men.', isCorrect: false },
+                //{ choice: 'The main ingredients of Roman concrete.', isCorrect: false },
+            //],
+        //},
+        //{
+            //text: 'The Colosseum is called that because?',
+            //answers: [
+                //{ choice: 'It is the Greek name for amphitheater.', isCorrect: false },
+                //{ choice: "It is built on the site of Emperor Nero's front yard.", isCorrect: false },
+                //{ choice: 'It is built on the site of a colossal statue of Emperor Nero.', isCorrect: true },
+                //{ choice: 'collo means hill in Italian and it is built on a hill.', isCorrect: false },
+            //],
+        //},
+        //{
+            //text: 'In classical architecture, Romans invented?',
+            //answers: [
+                //{ choice: 'The Arch.', isCorrect: false },
+                //{ choice: 'Concrete buildings.', isCorrect: false },
+                //{ choice: 'Long, straight roads.', isCorrect: false },
+                //{ choice: 'All of the above.', isCorrect: true }
+            //],
+        //},
+        //{
+            //text: 'Traditional Roman food is largely composed of?',
+            //answers: [
+                //{ choice: 'Guts.', isCorrect: true },
+                //{ choice: 'Steaks.', isCorrect: false },
+                //{ choice: 'Beans.', isCorrect: false },
+                //{ choice: 'Pasta and tomato sauce.', isCorrect: false }
+            //],
+        //},
+        //{
+            //text: 'One hundred years ago, Romans avoided artichokes and eggplants because?',
+            //answers: [
+                //{ choice: 'They were poisonous.', isCorrect: false },
+                //{ choice: 'They were from America.', isCorrect: false },
+                //{ choice: 'They were Jewish.', isCorrect: true },
+                //{ choice: 'They were expensive.', isCorrect: false }
+            //],
+        //},
+    //];
 
     // Set state for different variables
     const [state, setState] = React.useState({
