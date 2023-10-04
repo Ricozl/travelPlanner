@@ -62,7 +62,7 @@ function App() {
         result: ""
     });
 
-    const [currentQuestion, setCurrentQuestion] = React.useState(0);
+    const [currentQues, setCurrentQues] = React.useState(0);
 
     // function to handle right answers
     function handleRightAns (e) {
@@ -71,12 +71,12 @@ function App() {
             ...state,
             score: (state.score = state.score + 1)
         })
-        const nextQuestion = currentQuestion + 1;
+        const nextQuestion = currentQues + 1;
 
         // Check to see if at end of quiz, if not, get next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion),
-            <p>{questions[currentQuestion]}</p>
+            setCurrentQues(nextQuestion),
+            <p>{questions[currentQues]}</p>
         } else {
             // end of quiz, display score and result
             setState({
@@ -90,11 +90,11 @@ function App() {
     // function to handle wrong answers
     function handleClick (e) {
         // got answer wrong, move to next question
-        const nextQuestion = currentQuestion + 1;
+        const nextQuestion = currentQues + 1;
 
         // check to see if end of quiz, if not, move to next question
         if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion)
+            setCurrentQues(nextQuestion)
         } else {
             // if end of quiz, show score and result
             setState({
@@ -115,16 +115,16 @@ function App() {
                 <div className='score'>You scored {state.score} out of {questions.length}</div>
                 <div className='questions'>
                         <div className='quesCount'>
-                            <span>Question {currentQuestion + 1}</span>/{questions.length}
+                            <span>Question {currentQues + 1}</span>/{questions.length}
 
                         </div>
                         <div className='quesText'>
-                            <p id="ques">{questions[currentQuestion]}</p>
+                            <p id="ques">{questions[currentQues]}</p>
 
                         </div>
                     </div>
                     <div className='answerList'>
-                        {answerList[currentQuestion].answers.map((answer) => (
+                        {answerList[currentQues].answers.map((answer) => (
                             // each answer is a button, checks if correct, goes to function to handle if right or wrong
                             <button id="answers" onClick = {() => answer.isCorrect ? handleRightAns() : handleClick()}>{answer.choice}</button>
                         ))}
