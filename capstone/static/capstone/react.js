@@ -12,7 +12,7 @@ function App() {
         'One hundred years ago, Romans avoided artichokes and eggplants because?'
     ]
 
-    const answers: [
+    const answers = [
         {
             choice: 'Italian football (soccer) and Pete.', isCorrect: false,
             choice: 'Pecorino Romano and pepper sauce for pasta.', isCorrect: true ,
@@ -43,7 +43,7 @@ function App() {
             choice: 'They were Jewish.', isCorrect: true,
             choice: 'They were expensive.', isCorrect: false
         },
-    ];
+    ]
 
 
     //const questions = [
