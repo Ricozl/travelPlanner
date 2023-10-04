@@ -42,8 +42,8 @@ function App() {
             choice: 'They were from America.', isCorrect: false,
             choice: 'They were Jewish.', isCorrect: true,
             choice: 'They were expensive.', isCorrect: false
-        }
-    ]
+        },
+    ];
 
 
     //const questions = [
