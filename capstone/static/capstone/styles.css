@@ -339,5 +339,5 @@ h4 {
 }
 
 @media only screen and (max-width: 600px) {
-  font-size: 18px;
+  .quesText {font-size: 18px;}
 }
