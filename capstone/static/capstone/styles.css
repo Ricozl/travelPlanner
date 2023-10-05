@@ -307,7 +307,7 @@ h4 {
 }
 
 .quesText {
-  font-size: 24px;
+  font-size: 32px;
   color: black;
 }
 
@@ -316,7 +316,7 @@ h4 {
 }
 
 .score {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 #answers {
