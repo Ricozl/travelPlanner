@@ -337,6 +337,3 @@ h4 {
   color: green;
 }
 
-@media only screen and (max-width: 600px) {
-  .quesText {font-size: 18px;}
-}
