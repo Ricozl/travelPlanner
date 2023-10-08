@@ -7,8 +7,6 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
 from django.views.decorators.csrf import requires_csrf_token
-from email_validator import validate_email, EmailNotValidError
-
 
 
 from .models import User, Sites, Categories, Favorites
@@ -109,10 +107,18 @@ def logout_view(request):
 def register(request):
     if request.method == "POST":
         username = request.POST["username"]
-        email = request.POST["email"]
         if username < 5 or username > 20:
             return render(request, "capstone/register.html", {
                 "message": "Username must be 5 or more characters."
+            })
+
+        email = request.POST["email"]
+        pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        if re.match(pattern, email):
+            print("valid email")
+        else:
+            return render(request, "capstone/register.html", {
+                "message", "Invalid email address."
             })
 
         # Ensure password matches confirmation
