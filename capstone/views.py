@@ -107,6 +107,7 @@ def register(request):
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
+        if username < 5 or > 20:
 
         # Ensure password matches confirmation
         password = request.POST["password"]
