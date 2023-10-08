@@ -107,7 +107,7 @@ def logout_view(request):
 def register(request):
     if request.method == "POST":
         username = request.POST["username"]
-        if len(username) < 5 or username > 20:
+        if len(username) < 5 or len(username) > 20:
             return render(request, "capstone/register.html", {
                 "message": "Username must be 5 or more characters."
             })
