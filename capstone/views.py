@@ -114,6 +114,7 @@ def register(request):
 
         # Ensure password matches confirmation
         password = request.POST["password"]
+        x = re.search(")
         confirmation = request.POST["confirmation"]
         if password != confirmation:
             return render(request, "capstone/register.html", {
