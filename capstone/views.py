@@ -116,8 +116,12 @@ def register(request):
 
         # Ensure password matches confirmation
         password = request.POST["password"]
-        x = re.search("?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password)
-        confirmation = request.POST["confirmation"]
+        if re.fullmatch("?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password):
+            confirmation = request.POST["confirmation"]
+        else:
+            return render(request, "capstone/register.html", {
+                "message": "Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters."
+            })
         if password != confirmation:
             return render(request, "capstone/register.html", {
                 "message": "Passwords must match."
