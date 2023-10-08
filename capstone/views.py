@@ -1,4 +1,5 @@
 import json
+import re
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect, JsonResponse
@@ -6,6 +7,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
 from django.views.decorators.csrf import requires_csrf_token
+
 
 
 from .models import User, Sites, Categories, Favorites
@@ -114,7 +116,7 @@ def register(request):
 
         # Ensure password matches confirmation
         password = request.POST["password"]
-        x = re.search(")
+        x = re.search("?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password)
         confirmation = request.POST["confirmation"]
         if password != confirmation:
             return render(request, "capstone/register.html", {
