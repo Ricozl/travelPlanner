@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.core import serializers
 from django.views.decorators.csrf import requires_csrf_token
+from email_validator import validate_email, EmailNotValidError
 
 
 
