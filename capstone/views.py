@@ -107,7 +107,11 @@ def register(request):
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
-        if username < 5 or > 20:
+        if username < 5 or username > 20:
+            return render(request, "capstone/register.html", {
+                "message": "Username must be 5 or more characters."
+            })
+        if email
 
         # Ensure password matches confirmation
         password = request.POST["password"]
