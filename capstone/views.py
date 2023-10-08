@@ -123,7 +123,7 @@ def register(request):
 
         # Ensure password matches confirmation
         password = request.POST["password"]
-        if re.fullmatch("?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password):
+        if re.match("?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password):
             confirmation = request.POST["confirmation"]
         else:
             return render(request, "capstone/register.html", {
