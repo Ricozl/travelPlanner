@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev',
+#CSRF_TRUSTED_ORIGINS = ['https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.preview.app.github.dev',
+CSRF_TRUSTED_ORIGINS = ['https://LeithHall/Desktop/travelWebsite/63819642/capstone/static',
                         'https://localhost:8000']
 
 CORS_ORIGIN_WHITELIST = ['https://localhost:8000',]
