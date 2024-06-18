@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = '/capstone/capstone/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static/capstone')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'/Users/LeithHall/Desktop/travelWebsite/63819642/capstone/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
