@@ -48,8 +48,8 @@
     map.on('load', () => {
         // Add an image to use as a custom marker
         map.loadImage(
-            'https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.app.github.dev/static/capstone/mapbox-marker-icon-20px-green.png',
-
+            //'https://ricozl-fantastic-zebra-7x6j7wp9p9fxg94-8000.app.github.dev/static/capstone/mapbox-marker-icon-20px-green.png',
+            'static/capstone/mapbox-marker-icon-20px-green.png',
             (error, image) => {
                 if (error) throw error;
                 map.addImage('marker2', image)
