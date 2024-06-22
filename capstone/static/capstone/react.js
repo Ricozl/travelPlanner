@@ -79,17 +79,18 @@ function App() {
             <p>{questions[currentQues]}</p>
         } else {
             // end of quiz, display score and result
-            if (state.score == 5) {
+            if (state.score < 5) {
                 setState({
                     ...state,
                     showScore: true,
-                    result: "Fantastico: You Won!"
+                    result: "Nice try, but no Cigar!"
+                    
                 })
             } else {
                 setState({
                     ...state,
                     showScore: true,
-                    result: "Nice try, but no Cigar!"
+                    result: "Fantastico: You Won!"
                 })
             }
             
